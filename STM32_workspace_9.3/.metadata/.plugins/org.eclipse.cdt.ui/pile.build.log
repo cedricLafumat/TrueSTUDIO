@@ -1,0 +1,6 @@
+12:59:36 **** Incremental Build of configuration Debug for project pile ****
+make -j4 all 
+make: rien à faire pour « all ».
+
+12:59:36 Build Finished (took 266ms)
+

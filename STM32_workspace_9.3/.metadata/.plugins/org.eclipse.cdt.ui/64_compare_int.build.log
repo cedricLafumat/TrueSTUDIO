@@ -1,0 +1,6 @@
+10:50:56 **** Incremental Build of configuration Debug for project 64_compare_int ****
+make -j4 all 
+make: rien à faire pour « all ».
+
+10:50:57 Build Finished (took 333ms)
+

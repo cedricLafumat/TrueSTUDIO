@@ -1,0 +1,6 @@
+15:27:38 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+make: rien à faire pour « all ».
+
+15:27:39 Build Finished (took 325ms)
+

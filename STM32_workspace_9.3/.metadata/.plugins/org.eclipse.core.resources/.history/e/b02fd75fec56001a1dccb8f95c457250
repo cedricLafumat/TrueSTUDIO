@@ -1,0 +1,58 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(int argc, char* argv[]){
+
+
+
+	FILE* file_text = NULL;
+	file_text = fopen("*/home/cedric/Bureau/Lafumat_Cédric/C_dossier/long_text.txt", "r");
+
+	if (file_text != NULL){
+		printf("\nJ'ai réussi à ouvrir le fichier");
+	}
+	else{
+		printf("\nImpossible d'ouvrir le fichier");
+	}
+	fclose(file_text);
+
+	/*char text[] = "Bonjour, je suis heureux d'�tre au campus";
+	char vowel[] = {'a','e','i','o','u','y','A','E','I','O','U','Y','�','�','�','�','�','�','�','�','�'};
+	char consomn[] = {'b','c','d','f','g','h','j','k','l','m', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'z',
+			'B', 'C', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'X', 'Z', '�'};
+
+
+
+	int nb_vowel = 0;
+	int nb_cons = 0;
+
+
+	for (int i = 0; text[i] != '\0' ; i++) {
+	    	for (int j = 0; vowel[j] != '\0'; j++) {
+	    		if (text[i] == vowel[j]) {
+	    			nb_vowel +=1;
+	    		}
+	    	}
+	    	for (int k =0; consomn[k] != '\0'; k++) {
+	    		if (text[i] == consomn[k]) {
+	    			nb_cons += 1;
+	    		}
+	    	}
+	    }
+	int nb_letters;
+	nb_letters = nb_vowel + nb_cons;
+	printf("Nombre de Voyelles : %d\n", nb_vowel);
+	printf("Nombre de Consonnes : %d\n", nb_cons);
+	printf("Nombre de lettres: %d\n", nb_letters);
+
+	float pct_vowel;
+	float pct_cons;
+	pct_vowel = ((nb_vowel *100.00) / nb_letters);
+	pct_cons = 100.00 - pct_vowel;
+	printf("Pourcentage de voyelle : %.2f %%\n", pct_vowel);
+	printf("Pourcentage de consonne : %.2f %%\n", pct_cons);
+*/
+
+
+	return 0;
+}

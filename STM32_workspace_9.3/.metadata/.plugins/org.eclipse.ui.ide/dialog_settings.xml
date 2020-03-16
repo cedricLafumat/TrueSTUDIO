@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.internal.ide.dialogs.ProjectContentsLocationArea">
+		<item value="/home/cedric/Bureau/Lafumat_Cédric/C_dossier/c_projects" key="OUTSIDE_LOCATION"/>
+	</section>
+	<section name="NewWizardAction">
+	</section>
+	<section name="SaveAsDialogSettings">
+		<item value="525" key="DIALOG_WIDTH"/>
+		<item value="1|Ubuntu|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="619" key="DIALOG_HEIGHT"/>
+		<item value="701" key="DIALOG_X_ORIGIN"/>
+		<item value="110" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

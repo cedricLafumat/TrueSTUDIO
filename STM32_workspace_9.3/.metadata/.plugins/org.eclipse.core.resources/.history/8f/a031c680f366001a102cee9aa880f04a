@@ -1,0 +1,57 @@
+#include<stdio.h>
+#include<string.h>	//strlen
+#include<sys/socket.h>
+#include<arpa/inet.h>	//inet_addr
+#include"debug.h"
+#include"socket.h"
+#include<errno.h>
+#include<unistd.h>
+
+int create_socket()
+{
+	int socket_desc;
+	socket_desc = socket(AF_INET , SOCK_STREAM , 0);
+	return socket_desc;
+}
+
+
+int main(int argc , char *argv[])
+{
+	int socket_desc;
+	struct sockaddr_in server;
+	char *message;
+
+	//Create socket
+	socket_desc = create_socket();
+	if (socket_desc == -1)
+	{
+		error_printf("Could not create socket, num error %i, name message : %s", errno,strerror(errno));
+	}
+
+	server.sin_addr.s_addr = inet_addr(SRV_IP);
+	server.sin_family = AF_INET;
+	server.sin_port = htons( SRV_PORT );
+
+	//Connect to remote server
+	if (connect(socket_desc , (struct sockaddr *)&server , sizeof(server)) < 0)
+	{
+		error_printf("connect error, num error %i, name message : %s", errno,strerror(errno));
+		return 1;
+	}
+
+	puts("Connected");
+
+	//Send some data
+
+	while (1){
+		message = "Hello world !\n";
+		if( send(socket_desc , message , strlen(message) , 0) < 0)
+		{
+			error_printf("Send failed, num error %i, name message : %s", errno,strerror(errno));
+			return 1;
+		}
+		puts("Data Send\n");
+		sleep(2);
+	}
+	return 0;
+}

@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+
+struct count{
+	int value;
+	struct pile *previous;
+};
+
+
+
+int main(int argc, char* argv []){
+
+
+	struct count* counting = (struct count*)malloc(sizeof(struct count));
+	struct count counting;
+
+	return 0;
+}

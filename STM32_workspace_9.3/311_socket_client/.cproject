@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="com.atollic.managedbuild.pctools.config.gnu.exe.debug.237411003">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.atollic.managedbuild.pctools.config.gnu.exe.debug.237411003" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.GNU_ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="rm -rf" description="" id="com.atollic.managedbuild.pctools.config.gnu.exe.debug.237411003" name="Debug" parent="com.atollic.managedbuild.pctools.config.gnu.exe.debug">
+					<folderInfo id="com.atollic.managedbuild.pctools.config.gnu.exe.debug.237411003." name="/" resourcePath="">
+						<toolChain id="com.atollic.managedbuild.pctoolschain.gnu.exe.debug.448567652" name="Atollic Linux PC Tools" superClass="com.atollic.managedbuild.pctoolschain.gnu.exe.debug">
+							<targetPlatform id="com.atollic.pctools.managedbuild.target.gnu.platform.exe.debug.1727156797" name="Debug Platform" superClass="com.atollic.pctools.managedbuild.target.gnu.platform.exe.debug"/>
+							<builder buildPath="${workspace_loc:/311_socket_client}/Debug" id="com.atollic.pctools.managedbuild.target.gnu.builder.exe.debug.582179747" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="GNU Make Builder" superClass="com.atollic.pctools.managedbuild.target.gnu.builder.exe.debug"/>
+							<tool id="com.atollic.managedbuild.pctools.gnu.archiver.base.1906555670" name="Archiver" superClass="com.atollic.managedbuild.pctools.gnu.archiver.base"/>
+							<tool id="com.atollic.managedbuild.pctools.gnu.cpp.compiler.exe.debug.71551462" name="C++ Compiler" superClass="com.atollic.managedbuild.pctools.gnu.cpp.compiler.exe.debug">
+								<option id="com.atollic.pctools.gnu.cpp.compiler.exe.debug.option.optimization.level.128828980" name="Optimization Level" superClass="com.atollic.pctools.gnu.cpp.compiler.exe.debug.option.optimization.level" useByScannerDiscovery="false" value="com.atollic.pctools.gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
+								<option id="com.atollic.pctools.gnu.cpp.compiler.exe.debug.option.debugging.level.1424761241" name="Debug Level" superClass="com.atollic.pctools.gnu.cpp.compiler.exe.debug.option.debugging.level" useByScannerDiscovery="false" value="com.atollic.pctools.gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
+							</tool>
+							<tool id="com.atollic.managedbuild.pctools.gnu.c.compiler.exe.debug.1435022634" name="C Compiler" superClass="com.atollic.managedbuild.pctools.gnu.c.compiler.exe.debug">
+								<option defaultValue="com.atollic.pctools.gnu.c.optimization.level.none" id="com.atollic.pctools.gnu.c.compiler.exe.debug.option.optimization.level.282365605" name="Optimization Level" superClass="com.atollic.pctools.gnu.c.compiler.exe.debug.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
+								<option id="com.atollic.pctools.gnu.c.compiler.exe.debug.option.debugging.level.541823420" name="Debug Level" superClass="com.atollic.pctools.gnu.c.compiler.exe.debug.option.debugging.level" useByScannerDiscovery="false" value="com.atollic.pctools.gnu.c.debugging.level.max" valueType="enumerated"/>
+								<inputType id="com.atollic.managedbuild.pctools.gnu.c.compiler.input.595282141" superClass="com.atollic.managedbuild.pctools.gnu.c.compiler.input"/>
+							</tool>
+							<tool id="com.atollic.managedbuild.pctools.gnu.c.linker.exe.debug.1890415323" name="C Linker" superClass="com.atollic.managedbuild.pctools.gnu.c.linker.exe.debug">
+								<inputType id="com.atollic.managedbuild.pctools.gnu.c.linker.input.948518724" superClass="com.atollic.managedbuild.pctools.gnu.c.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="com.atollic.managedbuild.pctools.gnu.cpp.linker.exe.debug.1545520246" name="C++ Linker" superClass="com.atollic.managedbuild.pctools.gnu.cpp.linker.exe.debug"/>
+							<tool id="com.atollic.managedbuild.pctools.gnu.assembler.exe.debug.561831472" name="Assembler" superClass="com.atollic.managedbuild.pctools.gnu.assembler.exe.debug">
+								<inputType id="com.atollic.managedbuild.pctools.gnu.assembler.input.1488054580" superClass="com.atollic.managedbuild.pctools.gnu.assembler.input"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+					<sourceEntries>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="com.atollic.managedbuild.pctools.config.gnu.exe.release.265796401">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.atollic.managedbuild.pctools.config.gnu.exe.release.265796401" moduleId="org.eclipse.cdt.core.settings" name="Release">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.GNU_ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="rm -rf" description="" id="com.atollic.managedbuild.pctools.config.gnu.exe.release.265796401" name="Release" parent="com.atollic.managedbuild.pctools.config.gnu.exe.release">
+					<folderInfo id="com.atollic.managedbuild.pctools.config.gnu.exe.release.265796401." name="/" resourcePath="">
+						<toolChain id="com.atollic.managedbuild.pctoolschain.gnu.exe.release.156870451" name="Atollic Linux PC Tools" superClass="com.atollic.managedbuild.pctoolschain.gnu.exe.release">
+							<targetPlatform id="com.atollic.pctools.managedbuild.target.gnu.platform.exe.release.883373632" name="Debug Platform" superClass="com.atollic.pctools.managedbuild.target.gnu.platform.exe.release"/>
+							<builder buildPath="${workspace_loc:/311_socket_client}/Release" id="com.atollic.pctools.managedbuild.target.gnu.builder.exe.release.326197513" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="GNU Make Builder" superClass="com.atollic.pctools.managedbuild.target.gnu.builder.exe.release"/>
+							<tool id="com.atollic.managedbuild.pctools.gnu.archiver.base.1903614227" name="Archiver" superClass="com.atollic.managedbuild.pctools.gnu.archiver.base"/>
+							<tool id="com.atollic.managedbuild.pctools.gnu.cpp.compiler.exe.release.1431386754" name="C++ Compiler" superClass="com.atollic.managedbuild.pctools.gnu.cpp.compiler.exe.release">
+								<option id="com.atollic.pctools.gnu.cpp.compiler.exe.release.option.optimization.level.1496335580" name="Optimization Level" superClass="com.atollic.pctools.gnu.cpp.compiler.exe.release.option.optimization.level" useByScannerDiscovery="false" value="com.atollic.pctools.gnu.cpp.compiler.optimization.level.most" valueType="enumerated"/>
+								<option id="com.atollic.pctools.gnu.cpp.compiler.exe.release.option.debugging.level.143917684" name="Debug Level" superClass="com.atollic.pctools.gnu.cpp.compiler.exe.release.option.debugging.level" useByScannerDiscovery="false" value="com.atollic.pctools.gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
+							</tool>
+							<tool id="com.atollic.managedbuild.pctools.gnu.c.compiler.exe.release.1550405176" name="C Compiler" superClass="com.atollic.managedbuild.pctools.gnu.c.compiler.exe.release">
+								<option defaultValue="com.atollic.pctools.gnu.c.optimization.level.most" id="com.atollic.pctools.gnu.c.compiler.exe.release.option.optimization.level.1694036577" name="Optimization Level" superClass="com.atollic.pctools.gnu.c.compiler.exe.release.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
+								<option id="com.atollic.pctools.gnu.c.compiler.exe.release.option.debugging.level.221567472" name="Debug Level" superClass="com.atollic.pctools.gnu.c.compiler.exe.release.option.debugging.level" useByScannerDiscovery="false" value="com.atollic.pctools.gnu.c.debugging.level.none" valueType="enumerated"/>
+								<inputType id="com.atollic.managedbuild.pctools.gnu.c.compiler.input.578542430" superClass="com.atollic.managedbuild.pctools.gnu.c.compiler.input"/>
+							</tool>
+							<tool id="com.atollic.managedbuild.pctools.gnu.c.linker.exe.release.1111220750" name="C Linker" superClass="com.atollic.managedbuild.pctools.gnu.c.linker.exe.release">
+								<inputType id="com.atollic.managedbuild.pctools.gnu.c.linker.input.680120608" superClass="com.atollic.managedbuild.pctools.gnu.c.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="com.atollic.managedbuild.pctools.gnu.cpp.linker.exe.release.1302412209" name="C++ Linker" superClass="com.atollic.managedbuild.pctools.gnu.cpp.linker.exe.release"/>
+							<tool id="com.atollic.managedbuild.pctools.gnu.assembler.exe.release.1131639653" name="Assembler" superClass="com.atollic.managedbuild.pctools.gnu.assembler.exe.release">
+								<inputType id="com.atollic.managedbuild.pctools.gnu.assembler.input.1142169625" superClass="com.atollic.managedbuild.pctools.gnu.assembler.input"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+					<sourceEntries>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="311_socket_client.com.atollic.pctools.managedbuild.target.gnu.exe.2137050061" name="Executable" projectType="com.atollic.pctools.managedbuild.target.gnu.exe"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+</cproject>

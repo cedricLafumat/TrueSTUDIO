@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+
+struct count{
+	int value;
+	struct count *previous;
+};
+
+
+
+int main(int argc, char* argv []){
+	int begin_count = 10;
+	int end_count = 0;
+
+	struct count* counting = (struct count*)malloc(sizeof(struct count));
+	((struct count*)counting)->value = begin_count;
+	((struct count*)counting)->previous = 0;
+
+
+
+	for(int index_loop = begin_count; index_loop >= end_count; index_loop--){
+		struct count* decompte = (struct count*)malloc(sizeof(struct count));
+		printf("%i", decompte->value);
+		decompte->value-=1;
+	}
+
+
+	return 0;
+}

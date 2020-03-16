@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;exo_manip_char/src/61_count_char_file&apos; to &apos;61_count_char_file.c&apos;" description="Rename resource &apos;61_count_char_file&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/61_count_char_file" name="61_count_char_file.c" stamp="1582291215444" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;exo_manip_char/src/main.c&apos; to &apos;60_count_char.c&apos;" description="Rename resource &apos;main.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main.c" name="60_count_char.c" stamp="1582291459401" updateReferences="true"/>
+</session>

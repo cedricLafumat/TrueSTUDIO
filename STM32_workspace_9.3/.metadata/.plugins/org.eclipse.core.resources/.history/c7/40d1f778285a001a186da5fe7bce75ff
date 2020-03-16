@@ -1,0 +1,107 @@
+#include<stdio.h>
+#include "leds_control.h"
+
+typedef struct{
+	int RValue;
+	int GValue;
+	int BValue;
+}RGB;
+
+const RGB Red={255,0,0};
+const RGB Green={0,255,0};
+const RGB Blue={0,0,255};
+const RGB White={255,255,255};
+const RGB Purple={255,0,255};
+const RGB Yellow={255,255,0};
+const RGB Black={0,0,0};
+
+
+void SetLedLine( int Line, RGB TabLine[], int TabSize){
+	for (int col = 0; col < TabSize; col++){
+		setLedColor(Line, col+1, TabLine[col].RValue, TabLine[col].GValue, TabLine[col].BValue);
+	}
+}
+
+
+void SetLedOneColor( int Line, RGB Color, int SizeLine){
+	for (int col = 0; col < SizeLine; col++){
+		setLedColor(Line, col+1, Color.RValue, Color.GValue, Color.BValue);
+
+	}
+}
+
+void ResetAllBlack(){
+	SetLedOneColor(1,Black, 7);
+	SetLedOneColor(2,Black, 7);
+	SetLedOneColor(3,Black, 7);
+	SetLedOneColor(4,Black, 7);
+	SetLedOneColor(5,Black, 7);
+	SetLedOneColor(6,Black, 7);
+	SetLedOneColor(7,Black, 7);
+}
+
+void compteur(TabSize){
+	for(int compteur=9 ; compteur>=0; compteur--){
+		if (compteur==9){
+			Color tabline_1[7]={black,black,red,red,red,black,black};
+			Color tabline_2[7]={black, red,black,black,black,red, black};
+			Color tabline_3[7]={black, red,black,black,black,red, black};
+			Color tabline_4[7]={black,black,red,red,red,red,black};
+			Color tabline_5[7]={black,black,black,black,black,red,black};
+			Color tabline_6[7]={black,black,black,black,black,red,black};
+			Color tabline_7[7]={black,black,red,red,red,black,black};
+			Color *matrice[7]={tabline_1,tabline_2,tabline_3,tabline_4,tabline_5,tabline_6,tabline_7};
+			SetLedLine(matrice,TabSize);
+
+		}
+	}
+}
+int main(int argc, char* argv[]){
+
+	ResetAllBlack();
+
+	int TabSize;
+	TabSize = 7;
+	compteur(TabSize);
+
+	/*RGB TabLine1[7];
+	TabLine1[0] = Red;
+	TabLine1[1] = Black;
+	TabLine1[2] = Black;
+	TabLine1[3] = Black;
+	TabLine1[4] = Black;
+	TabLine1[5] = Black;
+	TabLine1[6] = Red;
+
+	RGB TabLine2[7];
+	TabLine2[0] = Red;
+	TabLine2[1] = Black;
+	TabLine2[2] = Green;
+	TabLine2[3] = Green;
+	TabLine2[4] = Green;
+	TabLine2[5] = Black;
+	TabLine2[6] = Red;
+
+	RGB TabLine3[7];
+	TabLine3[0] = Red;
+	TabLine3[1] = Black;
+	TabLine3[2] = Green;
+	TabLine3[3] = White;
+	TabLine3[4] = Green;
+	TabLine3[5] = Black;
+	TabLine3[6] = Red;
+
+
+
+	SetLedOneColor(1, Red, TabSize);
+	SetLedLine(2,TabLine1, 7);
+	SetLedLine(3, TabLine2, TabSize);
+	SetLedLine(4, TabLine3, TabSize);
+	SetLedLine(5, TabLine2, TabSize);
+	SetLedLine(6, TabLine1, TabSize);
+	SetLedOneColor(7, Red, TabSize);*/
+
+
+
+	return 0;
+}

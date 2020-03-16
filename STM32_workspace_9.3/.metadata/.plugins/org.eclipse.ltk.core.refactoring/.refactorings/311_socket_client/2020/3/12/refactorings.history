@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;311_socket_client/src/socket.h&apos; to &apos;client.h&apos;" description="Rename resource &apos;socket.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/socket.h" name="client.h" stamp="1584368450823" updateReferences="true"/>
+</session>

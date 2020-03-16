@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+
+struct count{
+	int value;
+	struct count *previous;
+};
+
+
+
+int main(int argc, char* argv []){
+
+
+	struct count* counting = (struct count*)malloc(sizeof(struct count));
+	((count*)counting)->value = 1;
+	((count*)counting)->previous = 0;
+
+	return 0;
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;liste_chainees/src/pile.h&apos; to &apos;Pile.h&apos;" description="Rename resource &apos;pile.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/pile.h" name="Pile.h" stamp="1582729922992" updateReferences="true"/>
+</session>
