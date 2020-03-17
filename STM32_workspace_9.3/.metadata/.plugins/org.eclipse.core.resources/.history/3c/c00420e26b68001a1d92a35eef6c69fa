@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<string.h>	//strlen
+#include<sys/socket.h>
+#include<arpa/inet.h>	//inet_addr
+#include"debug.h"
+#include<errno.h> //errno
+#include<unistd.h>
+#include"client.h"
+
+int main(int argc, char *argv[]) {
+	int socket_desc;
+	char *message;
+	int nb_bytes_send;
+	debug_setlevel(3);
+
+	socket_desc = connect_to_remote_server();
+	//connexion OK
+	message = "Hello world !\n";
+	int message_send = send_msg(socket_desc, message)
+	while (1) {
+		int error_send_message;
+		nb_bytes_send = send(socket_desc, message, strlen(message), 0);
+		while (nb_bytes_send == -1) {
+			nb_bytes_send = send(socket_desc, message, strlen(message), 0);
+			if (nb_bytes_send == -1) {
+				error_send_message = errno;
+				error_printf(
+						"Send failed // Num error : [%i] // Message_error : [%s]\n",
+						error_send_message, strerror(error_send_message));
+				close(socket_desc);
+				socket_desc = connect_to_remote_server();
+			}
+		}
+		debug_printf(3, "Data Send\n");
+		sleep(2);
+	}
+	return 0;
+}

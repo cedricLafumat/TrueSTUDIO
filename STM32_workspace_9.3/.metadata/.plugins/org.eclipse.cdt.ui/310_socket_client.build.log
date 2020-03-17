@@ -1,6 +1,6 @@
-15:27:30 **** Incremental Build of configuration Debug for project 310_socket_client ****
+00:13:39 **** Incremental Build of configuration Debug for project 310_socket_client ****
 make -j4 all 
 make: rien à faire pour « all ».
 
-15:27:30 Build Finished (took 285ms)
+00:13:39 Build Finished (took 343ms)
 

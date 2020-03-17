@@ -3,78 +3,28 @@
 #include<sys/socket.h>
 #include<arpa/inet.h>	//inet_addr
 #include"debug.h"
-#include"socket.h"
-#include<errno.h>
+#include<errno.h> //errno
 #include<unistd.h>
+#include"client.h"
 
-int create_socket(){
+int main(int argc, char *argv[]) {
+	debug_setlevel(3);
 	int socket_desc;
-	socket_desc = socket(AF_INET , SOCK_STREAM , 0);
-	if (socket_desc == -1){
-		error_printf("Could not create socket // Num error : [%i] // Message_error : [%s]\n", errno,strerror(errno));
-	}
-	return socket_desc;
-}
-
-int connect_to_remote_server(int socket_desc){
-	struct sockaddr_in server;
-	int is_connect;
-
-	server.sin_addr.s_addr = inet_addr(SRV_IP);
-	server.sin_family = AF_INET;
-	server.sin_port = htons( SRV_PORT );
-	is_connect = connect(socket_desc , (struct sockaddr *)&server , sizeof(server));
-	if (is_connect < 0){
-		error_printf("Connect error // Num error : [%i] // Message_error : [%s]\n\n", errno,strerror(errno));
-	}
-	else{
-		puts("Connected");
-	}
-	return is_connect;
-}
-
-
-int main(int argc , char *argv[]){
-	int socket_desc;
-	int is_connect;
 	char *message;
+	int message_send = -1;
 
-	//Create socket
-	socket_desc = create_socket();
-	while (socket_desc == -1){
-		socket_desc = create_socket();
-		sleep(2);
-	}
-
-	//Connect to remote server
-	is_connect = connect_to_remote_server(socket_desc);
-	while (is_connect == -1){
-		is_connect = connect_to_remote_server(socket_desc);
-		sleep(2);
-	}
-
-	//Send some data
-
-	while (1){
-		message = "Hello world !\n";
-		if( send(socket_desc , message , strlen(message) , 0) < 0)
-		{
-			error_printf("Send failed // Num error : [%i] // Message_error : [%s]\n", errno,strerror(errno));
-			socket_desc = create_socket();
-			while (socket_desc == -1){
-				sleep(2);
-				socket_desc = create_socket();
-			}
-			is_connect = connect_to_remote_server(socket_desc);
-			while (is_connect == -1){
-				sleep(2);
-				is_connect = connect_to_remote_server(socket_desc);
-			}
+	socket_desc = connect_to_remote_server();
+	//connection good
+	message = "Hello world !\n";
+	while (1) {
+		message_send = send_msg(socket_desc, message);
+		if (message_send == -1) {
+			//message not send, need to reconnect
+			socket_desc = connect_to_remote_server();
 		}
 		else{
-			puts("Data Send\n");
+			sleep(2);
 		}
-		sleep(2);
 	}
 	return 0;
 }

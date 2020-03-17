@@ -5,39 +5,26 @@
 #include"debug.h"
 #include<errno.h> //errno
 #include<unistd.h>
-#include "client.h"
+#include"client.h"
 
-int main(int argc , char *argv[]){
-	int is_connect;
+int main(int argc, char *argv[]) {
+	debug_setlevel(3);
+	int socket_desc;
 	char *message;
+	int message_send = -1;
 
-	//Connect to remote server
-	is_connect = connect_to_remote_server();
-	while (is_connect == -1){
-		is_connect = connect_to_remote_server();
-		sleep(2);
-	}
-
-	//Send some data
-
-	while (1){
-		message = "Hello world !\n";
-		int myerror;
-		if( send(is_connect , message , strlen(message) , 0) < 0)
-		{
-			myerror = errno;
-			error_printf("Send failed // Num error : [%i] // Message_error : [%s]\n", myerror,strerror(myerror));
-			close(is_connect);
-			is_connect = connect_to_remote_server();
-			while (is_connect == -1){
-				sleep(2);
-				is_connect = connect_to_remote_server();
-			}
+	socket_desc = connect_to_remote_server();
+	//connection good
+	message = "Hello world !\n";
+	while (1) {
+		message_send = send_msg(socket_desc, message);
+		if (message_send == -1) {
+			//message not send, need to reconnect
+			socket_desc = connect_to_remote_server();
 		}
 		else{
-			puts("Data Send\n");
+			sleep(2);
 		}
-		sleep(2);
 	}
 	return 0;
 }

@@ -569,3 +569,366 @@ gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o
 15:27:38 **** Incremental Build of configuration Debug for project 311_socket_client ****
 make -j4 all 
 make: rien à faire pour « all ».
+09:09:32 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+09:25:51 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+09:31:07 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+09:33:18 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+09:39:11 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+../src/client.c: In function ‘connect_to_remote_server’:
+../src/client.c:58:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+09:39:39 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+09:39:55 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+09:40:37 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+make: rien à faire pour « all ».
+09:42:43 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+09:42:45 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+make: rien à faire pour « all ».
+10:51:36 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+10:51:38 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+make: rien à faire pour « all ».
+10:58:50 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+10:58:52 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+make: rien à faire pour « all ».
+11:04:17 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+11:07:26 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+11:07:28 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+make: rien à faire pour « all ».
+12:06:38 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+13:19:18 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+13:35:32 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+13:35:46 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+make: rien à faire pour « all ».
+13:38:56 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+13:39:10 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+make: rien à faire pour « all ».
+13:40:04 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+13:40:45 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+../src/client.c: In function ‘connect_to_remote_server’:
+../src/client.c:60:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+13:41:08 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+13:45:38 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+13:57:43 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+13:57:45 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+make: rien à faire pour « all ».
+13:58:54 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+13:58:55 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+make: rien à faire pour « all ».
+14:00:43 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+14:00:44 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+make: rien à faire pour « all ».
+14:03:14 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+14:03:16 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+make: rien à faire pour « all ».
+14:04:41 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+14:04:42 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+make: rien à faire pour « all ».
+15:47:51 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+make: rien à faire pour « all ».
+15:48:02 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+make: rien à faire pour « all ».
+16:56:03 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘f’:
+../src/main.c:11:6: warning: unused variable ‘is_connect’ [-Wunused-variable]
+  int is_connect;
+      ^~~~~~~~~~
+../src/main.c:13:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+16:56:14 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+16:56:16 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+make: rien à faire pour « all ».
+16:57:20 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:02:08 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+17:02:10 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:25:16 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/client.c: In function ‘send_msg’:
+../src/main.c: In function ‘main’:
+../src/main.c:19:21: warning: implicit declaration of function ‘send_msg’; did you mean ‘sendmsg’? [-Wimplicit-function-declaration]
+  int message_send = send_msg(socket_desc, message)
+                     ^~~~~~~~
+                     sendmsg
+../src/main.c:37:2: error: expected ‘,’ or ‘;’ before ‘return’
+  return 0;
+  ^~~~~~
+../src/main.c:19:6: warning: unused variable ‘message_send’ [-Wunused-variable]
+  int message_send = send_msg(socket_desc, message)
+      ^~~~~~~~~~~~
+../src/main.c:13:6: warning: unused variable ‘nb_bytes_send’ [-Wunused-variable]
+  int nb_bytes_send;
+      ^~~~~~~~~~~~~
+../src/client.c:65:4: error: ‘nb_bytes_send’ undeclared (first use in this function)
+    nb_bytes_send = send(socket_desc, message, strlen(message), 0);
+    ^~~~~~~~~~~~~
+../src/client.c:65:4: note: each undeclared identifier is reported only once for each function it appears in
+src/subdir.mk:24: recipe for target 'src/client.o' failed
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/client.o] Error 1
+make: *** Attente des tâches non terminées....
+make: *** [src/main.o] Error 1
+17:25:51 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:20:17: warning: implicit declaration of function ‘send_msg’; did you mean ‘sendmsg’? [-Wimplicit-function-declaration]
+  message_send = send_msg(socket_desc, message)
+                 ^~~~~~~~
+                 sendmsg
+../src/main.c:38:2: error: expected ‘;’ before ‘return’
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+  return 0;
+  ^~~~~~
+../src/main.c:14:6: warning: unused variable ‘nb_bytes_send’ [-Wunused-variable]
+  int nb_bytes_send;
+      ^~~~~~~~~~~~~
+../src/main.c:13:6: warning: variable ‘message_send’ set but not used [-Wunused-but-set-variable]
+  int message_send;
+      ^~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+make: *** Attente des tâches non terminées....
+../src/client.c: In function ‘send_msg’:
+../src/client.c:65:4: error: ‘nb_bytes_send’ undeclared (first use in this function)
+    nb_bytes_send = send(socket_desc, message, strlen(message), 0);
+src/subdir.mk:24: recipe for target 'src/client.o' failed
+    ^~~~~~~~~~~~~
+../src/client.c:65:4: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/client.o] Error 1
+17:53:55 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:19:17: warning: implicit declaration of function ‘send_msg’; did you mean ‘sendmsg’? [-Wimplicit-function-declaration]
+  message_send = send_msg(socket_desc, message);
+                 ^~~~~~~~
+                 sendmsg
+../src/main.c:13:6: warning: variable ‘message_send’ set but not used [-Wunused-but-set-variable]
+  int message_send;
+      ^~~~~~~~~~~~
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+17:55:38 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:13:6: warning: variable ‘message_send’ set but not used [-Wunused-but-set-variable]
+  int message_send;
+      ^~~~~~~~~~~~
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+18:05:18 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+18:05:28 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:08:35 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+18:08:37 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:09:41 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+make: rien à faire pour « all ».
+23:30:09 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+23:30:12 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+make: rien à faire pour « all ».
+23:30:49 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+23:30:51 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+make: rien à faire pour « all ».
+23:33:27 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+../src/client.c: In function ‘connect_to_remote_server’:
+../src/client.c:57:12: warning: passing argument 1 of ‘printf’ makes pointer from integer without a cast [-Wint-conversion]
+     printf(nb_connection_attemps);
+            ^~~~~~~~~~~~~~~~~~~~~
+In file included from ../src/client.c:8:0:
+/usr/include/stdio.h:318:12: note: expected ‘const char * restrict’ but argument is of type ‘int’
+ extern int printf (const char *__restrict __format, ...);
+            ^~~~~~
+../src/client.c:57:5: warning: format not a string literal and no format arguments [-Wformat-security]
+     printf(nb_connection_attemps);
+     ^~~~~~
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+23:34:14 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+23:34:16 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+make: rien à faire pour « all ».
+23:34:43 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+23:34:45 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+make: rien à faire pour « all ».
+23:41:12 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+23:41:14 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+make: rien à faire pour « all ».
+23:45:19 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+23:45:21 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+make: rien à faire pour « all ».
+23:53:41 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+23:53:42 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+make: rien à faire pour « all ».
+00:04:33 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+00:07:47 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+make: rien à faire pour « all ».
+00:13:06 **** Build of configuration Debug for project 310_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/client.d" -MT"src/client.o" -o "src/client.o" "../src/client.c"
+gcc  -o "310_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+00:13:07 **** Incremental Build of configuration Debug for project 311_socket_client ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "311_socket_client"  ./src/client.o ./src/debug.o ./src/main.o   
+00:13:39 **** Incremental Build of configuration Debug for project 310_socket_client ****
+make -j4 all 
+make: rien à faire pour « all ».
