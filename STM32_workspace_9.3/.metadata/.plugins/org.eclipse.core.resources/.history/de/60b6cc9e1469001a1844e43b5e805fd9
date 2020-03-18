@@ -1,0 +1,10 @@
+#include<stdio.h>
+
+int main(void){
+	int param_A;
+	int param_B;
+
+	if (param_A && )
+
+	return 0;
+}

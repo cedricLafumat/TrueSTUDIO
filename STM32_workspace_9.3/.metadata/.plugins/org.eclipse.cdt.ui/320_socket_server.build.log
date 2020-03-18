@@ -1,7 +1,6 @@
-00:16:57 **** Build of configuration Debug for project 320_socket_server ****
+14:19:21 **** Incremental Build of configuration Debug for project 320_socket_server ****
 make -j4 all 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-gcc  -o "320_socket_server"  ./src/main.o   
+make: rien à faire pour « all ».
 
-00:16:58 Build Finished (took 436ms)
+14:19:21 Build Finished (took 267ms)
 

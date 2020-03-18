@@ -1,0 +1,17 @@
+#include<stdio.h>
+
+int main(void){
+	int param_A = 1;
+	int param_B = 0;
+	int result;
+
+	if (param_A && param_B){
+		result = 1;
+	}
+	else{
+		result = 0;
+	}
+	printf("%i", result);
+
+	return 0;
+}

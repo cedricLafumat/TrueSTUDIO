@@ -936,3 +936,238 @@ make: rien à faire pour « all ».
 make -j4 all 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
 gcc  -o "320_socket_server"  ./src/main.o   
+00:19:18 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "320_socket_server"  ./src/main.o   
+12:41:52 **** Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "code_fonction_logique"  ./src/main.o   
+12:42:48 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "code_fonction_logique"  ./src/main.o   
+13:30:49 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+13:30:49 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:7:17: error: expected expression before ‘)’ token
+  if (param_A && )
+src/subdir.mk:18: recipe for target 'src/main.o' failed
+                 ^
+../src/main.c:5:6: warning: unused variable ‘param_B’ [-Wunused-variable]
+  int param_B;
+      ^~~~~~~
+make: *** [src/main.o] Error 1
+13:33:08 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+13:33:08 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "code_fonction_logique"  ./src/main.o   
+13:33:11 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+make: rien à faire pour « all ».
+13:33:17 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+13:33:18 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "code_fonction_logique"  ./src/main.o   
+13:33:19 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+make: rien à faire pour « all ».
+13:33:39 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+13:33:39 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "code_fonction_logique"  ./src/main.o   
+13:33:41 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+make: rien à faire pour « all ».
+13:33:50 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+13:33:50 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "code_fonction_logique"  ./src/main.o   
+13:33:52 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+make: rien à faire pour « all ».
+13:33:57 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+13:33:58 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "code_fonction_logique"  ./src/main.o   
+13:33:59 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+make: rien à faire pour « all ».
+13:37:23 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+13:37:23 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘compare_bit_by_bit’:
+../src/main.c:3:5: warning: type of ‘param_A’ defaults to ‘int’ [-Wimplicit-int]
+ int compare_bit_by_bit( param_A, param_B) {
+src/subdir.mk:18: recipe for target 'src/main.o' failed
+     ^~~~~~~~~~~~~~~~~~
+../src/main.c:3:5: warning: type of ‘param_B’ defaults to ‘int’ [-Wimplicit-int]
+../src/main.c: In function ‘main’:
+../src/main.c:19:15: error: ‘result’ undeclared (first use in this function)
+  printf("%i", result);
+               ^~~~~~
+../src/main.c:19:15: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:14:6: warning: variable ‘result_bit_by_bit’ set but not used [-Wunused-but-set-variable]
+  int result_bit_by_bit;
+      ^~~~~~~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+13:37:36 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+13:37:36 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:19:15: error: ‘result’ undeclared (first use in this function)
+  printf("%i", result);
+               ^~~~~~
+../src/main.c:19:15: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:14:6: warning: variable ‘result_bit_by_bit’ set but not used [-Wunused-but-set-variable]
+  int result_bit_by_bit;
+      ^~~~~~~~~~~~~~~~~
+src/subdir.mk:18: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+13:37:55 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+13:37:55 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "code_fonction_logique"  ./src/main.o   
+13:38:39 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+make: rien à faire pour « all ».
+13:41:24 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+13:41:24 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "code_fonction_logique"  ./src/main.o   
+13:41:25 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+make: rien à faire pour « all ».
+13:41:34 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+13:41:34 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "code_fonction_logique"  ./src/main.o   
+13:41:35 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+make: rien à faire pour « all ».
+13:56:47 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+13:56:47 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "code_fonction_logique"  ./src/main.o   
+13:56:49 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+make: rien à faire pour « all ».
+13:56:55 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+13:56:55 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "code_fonction_logique"  ./src/main.o   
+13:56:57 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+make: rien à faire pour « all ».
+13:58:40 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+13:58:40 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "code_fonction_logique"  ./src/main.o   
+13:58:42 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+make: rien à faire pour « all ».
+13:58:49 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+13:58:49 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "code_fonction_logique"  ./src/main.o   
+13:58:50 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+make: rien à faire pour « all ».
+13:59:04 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+13:59:05 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "code_fonction_logique"  ./src/main.o   
+13:59:06 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+make: rien à faire pour « all ».
+14:13:52 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+14:13:52 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:37:6: warning: variable ‘result_compl_to_1’ set but not used [-Wunused-but-set-variable]
+  int result_compl_to_1;
+      ^~~~~~~~~~~~~~~~~
+gcc  -o "code_fonction_logique"  ./src/main.o   
+14:14:04 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+14:14:05 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "code_fonction_logique"  ./src/main.o   
+14:14:06 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+make: rien à faire pour « all ».
+14:19:09 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+14:19:10 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "code_fonction_logique"  ./src/main.o   
+14:19:11 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+make: rien à faire pour « all ».
+14:19:21 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+14:19:21 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "code_fonction_logique"  ./src/main.o   
+14:19:23 **** Incremental Build of configuration Debug for project code_fonction_logique ****
+make -j4 all 
+make: rien à faire pour « all ».
