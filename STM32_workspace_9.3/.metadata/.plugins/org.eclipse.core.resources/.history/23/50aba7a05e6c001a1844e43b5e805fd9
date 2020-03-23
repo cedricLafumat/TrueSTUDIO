@@ -1,0 +1,14 @@
+/*
+ * server.h
+ *
+ *  Created on: 22 mars 2020
+ *      Author: cedric
+ */
+
+#ifndef SERVER_H_
+#define SERVER_H_
+#define SRV_PORT 5001
+
+
+
+#endif /* SERVER_H_ */
