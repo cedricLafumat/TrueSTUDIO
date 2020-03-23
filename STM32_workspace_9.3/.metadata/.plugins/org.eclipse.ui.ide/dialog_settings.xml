@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/led_blink"/>
+		<item value="/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/test_create_project"/>
+	</list>
 	<section name="org.eclipse.ui.internal.ide.dialogs.ProjectContentsLocationArea">
 		<item value="/home/cedric/Bureau/Lafumat_Cédric/C_dossier/c_projects" key="OUTSIDE_LOCATION"/>
 	</section>
