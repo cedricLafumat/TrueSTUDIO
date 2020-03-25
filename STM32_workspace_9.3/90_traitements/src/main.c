@@ -19,26 +19,26 @@ const RGB Black={0,0,0};
 void SetLedLine(RGB **TabLine, int TabSize){
 	for (int line=0; line<TabSize; line++){
 		for(int col = 0; col < TabSize; col++){
-			setLedColor(line+1, col+1, TabLine[line][col].RValue, TabLine[line][col].GValue, TabLine[line][col].BValue);
+			setLedColor("R", line+1, col+1, TabLine[line][col].RValue, TabLine[line][col].GValue, TabLine[line][col].BValue, "\n");
 		}
 	}
 }
 
 void SetLedOneColor( int Line, RGB Color, int SizeLine){
 	for (int col = 0; col < SizeLine; col++){
-		setLedColor(Line, col+1, Color.RValue, Color.GValue, Color.BValue);
-
+		setLedColor("R", Line, col+1, Color.RValue, Color.GValue, Color.BValue, "\n");
 	}
 }
 
 void ResetAllBlack(){
-	SetLedOneColor(1,Black, 7);
-	SetLedOneColor(2,Black, 7);
-	SetLedOneColor(3,Black, 7);
-	SetLedOneColor(4,Black, 7);
-	SetLedOneColor(5,Black, 7);
-	SetLedOneColor(6,Black, 7);
-	SetLedOneColor(7,Black, 7);
+	int Sizeline = 7;
+	SetLedOneColor(1,Black, Sizeline);
+	SetLedOneColor(2,Black, Sizeline);
+	SetLedOneColor(3,Black, Sizeline);
+	SetLedOneColor(4,Black, Sizeline);
+	SetLedOneColor(5,Black, Sizeline);
+	SetLedOneColor(6,Black, Sizeline);
+	SetLedOneColor(7,Black, Sizeline);
 }
 
 void compteur(int TabSize){

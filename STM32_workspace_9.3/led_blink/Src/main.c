@@ -23,7 +23,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include<string.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -103,21 +103,39 @@ int main(void) {
 	/* Infinite loop */
 	/* USER CODE BEGIN WHILE */
 	int button_state = 0;
+	int delay = 150;
+	char*message;
+	message = "dhello world\n";
+	int msg_length = strlen(message);
 	while (1) {
-		button_state = HAL_GPIO_ReadPin(GPIOC, USER_Btn_Pin);
+		button_state = HAL_GPIO_ReadPin(USER_Btn_GPIO_Port, USER_Btn_Pin);
 		while (button_state == 1) {
-			HAL_GPIO_TogglePin(GPIOB, LD1_Pin);
-			HAL_Delay(100);
-			HAL_GPIO_TogglePin(GPIOB, LD2_Pin);
-			HAL_Delay(100);
-			HAL_GPIO_TogglePin(GPIOB, LD3_Pin);
-			HAL_Delay(100);
-			HAL_GPIO_TogglePin(GPIOB, LD2_Pin);
-			HAL_Delay(100);
-			int new_state = HAL_GPIO_ReadPin(GPIOC, USER_Btn_Pin);
+			HAL_UART_Transmit(&huart3, (unsigned char*) message, msg_length,10);
+			HAL_GPIO_TogglePin(LD1_GPIO_Port, LD1_Pin);
+			HAL_Delay(delay);
+			HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+			HAL_Delay(delay);
+			HAL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
+			HAL_Delay(delay);
+			HAL_GPIO_TogglePin(LD1_GPIO_Port, LD1_Pin);
+			HAL_Delay(delay);
+			HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+			HAL_Delay(delay);
+			HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+			HAL_Delay(delay);
+			HAL_GPIO_TogglePin(LD1_GPIO_Port, LD1_Pin);
+			HAL_Delay(delay);
+			HAL_GPIO_TogglePin(LD3_GPIO_Port, LD3_Pin);
+			HAL_Delay(delay);
+			HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+			HAL_Delay(delay);
+			HAL_GPIO_TogglePin(LD1_GPIO_Port, LD1_Pin);
+			HAL_Delay(delay);
+			int new_state = HAL_GPIO_ReadPin(USER_Btn_GPIO_Port, USER_Btn_Pin);
 			if (new_state == 1) {
 				button_state = 0;
-				while (HAL_GPIO_ReadPin(GPIOC, USER_Btn_Pin) == 1);
+				while (HAL_GPIO_ReadPin(USER_Btn_GPIO_Port, USER_Btn_Pin) == 1)
+					;
 			}
 		}
 	}
