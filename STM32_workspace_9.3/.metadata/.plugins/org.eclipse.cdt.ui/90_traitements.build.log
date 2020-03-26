@@ -1,6 +1,6 @@
-14:28:26 **** Incremental Build of configuration Debug for project 90_traitements ****
+13:58:37 **** Incremental Build of configuration Debug for project 90_traitements ****
 make -j4 all 
-make: rien à faire pour « all ».
+Cannot run program "make": Unknown reason
 
-14:28:26 Build Finished (took 274ms)
+13:58:37 Build Finished (took 7ms)
 

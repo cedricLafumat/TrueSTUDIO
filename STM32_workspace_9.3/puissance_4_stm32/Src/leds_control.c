@@ -2,6 +2,9 @@
 
 #include <fcntl.h>
 #include <unistd.h>
+#include<string.h>
+#include<stdio.h>
+#include "stm32f4xx_hal.h"
 
 #ifdef TEST_HEADER
 #include TEST_HEADER
@@ -37,6 +40,8 @@
 
 #define SIZE_OF_BUFFER (4 + NUMBER_OF_LEDS_PER_RING * 3)
 
+extern UART_HandleTypeDef huart3;
+
 /**
  * @brief compute buffer to control led through serial link
  *
@@ -47,7 +52,7 @@
  * @param green Green value of RGB code
  * @param blue Blue value of RGB code
  */
-static void computeMessage(unsigned char * const buffer,
+/*static void computeMessage(unsigned char * const buffer,
                            const unsigned int row, 
                            const unsigned int col, 
                            const unsigned int red, 
@@ -65,8 +70,8 @@ static void computeMessage(unsigned char * const buffer,
 
   buffer[SIZE_OF_BUFFER - 1] = '\n';
 }
-
-LedControlReturnCode setLedColor(const unsigned int row, 
+*/
+LedControlReturnCode setLedColor(const unsigned int row,
                                  const unsigned int col, 
                                  const unsigned int red, 
                                  const unsigned int green, 
@@ -82,13 +87,19 @@ LedControlReturnCode setLedColor(const unsigned int row,
 
   const unsigned int finalRow = row - 1;
   const unsigned int finalCol = col - 1;
+  char message[11];
+  sprintf(message, "R%d%d%02x%02x%02x\n", finalRow, finalCol, red, green, blue);
+  HAL_UART_Transmit(&huart3,(uint8_t *) message, strlen(message), 0xFFFF);
 
-  const int fd = LC_OPEN("/tmp/puissance4/serial/ttyS1", O_WRONLY | O_NDELAY);
+
+  /*
+ const int fd = LC_OPEN("/tmp/puissance4/serial/ttyS1", O_WRONLY | O_NDELAY);
+  unsigned char buffer[SIZE_OF_BUFFER] = { 0 };
+  computeMessage(buffer, finalRow, finalCol, red, green, blue);
 
   if (fd == -1)
     return LCRC_ERROR_SERIAL_OPEN;
 
-  unsigned char buffer[SIZE_OF_BUFFER] = { 0 };
   computeMessage(buffer, finalRow, finalCol, red, green, blue);
 
   const ssize_t nbOfWrittenBytes = LC_WRITE(fd, buffer, SIZE_OF_BUFFER);
@@ -100,6 +111,7 @@ LedControlReturnCode setLedColor(const unsigned int row,
 
   if (LC_CLOSE(fd) != 0)
     return LCRC_ERROR_SERIAL_CLOSE;
+ */
 
 
   return LCRC_OK;

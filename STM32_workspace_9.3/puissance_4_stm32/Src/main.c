@@ -61,7 +61,6 @@ const RGB White = { 255, 255, 255 };
 const RGB Purple = { 255, 0, 255 };
 const RGB Yellow = { 255, 255, 0 };
 const RGB Black = { 0, 0, 0 };
-
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -79,14 +78,14 @@ static void MX_USB_OTG_FS_PCD_Init(void);
 void SetLedLine(RGB **TabLine, int TabSize) {
 	for (int line = 0; line < TabSize; line++) {
 		for (int col = 0; col < TabSize; col++) {
-			setLedColor("R", line + 1, col + 1, TabLine[line][col].RValue, TabLine[line][col].GValue, TabLine[line][col].BValue, "\n");
+			setLedColor(line +1, col +1, TabLine[line][col].RValue, TabLine[line][col].GValue, TabLine[line][col].BValue);
 		}
 	}
 }
 
 void SetLedOneColor(int Line, RGB Color, int SizeLine) {
 	for (int col = 0; col < SizeLine; col++) {
-		setLedColor("R", Line, col + 1, Color.RValue, Color.GValue, Color.BValue, "\n");
+		setLedColor(Line , col +1, Color.RValue, Color.GValue, (Color.BValue));
 	}
 }
 
@@ -102,8 +101,8 @@ void ResetAllBlack() {
 }
 
 void compteur(int TabSize) {
-	for (int compteur = 9; compteur >= 0; compteur--) {
-		if (compteur == 9) {
+	for (int compteur = 13; compteur >= 0; compteur--) {
+		if (compteur == 13) {
 			RGB bckgrd = Black;
 			RGB number = Red;
 			RGB tabline_1[7] = { bckgrd, bckgrd, number, number, number, bckgrd,bckgrd };
@@ -116,7 +115,7 @@ void compteur(int TabSize) {
 			RGB *matrice[7] = { tabline_1, tabline_2, tabline_3, tabline_4,tabline_5, tabline_6, tabline_7 };
 			SetLedLine(matrice, TabSize);
 		}
-		if (compteur == 8) {
+		if (compteur == 12) {
 			RGB bckgrd = Black;
 			RGB number = White;
 			RGB tabline_1[7] = { bckgrd, bckgrd, number, number, number, bckgrd,bckgrd };
@@ -129,7 +128,7 @@ void compteur(int TabSize) {
 			RGB *matrice[7] = { tabline_1, tabline_2, tabline_3, tabline_4,tabline_5, tabline_6, tabline_7 };
 			SetLedLine(matrice, TabSize);
 		}
-		if (compteur == 7) {
+		if (compteur == 11) {
 			RGB bckgrd = Black;
 			RGB number = Green;
 			RGB tabline_1[7] = { bckgrd, number, number, number, number, number,bckgrd };
@@ -142,7 +141,7 @@ void compteur(int TabSize) {
 			RGB *matrice[7] = { tabline_1, tabline_2, tabline_3, tabline_4,tabline_5, tabline_6, tabline_7 };
 			SetLedLine(matrice, TabSize);
 		}
-		if (compteur == 6) {
+		if (compteur == 10) {
 			RGB bckgrd = Black;
 			RGB number = Blue;
 			RGB tabline_1[7] = { bckgrd, bckgrd, number, number, number, bckgrd,bckgrd };
@@ -155,7 +154,7 @@ void compteur(int TabSize) {
 			RGB *matrice[7] = { tabline_1, tabline_2, tabline_3, tabline_4,tabline_5, tabline_6, tabline_7 };
 			SetLedLine(matrice, TabSize);
 		}
-		if (compteur == 5) {
+		if (compteur == 9) {
 			RGB bckgrd = Black;
 			RGB number = Yellow;
 			RGB tabline_1[7] = { bckgrd, number, number, number, number, number,bckgrd };
@@ -168,7 +167,7 @@ void compteur(int TabSize) {
 			RGB *matrice[7] = { tabline_1, tabline_2, tabline_3, tabline_4,tabline_5, tabline_6, tabline_7 };
 			SetLedLine(matrice, TabSize);
 		}
-		if (compteur == 4) {
+		if (compteur == 8) {
 			RGB bckgrd = Black;
 			RGB number = Purple;
 			RGB tabline_1[7] = { bckgrd, bckgrd, bckgrd, bckgrd, number, bckgrd,bckgrd };
@@ -181,7 +180,7 @@ void compteur(int TabSize) {
 			RGB *matrice[7] = { tabline_1, tabline_2, tabline_3, tabline_4,tabline_5, tabline_6, tabline_7 };
 			SetLedLine(matrice, TabSize);
 		}
-		if (compteur == 3) {
+		if (compteur == 7) {
 			RGB bckgrd = Black;
 			RGB number = White;
 			RGB tabline_1[7] = { bckgrd, number, number, number, number, bckgrd,bckgrd };
@@ -194,7 +193,7 @@ void compteur(int TabSize) {
 			RGB *matrice[7] = { tabline_1, tabline_2, tabline_3, tabline_4,tabline_5, tabline_6, tabline_7 };
 			SetLedLine(matrice, TabSize);
 		}
-		if (compteur == 2) {
+		if (compteur == 6) {
 			RGB bckgrd = Black;
 			RGB number = Green;
 			RGB tabline_1[7] = { bckgrd, number, number, number, number, bckgrd,bckgrd };
@@ -207,7 +206,7 @@ void compteur(int TabSize) {
 			RGB *matrice[7] = { tabline_1, tabline_2, tabline_3, tabline_4,tabline_5, tabline_6, tabline_7 };
 			SetLedLine(matrice, TabSize);
 		}
-		if (compteur == 1) {
+		if (compteur == 5) {
 			RGB bckgrd = Black;
 			RGB number = Blue;
 			RGB tabline_1[7] = { bckgrd, bckgrd, bckgrd, bckgrd, number, bckgrd,bckgrd };
@@ -220,7 +219,7 @@ void compteur(int TabSize) {
 			RGB *matrice[7] = { tabline_1, tabline_2, tabline_3, tabline_4,tabline_5, tabline_6, tabline_7 };
 			SetLedLine(matrice, TabSize);
 		}
-		if (compteur == 0) {
+		if (compteur == 4) {
 			RGB bckgrd = Black;
 			RGB number = Red;
 			RGB tabline_1[7] = { bckgrd, bckgrd, number, number, number, bckgrd,bckgrd };
@@ -233,7 +232,61 @@ void compteur(int TabSize) {
 			RGB *matrice[7] = { tabline_1, tabline_2, tabline_3, tabline_4,tabline_5, tabline_6, tabline_7 };
 			SetLedLine(matrice, TabSize);
 		}
-		sleep(3);
+		if (compteur == 3) {
+			RGB bckgrd = Black;
+			RGB number = White;
+			RGB tabline_1[7] = { bckgrd, number, number, number, number, bckgrd,bckgrd };
+			RGB tabline_2[7] = { bckgrd, number, bckgrd, bckgrd, bckgrd, number,bckgrd };
+			RGB tabline_3[7] = { bckgrd, number, bckgrd, bckgrd, bckgrd, number,bckgrd };
+			RGB tabline_4[7] = { bckgrd, number, number, number, number, bckgrd,bckgrd };
+			RGB tabline_5[7] = { bckgrd, number, bckgrd, bckgrd, bckgrd, number,bckgrd };
+			RGB tabline_6[7] = { bckgrd, number, bckgrd, bckgrd, bckgrd, number,bckgrd };
+			RGB tabline_7[7] = { bckgrd, number, number, number, number, bckgrd,bckgrd };
+			RGB *matrice[7] = { tabline_1, tabline_2, tabline_3, tabline_4,tabline_5, tabline_6, tabline_7 };
+			SetLedLine(matrice, TabSize);
+		}
+		if (compteur == 2) {
+			RGB bckgrd = Black;
+			RGB number = White;
+			RGB tabline_1[7] = { bckgrd, bckgrd, number, number, number, bckgrd,bckgrd };
+			RGB tabline_2[7] = { bckgrd, number, bckgrd, bckgrd, bckgrd, number,bckgrd };
+			RGB tabline_3[7] = { bckgrd, number, bckgrd, bckgrd, bckgrd, number,bckgrd };
+			RGB tabline_4[7] = { bckgrd, number, bckgrd, bckgrd, bckgrd, number,bckgrd };
+			RGB tabline_5[7] = { bckgrd, number, bckgrd, bckgrd, bckgrd, number,bckgrd };
+			RGB tabline_6[7] = { bckgrd, number, bckgrd, bckgrd, bckgrd, number,bckgrd };
+			RGB tabline_7[7] = { bckgrd, bckgrd, number, number, number, bckgrd,bckgrd };
+			RGB *matrice[7] = { tabline_1, tabline_2, tabline_3, tabline_4,tabline_5, tabline_6, tabline_7 };
+			SetLedLine(matrice, TabSize);
+		}
+		if (compteur == 1) {
+			RGB bckgrd = Black;
+			RGB number = White;
+			RGB tabline_1[7] = { bckgrd, bckgrd, number, number, number, bckgrd,bckgrd };
+			RGB tabline_2[7] = { bckgrd, number, bckgrd, bckgrd, bckgrd, number,bckgrd };
+			RGB tabline_3[7] = { bckgrd, number, bckgrd, bckgrd, bckgrd, number,bckgrd };
+			RGB tabline_4[7] = { bckgrd, number, bckgrd, bckgrd, bckgrd, number,bckgrd };
+			RGB tabline_5[7] = { bckgrd, number, bckgrd, bckgrd, bckgrd, number,bckgrd };
+			RGB tabline_6[7] = { bckgrd, number, bckgrd, bckgrd, bckgrd, number,bckgrd };
+			RGB tabline_7[7] = { bckgrd, bckgrd, number, number, number, bckgrd,bckgrd };
+			RGB *matrice[7] = { tabline_1, tabline_2, tabline_3, tabline_4,tabline_5, tabline_6, tabline_7 };
+			SetLedLine(matrice, TabSize);
+		}
+		if (compteur == 0) {
+			RGB bckgrd = Black;
+			RGB number = White;
+			RGB tabline_1[7] = { bckgrd, number, bckgrd, bckgrd, bckgrd, number,bckgrd };
+			RGB tabline_2[7] = { bckgrd, number, number, bckgrd, number, number,bckgrd };
+			RGB tabline_3[7] = { bckgrd, number, bckgrd, number, bckgrd, number,bckgrd };
+			RGB tabline_4[7] = { bckgrd, number, bckgrd, bckgrd, bckgrd, number,bckgrd };
+			RGB tabline_5[7] = { bckgrd, number, bckgrd, bckgrd, bckgrd, number,bckgrd };
+			RGB tabline_6[7] = { bckgrd, number, bckgrd, bckgrd, bckgrd, number,bckgrd };
+			RGB tabline_7[7] = { bckgrd, number, bckgrd, bckgrd, bckgrd, number,bckgrd };
+			RGB *matrice[7] = { tabline_1, tabline_2, tabline_3, tabline_4,tabline_5, tabline_6, tabline_7 };
+			SetLedLine(matrice, TabSize);
+		}
+		HAL_Delay(1000);
+		ResetAllBlack();
+		HAL_Delay(500);
 	}
 }
 
@@ -270,9 +323,6 @@ int main(void) {
 	MX_USART3_UART_Init();
 	MX_USB_OTG_FS_PCD_Init();
 	/* USER CODE BEGIN 2 */
-	int TabSize;
-	TabSize = 7;
-	compteur(TabSize);
 
 	/* USER CODE END 2 */
 
@@ -280,7 +330,12 @@ int main(void) {
 	/* USER CODE BEGIN WHILE */
 	while (1) {
 		/* USER CODE END WHILE */
-
+		if(HAL_GPIO_ReadPin(USER_Btn_GPIO_Port, USER_Btn_Pin)){
+			ResetAllBlack();
+			int TabSize;
+			TabSize = 7;
+			compteur(TabSize);
+		}
 		/* USER CODE BEGIN 3 */
 	}
 	/* USER CODE END 3 */

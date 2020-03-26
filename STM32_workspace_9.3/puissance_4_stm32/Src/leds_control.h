@@ -25,12 +25,10 @@ typedef enum {
  * @return LCRC_OK if everything works correctly, else LCRC_ERROR_* corresponding
  *         of error encounter
  */
-LedControlReturnCode setLedColor(const unsigned char command,
-								 const unsigned int row,
+LedControlReturnCode setLedColor(const unsigned int row,
                                  const unsigned int col, 
                                  const unsigned int red, 
                                  const unsigned int green, 
-                                 const unsigned int blue,
-								 const unsigned char delimit);
+                                 const unsigned int blue);
 
 #endif
