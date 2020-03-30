@@ -856,3 +856,7 @@ Generate build reports done
 arm-atollic-eabi-objcopy -O ihex puissance_4_stm32.elf puissance_4_stm32.hex 
 Info: Nothing to build for puissance_4_stm32
 Info: Nothing to build for puissance_4_stm32
+15:12:17 **** Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "100_coeur_de_jeu"  ./src/main.o   

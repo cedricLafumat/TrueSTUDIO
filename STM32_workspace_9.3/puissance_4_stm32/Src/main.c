@@ -121,7 +121,7 @@ void compteur(int TabSize) {
 			RGB tabline_1[7] = { bckgrd, bckgrd, number, number, number, bckgrd,bckgrd };
 			RGB tabline_2[7] = { bckgrd, number, bckgrd, bckgrd, bckgrd, number,bckgrd };
 			RGB tabline_3[7] = { bckgrd, number, bckgrd, bckgrd, bckgrd, number,bckgrd };
-			RGB tabline_4[7] = { bckgrd, bckgrd, number, number, number, number,bckgrd };
+			RGB tabline_4[7] = { bckgrd, bckgrd, number, number, number, bckgrd,bckgrd };
 			RGB tabline_5[7] = { bckgrd, number, bckgrd, bckgrd, bckgrd, number,bckgrd };
 			RGB tabline_6[7] = { bckgrd, number, bckgrd, bckgrd, bckgrd, number,bckgrd };
 			RGB tabline_7[7] = { bckgrd, bckgrd, number, number, number, bckgrd,bckgrd };
