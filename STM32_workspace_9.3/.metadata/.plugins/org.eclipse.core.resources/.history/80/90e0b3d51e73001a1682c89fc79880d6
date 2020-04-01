@@ -1,9 +1,0 @@
-#include<stdio.h>
-#include"game_p4.c"
-
-int main(void){
-
-	gp4_init();
-
-	return 0;
-}

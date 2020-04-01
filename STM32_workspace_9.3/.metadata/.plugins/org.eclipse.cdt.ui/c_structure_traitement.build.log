@@ -1,6 +1,29 @@
-11:15:46 **** Incremental Build of configuration Debug for project c_structure_traitement ****
+20:32:19 **** Incremental Build of configuration Debug for project c_structure_traitement ****
 make -j4 all 
-make: rien à faire pour « all ».
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:35:2: error: ‘button’ undeclared (first use in this function)
+  button = 0;
+  ^~~~~~
+../src/main.c:35:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:36:2: error: ‘button_input’ undeclared (first use in this function); did you mean ‘button’?
+  button_input = scanf("%d", &button);
+  ^~~~~~~~~~~~
+  button
+../src/main.c:37:25: warning: implicit declaration of function ‘and’ [-Wimplicit-function-declaration]
+  if (button_input == 1) and ((button == 1) or (button == 2))
+                         ^~~
+../src/main.c:37:44: error: expected ‘)’ before ‘or’
+  if (button_input == 1) and ((button == 1) or (button == 2))
+                                            ^~
+../src/main.c:38:2: error: expected ‘;’ before ‘{’ token
+  {
+  ^
+../src/main.c:34:7: warning: unused variable ‘bool_light’ [-Wunused-variable]
+  bool bool_light = false;
+       ^~~~~~~~~~
+make: *** [src/main.o] Error 1
+src/subdir.mk:18: recipe for target 'src/main.o' failed
 
-11:15:46 Build Finished (took 320ms)
+20:32:20 Build Finished (took 534ms)
 

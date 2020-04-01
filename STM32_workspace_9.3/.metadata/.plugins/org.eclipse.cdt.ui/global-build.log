@@ -5733,3 +5733,1864 @@ gcc  -o "validation_2"  ./src/main.o
 15:11:33 **** Incremental Build of configuration Debug for project validation_2 ****
 make -j4 all 
 make: rien à faire pour « all ».
+16:37:51 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+16:37:54 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+16:43:06 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:19:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+16:43:31 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:19:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+16:52:06 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:04:32 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:19:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+17:04:36 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:05:26 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+17:05:28 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:05:36 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+17:05:40 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:06:00 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:06:11 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:07:31 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:09:04 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+17:09:07 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:09:13 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+17:09:15 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:10:09 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+17:10:11 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:11:34 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+17:11:35 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:21:15 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+17:21:17 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:24:14 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+../src/game_p4.c: In function ‘gp4_top_move_token_left’:
+../src/game_p4.c:85:7: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+   if (cpt_to_check_infinite_loop = 8){
+       ^~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+17:24:15 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:24:28 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+17:24:28 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:26:35 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+17:26:36 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:26:38 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:27:05 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+17:27:06 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:27:09 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:28:07 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+17:28:08 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:28:10 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:30:55 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+17:30:56 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:30:57 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:32:08 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+17:32:08 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:32:10 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:32:59 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+17:32:59 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:33:00 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:33:54 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+17:33:55 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:33:58 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:34:21 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+17:34:22 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:34:24 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:35:01 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+17:35:02 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:35:04 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:41:59 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+17:42:00 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:42:02 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:42:31 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+17:42:31 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:42:33 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:44:27 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+17:44:27 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:44:28 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:48:11 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+17:48:11 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:48:14 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:52:26 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+17:52:27 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:52:29 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:52:58 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+17:52:59 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:53:01 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:53:39 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+17:53:40 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:53:41 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:54:21 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+17:54:22 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+17:54:24 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:01:24 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+18:01:24 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:01:25 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:02:25 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+18:02:26 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:02:27 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:03:31 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+18:03:32 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:03:33 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:07:26 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+18:07:26 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:07:28 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:08:50 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+18:08:51 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:08:52 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:10:56 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+18:10:57 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:10:58 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:13:32 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+18:13:33 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:13:35 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:13:53 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+18:13:53 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:13:55 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:14:41 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+18:14:42 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:14:43 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:23:09 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+18:23:09 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:23:11 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:23:36 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:19:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+18:23:37 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:23:38 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:25:18 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+18:25:18 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:25:20 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:37:18 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+18:37:19 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:37:21 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:40:46 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+18:40:46 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:40:48 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:41:25 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+18:41:26 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:41:27 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:42:01 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+18:42:02 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:42:03 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:43:10 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+18:43:11 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:43:13 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:44:10 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+18:44:11 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:44:13 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:45:36 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+18:45:36 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:45:38 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:49:08 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+18:49:09 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:49:11 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:50:13 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+18:50:13 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:50:15 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:50:32 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+18:50:32 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:50:33 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:51:06 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+18:51:07 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:51:08 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:53:43 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+18:53:43 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:53:45 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:55:42 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+18:55:43 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:55:44 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:56:58 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+18:56:59 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:57:01 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:57:37 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+18:57:38 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:57:39 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:59:35 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+18:59:35 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+18:59:37 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+19:00:27 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+19:00:28 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+19:00:29 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+19:00:49 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+19:00:50 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+19:00:51 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+19:01:33 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+19:01:33 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+19:01:35 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+19:01:56 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+19:01:57 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+19:01:58 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+19:03:02 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+19:03:03 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+19:03:04 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+19:08:59 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+19:09:00 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+19:09:01 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+19:11:30 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+19:11:31 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+19:11:32 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+19:19:31 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+19:19:32 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+19:19:33 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+19:22:12 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+19:22:12 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+19:22:13 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+19:23:01 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+19:23:02 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+19:23:03 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+19:25:42 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+19:25:43 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+19:25:46 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+19:32:15 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:27:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+19:32:16 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+19:32:18 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+19:32:45 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:27:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+19:32:46 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: rien à faire pour « all ».
+19:32:47 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+19:36:10 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:27:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+19:36:33 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+19:36:35 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+19:41:08 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+19:41:10 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+20:21:30 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:27:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+20:21:34 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+20:22:32 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:27:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+20:22:35 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+20:24:18 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:27:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+20:32:19 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:27:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+../src/main.c: In function ‘main’:
+../src/main.c:53:6: warning: variable ‘move’ set but not used [-Wunused-but-set-variable]
+  int move = 0;
+      ^~~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+20:32:19 **** Incremental Build of configuration Debug for project c_structure_traitement ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:35:2: error: ‘button’ undeclared (first use in this function)
+  button = 0;
+  ^~~~~~
+../src/main.c:35:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:36:2: error: ‘button_input’ undeclared (first use in this function); did you mean ‘button’?
+  button_input = scanf("%d", &button);
+  ^~~~~~~~~~~~
+  button
+../src/main.c:37:25: warning: implicit declaration of function ‘and’ [-Wimplicit-function-declaration]
+  if (button_input == 1) and ((button == 1) or (button == 2))
+                         ^~~
+../src/main.c:37:44: error: expected ‘)’ before ‘or’
+  if (button_input == 1) and ((button == 1) or (button == 2))
+                                            ^~
+../src/main.c:38:2: error: expected ‘;’ before ‘{’ token
+  {
+  ^
+../src/main.c:34:7: warning: unused variable ‘bool_light’ [-Wunused-variable]
+  bool bool_light = false;
+       ^~~~~~~~~~
+make: *** [src/main.o] Error 1
+src/subdir.mk:18: recipe for target 'src/main.o' failed
+20:34:34 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:27:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+../src/main.c: In function ‘main’:
+../src/main.c:54:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+20:34:48 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+20:36:19 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:27:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+../src/main.c: In function ‘main’:
+../src/main.c:54:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+20:36:20 **** Incremental Build of configuration Debug for project exo_eclairage_public ****
+make -j4 all 
+make: rien à faire pour « all ».
+20:36:22 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+20:38:09 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:27:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+../src/main.c: In function ‘main’:
+../src/main.c:52:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+20:38:09 **** Incremental Build of configuration Debug for project exo_eclairage_public ****
+make -j4 all 
+make: rien à faire pour « all ».
+20:38:13 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+20:40:34 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:27:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+../src/main.c: In function ‘main’:
+../src/main.c:52:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+20:40:34 **** Incremental Build of configuration Debug for project exo_eclairage_public ****
+make -j4 all 
+make: rien à faire pour « all ».
+20:40:37 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+20:42:07 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:27:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+../src/main.c: In function ‘main’:
+../src/main.c:52:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+20:42:08 **** Incremental Build of configuration Debug for project exo_eclairage_public ****
+make -j4 all 
+make: rien à faire pour « all ».
+20:42:10 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+20:46:16 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:27:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+../src/main.c: In function ‘main’:
+../src/main.c:56:8: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+   move = NULL;
+        ^
+../src/main.c:52:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+20:46:17 **** Incremental Build of configuration Debug for project exo_eclairage_public ****
+make -j4 all 
+make: rien à faire pour « all ».
+20:47:52 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:27:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+../src/main.c: In function ‘main’:
+../src/main.c:52:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+20:47:52 **** Incremental Build of configuration Debug for project exo_eclairage_public ****
+make -j4 all 
+make: rien à faire pour « all ».
+20:47:56 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+20:49:04 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:27:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+../src/main.c: In function ‘main’:
+../src/main.c:58:11: warning: format ‘%d’ expects argument of type ‘int *’, but argument 2 has type ‘int’ [-Wformat=]
+   scanf("%d", move);
+          ~^
+../src/main.c:52:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+20:49:05 **** Incremental Build of configuration Debug for project exo_eclairage_public ****
+make -j4 all 
+make: rien à faire pour « all ».
+20:49:34 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:27:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+../src/main.c: In function ‘main’:
+../src/main.c:58:15: error: invalid type argument of unary ‘*’ (have ‘int’)
+   scanf("%d", *move);
+               ^~~~~
+../src/main.c:52:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+20:49:35 **** Incremental Build of configuration Debug for project exo_eclairage_public ****
+make -j4 all 
+make: rien à faire pour « all ».
+20:49:44 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:27:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+../src/main.c: In function ‘main’:
+../src/main.c:52:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+20:49:45 **** Incremental Build of configuration Debug for project exo_eclairage_public ****
+make -j4 all 
+make: rien à faire pour « all ».
+21:06:15 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:27:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+21:06:18 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+21:08:04 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:27:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+21:08:07 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+21:19:30 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:28:9: warning: unused variable ‘winner’ [-Wunused-variable]
+  int8_t winner = 0;
+         ^~~~~~
+../src/main.c:27:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+../src/game_p4.c: In function ‘gp4_check_winner’:
+../src/game_p4.c:297:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+21:20:16 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+21:20:24 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+21:20:48 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+21:33:21 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+../src/game_p4.c: In function ‘gp4_check_winner’:
+../src/game_p4.c:266:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+        victory_type = "h";
+src/subdir.mk:24: recipe for target 'src/game_p4.o' failed
+                     ^
+../src/game_p4.c:267:8: warning: ‘return’ with no value, in function returning non-void
+        return;
+        ^~~~~~
+../src/game_p4.c:233:5: note: declared here
+ int gp4_check_winner(void){
+     ^~~~~~~~~~~~~~~~
+../src/game_p4.c:265:21: warning: unused variable ‘coordinate_token4’ [-Wunused-variable]
+        coordinate_t coordinate_token4 = {col+3, line};
+                     ^~~~~~~~~~~~~~~~~
+../src/game_p4.c:264:21: warning: unused variable ‘coordinate_token3’ [-Wunused-variable]
+        coordinate_t coordinate_token3 = {col+2, line};
+                     ^~~~~~~~~~~~~~~~~
+../src/game_p4.c:263:21: warning: unused variable ‘coordinate_token2’ [-Wunused-variable]
+        coordinate_t coordinate_token2 = {col+1, line};
+                     ^~~~~~~~~~~~~~~~~
+../src/game_p4.c:262:21: warning: unused variable ‘coordinate_token1’ [-Wunused-variable]
+        coordinate_t coordinate_token1 = {col, line};
+                     ^~~~~~~~~~~~~~~~~
+../src/game_p4.c:278:8: warning: ‘return’ with no value, in function returning non-void
+        return;
+        ^~~~~~
+../src/game_p4.c:233:5: note: declared here
+ int gp4_check_winner(void){
+     ^~~~~~~~~~~~~~~~
+../src/game_p4.c:289:8: warning: ‘return’ with no value, in function returning non-void
+        return;
+        ^~~~~~
+../src/game_p4.c:233:5: note: declared here
+ int gp4_check_winner(void){
+     ^~~~~~~~~~~~~~~~
+../src/game_p4.c:300:8: warning: ‘return’ with no value, in function returning non-void
+        return;
+        ^~~~~~
+../src/game_p4.c:233:5: note: declared here
+ int gp4_check_winner(void){
+     ^~~~~~~~~~~~~~~~
+../src/game_p4.c:308:9: error: ‘winner’ undeclared (first use in this function); did you mean ‘winner_t’?
+  return winner;
+         ^~~~~~
+         winner_t
+../src/game_p4.c:308:9: note: each undeclared identifier is reported only once for each function it appears in
+../src/game_p4.c:241:7: warning: variable ‘victory_type’ set but not used [-Wunused-but-set-variable]
+  char victory_type;
+       ^~~~~~~~~~~~
+../src/game_p4.c:240:15: warning: unused variable ‘coordinate_token4’ [-Wunused-variable]
+  coordinate_t coordinate_token4;
+               ^~~~~~~~~~~~~~~~~
+../src/game_p4.c:239:15: warning: unused variable ‘coordinate_token3’ [-Wunused-variable]
+  coordinate_t coordinate_token3;
+               ^~~~~~~~~~~~~~~~~
+../src/game_p4.c:238:15: warning: unused variable ‘coordinate_token2’ [-Wunused-variable]
+  coordinate_t coordinate_token2;
+               ^~~~~~~~~~~~~~~~~
+../src/game_p4.c:237:15: warning: unused variable ‘coordinate_token1’ [-Wunused-variable]
+  coordinate_t coordinate_token1;
+               ^~~~~~~~~~~~~~~~~
+../src/game_p4.c:236:9: warning: variable ‘player_winner’ set but not used [-Wunused-but-set-variable]
+  int8_t player_winner = 0;
+         ^~~~~~~~~~~~~
+make: *** [src/game_p4.o] Error 1
+21:33:43 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+../src/game_p4.c: In function ‘gp4_check_winner’:
+../src/game_p4.c:266:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+        victory_type = "h";
+                     ^
+../src/game_p4.c:267:8: warning: ‘return’ with no value, in function returning non-void
+        return;
+        ^~~~~~
+../src/game_p4.c:233:5: note: declared here
+ int gp4_check_winner(void){
+     ^~~~~~~~~~~~~~~~
+../src/game_p4.c:265:21: warning: unused variable ‘coordinate_token4’ [-Wunused-variable]
+        coordinate_t coordinate_token4 = {col+3, line};
+                     ^~~~~~~~~~~~~~~~~
+../src/game_p4.c:264:21: warning: unused variable ‘coordinate_token3’ [-Wunused-variable]
+        coordinate_t coordinate_token3 = {col+2, line};
+                     ^~~~~~~~~~~~~~~~~
+../src/game_p4.c:263:21: warning: unused variable ‘coordinate_token2’ [-Wunused-variable]
+        coordinate_t coordinate_token2 = {col+1, line};
+                     ^~~~~~~~~~~~~~~~~
+../src/game_p4.c:262:21: warning: unused variable ‘coordinate_token1’ [-Wunused-variable]
+        coordinate_t coordinate_token1 = {col, line};
+                     ^~~~~~~~~~~~~~~~~
+../src/game_p4.c:278:8: warning: ‘return’ with no value, in function returning non-void
+        return;
+        ^~~~~~
+../src/game_p4.c:233:5: note: declared here
+ int gp4_check_winner(void){
+     ^~~~~~~~~~~~~~~~
+../src/game_p4.c:289:8: warning: ‘return’ with no value, in function returning non-void
+        return;
+        ^~~~~~
+../src/game_p4.c:233:5: note: declared here
+ int gp4_check_winner(void){
+     ^~~~~~~~~~~~~~~~
+../src/game_p4.c:300:8: warning: ‘return’ with no value, in function returning non-void
+        return;
+        ^~~~~~
+../src/game_p4.c:233:5: note: declared here
+ int gp4_check_winner(void){
+     ^~~~~~~~~~~~~~~~
+../src/game_p4.c:308:2: warning: ‘return’ with no value, in function returning non-void
+  return;
+  ^~~~~~
+../src/game_p4.c:233:5: note: declared here
+ int gp4_check_winner(void){
+     ^~~~~~~~~~~~~~~~
+../src/game_p4.c:241:7: warning: variable ‘victory_type’ set but not used [-Wunused-but-set-variable]
+  char victory_type;
+       ^~~~~~~~~~~~
+../src/game_p4.c:240:15: warning: unused variable ‘coordinate_token4’ [-Wunused-variable]
+  coordinate_t coordinate_token4;
+               ^~~~~~~~~~~~~~~~~
+../src/game_p4.c:239:15: warning: unused variable ‘coordinate_token3’ [-Wunused-variable]
+  coordinate_t coordinate_token3;
+               ^~~~~~~~~~~~~~~~~
+../src/game_p4.c:238:15: warning: unused variable ‘coordinate_token2’ [-Wunused-variable]
+  coordinate_t coordinate_token2;
+               ^~~~~~~~~~~~~~~~~
+../src/game_p4.c:237:15: warning: unused variable ‘coordinate_token1’ [-Wunused-variable]
+  coordinate_t coordinate_token1;
+               ^~~~~~~~~~~~~~~~~
+../src/game_p4.c:236:9: warning: variable ‘player_winner’ set but not used [-Wunused-but-set-variable]
+  int8_t player_winner = 0;
+         ^~~~~~~~~~~~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+21:35:48 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+../src/game_p4.c: In function ‘gp4_check_winner’:
+../src/game_p4.c:266:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+        victory_type = "h";
+                     ^
+../src/game_p4.c:269:8: warning: ‘return’ with no value, in function returning non-void
+        return;
+        ^~~~~~
+../src/game_p4.c:233:5: note: declared here
+ int gp4_check_winner(void){
+     ^~~~~~~~~~~~~~~~
+../src/game_p4.c:267:17: warning: unused variable ‘winner’ [-Wunused-variable]
+        winner_t winner = { player_winner, coordinate_token1, coordinate_token2,
+                 ^~~~~~
+../src/game_p4.c:280:8: warning: ‘return’ with no value, in function returning non-void
+        return;
+        ^~~~~~
+../src/game_p4.c:233:5: note: declared here
+ int gp4_check_winner(void){
+     ^~~~~~~~~~~~~~~~
+../src/game_p4.c:291:8: warning: ‘return’ with no value, in function returning non-void
+        return;
+        ^~~~~~
+../src/game_p4.c:233:5: note: declared here
+ int gp4_check_winner(void){
+     ^~~~~~~~~~~~~~~~
+../src/game_p4.c:302:8: warning: ‘return’ with no value, in function returning non-void
+        return;
+        ^~~~~~
+../src/game_p4.c:233:5: note: declared here
+ int gp4_check_winner(void){
+     ^~~~~~~~~~~~~~~~
+../src/game_p4.c:310:2: warning: ‘return’ with no value, in function returning non-void
+  return;
+  ^~~~~~
+../src/game_p4.c:233:5: note: declared here
+ int gp4_check_winner(void){
+     ^~~~~~~~~~~~~~~~
+../src/game_p4.c:240:15: warning: unused variable ‘coordinate_token4’ [-Wunused-variable]
+  coordinate_t coordinate_token4;
+               ^~~~~~~~~~~~~~~~~
+../src/game_p4.c:239:15: warning: unused variable ‘coordinate_token3’ [-Wunused-variable]
+  coordinate_t coordinate_token3;
+               ^~~~~~~~~~~~~~~~~
+../src/game_p4.c:238:15: warning: unused variable ‘coordinate_token2’ [-Wunused-variable]
+  coordinate_t coordinate_token2;
+               ^~~~~~~~~~~~~~~~~
+../src/game_p4.c:237:15: warning: unused variable ‘coordinate_token1’ [-Wunused-variable]
+  coordinate_t coordinate_token1;
+               ^~~~~~~~~~~~~~~~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+21:36:48 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+../src/game_p4.c: In function ‘gp4_check_winner’:
+../src/game_p4.c:266:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+        victory_type = "h";
+                     ^
+../src/game_p4.c:269:15: error: incompatible types when returning type ‘winner_t {aka struct <anonymous>}’ but ‘int’ was expected
+        return winner;
+               ^~~~~~
+../src/game_p4.c:285:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+        victory_type = "h";
+                     ^
+../src/game_p4.c:288:15: error: incompatible types when returning type ‘winner_t {aka struct <anonymous>}’ but ‘int’ was expected
+        return winner;
+               ^~~~~~
+../src/game_p4.c:299:8: warning: ‘return’ with no value, in function returning non-void
+        return;
+        ^~~~~~
+../src/game_p4.c:233:5: note: declared here
+ int gp4_check_winner(void){
+     ^~~~~~~~~~~~~~~~
+../src/game_p4.c:310:8: warning: ‘return’ with no value, in function returning non-void
+        return;
+        ^~~~~~
+../src/game_p4.c:233:5: note: declared here
+ int gp4_check_winner(void){
+     ^~~~~~~~~~~~~~~~
+../src/game_p4.c:318:2: warning: ‘return’ with no value, in function returning non-void
+  return;
+  ^~~~~~
+../src/game_p4.c:233:5: note: declared here
+ int gp4_check_winner(void){
+     ^~~~~~~~~~~~~~~~
+../src/game_p4.c:240:15: warning: unused variable ‘coordinate_token4’ [-Wunused-variable]
+  coordinate_t coordinate_token4;
+               ^~~~~~~~~~~~~~~~~
+../src/game_p4.c:239:15: warning: unused variable ‘coordinate_token3’ [-Wunused-variable]
+  coordinate_t coordinate_token3;
+               ^~~~~~~~~~~~~~~~~
+../src/game_p4.c:238:15: warning: unused variable ‘coordinate_token2’ [-Wunused-variable]
+  coordinate_t coordinate_token2;
+               ^~~~~~~~~~~~~~~~~
+../src/game_p4.c:237:15: warning: unused variable ‘coordinate_token1’ [-Wunused-variable]
+  coordinate_t coordinate_token1;
+               ^~~~~~~~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/game_p4.o' failed
+make: *** [src/game_p4.o] Error 1
+21:36:50 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+../src/game_p4.c: In function ‘gp4_check_winner’:
+../src/game_p4.c:266:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+        victory_type = "h";
+                     ^
+../src/game_p4.c:269:15: error: incompatible types when returning type ‘winner_t {aka struct <anonymous>}’ but ‘int’ was expected
+        return winner;
+               ^~~~~~
+../src/game_p4.c:285:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+        victory_type = "h";
+                     ^
+../src/game_p4.c:288:15: error: incompatible types when returning type ‘winner_t {aka struct <anonymous>}’ but ‘int’ was expected
+        return winner;
+               ^~~~~~
+../src/game_p4.c:299:8: warning: ‘return’ with no value, in function returning non-void
+        return;
+        ^~~~~~
+../src/game_p4.c:233:5: note: declared here
+ int gp4_check_winner(void){
+     ^~~~~~~~~~~~~~~~
+../src/game_p4.c:310:8: warning: ‘return’ with no value, in function returning non-void
+        return;
+        ^~~~~~
+../src/game_p4.c:233:5: note: declared here
+ int gp4_check_winner(void){
+     ^~~~~~~~~~~~~~~~
+../src/game_p4.c:318:2: warning: ‘return’ with no value, in function returning non-void
+  return;
+src/subdir.mk:24: recipe for target 'src/game_p4.o' failed
+  ^~~~~~
+../src/game_p4.c:233:5: note: declared here
+ int gp4_check_winner(void){
+     ^~~~~~~~~~~~~~~~
+../src/game_p4.c:240:15: warning: unused variable ‘coordinate_token4’ [-Wunused-variable]
+  coordinate_t coordinate_token4;
+               ^~~~~~~~~~~~~~~~~
+../src/game_p4.c:239:15: warning: unused variable ‘coordinate_token3’ [-Wunused-variable]
+  coordinate_t coordinate_token3;
+               ^~~~~~~~~~~~~~~~~
+../src/game_p4.c:238:15: warning: unused variable ‘coordinate_token2’ [-Wunused-variable]
+  coordinate_t coordinate_token2;
+               ^~~~~~~~~~~~~~~~~
+../src/game_p4.c:237:15: warning: unused variable ‘coordinate_token1’ [-Wunused-variable]
+  coordinate_t coordinate_token1;
+               ^~~~~~~~~~~~~~~~~
+make: *** [src/game_p4.o] Error 1
+21:37:06 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+../src/game_p4.c: In function ‘gp4_check_winner’:
+../src/game_p4.c:266:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+        victory_type = "h";
+                     ^
+../src/game_p4.c:269:15: error: incompatible types when returning type ‘winner_t {aka struct <anonymous>}’ but ‘int’ was expected
+        return winner;
+               ^~~~~~
+../src/game_p4.c:285:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+        victory_type = "h";
+                     ^
+../src/game_p4.c:288:15: error: incompatible types when returning type ‘winner_t {aka struct <anonymous>}’ but ‘int’ was expected
+        return winner;
+               ^~~~~~
+../src/game_p4.c:299:8: warning: ‘return’ with no value, in function returning non-void
+        return;
+        ^~~~~~
+../src/game_p4.c:233:5: note: declared here
+ int gp4_check_winner(void){
+src/subdir.mk:24: recipe for target 'src/game_p4.o' failed
+     ^~~~~~~~~~~~~~~~
+../src/game_p4.c:310:8: warning: ‘return’ with no value, in function returning non-void
+        return;
+        ^~~~~~
+../src/game_p4.c:233:5: note: declared here
+ int gp4_check_winner(void){
+     ^~~~~~~~~~~~~~~~
+../src/game_p4.c:318:2: warning: ‘return’ with no value, in function returning non-void
+  return;
+  ^~~~~~
+../src/game_p4.c:233:5: note: declared here
+ int gp4_check_winner(void){
+     ^~~~~~~~~~~~~~~~
+../src/game_p4.c:240:15: warning: unused variable ‘coordinate_token4’ [-Wunused-variable]
+  coordinate_t coordinate_token4;
+               ^~~~~~~~~~~~~~~~~
+../src/game_p4.c:239:15: warning: unused variable ‘coordinate_token3’ [-Wunused-variable]
+  coordinate_t coordinate_token3;
+               ^~~~~~~~~~~~~~~~~
+../src/game_p4.c:238:15: warning: unused variable ‘coordinate_token2’ [-Wunused-variable]
+  coordinate_t coordinate_token2;
+               ^~~~~~~~~~~~~~~~~
+../src/game_p4.c:237:15: warning: unused variable ‘coordinate_token1’ [-Wunused-variable]
+  coordinate_t coordinate_token1;
+               ^~~~~~~~~~~~~~~~~
+make: *** [src/game_p4.o] Error 1
+21:38:05 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/game_p4.c: In function ‘gp4_top_play_token’:
+../src/game_p4.c:135:11: warning: variable ‘winner’ set but not used [-Wunused-but-set-variable]
+  winner_t winner;
+           ^~~~~~
+../src/game_p4.c: In function ‘gp4_check_winner’:
+../src/game_p4.c:268:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+        victory_type = "h";
+                     ^
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:28:9: warning: unused variable ‘winner’ [-Wunused-variable]
+  int8_t winner = 0;
+         ^~~~~~
+../src/main.c:27:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+../src/game_p4.c:287:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+        victory_type = "h";
+                     ^
+../src/game_p4.c:301:8: warning: ‘return’ with no value, in function returning non-void
+        return;
+        ^~~~~~
+../src/game_p4.c:235:10: note: declared here
+ winner_t gp4_check_winner(void){
+          ^~~~~~~~~~~~~~~~
+../src/game_p4.c:312:8: warning: ‘return’ with no value, in function returning non-void
+        return;
+        ^~~~~~
+../src/game_p4.c:235:10: note: declared here
+ winner_t gp4_check_winner(void){
+          ^~~~~~~~~~~~~~~~
+../src/game_p4.c:320:2: warning: ‘return’ with no value, in function returning non-void
+  return;
+  ^~~~~~
+../src/game_p4.c:235:10: note: declared here
+ winner_t gp4_check_winner(void){
+          ^~~~~~~~~~~~~~~~
+../src/game_p4.c:242:15: warning: unused variable ‘coordinate_token4’ [-Wunused-variable]
+  coordinate_t coordinate_token4;
+               ^~~~~~~~~~~~~~~~~
+../src/game_p4.c:241:15: warning: unused variable ‘coordinate_token3’ [-Wunused-variable]
+  coordinate_t coordinate_token3;
+               ^~~~~~~~~~~~~~~~~
+../src/game_p4.c:240:15: warning: unused variable ‘coordinate_token2’ [-Wunused-variable]
+  coordinate_t coordinate_token2;
+               ^~~~~~~~~~~~~~~~~
+../src/game_p4.c:239:15: warning: unused variable ‘coordinate_token1’ [-Wunused-variable]
+  coordinate_t coordinate_token1;
+               ^~~~~~~~~~~~~~~~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+21:39:01 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+../src/game_p4.c: In function ‘gp4_top_play_token’:
+../src/game_p4.c:135:11: warning: variable ‘winner’ set but not used [-Wunused-but-set-variable]
+  winner_t winner;
+           ^~~~~~
+../src/game_p4.c: In function ‘gp4_check_winner’:
+../src/game_p4.c:268:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+        victory_type = "h";
+                     ^
+../src/game_p4.c:287:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+        victory_type = "h";
+                     ^
+../src/game_p4.c:301:8: warning: ‘return’ with no value, in function returning non-void
+        return;
+        ^~~~~~
+../src/game_p4.c:235:10: note: declared here
+ winner_t gp4_check_winner(void){
+          ^~~~~~~~~~~~~~~~
+../src/game_p4.c:312:8: warning: ‘return’ with no value, in function returning non-void
+        return;
+        ^~~~~~
+../src/game_p4.c:235:10: note: declared here
+ winner_t gp4_check_winner(void){
+          ^~~~~~~~~~~~~~~~
+../src/game_p4.c:320:2: warning: ‘return’ with no value, in function returning non-void
+  return;
+  ^~~~~~
+../src/game_p4.c:235:10: note: declared here
+ winner_t gp4_check_winner(void){
+          ^~~~~~~~~~~~~~~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+21:41:55 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+Cannot run program "make": Unknown reason
+21:42:18 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+Cannot run program "make": Unknown reason
+21:42:21 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+Cannot run program "make": Unknown reason
+21:42:34 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+Cannot run program "make": Unknown reason
+21:43:20 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+Cannot run program "make": Unknown reason
+21:43:21 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+Cannot run program "make": Unknown reason
+21:43:22 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+Cannot run program "make": Unknown reason
+21:43:24 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+Cannot run program "make": Unknown reason
+21:43:34 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+Cannot run program "make": Unknown reason
+21:43:39 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+Cannot run program "make": Unknown reason
+21:43:58 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+../src/game_p4.c: In function ‘gp4_top_play_token’:
+../src/game_p4.c:135:11: warning: variable ‘winner’ set but not used [-Wunused-but-set-variable]
+  winner_t winner;
+           ^~~~~~
+../src/game_p4.c: In function ‘gp4_check_winner’:
+../src/game_p4.c:268:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+        victory_type = "h";
+                     ^
+../src/game_p4.c:287:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+        victory_type = "h";
+                     ^
+../src/game_p4.c:306:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+        victory_type = "h";
+                     ^
+../src/game_p4.c:325:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+        victory_type = "h";
+                     ^
+../src/game_p4.c:336:9: error: incompatible types when returning type ‘int’ but ‘winner_t {aka struct <anonymous>}’ was expected
+  return 0;
+         ^
+../src/game_p4.c:342:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/game_p4.o] Error 1
+src/subdir.mk:24: recipe for target 'src/game_p4.o' failed
+21:44:12 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+../src/game_p4.c: In function ‘gp4_top_play_token’:
+../src/game_p4.c:135:11: warning: variable ‘winner’ set but not used [-Wunused-but-set-variable]
+  winner_t winner;
+           ^~~~~~
+../src/game_p4.c: In function ‘gp4_check_winner’:
+../src/game_p4.c:268:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+        victory_type = "h";
+                     ^
+../src/game_p4.c:287:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+        victory_type = "h";
+                     ^
+../src/game_p4.c:306:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+        victory_type = "h";
+                     ^
+../src/game_p4.c:325:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+        victory_type = "h";
+                     ^
+../src/game_p4.c:336:2: warning: ‘return’ with no value, in function returning non-void
+  return;
+  ^~~~~~
+../src/game_p4.c:235:10: note: declared here
+ winner_t gp4_check_winner(void){
+          ^~~~~~~~~~~~~~~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+21:44:24 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+21:44:50 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:28:9: warning: unused variable ‘winner’ [-Wunused-variable]
+  int8_t winner = 0;
+         ^~~~~~
+../src/main.c:27:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+21:45:00 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+21:45:32 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:28:9: warning: unused variable ‘winner’ [-Wunused-variable]
+  int8_t winner = 0;
+         ^~~~~~
+../src/main.c:27:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+21:45:34 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+21:46:24 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:28:9: warning: unused variable ‘winner’ [-Wunused-variable]
+  int8_t winner = 0;
+         ^~~~~~
+../src/main.c:27:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+21:46:26 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+21:50:47 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+../src/game_p4.c: In function ‘gp4_top_play_token’:
+../src/game_p4.c:135:11: warning: variable ‘winner’ set but not used [-Wunused-but-set-variable]
+  winner_t winner;
+           ^~~~~~
+../src/game_p4.c: In function ‘gp4_check_winner’:
+../src/game_p4.c:256:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+        victory_type = "h";
+                     ^
+../src/game_p4.c:277:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+        victory_type = "v";
+                     ^
+../src/game_p4.c:298:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+        victory_type = "d";
+                     ^
+../src/game_p4.c:319:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+        victory_type = "d";
+                     ^
+../src/game_p4.c:330:2: warning: ‘return’ with no value, in function returning non-void
+  return;
+  ^~~~~~
+../src/game_p4.c:235:10: note: declared here
+ winner_t gp4_check_winner(void){
+          ^~~~~~~~~~~~~~~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+22:09:43 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+../src/game_p4.c: In function ‘gp4_top_play_token’:
+../src/game_p4.c:135:11: warning: variable ‘winner’ set but not used [-Wunused-but-set-variable]
+  winner_t winner;
+           ^~~~~~
+../src/game_p4.c: In function ‘gp4_check_winner’:
+../src/game_p4.c:256:23: error: ‘h’ undeclared (first use in this function)
+        victory_type = h;
+                       ^
+../src/game_p4.c:256:23: note: each undeclared identifier is reported only once for each function it appears in
+src/subdir.mk:24: recipe for target 'src/game_p4.o' failed
+../src/game_p4.c:277:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+        victory_type = "v";
+                     ^
+../src/game_p4.c:298:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+        victory_type = "d";
+                     ^
+../src/game_p4.c:319:21: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+        victory_type = "d";
+                     ^
+../src/game_p4.c:330:2: warning: ‘return’ with no value, in function returning non-void
+  return;
+  ^~~~~~
+../src/game_p4.c:235:10: note: declared here
+ winner_t gp4_check_winner(void){
+          ^~~~~~~~~~~~~~~~
+make: *** [src/game_p4.o] Error 1
+22:10:31 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+../src/game_p4.c: In function ‘gp4_top_play_token’:
+../src/game_p4.c:135:11: warning: variable ‘winner’ set but not used [-Wunused-but-set-variable]
+  winner_t winner;
+           ^~~~~~
+../src/game_p4.c: In function ‘gp4_check_winner’:
+../src/game_p4.c:330:2: warning: ‘return’ with no value, in function returning non-void
+  return;
+  ^~~~~~
+../src/game_p4.c:235:10: note: declared here
+ winner_t gp4_check_winner(void){
+          ^~~~~~~~~~~~~~~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+22:11:37 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+../src/game_p4.c: In function ‘gp4_top_play_token’:
+../src/game_p4.c:148:13: error: invalid operands to binary == (have ‘winner_t {aka struct <anonymous>}’ and ‘int’)
+  if (winner == 0){
+             ^~
+../src/game_p4.c: In function ‘gp4_check_winner’:
+../src/game_p4.c:333:9: error: ‘winner’ undeclared (first use in this function); did you mean ‘winner_t’?
+  return winner;
+         ^~~~~~
+         winner_t
+../src/game_p4.c:333:9: note: each undeclared identifier is reported only once for each function it appears in
+../src/game_p4.c:339:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/game_p4.o] Error 1
+src/subdir.mk:24: recipe for target 'src/game_p4.o' failed
+22:11:58 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+../src/game_p4.c: In function ‘gp4_top_play_token’:
+../src/game_p4.c:148:13: error: invalid operands to binary == (have ‘winner_t {aka struct <anonymous>}’ and ‘int’)
+  if (winner == 0){
+             ^~
+src/subdir.mk:24: recipe for target 'src/game_p4.o' failed
+make: *** [src/game_p4.o] Error 1
+22:12:30 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+../src/game_p4.c: In function ‘gp4_top_play_token’:
+../src/game_p4.c:135:11: warning: variable ‘winner’ set but not used [-Wunused-but-set-variable]
+  winner_t winner;
+           ^~~~~~
+../src/game_p4.c: In function ‘gp4_check_winner’:
+../src/game_p4.c:331:9: warning: ‘winner’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+  return winner;
+         ^~~~~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+22:12:53 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+22:24:03 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:27:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+../src/game_p4.c: In function ‘gp4_top_play_token’:
+../src/game_p4.c:135:6: warning: variable ‘win’ set but not used [-Wunused-but-set-variable]
+  int win = 0;
+      ^~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+22:25:22 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+../src/game_p4.c: In function ‘gp4_top_play_token’:
+../src/game_p4.c:148:5: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  if(win = 0){
+     ^~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+22:25:31 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+22:27:14 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:27:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+22:27:54 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:27:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+22:27:56 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+23:00:24 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:27:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+23:03:33 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+../src/game_p4.c: In function ‘gp4_top_play_token’:
+../src/game_p4.c:135:6: warning: unused variable ‘win’ [-Wunused-variable]
+  int win = 0;
+      ^~~
+../src/game_p4.c: At top level:
+../src/game_p4.c:235:6: error: conflicting types for ‘gp4_check_winner’
+ void gp4_check_winner(void){
+      ^~~~~~~~~~~~~~~~
+In file included from ../src/game_p4.c:11:0:
+../src/game_p4.h:43:5: note: previous declaration of ‘gp4_check_winner’ was here
+ int gp4_check_winner(void);
+     ^~~~~~~~~~~~~~~~
+make: *** [src/game_p4.o] Error 1
+src/subdir.mk:24: recipe for target 'src/game_p4.o' failed
+23:03:52 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/game_p4.c: In function ‘gp4_top_play_token’:
+../src/game_p4.c:135:6: warning: unused variable ‘win’ [-Wunused-variable]
+  int win = 0;
+      ^~~
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:27:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+23:04:04 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+23:04:08 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+23:05:09 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+23:05:11 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+23:06:48 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+../src/game_p4.c: In function ‘gp4_top_play_token’:
+../src/game_p4.c:147:6: error: void value not ignored as it ought to be
+  win = gp4_check_winner();
+      ^
+src/subdir.mk:24: recipe for target 'src/game_p4.o' failed
+make: *** [src/game_p4.o] Error 1
+23:09:49 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:27:15: warning: variable ‘pos’ set but not used [-Wunused-but-set-variable]
+  coordinate_t pos;
+               ^~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+23:09:53 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+23:12:51 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+23:12:54 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+23:13:02 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+23:13:05 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+00:10:15 **** Build of configuration Debug for project 33_c_rappel_module_portee ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "33_c_rappel_module_portee"  ./src/main.o   
+00:12:57 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+00:12:57 **** Build of configuration Debug for project 33_c_rappel_taille_memoire ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘size’:
+../src/main.c:126:10: warning: ‘sizeof’ on array function parameter ‘inParamTableau’ will return size of ‘int *’ [-Wsizeof-array-argument]
+    sizeof(inParamTableau));
+          ^
+../src/main.c:89:14: note: declared here
+ int size(int inParamTableau[]  ) {
+              ^~~~~~~~~~~~~~
+gcc  -o "33_c_rappel_taille_memoire"  ./src/main.o   
+00:12:58 **** Build of configuration Debug for project 34_c_rappel_module_portee ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/f1.d" -MT"src/f1.o" -o "src/f1.o" "../src/f1.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "34_c_rappel_module_portee"  ./src/f1.o ./src/main.o   
+00:13:44 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: rien à faire pour « all ».
+00:13:45 **** Incremental Build of configuration Debug for project 34_c_rappel_module_portee ****
+make -j4 all 
+make: rien à faire pour « all ».
+00:14:37 **** Incremental Build of configuration Debug for project 34_c_rappel_module_portee ****
+make -j4 all 
+make: rien à faire pour « all ».
+00:14:47 **** Incremental Build of configuration Debug for project 34_c_rappel_module_portee ****
+make -j4 all 
+make: rien à faire pour « all ».
+00:14:48 **** Incremental Build of configuration Debug for project 34_c_rappel_module_portee ****
+make -j4 all 
+make: rien à faire pour « all ».
+00:15:26 **** Incremental Build of configuration Debug for project 33_c_rappel_taille_memoire ****
+make -j4 all 
+make: rien à faire pour « all ».
+00:15:33 **** Incremental Build of configuration Debug for project 33_c_rappel_taille_memoire ****
+make -j4 all 
+make: rien à faire pour « all ».
+00:15:40 **** Incremental Build of configuration Debug for project 33_c_rappel_taille_memoire ****
+make -j4 all 
+make: rien à faire pour « all ».
