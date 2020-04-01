@@ -15,11 +15,11 @@
 #endif
 
 #ifndef MAX_ROW
-  #define MAX_ROW 7
+  #define LINE_COUNT 7
 #endif
 
 #ifndef MAX_COL
-  #define MAX_COL 7
+  #define COL_COUNT 7
 #endif
 
 #ifndef LC_OPEN
@@ -76,10 +76,10 @@ LedControlReturnCode setLedColor(const unsigned int row,
                                  const unsigned int red, 
                                  const unsigned int green, 
                                  const unsigned int blue) {
-  if (row > MAX_ROW || row == 0)
+  if (row > LINE_COUNT || row == 0)
     return LCRC_ERROR_ROW;
 
-  if (col > MAX_COL || col == 0)
+  if (col > COL_COUNT || col == 0)
     return LCRC_ERROR_COL;
 
   if (red > 255 || green > 255 || blue > 255)

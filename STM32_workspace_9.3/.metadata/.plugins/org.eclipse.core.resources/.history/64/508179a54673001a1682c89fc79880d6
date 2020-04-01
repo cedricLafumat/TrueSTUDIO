@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include"game_p4.h"
+#include"debug.h"
+
+int main(void){
+	debug_setlevel(2);
+
+	gp4_init();
+	gp4_display();
+
+	return 0;
+}

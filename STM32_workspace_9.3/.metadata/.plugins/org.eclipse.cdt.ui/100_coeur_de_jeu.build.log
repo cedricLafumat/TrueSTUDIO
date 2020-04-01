@@ -1,7 +1,12 @@
-15:12:17 **** Build of configuration Debug for project 100_coeur_de_jeu ****
+14:42:11 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
 make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-gcc  -o "100_coeur_de_jeu"  ./src/main.o   
+../src/main.c: In function ‘gp4_scenar_test’:
+../src/main.c:28:15: warning: unused variable ‘pos’ [-Wunused-variable]
+  coordinate_t pos = gp4_top_play_token();
+               ^~~
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
 
-15:12:18 Build Finished (took 715ms)
+14:42:11 Build Finished (took 578ms)
 

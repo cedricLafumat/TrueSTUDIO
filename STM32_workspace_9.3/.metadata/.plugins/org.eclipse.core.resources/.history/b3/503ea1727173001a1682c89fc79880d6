@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include"game_p4.h"
+#include"debug.h"
+
+
+
+void gp4_scenar_test(void){
+	gp4_init();
+	gp4_display();
+	gp4_next_player();
+	gp4_display();
+	gp4_top_move_token_left();
+	gp4_display();
+	gp4_next_player();
+	gp4_display();
+	gp4_top_move_token_right();
+	gp4_display();
+	gp4_top_move_token_right();
+	gp4_display();
+}
+
+
+int main(void){
+	debug_setlevel(2);
+
+	gp4_scenar_test();
+
+
+
+
+	return 0;
+}

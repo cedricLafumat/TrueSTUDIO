@@ -1,0 +1,6 @@
+11:49:15 **** Incremental Build of configuration Debug for project 33_c_rappel ****
+make -j4 all 
+make: rien à faire pour « all ».
+
+11:49:16 Build Finished (took 467ms)
+

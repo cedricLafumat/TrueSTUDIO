@@ -1,0 +1,13 @@
+/*
+ * validation2.h
+ *
+ *  Created on: 1 avr. 2020
+ *      Author: cedric
+ */
+
+#ifndef VALIDATION2_H_
+#define VALIDATION2_H_
+
+#define var_val2 2
+
+#endif /* VALIDATION2_H_ */

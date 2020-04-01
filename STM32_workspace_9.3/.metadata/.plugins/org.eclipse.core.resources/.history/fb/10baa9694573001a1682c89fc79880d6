@@ -1,0 +1,10 @@
+#include<stdio.h>
+#include"game_p4.h"
+
+int main(void){
+
+	gp4_init();
+	gp4_display();
+
+	return 0;
+}
