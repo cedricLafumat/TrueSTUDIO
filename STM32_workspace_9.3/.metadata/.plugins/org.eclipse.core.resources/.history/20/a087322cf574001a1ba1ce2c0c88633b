@@ -1,0 +1,74 @@
+#include<stdio.h>
+#include"game_p4.h"
+#include"debug.h"
+
+
+
+void gp4_scenar_test(void){
+	/*
+	 * -------------------- LIST FUNCTION ------------------------------
+	 * gp4_init();  					---- init matrix
+	 * gp4_display();					---- print matrix
+	 * gp4_next_player();				---- change player
+	 * gp4_top_move_token_left();		---- move left
+	 * gp4_top_move_token_right();		---- move right
+	 * pos = gp4_top_play_token();		---- play token
+	 * gp4_check_winner();				---- check_winner
+	 *
+	 * ------------------ COMBINAISON PLAY TOKEN
+	 * 	pos = gp4_top_play_token();
+	 * 	gp4_display();
+	 * 	gp4_check_winner();
+	 * 	gp4_next_player();
+	 *
+	 *
+	 */
+
+	coordinate_t pos;
+
+	/*gp4_init();
+	gp4_display();
+	gp4_top_move_token_right();
+	pos = gp4_top_play_token();
+	gp4_top_move_token_left();
+	pos = gp4_top_play_token();
+	gp4_top_move_token_right();
+	pos = gp4_top_play_token();
+	gp4_top_move_token_left();
+	pos = gp4_top_play_token();
+	gp4_top_move_token_right();
+	pos = gp4_top_play_token();
+	gp4_top_move_token_left();
+	pos = gp4_top_play_token();
+	gp4_top_move_token_right();
+	pos = gp4_top_play_token();*/
+
+	int move;
+	printf("\n(1) gauche // (2) validation // (3) droite : ");
+	scanf("%d", &move);
+	fflush(stdout);
+	if (move == 1){
+		gp4_top_move_token_left();
+	}
+	if(move == 2){
+		pos = gp4_top_play_token();
+	}
+	if (move == 3){
+		gp4_top_move_token_right();
+	}
+
+}
+
+
+int main(void){
+	debug_setlevel(4);
+
+	gp4_init();
+	gp4_display();
+	while(1){
+		gp4_scenar_test();
+	}
+
+
+	return 0;
+}

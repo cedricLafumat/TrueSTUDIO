@@ -1,0 +1,11 @@
+#include<stdio.h>
+#include <pthread.h>
+
+int main(void){
+
+	printf("Hello World!\n");
+	fflush(stdout);
+	//int pthread_create (pthread_t * thread, pthread_attr_t * attr, void * (* start_routine) (void *), void * arg);
+
+	return 0;
+}

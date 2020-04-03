@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<pthread.h>
+#include<unistd.h>
+
+void *print_hello_world(void *arg){
+	int cpt = 0;
+	while(cpt < 10){
+		cpt += 1;
+		printf("Hello World! %d\n", cpt);
+		sleep(2);
+	}
+	(void) arg;
+	pthread_exit(NULL);
+}
+
+void *print_world_is_mine(void *arg){
+	int cpt = 0;
+	while(cpt < 10){
+		cpt += 1;
+		printf("The world is mine %d\n", cpt);
+		sleep(2);
+	}
+	(void) arg;
+	pthread_exit(NULL);
+}
+
+
+int main(void){
+
+	pthread_t thread1;
+	pthread_t thread2;
+
+	pthread_create(&thread1, NULL, print_hello_world, NULL);
+	pthread_create(&thread2, NULL, print_world_is_mine, NULL);
+
+	while(1){
+		sleep(2);
+	}
+	return 0;
+}
