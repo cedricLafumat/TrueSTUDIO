@@ -24,14 +24,16 @@ typedef struct{
 	int8_t y;
 }coordinate_t;
 
+typedef enum {non_victory, horizontal , vertical , diagonale_gauche , diagonale_droite , egalite } victory_type;
+
 typedef struct{
 	int8_t player_winner;
 	coordinate_t token1;
 	coordinate_t token2;
 	coordinate_t token3;
 	coordinate_t token4;
-	int8_t victory_type;
-	//enum victory_type {non_victory = 0,horizontal = 1, vertical = 2, diagonal_bas_gauche = 3, diagonale_bas_droite = 4};
+	//int8_t victory_type;
+	victory_type type_victory;
 }winner_t;
 
 

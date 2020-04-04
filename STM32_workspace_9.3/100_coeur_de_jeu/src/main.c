@@ -2,61 +2,52 @@
 #include"game_p4.h"
 #include"debug.h"
 
+/*
+ * -------------------- LIST FUNCTION ------------------------------
+ * gp4_init();  					---- init matrix
+ * gp4_display();					---- print matrix
+ * gp4_next_player();				---- change player
+ * gp4_top_move_token_left();		---- move left
+ * gp4_top_move_token_right();		---- move right
+ * gp4_top_play_token();			---- play token
+ * gp4_check_winner();				---- check_winner
+ *
+ * ------------------ COMBINAISON PLAY TOKEN
+ * 	gp4_top_play_token();
+ * 	gp4_display();
+ * 	gp4_check_winner();
+ * 	gp4_next_player();
+ *
+ */
 
+int gp4_pilot(void){
 
-void gp4_scenar_test(void){
-	/*
-	 * -------------------- LIST FUNCTION ------------------------------
-	 * gp4_init();  					---- init matrix
-	 * gp4_display();					---- print matrix
-	 * gp4_next_player();				---- change player
-	 * gp4_top_move_token_left();		---- move left
-	 * gp4_top_move_token_right();		---- move right
-	 * pos = gp4_top_play_token();		---- play token
-	 * gp4_check_winner();				---- check_winner
-	 *
-	 * ------------------ COMBINAISON PLAY TOKEN
-	 * 	pos = gp4_top_play_token();
-	 * 	gp4_display();
-	 * 	gp4_check_winner();
-	 * 	gp4_next_player();
-	 *
-	 *
-	 */
-
-
-	/*gp4_init();
-	gp4_display();
-	coordinate_t token_coordinates;
-	gp4_top_move_token_right();
-	token_coordinates = gp4_top_play_token();
-	gp4_top_move_token_left();
-	token_coordinates = gp4_top_play_token();
-	gp4_top_move_token_right();
-	token_coordinates = gp4_top_play_token();
-	gp4_top_move_token_left();
-	token_coordinates = gp4_top_play_token();
-	gp4_top_move_token_right();
-	token_coordinates = gp4_top_play_token();
-	gp4_top_move_token_left();
-	token_coordinates = gp4_top_play_token();
-	gp4_top_move_token_right();
-	token_coordinates = gp4_top_play_token();*/
-
-	coordinate_t token_coordinates;
 	int move;
+	winner_t winner;
+	int state_party = 0;
 	printf("\n(4) gauche // (5) validation // (6) droite : ");
 	scanf("%d", &move);
-	fflush(stdout);
 	if (move == 4){
 		gp4_top_move_token_left();
+		gp4_display();
 	}
 	if(move == 5){
-		token_coordinates = gp4_top_play_token();
+		gp4_top_play_token();
+		gp4_display();
+		winner = gp4_check_winner();
+		if (winner.type_victory == non_victory){
+			gp4_next_player();
+			gp4_display();
+		}
+		else if(winner.type_victory != non_victory){
+			state_party = 1;
+		}
 	}
 	if (move == 6){
 		gp4_top_move_token_right();
+		gp4_display();
 	}
+	return state_party;
 
 }
 
@@ -64,12 +55,20 @@ void gp4_scenar_test(void){
 int main(void){
 	debug_setlevel(4);
 
-	gp4_init();
-	gp4_display();
-	while(1){
-		gp4_scenar_test();
+	int choice = 1;
+	while (choice == 1){
+		printf("Nouvelle partie !\n");
+		int state_party = 0;
+		gp4_init();
+		gp4_display();
+		while(state_party == 0){
+			state_party = gp4_pilot();
+		}
+		printf("Partie fini !!\n");
+		printf("Voulez-vous recommencer une partie? (1) oui / (0) non : ");
+		scanf("%d", &choice);
 	}
-
+	printf("\nFin du jeu, passage en mode animation");
 
 	return 0;
 }

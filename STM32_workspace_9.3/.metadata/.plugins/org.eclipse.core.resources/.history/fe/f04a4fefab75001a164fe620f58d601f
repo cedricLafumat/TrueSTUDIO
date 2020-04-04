@@ -1,0 +1,46 @@
+#include<stdio.h>
+#include<pthread.h>
+#include<unistd.h>
+#include "leds_control.h"
+
+
+void *read_input(void *arg){
+	char message[5];
+	while(1){
+		if ((readbutton(message, 5)) == LCRC_OK){
+			for (int i = 0; i<4; i++){
+				if(i == 3){
+					printf("%d", message[i]);
+				}
+				else{
+				printf("%d-", message[i]);
+				}
+			}
+			printf("\n");
+		}
+	}
+	(void) arg;
+	pthread_exit(NULL);
+}
+
+void *send_message(void *arg){
+
+	(void) arg;
+	pthread_exit(NULL);
+}
+
+int main(void){
+	openLink();
+	pthread_t thread_read;
+	pthread_t thread_send;
+	printf("Création thread de lecture\n");
+	pthread_create(&thread_read, NULL, read_input, NULL);
+	printf("Créatopn thread d'envoi\n");
+	pthread_create(&thread_send, NULL, send_message, NULL);
+
+
+	(void)pthread_join (thread_read, NULL);
+	(void)pthread_join (thread_send, NULL);
+	closeLink();
+	return 0;
+}

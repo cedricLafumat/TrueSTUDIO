@@ -1,78 +1,69 @@
 #include<stdio.h>
 #include<pthread.h>
 #include<unistd.h>
-
-static int g_tab[5];
-pthread_mutex_t mutex;
+#include "leds_control.h"
 
 
+static char message[5];
+static int active_player;
+static int direction;
 
-/*void *print_hello_world(void *arg){
-	//int cpt = 0;
-	//while(cpt < 10){
-	//	cpt += 1;
-		printf("Hello World! \n");
-	//	sleep(2);
-	//}
+typedef struct{
+	int RValue;
+	int GValue;
+	int BValue;
+}RGB;
+
+const RGB Red={255,0,0};
+const RGB Green={0,255,0};
+const RGB Blue={0,0,255};
+const RGB White={255,255,255};
+const RGB Purple={255,0,255};
+const RGB Yellow={255,255,0};
+const RGB Black={0,0,0};
+
+void *read_input(void *arg){
+	while(1){
+		if ((readbutton(message, 5)) == LCRC_OK){
+			for (int i = 0; i<4; i++){
+				if(i == 3){
+					printf("%d", message[i]);
+				}
+				else{
+				printf("%d-", message[i]);
+				}
+			}
+			printf("\n");
+			if (message[1] == 49){
+				active_player = 1;
+			}
+			else if (message[1] == 50){
+				active_player = 2;
+			}
+		}
+	}
 	(void) arg;
 	pthread_exit(NULL);
 }
 
-void *print_world_is_mine(void *arg){
-	//int cpt = 0;
-	//while(cpt < 10){
-	//	cpt += 1;
-		printf("The world is mine \n");
-	//	sleep(2);
-	//}
-	(void) arg;
-	pthread_exit(NULL);
-}*/
-
-
-void *write_in_tab(void *arg){
-	int val = 0;
-	pthread_mutex_lock(&mutex);
-	for (int cpt = 0; cpt<5; cpt ++){
-		g_tab[cpt] = val;
-		printf("Ecriture de la valeur %d dans la case [%d] du tableau\n", val, cpt);
-		val += 10;
-		sleep(1);
-	}
-	pthread_mutex_unlock (&mutex);
-	(void) arg;
-	pthread_exit(NULL);
-}
-
-void *print_tabl(void *arg){
-	pthread_mutex_lock(&mutex);
-	for (int cpt = 0; cpt<5; cpt++){
-		printf("J'affiche la valeur de la case [%d] du tableau : %d\n", cpt, g_tab[cpt]);
-		sleep(1);
-	}
-	pthread_mutex_unlock (&mutex);
+void *send_message(void *arg){
+	setLedColor(1, 1, 255, 255, 255);
 	(void) arg;
 	pthread_exit(NULL);
 }
 
 int main(void){
-
-	/*pthread_t thread1;
-	pthread_t thread2;
-
-	pthread_create(&thread1, NULL, print_hello_world, NULL);
-	sleep(1);
-	pthread_create(&thread2, NULL, print_world_is_mine, NULL);*/
-
-	pthread_t write_tab;
-	pthread_t print_tab;
-
-	pthread_mutex_init(&mutex, NULL);
-	pthread_create(&write_tab, NULL, write_in_tab, NULL);
-	pthread_create(&print_tab, NULL, print_tabl, NULL);
+	openLink();
+	pthread_t thread_read;
+	pthread_t thread_send;
+	printf("Creation thread de lecture\n");
+	pthread_create(&thread_read, NULL, read_input, NULL);
+	printf("Creation thread d'envoi\n");
+	pthread_create(&thread_send, NULL, send_message, NULL);
 
 
-	(void)pthread_join (write_tab, NULL);
-	(void)pthread_join (print_tab, NULL);
+	(void)pthread_join (thread_read, NULL);
+	(void)pthread_join (thread_send, NULL);
+	closeLink();
 	return 0;
 }

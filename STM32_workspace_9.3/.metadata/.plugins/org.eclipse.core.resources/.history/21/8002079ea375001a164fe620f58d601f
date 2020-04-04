@@ -1,0 +1,45 @@
+#include<stdio.h>
+#include<pthread.h>
+#include<unistd.h>
+#include "leds_control.h"
+
+
+
+void *read_input(void *arg){
+	char message[5];
+	while(1){
+		if ((readbutton(message, 5)) == LCRC_OK){
+			for (int i = 0; i<4; i++){
+				printf("%d", message[i]);
+			}
+			printf("\n");
+		}
+	(void) arg;
+	pthread_exit(NULL);
+	}
+}
+
+/*void *print_tabl(void *arg){
+	for (int cpt = 0; cpt<5; cpt++){
+		printf("J'affiche la valeur de la case [%d] du tableau : %d\n", cpt, g_tab[cpt]);
+		sleep(1);
+	}
+	pthread_mutex_unlock (&mutex);
+	(void) arg;
+}*/
+
+int main(void){
+	openLink();
+	pthread_t thread_read;
+	//pthread_t print_tab;
+
+	//pthread_mutex_init(&mutex, NULL);
+	pthread_create(&thread_read, NULL, read_input, NULL);
+	//pthread_create(&print_tab, NULL, print_tabl, NULL);
+
+
+	(void)pthread_join (thread_read, NULL);
+	//(void)pthread_join (print_tab, NULL);
+	closeLink();
+	return 0;
+}
