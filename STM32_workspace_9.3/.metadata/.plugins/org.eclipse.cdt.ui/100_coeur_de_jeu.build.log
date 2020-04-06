@@ -1,6 +1,6 @@
-02:08:34 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+22:59:44 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
 make -j4 all 
-make: rien à faire pour « all ».
+make: Nothing to be done for 'all'.
 
-02:08:34 Build Finished (took 542ms)
+22:59:45 Build Finished (took 558ms)
 

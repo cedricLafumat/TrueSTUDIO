@@ -5,8 +5,8 @@
 
 
 static char message[5];
-static int active_player;
-static int direction;
+static int g_active_player;
+static char *direction;
 
 typedef struct{
 	int RValue;
@@ -35,10 +35,22 @@ void *read_input(void *arg){
 			}
 			printf("\n");
 			if (message[1] == 49){
-				active_player = 1;
+				g_active_player = 1;
 			}
 			else if (message[1] == 50){
-				active_player = 2;
+				g_active_player = 2;
+			}
+			if (message[2] == 108){
+				direction = "left";
+			}
+			else if(message[2] == 114){
+				direction = "right";
+			}
+			else if(message[2] == 100){
+				direction = "low";
+			}
+			else if(message[2] == 117){
+				direction = "high";
 			}
 		}
 	}

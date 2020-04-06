@@ -1,4 +1,4 @@
-15:14:40 **** Incremental Build of configuration Debug for project 90_traitements ****
+20:57:38 **** Incremental Build of configuration Debug for project 90_traitements ****
 make -j4 all 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/leds_control.d" -MT"src/leds_control.o" -o "src/leds_control.o" "../src/leds_control.c"
 ../src/leds_control.c:69:22: error: conflicting types for ‘setLedColor’
@@ -8,8 +8,8 @@ In file included from ../src/leds_control.c:1:0:
 ../src/leds_control.h:28:22: note: previous declaration of ‘setLedColor’ was here
  LedControlReturnCode setLedColor(const unsigned char command,
                       ^~~~~~~~~~~
-make: *** [src/leds_control.o] Error 1
 src/subdir.mk:21: recipe for target 'src/leds_control.o' failed
+make: *** [src/leds_control.o] Error 1
 
-15:14:41 Build Finished (took 523ms)
+20:57:38 Build Finished (took 537ms)
 

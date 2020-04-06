@@ -25,26 +25,35 @@ int gp4_pilot(void){
 	int move;
 	winner_t winner;
 	int state_party = 0;
+	pos_token_t pilot_move;
 	printf("\n(4) gauche // (5) validation // (6) droite : ");
 	scanf("%d", &move);
 	if (move == 4){
-		gp4_top_move_token_left();
+		pilot_move = gp4_top_move_token_left();
+		if (pilot_move.is_ok == false){
+			state_party = 1;
+			return state_party;
+		}
 		gp4_display();
 	}
 	if(move == 5){
 		gp4_top_play_token();
 		gp4_display();
 		winner = gp4_check_winner();
-		if (winner.type_victory == non_victory){
+		if (winner.status == live){
 			gp4_next_player();
 			gp4_display();
 		}
-		else if(winner.type_victory != non_victory){
+		else{
 			state_party = 1;
 		}
 	}
 	if (move == 6){
-		gp4_top_move_token_right();
+		pilot_move = gp4_top_move_token_right();
+		if (pilot_move.is_ok == false){
+			state_party = 1;
+			return state_party;
+		}
 		gp4_display();
 	}
 	return state_party;
@@ -53,11 +62,11 @@ int gp4_pilot(void){
 
 
 int main(void){
-	debug_setlevel(4);
+	debug_setlevel(3);
 
 	int choice = 1;
 	while (choice == 1){
-		printf("Nouvelle partie !\n");
+		printf("Nouvelle partie !\n\n");
 		int state_party = 0;
 		gp4_init();
 		gp4_display();
@@ -65,7 +74,7 @@ int main(void){
 			state_party = gp4_pilot();
 		}
 		printf("Partie fini !!\n");
-		printf("Voulez-vous recommencer une partie? (1) oui / (0) non : ");
+		printf("Voulez-vous recommencer une partie? (0) non  / (1) oui : ");
 		scanf("%d", &choice);
 	}
 	printf("\nFin du jeu, passage en mode animation");

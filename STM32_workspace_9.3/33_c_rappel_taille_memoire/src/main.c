@@ -135,7 +135,7 @@ int size(int inParamTableau[]  ) {
 int main(void) {
 	size(T); // size( & ( T[0] ) ) ;
 	array1();
-//	array2d();
-//	array3d();
+	array2d();
+	array3d();
 
 }

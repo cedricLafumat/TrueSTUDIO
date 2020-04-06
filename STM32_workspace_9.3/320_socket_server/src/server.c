@@ -27,15 +27,27 @@ int create_socket(void) {
 	return socket_desc;
 }
 
+
+
+int listen_client(int socket_desc){
+	int listen_state;
+	listen_state = listen(socket_desc , 3);
+	return listen_state;
+}
+
+
+
 int create_server(void) {
 	struct sockaddr_in server;
 	struct sockaddr_in client;
 	int error_create;
 	int error_accept;
-	int is_create = -1;
+	int error_listen;
+	int bind_state = -1;
 	int socket_desc = -1;
-	int new_socket;
-	int c;
+	int new_socket_desc;
+	char *message;
+	int size_struct_sockaddr;
 	while (socket_desc == -1) {
 		socket_desc = create_socket();
 		if (socket_desc == -1) {
@@ -44,9 +56,9 @@ int create_server(void) {
 			server.sin_family = AF_INET;
 			server.sin_addr.s_addr = INADDR_ANY;
 			server.sin_port = htons(LISTEN_PORT);
-			while (is_create == -1) {
-				is_create = bind(socket_desc, (struct sockaddr *) &server, sizeof(server));
-				if (is_create == -1) {
+			while (bind_state == -1) {
+				bind_state = bind(socket_desc, (struct sockaddr *)&server, sizeof(server));
+				if (bind_state == -1) {
 					error_create = errno;
 					error_printf(
 							"bind failed // Num error : [%i] // Message_error : [%s]\n\n",
@@ -59,27 +71,36 @@ int create_server(void) {
 		}
 	}
 	//listen
-	listen(socket_desc, 3);
+	int listen_state = -1;
+	while (listen_state == -1){
+		listen_state = listen_client(socket_desc);
+		if (listen_state == -1){
+			error_listen = errno;
+			error_printf("listen failed // Num error : [%i] // Message_error : [%s]\n\n",
+					error_listen, strerror(error_listen));
+			sleep(2);
+		}
+	}
 
 	//accept and incoming connection
+
 	debug_printf(3, "Waiting for incoming connections\n", socket_desc);
-	c = sizeof(struct sockaddr_in);
-	new_socket = accept(socket_desc, (struct sockaddr *)&client, (socklen_t*)&c);
-	if (new_socket<0){
+	size_struct_sockaddr = sizeof(struct sockaddr_in);
+	new_socket_desc = accept(socket_desc, (struct sockaddr *)&client, (socklen_t*)&size_struct_sockaddr);
+	while (new_socket_desc >= 0 ){
+		debug_printf(3, "Connection accepted\n", socket_desc);
+		//reply to the client
+		message = "Auto-reply to the client\n";
+		write(new_socket_desc, message, strlen(message));
+		debug_printf(3, "Auto-reply send\n", socket_desc);
+	}
+	if (new_socket_desc<0){
 		error_accept = errno;
 		error_printf("accept failed // Num error : [%i] // Message_error : [%s]\n\n", error_accept, strerror(error_accept));
 	}
-	else{
-		debug_printf(3, "Connection accepted\n", socket_desc);
-	}
+
 	return socket_desc;
 }
 
-int listen_client(int socket_desc){
-	int is_listen;
-	//Listen
-	is_listen = listen(socket_desc , 3);
-	return is_listen;
-}
 
 
