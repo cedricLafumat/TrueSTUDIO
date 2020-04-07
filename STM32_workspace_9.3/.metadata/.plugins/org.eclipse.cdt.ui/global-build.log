@@ -14708,3 +14708,896 @@ make: Nothing to be done for 'all'.
 22:59:44 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
 make -j4 all 
 make: Nothing to be done for 'all'.
+23:06:32 **** Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server.d" -MT"src/server.o" -o "src/server.o" "../src/server.c"
+gcc  -o "320_socket_server"  ./src/debug.o ./src/main.o ./src/server.o   
+23:06:35 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+23:52:30 **** Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server.d" -MT"src/server.o" -o "src/server.o" "../src/server.c"
+gcc  -o "320_socket_server"  ./src/debug.o ./src/main.o ./src/server.o   
+09:32:08 **** Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/main.o   
+09:32:30 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/main.o   
+09:32:43 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:35:22 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:6:2: warning: statement with no effect [-Wunused-value]
+src/subdir.mk:18: recipe for target 'src/main.o' failed
+  tab{1,2,3,4,5,6,7,8,9,10};
+  ^~~
+../src/main.c:6:5: error: expected ‘;’ before ‘{’ token
+  tab{1,2,3,4,5,6,7,8,9,10};
+     ^
+make: *** [src/main.o] Error 1
+09:35:33 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:6:8: error: expected expression before ‘{’ token
+  tab = {1,2,3,4,5,6,7,8,9,10};
+        ^
+src/subdir.mk:18: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+09:35:47 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:6:6: error: expected expression before ‘]’ token
+  tab[] = {1,2,3,4,5,6,7,8,9,10};
+      ^
+src/subdir.mk:18: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+09:37:32 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:6:6: error: expected expression before ‘]’ token
+  tab[] = {1,2,3,4,5,6,7,8,9,10};
+      ^
+../src/main.c:8:23: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  for (int i = 0; i< 10, i++){
+                       ^
+../src/main.c:8:28: error: expected ‘;’ before ‘)’ token
+  for (int i = 0; i< 10, i++){
+                            ^
+src/subdir.mk:18: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+09:37:47 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/main.o   
+09:37:51 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:38:18 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/main.o   
+09:38:20 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:39:21 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/main.o   
+09:39:23 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:57:03 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/file.o ./src/main.o   
+09:57:05 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:10:01 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+13:10:02 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:10:06 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:39:03 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+../src/file.c: In function ‘enfiler’:
+../src/file.c:23:12: error: ‘Element {aka struct Element}’ has no member named ‘precedent’
+     nouveau->precedent = NULL;
+            ^~
+src/subdir.mk:24: recipe for target 'src/file.o' failed
+../src/file.c:29:18: warning: unused variable ‘elementActuel’ [-Wunused-variable]
+         Element *elementActuel = file->premier;
+                  ^~~~~~~~~~~~~
+make: *** [src/file.o] Error 1
+13:39:03 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:48:55 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/file.c: In function ‘enfiler’:
+../src/file.c:31:29: error: ‘Element {aka struct Element}’ has no member named ‘suivant’
+         while (elementActuel->suivant != NULL)
+                             ^~
+../src/file.c:33:42: error: ‘Element {aka struct Element}’ has no member named ‘suivant’
+             elementActuel = elementActuel->suivant;
+                                          ^~
+../src/file.c:35:22: error: ‘Element {aka struct Element}’ has no member named ‘suivant’
+         elementActuel->suivant = nouveau;
+                      ^~
+../src/file.c: In function ‘defiler’:
+../src/file.c:59:38: error: ‘Element {aka struct Element}’ has no member named ‘suivant’
+         file->premier = elementDefile->suivant;
+                                      ^~
+../src/file.c: In function ‘afficherFile’:
+../src/file.c:78:26: error: ‘Element {aka struct Element}’ has no member named ‘suivant’
+         element = element->suivant;
+                          ^~
+src/subdir.mk:24: recipe for target 'src/file.o' failed
+make: *** [src/file.o] Error 1
+make: *** Waiting for unfinished jobs....
+13:48:56 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:52:57 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/file.c: In function ‘enfiler’:
+../src/file.c:28:18: warning: unused variable ‘elementActuel’ [-Wunused-variable]
+         Element *elementActuel = file->premier;
+                  ^~~~~~~~~~~~~
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+13:52:57 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:10:46 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+14:10:46 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:01:59 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:14:2: error: unknown type name ‘Queue’; use ‘struct’ keyword to refer to the type
+  Queue queue;
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+  ^~~~~
+  struct 
+../src/main.c:15:13: warning: passing argument 1 of ‘init_queue’ from incompatible pointer type [-Wincompatible-pointer-types]
+  init_queue(&queue);
+             ^
+In file included from ../src/main.c:3:0:
+../src/file.h:17:6: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ void init_queue(struct Queue *queue);
+      ^~~~~~~~~~
+../src/main.c:16:14: warning: passing argument 1 of ‘add_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+  add_element(&queue, 1);
+              ^
+In file included from ../src/main.c:3:0:
+../src/file.h:18:6: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/main.c:17:14: warning: passing argument 1 of ‘add_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+  add_element(&queue, 2);
+              ^
+In file included from ../src/main.c:3:0:
+../src/file.h:18:6: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/main.c:18:14: warning: passing argument 1 of ‘add_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+  add_element(&queue, 3);
+              ^
+In file included from ../src/main.c:3:0:
+../src/file.h:18:6: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/main.c:19:27: warning: passing argument 1 of ‘pop_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+  printf("%d", pop_element(&queue));
+                           ^
+In file included from ../src/main.c:3:0:
+../src/file.h:19:5: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c:20:27: warning: passing argument 1 of ‘pop_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+src/subdir.mk:24: recipe for target 'src/file.o' failed
+  printf("%d", pop_element(&queue));
+                           ^
+In file included from ../src/main.c:3:0:
+../src/file.h:19:5: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c:21:27: warning: passing argument 1 of ‘pop_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+  printf("%d", pop_element(&queue));
+                           ^
+In file included from ../src/main.c:3:0:
+../src/file.h:19:5: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+../src/file.c:80:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+make: *** [src/file.o] Error 1
+15:02:00 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:03:07 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:14:2: error: unknown type name ‘Queue’; use ‘struct’ keyword to refer to the type
+  Queue queue;
+  ^~~~~
+  struct 
+../src/main.c:15:13: warning: passing argument 1 of ‘init_queue’ from incompatible pointer type [-Wincompatible-pointer-types]
+  init_queue(&queue);
+             ^
+In file included from ../src/main.c:3:0:
+../src/file.h:17:6: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ void init_queue(struct Queue *queue);
+      ^~~~~~~~~~
+../src/main.c:16:14: warning: passing argument 1 of ‘add_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+  add_element(&queue, 1);
+              ^
+In file included from ../src/main.c:3:0:
+../src/file.h:18:6: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/main.c:17:14: warning: passing argument 1 of ‘add_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+  add_element(&queue, 2);
+              ^
+In file included from ../src/main.c:3:0:
+../src/file.h:18:6: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/main.c:18:14: warning: passing argument 1 of ‘add_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+  add_element(&queue, 3);
+              ^
+In file included from ../src/main.c:3:0:
+../src/file.h:18:6: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/main.c:19:27: warning: passing argument 1 of ‘pop_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+  printf("%d", pop_element(&queue));
+                           ^
+In file included from ../src/main.c:3:0:
+../src/file.h:19:5: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c:20:27: warning: passing argument 1 of ‘pop_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+  printf("%d", pop_element(&queue));
+                           ^
+In file included from ../src/main.c:3:0:
+../src/file.h:19:5: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c:21:27: warning: passing argument 1 of ‘pop_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+  printf("%d", pop_element(&queue));
+                           ^
+In file included from ../src/main.c:3:0:
+../src/file.h:19:5: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+15:03:08 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:03:35 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+./src/main.o: In function `main':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:15: undefined reference to `init_queue'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:16: undefined reference to `add_element'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:17: undefined reference to `add_element'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:18: undefined reference to `add_element'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:19: undefined reference to `pop_element'
+makefile:30: recipe for target 'fifo_project' failed
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:20: undefined reference to `pop_element'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:21: undefined reference to `pop_element'
+collect2: error: ld returned 1 exit status
+make: *** [fifo_project] Error 1
+15:03:36 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:04:40 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+15:04:40 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:05:00 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:05:01 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:05:02 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:38:26 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+15:38:26 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:44:52 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+15:44:53 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:45:59 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+15:45:59 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:46:01 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:10:25 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+../src/file.c: In function ‘add_element’:
+../src/file.c:12:2: error: unknown type name ‘Element’; use ‘struct’ keyword to refer to the type
+  Element *new_element = malloc(sizeof(*new_element));
+  ^~~~~~~
+  struct 
+../src/file.c:16:13: error: request for member ‘number’ in something not a structure or union
+  new_element->number = val_number;
+             ^~
+../src/file.c:17:13: error: request for member ‘tail’ in something not a structure or union
+src/subdir.mk:24: recipe for target 'src/file.o' failed
+  new_element->tail = NULL;
+             ^~
+../src/file.c:20:15: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+   queue->head = new_element;
+               ^
+make: *** [src/file.o] Error 1
+16:10:25 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:13:56 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+../src/file.c: In function ‘add_element’:
+../src/file.c:12:2: error: unknown type name ‘Element’; use ‘struct’ keyword to refer to the type
+  Element *new_element = malloc(sizeof(*new_element));
+  ^~~~~~~
+  struct 
+../src/file.c:16:14: error: request for member ‘number’ in something not a structure or union
+  *new_element->number = val_number;
+              ^~
+../src/file.c:17:13: error: request for member ‘tail’ in something not a structure or union
+  new_element->tail = NULL;
+             ^~
+../src/file.c:20:15: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+   queue->head = new_element;
+               ^
+make: *** [src/file.o] Error 1
+src/subdir.mk:24: recipe for target 'src/file.o' failed
+16:13:57 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:14:02 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+../src/file.c: In function ‘add_element’:
+../src/file.c:12:2: error: unknown type name ‘Element’; use ‘struct’ keyword to refer to the type
+src/subdir.mk:24: recipe for target 'src/file.o' failed
+  Element *new_element = malloc(sizeof(*new_element));
+  ^~~~~~~
+  struct 
+../src/file.c:16:13: error: request for member ‘number’ in something not a structure or union
+  new_element->number = val_number;
+             ^~
+../src/file.c:17:13: error: request for member ‘tail’ in something not a structure or union
+  new_element->tail = NULL;
+             ^~
+../src/file.c:20:15: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+   queue->head = new_element;
+               ^
+make: *** [src/file.o] Error 1
+16:14:02 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:14:39 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+../src/file.c: In function ‘add_element’:
+../src/file.c:12:2: error: unknown type name ‘Element’; use ‘struct’ keyword to refer to the type
+  Element *new_element = malloc(sizeof(*new_element));
+  ^~~~~~~
+  struct 
+../src/file.c:16:13: error: request for member ‘Element’ in something not a structure or union
+  new_element->Element *number = val_number;
+             ^~
+../src/file.c:16:24: error: ‘number’ undeclared (first use in this function); did you mean ‘val_number’?
+  new_element->Element *number = val_number;
+                        ^~~~~~
+                        val_number
+../src/file.c:16:24: note: each undeclared identifier is reported only once for each function it appears in
+../src/file.c:17:13: error: request for member ‘tail’ in something not a structure or union
+src/subdir.mk:24: recipe for target 'src/file.o' failed
+  new_element->tail = NULL;
+             ^~
+../src/file.c:20:15: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+   queue->head = new_element;
+               ^
+make: *** [src/file.o] Error 1
+16:14:40 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:14:49 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+../src/file.c: In function ‘add_element’:
+../src/file.c:12:2: error: unknown type name ‘Element’; use ‘struct’ keyword to refer to the type
+  Element *new_element = malloc(sizeof(*new_element));
+  ^~~~~~~
+  struct 
+../src/file.c:16:13: error: request for member ‘number’ in something not a structure or union
+  new_element->number = val_number;
+             ^~
+../src/file.c:17:13: error: request for member ‘tail’ in something not a structure or union
+  new_element->tail = NULL;
+             ^~
+../src/file.c:20:15: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+   queue->head = new_element;
+               ^
+make: *** [src/file.o] Error 1
+src/subdir.mk:24: recipe for target 'src/file.o' failed
+16:14:50 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:16:05 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+../src/file.c: In function ‘add_element’:
+../src/file.c:12:9: error: ‘new_element’ undeclared (first use in this function); did you mean ‘pop_element’?
+  queue *new_element = malloc(sizeof(*new_element));
+         ^~~~~~~~~~~
+         pop_element
+../src/file.c:12:9: note: each undeclared identifier is reported only once for each function it appears in
+src/subdir.mk:24: recipe for target 'src/file.o' failed
+make: *** [src/file.o] Error 1
+16:16:05 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:16:14 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+../src/file.c: In function ‘add_element’:
+../src/file.c:12:2: error: unknown type name ‘Queue’; use ‘struct’ keyword to refer to the type
+  Queue *new_element = malloc(sizeof(*new_element));
+  ^~~~~
+  struct 
+../src/file.c:16:13: error: request for member ‘number’ in something not a structure or union
+  new_element->number = val_number;
+             ^~
+../src/file.c:17:13: error: request for member ‘tail’ in something not a structure or union
+  new_element->tail = NULL;
+             ^~
+../src/file.c:20:15: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+   queue->head = new_element;
+src/subdir.mk:24: recipe for target 'src/file.o' failed
+               ^
+make: *** [src/file.o] Error 1
+16:16:15 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:16:28 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+../src/file.c: In function ‘add_element’:
+../src/file.c:12:9: error: ‘new_element’ undeclared (first use in this function); did you mean ‘pop_element’?
+  queue *new_element = malloc(sizeof(*new_element));
+         ^~~~~~~~~~~
+         pop_element
+../src/file.c:12:9: note: each undeclared identifier is reported only once for each function it appears in
+src/subdir.mk:24: recipe for target 'src/file.o' failed
+make: *** [src/file.o] Error 1
+16:16:29 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:16:35 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+../src/file.c: In function ‘add_element’:
+../src/file.c:12:9: error: ‘new_element’ undeclared (first use in this function); did you mean ‘pop_element’?
+  queue *new_element = malloc(sizeof(*new_element));
+         ^~~~~~~~~~~
+         pop_element
+../src/file.c:12:9: note: each undeclared identifier is reported only once for each function it appears in
+src/subdir.mk:24: recipe for target 'src/file.o' failed
+make: *** [src/file.o] Error 1
+16:16:35 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:18:55 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/file.c: In function ‘add_element’:
+../src/file.c:12:9: error: ‘new_element’ undeclared (first use in this function); did you mean ‘pop_element’?
+  queue *new_element = malloc(sizeof(*new_element));
+         ^~~~~~~~~~~
+         pop_element
+../src/file.c:12:9: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/file.o] Error 1
+src/subdir.mk:24: recipe for target 'src/file.o' failed
+make: *** Waiting for unfinished jobs....
+16:18:56 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:36:47 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+../src/file.c: In function ‘add_element’:
+../src/file.c:13:2: error: unknown type name ‘Element’; use ‘struct’ keyword to refer to the type
+  Element *new_element = malloc(sizeof(*new_element));
+  ^~~~~~~
+  struct 
+../src/file.c:17:13: error: request for member ‘number’ in something not a structure or union
+  new_element->number = val_number;
+             ^~
+../src/file.c:18:13: error: request for member ‘tail’ in something not a structure or union
+  new_element->tail = NULL;
+             ^~
+../src/file.c:21:15: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+   queue->head = new_element;
+               ^
+src/subdir.mk:24: recipe for target 'src/file.o' failed
+make: *** [src/file.o] Error 1
+17:36:48 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:37:05 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+../src/file.c: In function ‘add_element’:
+../src/file.c:18:13: error: ‘struct Element’ has no member named ‘tail’
+src/subdir.mk:24: recipe for target 'src/file.o' failed
+  new_element->tail = NULL;
+             ^~
+make: *** [src/file.o] Error 1
+17:37:06 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:56:59 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+17:57:00 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:03:31 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+19:03:32 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:04:51 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+../src/file.c: In function ‘add_element’:
+../src/file.c:20:15: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+   queue->tail = &new_element;
+               ^
+../src/file.c:24:15: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+   queue->head = &new_element;
+               ^
+../src/file.c:25:15: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+   queue->tail = &new_element;
+               ^
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+19:04:51 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:05:01 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+../src/file.c: In function ‘add_element’:
+../src/file.c:20:15: error: incompatible types when assigning to type ‘struct Element *’ from type ‘struct Element’
+   queue->tail = *new_element;
+               ^
+../src/file.c:24:15: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+   queue->head = &new_element;
+               ^
+../src/file.c:25:15: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+   queue->tail = &new_element;
+               ^
+src/subdir.mk:24: recipe for target 'src/file.o' failed
+make: *** [src/file.o] Error 1
+19:05:02 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:05:21 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+19:05:22 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:13:05 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+../src/file.c: In function ‘add_element’:
+../src/file.c:20:35: error: invalid initializer
+   struct Element actual_element = queue->tail;
+                                   ^~~~~
+../src/file.c:22:15: error: incompatible types when assigning to type ‘struct Element *’ from type ‘struct Element’
+   queue->tail = actual_element;
+               ^
+make: *** [src/file.o] Error 1
+src/subdir.mk:24: recipe for target 'src/file.o' failed
+19:13:06 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:15:22 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+../src/file.c: In function ‘add_element’:
+../src/file.c:20:35: error: invalid initializer
+   struct Element actual_element = queue->tail;
+                                   ^~~~~
+src/subdir.mk:24: recipe for target 'src/file.o' failed
+make: *** [src/file.o] Error 1
+19:15:23 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:15:28 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+../src/file.c: In function ‘add_element’:
+../src/file.c:20:35: error: invalid initializer
+   struct Element actual_element = queue->tail;
+                                   ^~~~~
+make: *** [src/file.o] Error 1
+src/subdir.mk:24: recipe for target 'src/file.o' failed
+19:15:28 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:15:45 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+../src/file.c: In function ‘add_element’:
+../src/file.c:21:31: error: ‘actual_element’ is a pointer; did you mean to use ‘->’?
+   new_element = actual_element.next;
+                               ^
+                               ->
+../src/file.c:20:19: warning: variable ‘actual_element’ set but not used [-Wunused-but-set-variable]
+   struct Element *actual_element = queue->tail;
+                   ^~~~~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/file.o' failed
+make: *** [src/file.o] Error 1
+19:15:45 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:16:25 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+19:16:25 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:17:46 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+19:17:46 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:32:32 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+19:32:33 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+20:27:06 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+20:27:06 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+20:27:23 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:11:46 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+21:11:46 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:19:51 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/file.c: In function ‘print_queue’:
+../src/file.c:62:36: error: invalid initializer
+  struct Element element_to_print = queue->head;
+                                    ^~~~~
+../src/file.c:64:26: error: invalid operands to binary != (have ‘struct Element’ and ‘void *’)
+  while (element_to_print != NULL){
+                          ^~
+../src/file.c:66:20: error: incompatible types when assigning to type ‘struct Element’ from type ‘struct Element *’
+src/subdir.mk:24: recipe for target 'src/file.o' failed
+   element_to_print = element_to_print.next;
+                    ^
+make: *** [src/file.o] Error 1
+make: *** Waiting for unfinished jobs....
+21:19:52 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:20:58 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+../src/file.c: In function ‘print_queue’:
+../src/file.c:62:36: error: invalid initializer
+  struct Element element_to_print = queue->head;
+                                    ^~~~~
+../src/file.c:64:26: error: invalid operands to binary != (have ‘struct Element’ and ‘void *’)
+  while (element_to_print != NULL){
+                          ^~
+../src/file.c:66:20: error: incompatible types when assigning to type ‘struct Element’ from type ‘struct Element *’
+   element_to_print = element_to_print.next;
+                    ^
+make: *** [src/file.o] Error 1
+src/subdir.mk:24: recipe for target 'src/file.o' failed
+21:20:59 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:22:24 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+../src/file.c: In function ‘print_queue’:
+../src/file.c:65:34: error: ‘element_to_print’ is a pointer; did you mean to use ‘->’?
+   printf("%d\n", element_to_print.number);
+                                  ^
+                                  ->
+../src/file.c:66:38: error: ‘element_to_print’ is a pointer; did you mean to use ‘->’?
+   element_to_print = element_to_print.next;
+                                      ^
+                                      ->
+make: *** [src/file.o] Error 1
+src/subdir.mk:24: recipe for target 'src/file.o' failed
+21:22:24 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:22:53 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+21:22:54 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:22:58 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:23:12 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+21:23:13 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:23:18 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:23:54 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+21:23:55 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:23:56 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:24:16 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+21:24:17 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:24:18 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:26:36 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+21:26:37 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:44:35 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+21:44:36 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:45:10 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+21:45:10 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:55:41 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+21:55:41 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:55:43 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:56:51 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "100_coeur_de_jeu"  ./src/debug.o ./src/game_p4.o ./src/main.o   
+21:56:52 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:56:54 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:58:34 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:58:35 **** Incremental Build of configuration Debug for project liste_chainees ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:58:37 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: Nothing to be done for 'all'.

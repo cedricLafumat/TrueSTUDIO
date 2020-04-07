@@ -86,8 +86,7 @@ int create_server(void) {
 
 	debug_printf(3, "Waiting for incoming connections\n", socket_desc);
 	size_struct_sockaddr = sizeof(struct sockaddr_in);
-	new_socket_desc = accept(socket_desc, (struct sockaddr *)&client, (socklen_t*)&size_struct_sockaddr);
-	while (new_socket_desc >= 0 ){
+	while ((new_socket_desc = accept(socket_desc, (struct sockaddr *)&client, (socklen_t*)&size_struct_sockaddr))){
 		debug_printf(3, "Connection accepted\n", socket_desc);
 		//reply to the client
 		message = "Auto-reply to the client\n";

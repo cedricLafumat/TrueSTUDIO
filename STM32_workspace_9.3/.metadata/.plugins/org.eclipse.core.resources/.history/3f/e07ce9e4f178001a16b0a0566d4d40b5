@@ -1,0 +1,101 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "file.h"
+
+
+void init_queue(struct Queue *queue){
+	queue-> head = NULL;
+	queue-> tail = NULL;
+}
+
+void add_element(struct Queue *queue, int val_number){
+	struct Element *new_element = malloc(sizeof(*new_element));
+	if(queue == NULL || new_element == NULL){
+		exit(EXIT_FAILURE);
+	}
+	new_element->number = val_number;
+	new_element->next = NULL;
+
+	if(queue->head != NULL){ // La pile a au moins 1 élément
+		queue->tail = new_element;
+
+	}
+	else{ // Le pointeur vers le 1er élément n'existe pas, ma pile est vide
+		queue->head = new_element;
+		queue->tail = new_element;
+	}
+
+}
+
+int pop_element(struct Queue *queue){
+	return 5;
+}
+
+
+
+/*void enfiler(File *file, int nvNombre)
+{
+    Element *nouveau = malloc(sizeof(*nouveau));
+    if (file == NULL || nouveau == NULL)
+    {
+        exit(EXIT_FAILURE);
+    }
+
+    nouveau->nombre = nvNombre;
+    nouveau->suivant = NULL;
+
+    else
+    {
+        //On se positionne à la fin de la file
+        Element *elementActuel = file->premier;
+       while (elementActuel->suivant != NULL)
+        {
+            elementActuel = elementActuel->suivant;
+        }
+        elementActuel->suivant = nouveau;
+    }
+}
+
+
+int defiler(File *file)
+{
+    if (file == NULL)
+    {
+        exit(EXIT_FAILURE);
+    }
+
+    int nombreDefile = 0;
+
+    //On vérifie s'il y a quelque chose à défiler
+    if (file->premier != NULL)
+    {
+        Element *elementDefile = file->premier;
+
+        nombreDefile = elementDefile->nombre;
+        file->premier = elementDefile->suivant;
+        free(elementDefile);
+    }
+
+    return nombreDefile;
+}
+
+void afficherFile(File *file)
+{
+    if (file == NULL)
+    {
+        exit(EXIT_FAILURE);
+    }
+
+    Element *element = file->premier;
+
+    while (element != NULL)
+    {
+        printf("%d ", element->nombre);
+        element = element->suivant;
+    }
+
+    printf("\n");
+}*/
+
+
+
