@@ -15601,3 +15601,1880 @@ make: Nothing to be done for 'all'.
 21:58:37 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
 make -j4 all 
 make: Nothing to be done for 'all'.
+23:12:29 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+23:12:35 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+23:15:05 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+23:18:11 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+23:21:54 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+23:21:56 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+23:22:45 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+23:22:47 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+23:23:15 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+23:23:18 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+23:25:21 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+23:25:23 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+23:26:27 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+23:26:29 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+23:27:42 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+../src/file.c: In function ‘pop_element’:
+../src/file.c:48:14: error: incompatible type for argument 1 of ‘free’
+         free(*element_to_remove); // libere l'espace alloue pour cet element
+              ^
+In file included from ../src/file.c:2:0:
+/usr/include/stdlib.h:563:13: note: expected ‘void *’ but argument is of type ‘struct Element’
+ extern void free (void *__ptr) __THROW;
+src/subdir.mk:24: recipe for target 'src/file.o' failed
+             ^~~~
+make: *** [src/file.o] Error 1
+23:28:51 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+23:29:54 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+23:29:57 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+23:31:23 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+23:31:46 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+23:32:35 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+23:32:37 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+23:34:36 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+23:34:44 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+23:34:45 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+23:36:00 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+23:36:02 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+23:36:41 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+23:36:43 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+23:37:26 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+23:37:27 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+23:37:51 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+23:37:52 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+23:38:37 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+23:38:38 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+23:39:46 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+23:39:49 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+23:47:15 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+23:47:17 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+23:56:38 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+23:56:40 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+23:59:05 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+../src/file.c: In function ‘add_element’:
+../src/file.c:23:31: error: ‘queue’ is a pointer; did you mean to use ‘->’?
+   Element *actual_head = queue.head;
+                               ^
+                               ->
+make: *** [src/file.o] Error 1
+src/subdir.mk:24: recipe for target 'src/file.o' failed
+23:59:52 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+../src/file.c: In function ‘add_element’:
+../src/file.c:23:25: error: invalid initializer
+   Element actual_head = queue->head;
+                         ^~~~~
+../src/file.c:24:21: error: incompatible types when assigning to type ‘struct Element *’ from type ‘Element {aka struct Element}’
+   new_element->next = actual_head;
+                     ^
+src/subdir.mk:24: recipe for target 'src/file.o' failed
+make: *** [src/file.o] Error 1
+23:59:59 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+00:00:03 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+00:10:44 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+../src/file.c: In function ‘pop_element’:
+../src/file.c:55:15: error: incompatible types when assigning to type ‘struct Element *’ from type ‘struct Element’
+   queue->head = *element_to_remove->next; // l'element suivant devient la tete
+               ^
+make: *** [src/file.o] Error 1
+src/subdir.mk:24: recipe for target 'src/file.o' failed
+00:10:48 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+00:10:50 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+00:11:19 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+00:11:22 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+00:11:38 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+00:11:40 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+00:13:19 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+00:13:20 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+00:15:00 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+00:15:01 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+00:15:16 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+00:15:18 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+00:16:10 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+00:16:12 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+00:21:48 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+00:21:50 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+00:22:01 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+00:22:03 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+00:23:09 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+../src/file.c: In function ‘pop_element’:
+../src/file.c:56:3: warning: attempt to free a non-heap object ‘element_to_remove’ [-Wfree-nonheap-object]
+   free(&element_to_remove); // libere l'espace alloue pour cet element
+   ^~~~~~~~~~~~~~~~~~~~~~~~
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+00:23:20 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+../src/file.c: In function ‘pop_element’:
+../src/file.c:56:8: error: incompatible type for argument 1 of ‘free’
+   free(*element_to_remove); // libere l'espace alloue pour cet element
+        ^
+In file included from ../src/file.c:2:0:
+/usr/include/stdlib.h:563:13: note: expected ‘void *’ but argument is of type ‘Element {aka struct Element}’
+ extern void free (void *__ptr) __THROW;
+src/subdir.mk:24: recipe for target 'src/file.o' failed
+             ^~~~
+make: *** [src/file.o] Error 1
+00:23:27 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+../src/file.c: In function ‘pop_element’:
+../src/file.c:56:3: warning: attempt to free a non-heap object ‘element_to_remove’ [-Wfree-nonheap-object]
+   free(&element_to_remove); // libere l'espace alloue pour cet element
+   ^~~~~~~~~~~~~~~~~~~~~~~~
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+00:23:29 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+00:23:36 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+00:23:37 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+00:24:44 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+../src/file.c: In function ‘add_element’:
+../src/file.c:39:45: warning: format ‘%p’ expects argument of type ‘void *’, but argument 3 has type ‘Element {aka struct Element}’ [-Wformat=]
+  printf("J'ajoute %d � ma liste // adresse %p\n", val_number, *new_element);
+                                            ~^                 ~~~~~~~~~~~~
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+00:24:59 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+00:29:14 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+00:29:17 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+00:29:42 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+00:29:44 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+00:38:28 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+00:38:30 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+00:39:01 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+../src/file.c: In function ‘add_element’:
+../src/file.c:27:21: error: incompatible types when assigning to type ‘struct Element *’ from type ‘struct Element’
+   new_element->next = *queue->tail;
+                     ^
+src/subdir.mk:24: recipe for target 'src/file.o' failed
+make: *** [src/file.o] Error 1
+00:40:57 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+00:40:59 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+00:41:12 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+00:41:14 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+00:44:05 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+00:44:11 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:3:0:
+../src/file.h:7:5: error: unknown type name ‘Element’
+     Element *next; // pointeur vers l'element suivant
+     ^~~~~~~
+In file included from ../src/file.c:3:0:
+../src/file.h:7:5: error: unknown type name ‘Element’
+     Element *next; // pointeur vers l'element suivant
+     ^~~~~~~
+../src/file.c: In function ‘add_element’:
+../src/file.c:26:21: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+   actual_tail->next = new_element; // je mets le pointeur de l'element actuel vers le nouvel element
+                     ^
+../src/file.c: In function ‘pop_element’:
+../src/file.c:55:15: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+   queue->head = element_to_remove->next; // l'element suivant devient la tete
+               ^
+../src/file.c: In function ‘print_queue’:
+../src/file.c:74:20: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
+   element_to_print = element_to_print->next; // l'element a afficher prend l'adresse du suivant
+                    ^
+src/subdir.mk:24: recipe for target 'src/file.o' failed
+make: *** [src/file.o] Error 1
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** Waiting for unfinished jobs....
+make: *** [src/main.o] Error 1
+00:44:19 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+00:44:24 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:02:48 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+./src/file.o: In function `init_queue':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/file.c:7: multiple definition of `init_queue'
+./src/fifo.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/fifo.c:14: first defined here
+./src/file.o: In function `add_element':
+makefile:30: recipe for target 'fifo_project' failed
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/file.c:12: multiple definition of `add_element'
+./src/fifo.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/fifo.c:19: first defined here
+./src/file.o: In function `pop_element':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/file.c:44: multiple definition of `pop_element'
+./src/fifo.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/fifo.c:51: first defined here
+./src/file.o: In function `print_queue':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/file.c:64: multiple definition of `print_queue'
+./src/fifo.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/fifo.c:71: first defined here
+collect2: error: ld returned 1 exit status
+make: *** [fifo_project] Error 1
+09:02:49 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:03:10 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+./src/file.o: In function `init_queue':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/file.c:7: multiple definition of `init_queue'
+makefile:30: recipe for target 'fifo_project' failed
+./src/fifo.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/fifo.c:14: first defined here
+./src/file.o: In function `add_element':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/file.c:12: multiple definition of `add_element'
+./src/fifo.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/fifo.c:19: first defined here
+./src/file.o: In function `pop_element':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/file.c:44: multiple definition of `pop_element'
+./src/fifo.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/fifo.c:51: first defined here
+./src/file.o: In function `print_queue':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/file.c:64: multiple definition of `print_queue'
+./src/fifo.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/fifo.c:71: first defined here
+collect2: error: ld returned 1 exit status
+make: *** [fifo_project] Error 1
+09:03:11 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:03:26 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+./src/file.o: In function `init_queue':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/file.c:7: multiple definition of `init_queue'
+makefile:30: recipe for target 'fifo_project' failed
+./src/fifo.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/fifo.c:14: first defined here
+./src/file.o: In function `add_element':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/file.c:12: multiple definition of `add_element'
+./src/fifo.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/fifo.c:19: first defined here
+./src/file.o: In function `pop_element':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/file.c:44: multiple definition of `pop_element'
+./src/fifo.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/fifo.c:51: first defined here
+./src/file.o: In function `print_queue':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/file.c:64: multiple definition of `print_queue'
+./src/fifo.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/fifo.c:71: first defined here
+collect2: error: ld returned 1 exit status
+make: *** [fifo_project] Error 1
+09:03:27 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:04:08 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+09:04:08 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:15:30 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+09:15:31 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:15:36 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:17:41 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+09:17:41 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:17:46 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:23:42 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+09:23:43 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:23:44 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:27:52 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:27:52 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:27:54 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:33:33 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:10:2: warning: implicit declaration of function ‘pthread_create’ [-Wimplicit-function-declaration]
+  pthread_create(&thread_push, NULL, thread_add, NULL);
+  ^~~~~~~~~~~~~~
+../src/main.c:10:37: error: ‘thread_add’ undeclared (first use in this function); did you mean ‘thread_pop’?
+  pthread_create(&thread_push, NULL, thread_add, NULL);
+                                     ^~~~~~~~~~
+                                     thread_pop
+../src/main.c:10:37: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:8:12: warning: unused variable ‘thread_pop’ [-Wunused-variable]
+  pthread_t thread_pop;
+            ^~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+../src/fifo.c: In function ‘thread_add’:
+../src/fifo.c:90:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+09:33:34 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:33:34 **** Incremental Build of configuration Debug for project pile ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:33:51 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/fifo.c:88:7: error: conflicting types for ‘thread_add’
+ void *thread_add(void *arg){
+       ^~~~~~~~~~
+In file included from ../src/fifo.c:10:0:
+../src/fifo.h:29:6: note: previous declaration of ‘thread_add’ was here
+ void thread_add(void);
+      ^~~~~~~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:10:2: warning: implicit declaration of function ‘pthread_create’; did you mean ‘thread_add’? [-Wimplicit-function-declaration]
+  pthread_create(&thread_push, NULL, thread_add, NULL);
+  ^~~~~~~~~~~~~~
+  thread_add
+../src/main.c:8:12: warning: unused variable ‘thread_pop’ [-Wunused-variable]
+  pthread_t thread_pop;
+            ^~~~~~~~~~
+../src/fifo.c: In function ‘thread_add’:
+src/subdir.mk:24: recipe for target 'src/fifo.o' failed
+../src/fifo.c:90:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/fifo.o] Error 1
+make: *** Waiting for unfinished jobs....
+09:33:52 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:33:53 **** Incremental Build of configuration Debug for project pile ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:34:01 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:10:2: warning: implicit declaration of function ‘pthread_create’; did you mean ‘thread_add’? [-Wimplicit-function-declaration]
+  pthread_create(&thread_push, NULL, thread_add, NULL);
+  ^~~~~~~~~~~~~~
+  thread_add
+../src/main.c:8:12: warning: unused variable ‘thread_pop’ [-Wunused-variable]
+  pthread_t thread_pop;
+            ^~~~~~~~~~
+../src/fifo.c:88:7: error: conflicting types for ‘thread_add’
+ void *thread_add(void *arg){
+       ^~~~~~~~~~
+In file included from ../src/fifo.c:10:0:
+../src/fifo.h:29:7: note: previous declaration of ‘thread_add’ was here
+ void *thread_add(void);
+       ^~~~~~~~~~
+../src/fifo.c: In function ‘thread_add’:
+../src/fifo.c:90:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/fifo.o] Error 1
+src/subdir.mk:24: recipe for target 'src/fifo.o' failed
+09:34:02 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:34:03 **** Incremental Build of configuration Debug for project pile ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:34:13 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:10:2: warning: implicit declaration of function ‘pthread_create’; did you mean ‘thread_add’? [-Wimplicit-function-declaration]
+  pthread_create(&thread_push, NULL, thread_add, NULL);
+  ^~~~~~~~~~~~~~
+  thread_add
+../src/main.c:8:12: warning: unused variable ‘thread_pop’ [-Wunused-variable]
+  pthread_t thread_pop;
+            ^~~~~~~~~~
+../src/fifo.c: In function ‘thread_add’:
+../src/fifo.c:90:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+./src/main.o: In function `main':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:10: undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make: *** [fifo_project] Error 1
+makefile:30: recipe for target 'fifo_project' failed
+09:34:13 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:34:14 **** Incremental Build of configuration Debug for project pile ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:35:22 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:10:2: warning: implicit declaration of function ‘pthread_create’; did you mean ‘thread_add’? [-Wimplicit-function-declaration]
+  pthread_create(&thread_push, NULL, thread_add, NULL);
+  ^~~~~~~~~~~~~~
+  thread_add
+../src/main.c:12:36: error: ‘thread_del’ undeclared (first use in this function); did you mean ‘thread_pop’?
+  pthread_create(&thread_pop, NULL, thread_del, NULL);
+                                    ^~~~~~~~~~
+                                    thread_pop
+../src/main.c:12:36: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/main.o] Error 1
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+09:35:23 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:35:23 **** Incremental Build of configuration Debug for project pile ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:35:49 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/fifo.c: In function ‘thread_add’:
+../src/fifo.c:90:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/fifo.c: In function ‘thread_del’:
+../src/fifo.c:94:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/main.c: In function ‘main’:
+../src/main.c:10:2: warning: implicit declaration of function ‘pthread_create’; did you mean ‘thread_del’? [-Wimplicit-function-declaration]
+  pthread_create(&thread_push, NULL, thread_add, NULL);
+  ^~~~~~~~~~~~~~
+  thread_del
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+./src/main.o: In function `main':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:10: undefined reference to `pthread_create'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:12: undefined reference to `pthread_create'
+makefile:30: recipe for target 'fifo_project' failed
+collect2: error: ld returned 1 exit status
+make: *** [fifo_project] Error 1
+09:35:50 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:35:50 **** Incremental Build of configuration Debug for project pile ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:36:16 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/fifo.c: In function ‘thread_add’:
+../src/fifo.c:90:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/fifo.c: In function ‘thread_del’:
+../src/fifo.c:94:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+./src/main.o: In function `main':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:11: undefined reference to `pthread_create'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:13: undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+makefile:30: recipe for target 'fifo_project' failed
+make: *** [fifo_project] Error 1
+09:36:16 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:36:17 **** Incremental Build of configuration Debug for project pile ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:36:33 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+../src/fifo.c: In function ‘thread_add’:
+../src/fifo.c:90:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/fifo.c: In function ‘thread_del’:
+../src/fifo.c:94:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+./src/main.o: In function `main':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:11: undefined reference to `pthread_create'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:13: undefined reference to `pthread_create'
+makefile:30: recipe for target 'fifo_project' failed
+collect2: error: ld returned 1 exit status
+make: *** [fifo_project] Error 1
+09:36:34 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:36:35 **** Incremental Build of configuration Debug for project pile ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:38:26 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+./src/main.o: In function `main':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:11: undefined reference to `pthread_create'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:13: undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+makefile:30: recipe for target 'fifo_project' failed
+make: *** [fifo_project] Error 1
+09:38:27 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:38:28 **** Incremental Build of configuration Debug for project pile ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:39:03 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/fifo.c:88:7: error: conflicting types for ‘thread_add’
+ void *thread_add(void *arg){
+       ^~~~~~~~~~
+In file included from ../src/fifo.c:10:0:
+../src/fifo.h:29:6: note: previous declaration of ‘thread_add’ was here
+ void thread_add(void *arg);
+      ^~~~~~~~~~
+../src/fifo.c:92:7: error: conflicting types for ‘thread_del’
+ void *thread_del(void *arg){
+       ^~~~~~~~~~
+In file included from ../src/fifo.c:10:0:
+../src/fifo.h:30:6: note: previous declaration of ‘thread_del’ was here
+ void thread_del(void *arg);
+      ^~~~~~~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:11:37: warning: passing argument 3 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+  pthread_create(&thread_push, NULL, thread_add, NULL);
+                                     ^~~~~~~~~~
+In file included from ../src/main.c:4:0:
+/usr/include/pthread.h:234:12: note: expected ‘void * (*)(void *)’ but argument is of type ‘void (*)(void *)’
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+../src/main.c:13:36: warning: passing argument 3 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+  pthread_create(&thread_pop, NULL, thread_del, NULL);
+                                    ^~~~~~~~~~
+In file included from ../src/main.c:4:0:
+/usr/include/pthread.h:234:12: note: expected ‘void * (*)(void *)’ but argument is of type ‘void (*)(void *)’
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+../src/fifo.c: In function ‘thread_add’:
+../src/fifo.c:90:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/fifo.c: In function ‘thread_del’:
+../src/fifo.c:94:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+src/subdir.mk:24: recipe for target 'src/fifo.o' failed
+make: *** [src/fifo.o] Error 1
+make: *** Waiting for unfinished jobs....
+09:39:04 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:39:04 **** Incremental Build of configuration Debug for project pile ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:39:15 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/fifo.c: In function ‘thread_add’:
+../src/fifo.c:90:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/fifo.c: In function ‘thread_del’:
+../src/fifo.c:94:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+./src/main.o: In function `main':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:11: undefined reference to `pthread_create'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:13: undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+makefile:30: recipe for target 'fifo_project' failed
+make: *** [fifo_project] Error 1
+09:39:15 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:39:16 **** Incremental Build of configuration Debug for project pile ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:39:47 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+./src/main.o: In function `main':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:11: undefined reference to `pthread_create'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:13: undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+makefile:30: recipe for target 'fifo_project' failed
+make: *** [fifo_project] Error 1
+09:39:48 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:39:48 **** Incremental Build of configuration Debug for project pile ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:40:35 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:11:18: error: ‘thread_read’ undeclared (first use in this function); did you mean ‘thread_del’?
+  pthread_create(&thread_read, NULL, read_input, NULL);
+                  ^~~~~~~~~~~
+                  thread_del
+../src/main.c:11:18: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:11:37: error: ‘read_input’ undeclared (first use in this function)
+  pthread_create(&thread_read, NULL, read_input, NULL);
+                                     ^~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+09:40:36 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:40:37 **** Incremental Build of configuration Debug for project pile ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:42:10 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+./src/main.o: In function `main':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:23: undefined reference to `pthread_create'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:25: undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+makefile:30: recipe for target 'fifo_project' failed
+make: *** [fifo_project] Error 1
+09:42:10 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:42:11 **** Incremental Build of configuration Debug for project pile ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:43:18 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:23:37: error: too few arguments to function ‘thread_add’
+  pthread_create(&thread_push, NULL, thread_add(), NULL);
+                                     ^~~~~~~~~~
+../src/main.c:7:7: note: declared here
+ void *thread_add(void *arg){
+       ^~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+09:43:19 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:43:20 **** Incremental Build of configuration Debug for project pile ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:43:27 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+./src/main.o: In function `main':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:23: undefined reference to `pthread_create'
+makefile:30: recipe for target 'fifo_project' failed
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:26: undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make: *** [fifo_project] Error 1
+09:43:28 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:43:29 **** Incremental Build of configuration Debug for project pile ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:43:55 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+./src/main.o: In function `main':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:23: undefined reference to `pthread_create'
+makefile:30: recipe for target 'fifo_project' failed
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:26: undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make: *** [fifo_project] Error 1
+09:43:56 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:43:57 **** Incremental Build of configuration Debug for project pile ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:45:40 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:27:22: warning: passing argument 1 of ‘pthread_join’ makes integer from pointer without a cast [-Wint-conversion]
+  (void)pthread_join (thread_add, NULL);
+                      ^~~~~~~~~~
+In file included from ../src/main.c:4:0:
+/usr/include/pthread.h:251:12: note: expected ‘pthread_t {aka long unsigned int}’ but argument is of type ‘void * (*)(void *)’
+ extern int pthread_join (pthread_t __th, void **__thread_return);
+            ^~~~~~~~~~~~
+../src/main.c:28:22: warning: passing argument 1 of ‘pthread_join’ makes integer from pointer without a cast [-Wint-conversion]
+  (void)pthread_join (thread_del, NULL);
+                      ^~~~~~~~~~
+In file included from ../src/main.c:4:0:
+/usr/include/pthread.h:251:12: note: expected ‘pthread_t {aka long unsigned int}’ but argument is of type ‘void * (*)(void *)’
+ extern int pthread_join (pthread_t __th, void **__thread_return);
+            ^~~~~~~~~~~~
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+./src/main.o: In function `main':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:23: undefined reference to `pthread_create'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:25: undefined reference to `pthread_create'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:27: undefined reference to `pthread_join'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:28: undefined reference to `pthread_join'
+makefile:30: recipe for target 'fifo_project' failed
+collect2: error: ld returned 1 exit status
+make: *** [fifo_project] Error 1
+09:45:41 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:45:42 **** Incremental Build of configuration Debug for project pile ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:46:12 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:27:22: warning: passing argument 1 of ‘pthread_join’ makes integer from pointer without a cast [-Wint-conversion]
+  (void)pthread_join (thread_add, NULL);
+                      ^~~~~~~~~~
+In file included from ../src/main.c:4:0:
+/usr/include/pthread.h:251:12: note: expected ‘pthread_t {aka long unsigned int}’ but argument is of type ‘void * (*)(void *)’
+ extern int pthread_join (pthread_t __th, void **__thread_return);
+            ^~~~~~~~~~~~
+../src/main.c:28:22: warning: passing argument 1 of ‘pthread_join’ makes integer from pointer without a cast [-Wint-conversion]
+  (void)pthread_join (thread_del, NULL);
+                      ^~~~~~~~~~
+In file included from ../src/main.c:4:0:
+/usr/include/pthread.h:251:12: note: expected ‘pthread_t {aka long unsigned int}’ but argument is of type ‘void * (*)(void *)’
+ extern int pthread_join (pthread_t __th, void **__thread_return);
+            ^~~~~~~~~~~~
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+./src/main.o: In function `main':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:23: undefined reference to `pthread_create'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:25: undefined reference to `pthread_create'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:27: undefined reference to `pthread_join'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:28: undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+makefile:30: recipe for target 'fifo_project' failed
+make: *** [fifo_project] Error 1
+09:46:12 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:46:13 **** Incremental Build of configuration Debug for project pile ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:50:09 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:25:18: error: ‘thread_pop’ undeclared (first use in this function); did you mean ‘thread_del’?
+  pthread_create(&thread_pop, NULL, thread_del, NULL);
+                  ^~~~~~~~~~
+                  thread_del
+../src/main.c:25:18: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:21:12: warning: unused variable ‘thread2’ [-Wunused-variable]
+  pthread_t thread2;
+            ^~~~~~~
+make: *** [src/main.o] Error 1
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+09:50:10 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:50:11 **** Incremental Build of configuration Debug for project pile ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:50:21 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:25:18: error: ‘thread_pop’ undeclared (first use in this function); did you mean ‘thread_del’?
+  pthread_create(&thread_pop, NULL, thread_del, NULL);
+                  ^~~~~~~~~~
+                  thread_del
+../src/main.c:25:18: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:21:12: warning: unused variable ‘thread2’ [-Wunused-variable]
+  pthread_t thread2;
+            ^~~~~~~
+make: *** [src/main.o] Error 1
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+09:50:22 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:50:22 **** Incremental Build of configuration Debug for project pile ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:50:26 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+./src/main.o: In function `main':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:23: undefined reference to `pthread_create'
+makefile:30: recipe for target 'fifo_project' failed
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:25: undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make: *** [fifo_project] Error 1
+09:50:26 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:50:27 **** Incremental Build of configuration Debug for project pile ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:56:40 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+./src/main.o: In function `main':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:23: undefined reference to `pthread_create'
+makefile:30: recipe for target 'fifo_project' failed
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:24: undefined reference to `pthread_create'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:26: undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make: *** [fifo_project] Error 1
+09:56:40 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:59:39 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -Ipthread -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -Ipthread -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc -Ipthread -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+./src/main.o: In function `main':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:23: undefined reference to `pthread_create'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:24: undefined reference to `pthread_create'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:26: undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+makefile:30: recipe for target 'fifo_project' failed
+make: *** [fifo_project] Error 1
+09:59:40 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:59:51 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -Ipthread -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+./src/main.o: In function `main':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:23: undefined reference to `pthread_create'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:25: undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+makefile:30: recipe for target 'fifo_project' failed
+make: *** [fifo_project] Error 1
+09:59:52 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:00:47 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+./src/main.o: In function `main':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:23: undefined reference to `pthread_create'
+makefile:30: recipe for target 'fifo_project' failed
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:25: undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make: *** [fifo_project] Error 1
+10:00:47 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:02:56 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -Ipthread -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -D_REENTRANT -Ipthread -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc -D_REENTRANT -Ipthread -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+./src/main.o: In function `main':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:23: undefined reference to `pthread_create'
+makefile:30: recipe for target 'fifo_project' failed
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:25: undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make: *** [fifo_project] Error 1
+10:02:56 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:03:29 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+./src/main.o: In function `main':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:23: undefined reference to `pthread_create'
+makefile:30: recipe for target 'fifo_project' failed
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:25: undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make: *** [fifo_project] Error 1
+10:03:30 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:03:50 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:03:56 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+./src/main.o: In function `main':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:23: undefined reference to `pthread_create'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:25: undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+makefile:30: recipe for target 'fifo_project' failed
+make: *** [fifo_project] Error 1
+10:03:57 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:07:44 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/file.d" -MT"src/file.o" -o "src/file.o" "../src/file.c"
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+10:07:45 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:13:56 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   
+./src/main.o: In function `main':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:23: undefined reference to `pthread_create'
+makefile:30: recipe for target 'fifo_project' failed
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/fifo_project/Debug/../src/main.c:25: undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make: *** [fifo_project] Error 1
+10:13:56 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+gcc  -o "multithread"  ./src/leds_control.o ./src/main.o   -lpthread
+10:14:21 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+10:14:21 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:08:06 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+11:08:07 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:08:10 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:08:36 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:08:37 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:08:48 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:09:41 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:10:16 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘thread_add’:
+../src/main.c:8:17: warning: dereferencing ‘void *’ pointer
+  Queue *queue = *arg;
+                 ^~~~
+../src/main.c:8:17: error: void value not ignored as it ought to be
+  Queue *queue = *arg;
+                 ^
+../src/main.c:8:9: warning: unused variable ‘queue’ [-Wunused-variable]
+  Queue *queue = *arg;
+         ^~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+11:10:17 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:10:33 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘thread_add’:
+../src/main.c:8:16: warning: dereferencing ‘void *’ pointer
+  Queue queue = *arg;
+                ^~~~
+../src/main.c:8:16: error: invalid initializer
+  Queue queue = *arg;
+                ^
+../src/main.c:8:8: warning: unused variable ‘queue’ [-Wunused-variable]
+  Queue queue = *arg;
+        ^~~~~
+make: *** [src/main.o] Error 1
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+11:10:34 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:18:29 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘thread_add’:
+../src/main.c:11:16: warning: dereferencing ‘void *’ pointer
+  Queue queue = *arg;
+                ^~~~
+../src/main.c:11:16: error: invalid initializer
+  Queue queue = *arg;
+                ^
+../src/main.c:15:23: error: incompatible type for argument 1 of ‘pthread_mutex_lock’
+    pthread_mutex_lock(mutex_queue);
+                       ^~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+/usr/include/pthread.h:763:12: note: expected ‘pthread_mutex_t * {aka union <anonymous> *}’ but argument is of type ‘pthread_mutex_t {aka union <anonymous>}’
+ extern int pthread_mutex_lock (pthread_mutex_t *__mutex)
+            ^~~~~~~~~~~~~~~~~~
+../src/main.c:17:25: error: incompatible type for argument 1 of ‘pthread_mutex_unlock’
+    pthread_mutex_unlock(mutex_queue);
+                         ^~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+/usr/include/pthread.h:774:12: note: expected ‘pthread_mutex_t * {aka union <anonymous> *}’ but argument is of type ‘pthread_mutex_t {aka union <anonymous>}’
+ extern int pthread_mutex_unlock (pthread_mutex_t *__mutex)
+            ^~~~~~~~~~~~~~~~~~~~
+../src/main.c: In function ‘thread_del’:
+../src/main.c:26:16: warning: dereferencing ‘void *’ pointer
+  Queue queue = *arg;
+                ^~~~
+../src/main.c:26:16: error: invalid initializer
+  Queue queue = *arg;
+                ^
+../src/main.c:27:21: error: incompatible type for argument 1 of ‘pthread_mutex_lock’
+  pthread_mutex_lock(mutex_queue);
+                     ^~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+/usr/include/pthread.h:763:12: note: expected ‘pthread_mutex_t * {aka union <anonymous> *}’ but argument is of type ‘pthread_mutex_t {aka union <anonymous>}’
+ extern int pthread_mutex_lock (pthread_mutex_t *__mutex)
+            ^~~~~~~~~~~~~~~~~~
+../src/main.c:29:23: error: incompatible type for argument 1 of ‘pthread_mutex_unlock’
+  pthread_mutex_unlock(mutex_queue);
+                       ^~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+/usr/include/pthread.h:774:12: note: expected ‘pthread_mutex_t * {aka union <anonymous> *}’ but argument is of type ‘pthread_mutex_t {aka union <anonymous>}’
+ extern int pthread_mutex_unlock (pthread_mutex_t *__mutex)
+            ^~~~~~~~~~~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+11:19:03 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘thread_add’:
+../src/main.c:11:16: warning: dereferencing ‘void *’ pointer
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+  Queue queue = *arg;
+                ^~~~
+../src/main.c:11:16: error: invalid initializer
+  Queue queue = *arg;
+                ^
+../src/main.c: In function ‘thread_del’:
+../src/main.c:26:16: warning: dereferencing ‘void *’ pointer
+  Queue queue = *arg;
+                ^~~~
+../src/main.c:26:16: error: invalid initializer
+  Queue queue = *arg;
+                ^
+make: *** [src/main.o] Error 1
+11:19:40 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘thread_add’:
+../src/main.c:11:16: warning: dereferencing ‘void *’ pointer
+  Queue queue = *arg;
+                ^~~~
+../src/main.c:11:16: error: invalid initializer
+  Queue queue = *arg;
+                ^
+../src/main.c: In function ‘thread_del’:
+../src/main.c:26:17: warning: dereferencing ‘void *’ pointer
+  Queue *queue = *arg;
+                 ^~~~
+../src/main.c:26:17: error: void value not ignored as it ought to be
+  Queue *queue = *arg;
+                 ^
+../src/main.c:28:14: warning: passing argument 1 of ‘pop_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+  pop_element(&queue);
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+              ^
+In file included from ../src/main.c:4:0:
+../src/fifo.h:27:5: note: expected ‘struct Queue *’ but argument is of type ‘Queue ** {aka struct Queue **}’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+make: *** [src/main.o] Error 1
+11:19:56 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘thread_add’:
+../src/main.c:11:16: warning: dereferencing ‘void *’ pointer
+  Queue queue = *arg;
+                ^~~~
+../src/main.c:11:16: error: invalid initializer
+  Queue queue = *arg;
+                ^
+../src/main.c: In function ‘thread_del’:
+../src/main.c:26:16: warning: dereferencing ‘void *’ pointer
+  Queue queue = *arg;
+                ^~~~
+../src/main.c:26:16: error: invalid initializer
+  Queue queue = *arg;
+                ^
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+11:22:10 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘thread_add’:
+../src/main.c:11:16: warning: dereferencing ‘void *’ pointer
+  Queue queue = *arg;
+                ^~~~
+../src/main.c:11:16: error: invalid initializer
+  Queue queue = *arg;
+                ^
+../src/main.c: In function ‘thread_del’:
+../src/main.c:26:16: warning: dereferencing ‘void *’ pointer
+  Queue queue = *arg;
+                ^~~~
+../src/main.c:26:16: error: invalid initializer
+  Queue queue = *arg;
+                ^
+../src/main.c: In function ‘main’:
+../src/main.c:47:22: warning: passing argument 1 of ‘pthread_join’ makes integer from pointer without a cast [-Wint-conversion]
+  (void) pthread_join(&thread_push);
+                      ^
+In file included from ../src/main.c:5:0:
+/usr/include/pthread.h:251:12: note: expected ‘pthread_t {aka long unsigned int}’ but argument is of type ‘pthread_t * {aka long unsigned int *}’
+ extern int pthread_join (pthread_t __th, void **__thread_return);
+            ^~~~~~~~~~~~
+../src/main.c:47:9: error: too few arguments to function ‘pthread_join’
+  (void) pthread_join(&thread_push);
+         ^~~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+/usr/include/pthread.h:251:12: note: declared here
+ extern int pthread_join (pthread_t __th, void **__thread_return);
+            ^~~~~~~~~~~~
+../src/main.c:48:22: warning: passing argument 1 of ‘pthread_join’ makes integer from pointer without a cast [-Wint-conversion]
+  (void) pthread_join(&thread_pop);
+                      ^
+In file included from ../src/main.c:5:0:
+/usr/include/pthread.h:251:12: note: expected ‘pthread_t {aka long unsigned int}’ but argument is of type ‘pthread_t * {aka long unsigned int *}’
+ extern int pthread_join (pthread_t __th, void **__thread_return);
+            ^~~~~~~~~~~~
+../src/main.c:48:9: error: too few arguments to function ‘pthread_join’
+  (void) pthread_join(&thread_pop);
+         ^~~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+/usr/include/pthread.h:251:12: note: declared here
+ extern int pthread_join (pthread_t __th, void **__thread_return);
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+            ^~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+11:22:38 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘thread_add’:
+../src/main.c:11:16: warning: dereferencing ‘void *’ pointer
+  Queue queue = *arg;
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+                ^~~~
+../src/main.c:11:16: error: invalid initializer
+  Queue queue = *arg;
+                ^
+../src/main.c: In function ‘thread_del’:
+../src/main.c:26:16: warning: dereferencing ‘void *’ pointer
+  Queue queue = *arg;
+                ^~~~
+../src/main.c:26:16: error: invalid initializer
+  Queue queue = *arg;
+                ^
+../src/main.c: In function ‘main’:
+../src/main.c:47:22: warning: passing argument 1 of ‘pthread_join’ makes integer from pointer without a cast [-Wint-conversion]
+  (void) pthread_join(&thread_push, NULL);
+                      ^
+In file included from ../src/main.c:5:0:
+/usr/include/pthread.h:251:12: note: expected ‘pthread_t {aka long unsigned int}’ but argument is of type ‘pthread_t * {aka long unsigned int *}’
+ extern int pthread_join (pthread_t __th, void **__thread_return);
+            ^~~~~~~~~~~~
+../src/main.c:48:22: warning: passing argument 1 of ‘pthread_join’ makes integer from pointer without a cast [-Wint-conversion]
+  (void) pthread_join(&thread_pop, NULL);
+                      ^
+In file included from ../src/main.c:5:0:
+/usr/include/pthread.h:251:12: note: expected ‘pthread_t {aka long unsigned int}’ but argument is of type ‘pthread_t * {aka long unsigned int *}’
+ extern int pthread_join (pthread_t __th, void **__thread_return);
+            ^~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+11:22:39 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:22:57 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘thread_add’:
+../src/main.c:11:16: warning: dereferencing ‘void *’ pointer
+  Queue queue = *arg;
+                ^~~~
+../src/main.c:11:16: error: invalid initializer
+  Queue queue = *arg;
+                ^
+../src/main.c: In function ‘thread_del’:
+../src/main.c:26:16: warning: dereferencing ‘void *’ pointer
+  Queue queue = *arg;
+                ^~~~
+../src/main.c:26:16: error: invalid initializer
+  Queue queue = *arg;
+                ^
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+11:22:57 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:24:59 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘thread_add’:
+../src/main.c:11:17: warning: dereferencing ‘void *’ pointer
+  Queue *queue = *arg;
+                 ^~~~
+../src/main.c:11:17: error: void value not ignored as it ought to be
+  Queue *queue = *arg;
+                 ^
+../src/main.c:16:16: warning: passing argument 1 of ‘add_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+    add_element(&queue, i);
+                ^
+In file included from ../src/main.c:4:0:
+../src/fifo.h:26:6: note: expected ‘struct Queue *’ but argument is of type ‘Queue ** {aka struct Queue **}’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/main.c: In function ‘thread_del’:
+../src/main.c:26:16: warning: dereferencing ‘void *’ pointer
+  Queue queue = *arg;
+                ^~~~
+../src/main.c:26:16: error: invalid initializer
+  Queue queue = *arg;
+                ^
+make: *** [src/main.o] Error 1
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+11:24:59 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:26:22 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘thread_del’:
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+../src/main.c:28:75: error: ‘queue’ undeclared (first use in this function); did you mean ‘Queue’?
+  printf("Je supprime l'element %d // adresse %p\n", pop_element(p_queue), queue.head);
+                                                                           ^~~~~
+                                                                           Queue
+../src/main.c:28:75: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/main.o] Error 1
+11:26:22 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:26:39 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘thread_del’:
+../src/main.c:28:82: error: ‘p_queue’ is a pointer; did you mean to use ‘->’?
+  printf("Je supprime l'element %d // adresse %p\n", pop_element(p_queue), p_queue.head);
+                                                                                  ^
+                                                                                  ->
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+11:26:40 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:26:53 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+11:26:54 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:28:31 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+11:28:31 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:28:47 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:30:18 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:33:10 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:36:26 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+11:36:26 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:38:48 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:38:48 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:38:52 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:39:11 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:43:19 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:46:16 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+11:46:17 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:46:18 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:47:23 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+11:47:24 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:47:37 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:48:31 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+11:48:32 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:48:33 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:48:55 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+11:48:56 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:48:58 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:52:31 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+11:52:32 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:52:42 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:54:33 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:59:16 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+11:59:16 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:59:18 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+12:00:02 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+12:00:02 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+12:00:04 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+12:00:38 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+12:00:38 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+12:00:40 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:07:48 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+13:07:49 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:07:53 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:03:14 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:9:14: warning: ‘semaphore’ defined but not used [-Wunused-variable]
+ static sem_t semaphore;
+              ^~~~~~~~~
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+14:03:15 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:09:02 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:47:2: warning: parameter names (without types) in function declaration
+  int sem_init(semaphore);
+  ^~~
+At top level:
+../src/main.c:9:14: warning: ‘semaphore’ defined but not used [-Wunused-variable]
+ static sem_t semaphore;
+              ^~~~~~~~~
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+14:09:03 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:11:32 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:43:6: error: conflicting types for ‘sem_init’
+  int sem_init(sem_t semaphore);
+      ^~~~~~~~
+In file included from ../src/main.c:6:0:
+/usr/include/semaphore.h:35:12: note: previous declaration of ‘sem_init’ was here
+ extern int sem_init (sem_t *__sem, int __pshared, unsigned int __value)
+            ^~~~~~~~
+At top level:
+../src/main.c:9:14: warning: ‘semaphore’ defined but not used [-Wunused-variable]
+ static sem_t semaphore;
+              ^~~~~~~~~
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+../src/fifo.c: In function ‘add_element’:
+../src/fifo.c:22:2: warning: implicit declaration of function ‘pthread_mutex_lock’ [-Wimplicit-function-declaration]
+  pthread_mutex_lock(&mutex_queue);
+  ^~~~~~~~~~~~~~~~~~
+../src/fifo.c:48:2: warning: implicit declaration of function ‘pthread_mutex_unlock’ [-Wimplicit-function-declaration]
+  pthread_mutex_unlock(&mutex_queue);
+  ^~~~~~~~~~~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+14:11:33 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:11:51 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+14:11:51 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:11:54 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:21:12 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+14:21:13 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:22:50 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:24:48 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+14:24:49 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:25:56 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+14:25:57 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:25:58 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:29:20 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+14:29:21 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:29:25 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:30:01 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:31:08 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:41:09 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/fifo.c: In function ‘add_element’:
+../src/fifo.c:25:2: warning: implicit declaration of function ‘pthread_mutex_lock’ [-Wimplicit-function-declaration]
+  pthread_mutex_lock(&mutex_queue);
+  ^~~~~~~~~~~~~~~~~~
+../src/fifo.c:48:2: warning: implicit declaration of function ‘pthread_mutex_unlock’ [-Wimplicit-function-declaration]
+  pthread_mutex_unlock(&mutex_queue);
+  ^~~~~~~~~~~~~~~~~~~~
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+14:41:10 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:41:45 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘thread_add’:
+../src/main.c:18:2: warning: implicit declaration of function ‘pthread_exit’; did you mean ‘thread_add’? [-Wimplicit-function-declaration]
+  pthread_exit(NULL);
+  ^~~~~~~~~~~~
+  thread_add
+../src/main.c: In function ‘main’:
+../src/main.c:43:2: warning: implicit declaration of function ‘pthread_create’; did you mean ‘thread_del’? [-Wimplicit-function-declaration]
+  pthread_create(&thread_push, NULL, thread_add, &queue);
+  ^~~~~~~~~~~~~~
+  thread_del
+../src/main.c:47:9: warning: implicit declaration of function ‘pthread_join’; did you mean ‘thread_del’? [-Wimplicit-function-declaration]
+  (void) pthread_join(thread_push, NULL);
+         ^~~~~~~~~~~~
+         thread_del
+../src/main.c: In function ‘thread_add’:
+../src/main.c:19:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+14:41:46 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:42:16 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+14:42:17 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:42:21 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:43:03 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+14:43:03 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:22:04 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:22:24 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:24:00 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+15:25:18 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:25:18 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:25:20 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:27:02 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+15:27:02 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:27:04 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:35:59 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+15:36:00 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:36:03 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:08:42 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+16:08:43 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:08:45 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:28:00 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:39:40 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+16:39:41 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
