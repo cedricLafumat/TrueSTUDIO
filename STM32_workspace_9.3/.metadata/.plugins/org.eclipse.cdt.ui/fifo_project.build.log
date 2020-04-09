@@ -1,7 +1,6 @@
-16:39:40 **** Incremental Build of configuration Debug for project fifo_project ****
+15:39:58 **** Incremental Build of configuration Debug for project fifo_project ****
 make -j4 all 
-gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+make: Nothing to be done for 'all'.
 
-16:39:41 Build Finished (took 853ms)
+15:39:59 Build Finished (took 540ms)
 

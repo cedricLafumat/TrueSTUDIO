@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include"leds_control.h"
+#include<pthread.h>
+
+int main(void){
+
+	pthread_t thread_read, thread_app, thread_send;
+
+	pthread_create(&thread_read, NULL, read_input, NULL);
+	pthread_create(&thread_app, NULL, change_number_app, NULL);
+	pthread_create(&thread_send, NULL, send_message, NULL);
+
+	return 0;
+}

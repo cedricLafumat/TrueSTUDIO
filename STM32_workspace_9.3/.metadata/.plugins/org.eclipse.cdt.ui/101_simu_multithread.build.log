@@ -1,0 +1,30 @@
+15:43:47 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘set_number’:
+../src/main.c:40:4: warning: implicit declaration of function ‘SetLedLine’; did you mean ‘getline’? [-Wimplicit-function-declaration]
+    SetLedLine(matrice,TabSize);
+    ^~~~~~~~~~
+    getline
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:207:3: error: too few arguments to function ‘set_number’
+   set_number();
+   ^~~~~~~~~~
+../src/main.c:27:6: note: declared here
+ void set_number(int TabSize){
+      ^~~~~~~~~~
+../src/main.c:210:3: error: too few arguments to function ‘set_number’
+   set_number();
+   ^~~~~~~~~~
+../src/main.c:27:6: note: declared here
+ void set_number(int TabSize){
+      ^~~~~~~~~~
+At top level:
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+
+15:43:47 Build Finished (took 512ms)
+

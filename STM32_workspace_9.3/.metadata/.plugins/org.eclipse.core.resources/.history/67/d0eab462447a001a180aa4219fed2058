@@ -1,0 +1,248 @@
+#include<stdio.h>
+#include<pthread.h>
+#include<unistd.h>
+#include "leds_control.h"
+
+
+static char message[5];
+static int g_active_player;
+static char *direction;
+static int state_button;
+static int TabSize = 7;
+
+typedef struct{
+	int RValue;
+	int GValue;
+	int BValue;
+}RGB;
+
+const RGB Red={255,0,0};
+const RGB Green={0,255,0};
+const RGB Blue={0,0,255};
+const RGB White={255,255,255};
+const RGB Purple={255,0,255};
+const RGB Yellow={255,255,0};
+const RGB Black={0,0,0};
+
+void *read_input(void *arg){
+	while(1){
+		if ((readbutton(message, 5)) == LCRC_OK){
+			for (int i = 0; i<4; i++){
+				if(i == 3){
+					printf("%d", message[i]);
+				}
+				else{
+				printf("%d-", message[i]);
+				}
+			}
+			printf("\n");
+			if (message[1] == 49){
+				g_active_player = 1;
+				printf("active player : %d\n", g_active_player);
+			}
+			else if (message[1] == 50){
+				g_active_player = 2;
+				printf("active player : %d\n", g_active_player);
+			}
+			if (message[2] == 108){
+				direction = "left";
+				printf("direction : %s\n", direction);
+			}
+			else if(message[2] == 114){
+				direction = "right";
+				printf("direction : %s\n", direction);
+			}
+			else if(message[2] == 100){
+				direction = "up";
+				printf("direction : %s\n", direction);
+			}
+			else if(message[2] == 117){
+				direction = "down";
+				printf("direction : %s\n", direction);
+			}
+			if(message[3] == 100){
+				state_button = 0;
+				printf("etat du bouton : down\n");
+			}
+			else if(message[3] == 117){
+				state_button = 1;
+				printf("etat du bouton : up\n");
+			}
+		}
+	}
+	(void) arg;
+	pthread_exit(NULL);
+}
+
+void *handle_app(void *arg){
+	(void) arg;
+	pthread_exit(NULL);
+}
+
+void *send_message(void *arg){
+
+	setLedColor(1, 1, 255, 255, 255);
+	(void) arg;
+	pthread_exit(NULL);
+}
+
+void SetLedLine(RGB **TabLine, int TabSize){
+	for (int line=0; line<TabSize; line++){
+		for(int col = 0; col < TabSize; col++){
+			setLedColor(line+1, col+1, TabLine[line][col].RValue, TabLine[line][col].GValue, TabLine[line][col].BValue);
+		}
+	}
+}
+
+void switch_number (int number_to_switch){
+	if (number_to_switch==9){
+				RGB bckgrd = Black;
+				RGB number = Red;
+				RGB tabline_1[7]={bckgrd,bckgrd,number,number,number,bckgrd,bckgrd};
+				RGB tabline_2[7]={bckgrd,number,bckgrd,bckgrd,bckgrd,number,bckgrd};
+				RGB tabline_3[7]={bckgrd,number,bckgrd,bckgrd,bckgrd,number,bckgrd};
+				RGB tabline_4[7]={bckgrd,bckgrd,number,number,number,number,bckgrd};
+				RGB tabline_5[7]={bckgrd,bckgrd,bckgrd,bckgrd,bckgrd,number,bckgrd};
+				RGB tabline_6[7]={bckgrd,bckgrd,bckgrd,bckgrd,bckgrd,number,bckgrd};
+				RGB tabline_7[7]={bckgrd,bckgrd,number,number,number,bckgrd,bckgrd};
+				RGB *matrice[7]={tabline_1,tabline_2,tabline_3,tabline_4,tabline_5,tabline_6,tabline_7};
+				SetLedLine(matrice,TabSize);
+			}
+			if (number_to_switch==8){
+				RGB bckgrd = Black;
+				RGB number = White;
+				RGB tabline_1[7]={bckgrd,bckgrd,number,number,number,bckgrd,bckgrd};
+				RGB tabline_2[7]={bckgrd,number,bckgrd,bckgrd,bckgrd,number,bckgrd};
+				RGB tabline_3[7]={bckgrd,number,bckgrd,bckgrd,bckgrd,number,bckgrd};
+				RGB tabline_4[7]={bckgrd,bckgrd,number,number,number,number,bckgrd};
+				RGB tabline_5[7]={bckgrd,number,bckgrd,bckgrd,bckgrd,number,bckgrd};
+				RGB tabline_6[7]={bckgrd,number,bckgrd,bckgrd,bckgrd,number,bckgrd};
+				RGB tabline_7[7]={bckgrd,bckgrd,number,number,number,bckgrd,bckgrd};
+				RGB *matrice[7]={tabline_1,tabline_2,tabline_3,tabline_4,tabline_5,tabline_6,tabline_7};
+				SetLedLine(matrice,TabSize);
+			}
+			if (number_to_switch==7){
+				RGB bckgrd = Black;
+				RGB number = Green;
+				RGB tabline_1[7]={bckgrd,number,number,number,number,number,bckgrd};
+				RGB tabline_2[7]={bckgrd,bckgrd,bckgrd,bckgrd,bckgrd,number,bckgrd};
+				RGB tabline_3[7]={bckgrd,bckgrd,bckgrd,bckgrd,bckgrd,number,bckgrd};
+				RGB tabline_4[7]={bckgrd,bckgrd,bckgrd,bckgrd,number,bckgrd,bckgrd};
+				RGB tabline_5[7]={bckgrd,bckgrd,bckgrd,number,bckgrd,bckgrd,bckgrd};
+				RGB tabline_6[7]={bckgrd,bckgrd,number,bckgrd,bckgrd,bckgrd,bckgrd};
+				RGB tabline_7[7]={bckgrd,number,bckgrd,bckgrd,bckgrd,bckgrd,bckgrd};
+				RGB *matrice[7]={tabline_1,tabline_2,tabline_3,tabline_4,tabline_5,tabline_6,tabline_7};
+				SetLedLine(matrice,TabSize);
+			}
+			if (number_to_switch==6){
+				RGB bckgrd = Black;
+				RGB number = Blue;
+				RGB tabline_1[7]={bckgrd,bckgrd,number,number,number,bckgrd,bckgrd};
+				RGB tabline_2[7]={bckgrd,number,bckgrd,bckgrd,bckgrd,number,bckgrd};
+				RGB tabline_3[7]={bckgrd,number,bckgrd,bckgrd,bckgrd,bckgrd,bckgrd};
+				RGB tabline_4[7]={bckgrd,number,number,number,number,bckgrd,bckgrd};
+				RGB tabline_5[7]={bckgrd,number,bckgrd,bckgrd,bckgrd,number,bckgrd};
+				RGB tabline_6[7]={bckgrd,number,bckgrd,bckgrd,bckgrd,number,bckgrd};
+				RGB tabline_7[7]={bckgrd,bckgrd,number,number,number,bckgrd,bckgrd};
+				RGB *matrice[7]={tabline_1,tabline_2,tabline_3,tabline_4,tabline_5,tabline_6,tabline_7};
+				SetLedLine(matrice,TabSize);
+			}
+			if (number_to_switch==5){
+				RGB bckgrd = Black;
+				RGB number = Yellow;
+				RGB tabline_1[7]={bckgrd,number,number,number,number,number,bckgrd};
+				RGB tabline_2[7]={bckgrd,number,bckgrd,bckgrd,bckgrd,bckgrd,bckgrd};
+				RGB tabline_3[7]={bckgrd,number,bckgrd,bckgrd,bckgrd,bckgrd,bckgrd};
+				RGB tabline_4[7]={bckgrd,number,number,number,number,bckgrd,bckgrd};
+				RGB tabline_5[7]={bckgrd,bckgrd,bckgrd,bckgrd,bckgrd,number,bckgrd};
+				RGB tabline_6[7]={bckgrd,bckgrd,bckgrd,bckgrd,bckgrd,number,bckgrd};
+				RGB tabline_7[7]={bckgrd,number,number,number,number,bckgrd,bckgrd};
+				RGB *matrice[7]={tabline_1,tabline_2,tabline_3,tabline_4,tabline_5,tabline_6,tabline_7};
+				SetLedLine(matrice,TabSize);
+			}
+			if (number_to_switch==4){
+				RGB bckgrd = Black;
+				RGB number = Purple;
+				RGB tabline_1[7]={bckgrd,bckgrd,bckgrd,bckgrd,number,bckgrd,bckgrd};
+				RGB tabline_2[7]={bckgrd,bckgrd,bckgrd,number,number,bckgrd,bckgrd};
+				RGB tabline_3[7]={bckgrd,bckgrd,number,bckgrd,number,bckgrd,bckgrd};
+				RGB tabline_4[7]={bckgrd,number,number,number,number,bckgrd,bckgrd};
+				RGB tabline_5[7]={bckgrd,bckgrd,bckgrd,bckgrd,number,bckgrd,bckgrd};
+				RGB tabline_6[7]={bckgrd,bckgrd,bckgrd,bckgrd,number,bckgrd,bckgrd};
+				RGB tabline_7[7]={bckgrd,bckgrd,bckgrd,bckgrd,number,bckgrd,bckgrd};
+				RGB *matrice[7]={tabline_1,tabline_2,tabline_3,tabline_4,tabline_5,tabline_6,tabline_7};
+				SetLedLine(matrice,TabSize);
+			}
+			if (number_to_switch==3){
+				RGB bckgrd = Black;
+				RGB number = White;
+				RGB tabline_1[7]={bckgrd,number,number,number,number,bckgrd,bckgrd};
+				RGB tabline_2[7]={bckgrd,bckgrd,bckgrd,bckgrd,bckgrd,number,bckgrd};
+				RGB tabline_3[7]={bckgrd,bckgrd,bckgrd,bckgrd,bckgrd,number,bckgrd};
+				RGB tabline_4[7]={bckgrd,bckgrd,number,number,number,bckgrd,bckgrd};
+				RGB tabline_5[7]={bckgrd,bckgrd,bckgrd,bckgrd,bckgrd,number,bckgrd};
+				RGB tabline_6[7]={bckgrd,bckgrd,bckgrd,bckgrd,bckgrd,number,bckgrd};
+				RGB tabline_7[7]={bckgrd,number,number,number,number,bckgrd,bckgrd};
+				RGB *matrice[7]={tabline_1,tabline_2,tabline_3,tabline_4,tabline_5,tabline_6,tabline_7};
+				SetLedLine(matrice,TabSize);
+			}
+			if (number_to_switch==2){
+				RGB bckgrd = Black;
+				RGB number = Green;
+				RGB tabline_1[7]={bckgrd,number,number,number,number,bckgrd,bckgrd};
+				RGB tabline_2[7]={bckgrd,bckgrd,bckgrd,bckgrd,bckgrd,number,bckgrd};
+				RGB tabline_3[7]={bckgrd,bckgrd,bckgrd,bckgrd,bckgrd,number,bckgrd};
+				RGB tabline_4[7]={bckgrd,bckgrd,number,number,number,bckgrd,bckgrd};
+				RGB tabline_5[7]={bckgrd,number,bckgrd,bckgrd,bckgrd,bckgrd,bckgrd};
+				RGB tabline_6[7]={bckgrd,number,bckgrd,bckgrd,bckgrd,bckgrd,bckgrd};
+				RGB tabline_7[7]={bckgrd,number,number,number,number,number,bckgrd};
+				RGB *matrice[7]={tabline_1,tabline_2,tabline_3,tabline_4,tabline_5,tabline_6,tabline_7};
+				SetLedLine(matrice,TabSize);
+			}
+			if (number_to_switch==1){
+				RGB bckgrd = Black;
+				RGB number = Blue;
+				RGB tabline_1[7]={bckgrd,bckgrd,bckgrd,bckgrd,number,bckgrd,bckgrd};
+				RGB tabline_2[7]={bckgrd,bckgrd,bckgrd,number,number,bckgrd,bckgrd};
+				RGB tabline_3[7]={bckgrd,bckgrd,number,bckgrd,number,bckgrd,bckgrd};
+				RGB tabline_4[7]={bckgrd,number,bckgrd,bckgrd,number,bckgrd,bckgrd};
+				RGB tabline_5[7]={bckgrd,bckgrd,bckgrd,bckgrd,number,bckgrd,bckgrd};
+				RGB tabline_6[7]={bckgrd,bckgrd,bckgrd,bckgrd,number,bckgrd,bckgrd};
+				RGB tabline_7[7]={bckgrd,bckgrd,bckgrd,bckgrd,number,bckgrd,bckgrd};
+				RGB *matrice[7]={tabline_1,tabline_2,tabline_3,tabline_4,tabline_5,tabline_6,tabline_7};
+				SetLedLine(matrice,TabSize);
+			}
+			if (number_to_switch==0){
+				RGB bckgrd = Black;
+				RGB number = Red;
+				RGB tabline_1[7]={bckgrd,bckgrd,number,number,number,bckgrd,bckgrd};
+				RGB tabline_2[7]={bckgrd,number,bckgrd,bckgrd,bckgrd,number,bckgrd};
+				RGB tabline_3[7]={bckgrd,number,bckgrd,bckgrd,bckgrd,number,bckgrd};
+				RGB tabline_4[7]={bckgrd,number,bckgrd,bckgrd,bckgrd,number,bckgrd};
+				RGB tabline_5[7]={bckgrd,number,bckgrd,bckgrd,bckgrd,number,bckgrd};
+				RGB tabline_6[7]={bckgrd,number,bckgrd,bckgrd,bckgrd,number,bckgrd};
+				RGB tabline_7[7]={bckgrd,bckgrd,number,number,number,bckgrd,bckgrd};
+				RGB *matrice[7]={tabline_1,tabline_2,tabline_3,tabline_4,tabline_5,tabline_6,tabline_7};
+				SetLedLine(matrice,TabSize);
+			}
+}
+
+int main(void){
+	openLink();
+	pthread_t thread_read;
+	pthread_t thread_app;
+	pthread_t thread_send;
+	printf("Creation thread de lecture\n");
+	pthread_create(&thread_read, NULL, read_input, NULL);
+	printf("Creation thread de lecture\n");
+	pthread_create(&thread_app, NULL, handle_app, NULL);
+	printf("Creation thread d'envoi\n");
+	pthread_create(&thread_send, NULL, send_message, NULL);
+
+
+	(void)pthread_join (thread_read, NULL);
+	(void)pthread_join (thread_app, NULL);
+	(void)pthread_join (thread_send, NULL);
+	closeLink();
+	return 0;
+}

@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include"leds_control.h"
+#include<pthread.h>
+#include<unistd.h>
+
+void *read_input(void *arg){
+	pthread_exit(NULL);
+}
+
+void *change_number_app(void *arg){
+	pthread_exit(NULL);
+}
+
+void *send_message(void *arg){
+	pthread_exit(NULL);
+}
+
+int main(void){
+
+	pthread_t thread_read, thread_app, thread_send;
+
+	pthread_create(&thread_read, NULL, read_input, NULL);
+	pthread_create(&thread_app, NULL, change_number_app, NULL);
+	pthread_create(&thread_send, NULL, send_message, NULL);
+
+	return 0;
+}

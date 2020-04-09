@@ -17478,3 +17478,1091 @@ gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
 16:39:41 **** Incremental Build of configuration Debug for project multithread ****
 make -j4 all 
 make: Nothing to be done for 'all'.
+00:24:14 **** Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+00:24:17 **** Incremental Build of configuration Debug for project 320_socket_server ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:27:29 **** Incremental Build of configuration Debug for project 90_traitements ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/leds_control.d" -MT"src/leds_control.o" -o "src/leds_control.o" "../src/leds_control.c"
+../src/leds_control.c:69:22: error: conflicting types for ‘setLedColor’
+ LedControlReturnCode setLedColor(const unsigned int row,
+                      ^~~~~~~~~~~
+In file included from ../src/leds_control.c:1:0:
+../src/leds_control.h:28:22: note: previous declaration of ‘setLedColor’ was here
+ LedControlReturnCode setLedColor(const unsigned char command,
+                      ^~~~~~~~~~~
+src/subdir.mk:21: recipe for target 'src/leds_control.o' failed
+make: *** [src/leds_control.o] Error 1
+09:27:29 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘switch_number’:
+../src/main.c:80:5: warning: implicit declaration of function ‘SetLedLine’; did you mean ‘getline’? [-Wimplicit-function-declaration]
+     SetLedLine(matrice,TabSize);
+     ^~~~~~~~~~
+     getline
+../src/main.c:80:24: error: ‘TabSize’ undeclared (first use in this function)
+     SetLedLine(matrice,TabSize);
+                        ^~~~~~~
+../src/main.c:80:24: note: each undeclared identifier is reported only once for each function it appears in
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+09:28:11 **** Incremental Build of configuration Debug for project 90_traitements ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/leds_control.d" -MT"src/leds_control.o" -o "src/leds_control.o" "../src/leds_control.c"
+../src/leds_control.c:69:22: error: conflicting types for ‘setLedColor’
+ LedControlReturnCode setLedColor(const unsigned int row,
+                      ^~~~~~~~~~~
+In file included from ../src/leds_control.c:1:0:
+../src/leds_control.h:28:22: note: previous declaration of ‘setLedColor’ was here
+ LedControlReturnCode setLedColor(const unsigned char command,
+                      ^~~~~~~~~~~
+src/subdir.mk:21: recipe for target 'src/leds_control.o' failed
+make: *** [src/leds_control.o] Error 1
+09:28:12 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:10:8: warning: type defaults to ‘int’ in declaration of ‘TabSize’ [-Wimplicit-int]
+ static TabSize = 7;
+        ^~~~~~~
+../src/main.c: In function ‘switch_number’:
+../src/main.c:81:5: warning: implicit declaration of function ‘SetLedLine’; did you mean ‘getline’? [-Wimplicit-function-declaration]
+     SetLedLine(matrice,TabSize);
+     ^~~~~~~~~~
+     getline
+gcc  -o "multithread"  ./src/leds_control.o ./src/main.o   -lpthread
+./src/main.o: In function `switch_number':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/multithread/Debug/../src/main.c:81: undefined reference to `SetLedLine'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/multithread/Debug/../src/main.c:94: undefined reference to `SetLedLine'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/multithread/Debug/../src/main.c:107: undefined reference to `SetLedLine'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/multithread/Debug/../src/main.c:120: undefined reference to `SetLedLine'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/multithread/Debug/../src/main.c:133: undefined reference to `SetLedLine'
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/multithread/Debug/../src/main.c:146: more undefined references to `SetLedLine' follow
+collect2: error: ld returned 1 exit status
+make: *** [multithread] Error 1
+makefile:30: recipe for target 'multithread' failed
+09:28:15 **** Incremental Build of configuration Debug for project 90_traitements ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/leds_control.d" -MT"src/leds_control.o" -o "src/leds_control.o" "../src/leds_control.c"
+../src/leds_control.c:69:22: error: conflicting types for ‘setLedColor’
+ LedControlReturnCode setLedColor(const unsigned int row,
+                      ^~~~~~~~~~~
+In file included from ../src/leds_control.c:1:0:
+../src/leds_control.h:28:22: note: previous declaration of ‘setLedColor’ was here
+ LedControlReturnCode setLedColor(const unsigned char command,
+                      ^~~~~~~~~~~
+src/subdir.mk:21: recipe for target 'src/leds_control.o' failed
+make: *** [src/leds_control.o] Error 1
+09:28:16 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘switch_number’:
+../src/main.c:81:5: warning: implicit declaration of function ‘SetLedLine’; did you mean ‘getline’? [-Wimplicit-function-declaration]
+     SetLedLine(matrice,TabSize);
+     ^~~~~~~~~~
+     getline
+gcc  -o "multithread"  ./src/leds_control.o ./src/main.o   -lpthread
+./src/main.o: In function `switch_number':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/multithread/Debug/../src/main.c:81: undefined reference to `SetLedLine'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/multithread/Debug/../src/main.c:94: undefined reference to `SetLedLine'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/multithread/Debug/../src/main.c:107: undefined reference to `SetLedLine'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/multithread/Debug/../src/main.c:120: undefined reference to `SetLedLine'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/multithread/Debug/../src/main.c:133: undefined reference to `SetLedLine'
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/multithread/Debug/../src/main.c:146: more undefined references to `SetLedLine' follow
+collect2: error: ld returned 1 exit status
+make: *** [multithread] Error 1
+makefile:30: recipe for target 'multithread' failed
+09:29:00 **** Incremental Build of configuration Debug for project 90_traitements ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/leds_control.d" -MT"src/leds_control.o" -o "src/leds_control.o" "../src/leds_control.c"
+../src/leds_control.c:69:22: error: conflicting types for ‘setLedColor’
+ LedControlReturnCode setLedColor(const unsigned int row,
+                      ^~~~~~~~~~~
+In file included from ../src/leds_control.c:1:0:
+../src/leds_control.h:28:22: note: previous declaration of ‘setLedColor’ was here
+ LedControlReturnCode setLedColor(const unsigned char command,
+                      ^~~~~~~~~~~
+make: *** [src/leds_control.o] Error 1
+src/subdir.mk:21: recipe for target 'src/leds_control.o' failed
+09:29:01 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘switch_number’:
+../src/main.c:83:5: warning: implicit declaration of function ‘SetLedLine’; did you mean ‘getline’? [-Wimplicit-function-declaration]
+     SetLedLine(matrice,TabSize);
+     ^~~~~~~~~~
+     getline
+gcc  -o "multithread"  ./src/leds_control.o ./src/main.o   -lpthread
+./src/main.o: In function `switch_number':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/multithread/Debug/../src/main.c:83: undefined reference to `SetLedLine'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/multithread/Debug/../src/main.c:96: undefined reference to `SetLedLine'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/multithread/Debug/../src/main.c:109: undefined reference to `SetLedLine'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/multithread/Debug/../src/main.c:122: undefined reference to `SetLedLine'
+makefile:30: recipe for target 'multithread' failed
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/multithread/Debug/../src/main.c:135: undefined reference to `SetLedLine'
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/multithread/Debug/../src/main.c:148: more undefined references to `SetLedLine' follow
+collect2: error: ld returned 1 exit status
+make: *** [multithread] Error 1
+09:29:04 **** Incremental Build of configuration Debug for project 90_traitements ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/leds_control.d" -MT"src/leds_control.o" -o "src/leds_control.o" "../src/leds_control.c"
+../src/leds_control.c:69:22: error: conflicting types for ‘setLedColor’
+ LedControlReturnCode setLedColor(const unsigned int row,
+                      ^~~~~~~~~~~
+In file included from ../src/leds_control.c:1:0:
+../src/leds_control.h:28:22: note: previous declaration of ‘setLedColor’ was here
+ LedControlReturnCode setLedColor(const unsigned char command,
+                      ^~~~~~~~~~~
+make: *** [src/leds_control.o] Error 1
+src/subdir.mk:21: recipe for target 'src/leds_control.o' failed
+09:29:05 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘SetLedLine’:
+../src/main.c:71:16: warning: passing argument 1 of ‘setLedColor’ makes integer from pointer without a cast [-Wint-conversion]
+    setLedColor("R", line+1, col+1, TabLine[line][col].RValue, TabLine[line][col].GValue, TabLine[line][col].BValue, "\n");
+                ^~~
+In file included from ../src/main.c:4:0:
+../src/leds_control.h:29:22: note: expected ‘unsigned int’ but argument is of type ‘char *’
+ LedControlReturnCode setLedColor(const unsigned int row,
+                      ^~~~~~~~~~~
+../src/main.c:71:4: error: too many arguments to function ‘setLedColor’
+    setLedColor("R", line+1, col+1, TabLine[line][col].RValue, TabLine[line][col].GValue, TabLine[line][col].BValue, "\n");
+    ^~~~~~~~~~~
+In file included from ../src/main.c:4:0:
+../src/leds_control.h:29:22: note: declared here
+ LedControlReturnCode setLedColor(const unsigned int row,
+                      ^~~~~~~~~~~
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+09:31:47 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "multithread"  ./src/leds_control.o ./src/main.o   -lpthread
+09:31:52 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:54:13 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "multithread"  ./src/leds_control.o ./src/main.o   -lpthread
+09:54:17 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:56:33 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "multithread"  ./src/leds_control.o ./src/main.o   -lpthread
+09:56:35 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:57:23 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "multithread"  ./src/leds_control.o ./src/main.o   -lpthread
+09:57:42 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:58:39 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:58:52 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:59:06 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:59:08 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:02:31 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "multithread"  ./src/leds_control.o ./src/main.o   -lpthread
+10:02:43 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:02:44 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:03:06 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "multithread"  ./src/leds_control.o ./src/main.o   -lpthread
+10:03:20 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:30:39 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "multithread"  ./src/leds_control.o ./src/main.o   -lpthread
+11:03:34 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+11:03:36 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:06:31 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:35:12: warning: unused variable ‘thread_pop’ [-Wunused-variable]
+  pthread_t thread_pop;
+            ^~~~~~~~~~
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+11:06:38 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+11:06:40 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:11:03 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "fifo_project"  ./src/fifo.o ./src/file.o ./src/main.o   -lpthread
+11:11:05 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:11:32 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:11:34 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:27:33 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "multithread"  ./src/leds_control.o ./src/main.o   -lpthread
+11:27:37 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:27:52 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "multithread"  ./src/leds_control.o ./src/main.o   -lpthread
+11:27:53 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:42:15 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "multithread"  ./src/leds_control.o ./src/main.o   -lpthread
+11:42:17 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:43:14 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:52:22 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:89:15: error: incompatible type for argument 1 of ‘pthread_exit’
+  pthread_exit(message_recv);
+               ^~~~~~~~~~~~
+In file included from ../src/main.c:2:0:
+/usr/include/pthread.h:243:13: note: expected ‘void *’ but argument is of type ‘Message {aka struct <anonymous>}’
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+ extern void pthread_exit (void *__retval) __attribute__ ((__noreturn__));
+             ^~~~~~~~~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:251:37: warning: passing argument 3 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+  pthread_create(&thread_read, NULL, read_input, NULL);
+                                     ^~~~~~~~~~
+In file included from ../src/main.c:2:0:
+/usr/include/pthread.h:234:12: note: expected ‘void * (*)(void *)’ but argument is of type ‘Message * (*)(void *) {aka struct <anonymous> * (*)(void *)}’
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+11:52:35 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:34:10: warning: variable ‘message_recv’ set but not used [-Wunused-but-set-variable]
+  Message message_recv;
+          ^~~~~~~~~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:251:37: warning: passing argument 3 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+  pthread_create(&thread_read, NULL, read_input, NULL);
+                                     ^~~~~~~~~~
+In file included from ../src/main.c:2:0:
+/usr/include/pthread.h:234:12: note: expected ‘void * (*)(void *)’ but argument is of type ‘Message * (*)(void *) {aka struct <anonymous> * (*)(void *)}’
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+gcc  -o "multithread"  ./src/leds_control.o ./src/main.o   -lpthread
+11:53:06 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:34:10: warning: variable ‘message_recv’ set but not used [-Wunused-but-set-variable]
+  Message message_recv;
+          ^~~~~~~~~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:251:31: error: expected expression before ‘Message’
+  pthread_create(&thread_read, Message, read_input, NULL);
+                               ^~~~~~~
+../src/main.c:251:2: error: too few arguments to function ‘pthread_create’
+  pthread_create(&thread_read, Message, read_input, NULL);
+  ^~~~~~~~~~~~~~
+In file included from ../src/main.c:2:0:
+/usr/include/pthread.h:234:12: note: declared here
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+11:53:15 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:34:10: warning: variable ‘message_recv’ set but not used [-Wunused-but-set-variable]
+  Message message_recv;
+          ^~~~~~~~~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:251:32: error: expected expression before ‘Message’
+  pthread_create(&thread_read, &Message, read_input, NULL);
+                                ^~~~~~~
+../src/main.c:251:2: error: too few arguments to function ‘pthread_create’
+  pthread_create(&thread_read, &Message, read_input, NULL);
+  ^~~~~~~~~~~~~~
+In file included from ../src/main.c:2:0:
+/usr/include/pthread.h:234:12: note: declared here
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+11:53:24 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:34:10: warning: variable ‘message_recv’ set but not used [-Wunused-but-set-variable]
+  Message message_recv;
+          ^~~~~~~~~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:251:37: warning: passing argument 3 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+  pthread_create(&thread_read, NULL, read_input, NULL);
+                                     ^~~~~~~~~~
+In file included from ../src/main.c:2:0:
+/usr/include/pthread.h:234:12: note: expected ‘void * (*)(void *)’ but argument is of type ‘Message * (*)(void *) {aka struct <anonymous> * (*)(void *)}’
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+gcc  -o "multithread"  ./src/leds_control.o ./src/main.o   -lpthread
+11:54:09 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:89:15: error: incompatible type for argument 1 of ‘pthread_exit’
+  pthread_exit(message_recv);
+               ^~~~~~~~~~~~
+In file included from ../src/main.c:2:0:
+/usr/include/pthread.h:243:13: note: expected ‘void *’ but argument is of type ‘Message {aka struct <anonymous>}’
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+ extern void pthread_exit (void *__retval) __attribute__ ((__noreturn__));
+             ^~~~~~~~~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:251:37: warning: passing argument 3 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+  pthread_create(&thread_read, NULL, read_input, NULL);
+                                     ^~~~~~~~~~
+In file included from ../src/main.c:2:0:
+/usr/include/pthread.h:234:12: note: expected ‘void * (*)(void *)’ but argument is of type ‘Message * (*)(void *) {aka struct <anonymous> * (*)(void *)}’
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+11:54:22 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:89:15: error: incompatible type for argument 1 of ‘pthread_exit’
+  pthread_exit(message_recv);
+               ^~~~~~~~~~~~
+In file included from ../src/main.c:2:0:
+/usr/include/pthread.h:243:13: note: expected ‘void *’ but argument is of type ‘Message {aka struct <anonymous>}’
+ extern void pthread_exit (void *__retval) __attribute__ ((__noreturn__));
+             ^~~~~~~~~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:251:31: error: ‘message_recv’ undeclared (first use in this function); did you mean ‘message’?
+  pthread_create(&thread_read, message_recv, read_input, NULL);
+                               ^~~~~~~~~~~~
+                               message
+../src/main.c:251:31: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:251:45: warning: passing argument 3 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+  pthread_create(&thread_read, message_recv, read_input, NULL);
+                                             ^~~~~~~~~~
+In file included from ../src/main.c:2:0:
+/usr/include/pthread.h:234:12: note: expected ‘void * (*)(void *)’ but argument is of type ‘Message * (*)(void *) {aka struct <anonymous> * (*)(void *)}’
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+11:54:30 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:89:15: error: incompatible type for argument 1 of ‘pthread_exit’
+  pthread_exit(message_recv);
+               ^~~~~~~~~~~~
+In file included from ../src/main.c:2:0:
+/usr/include/pthread.h:243:13: note: expected ‘void *’ but argument is of type ‘Message {aka struct <anonymous>}’
+ extern void pthread_exit (void *__retval) __attribute__ ((__noreturn__));
+             ^~~~~~~~~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:251:31: error: expected expression before ‘Message’
+  pthread_create(&thread_read, Message, read_input, NULL);
+                               ^~~~~~~
+../src/main.c:251:2: error: too few arguments to function ‘pthread_create’
+  pthread_create(&thread_read, Message, read_input, NULL);
+  ^~~~~~~~~~~~~~
+In file included from ../src/main.c:2:0:
+/usr/include/pthread.h:234:12: note: declared here
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+13:03:16 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:89:15: error: incompatible type for argument 1 of ‘pthread_exit’
+  pthread_exit(message_recv);
+               ^~~~~~~~~~~~
+In file included from ../src/main.c:2:0:
+/usr/include/pthread.h:243:13: note: expected ‘void *’ but argument is of type ‘Message {aka struct <anonymous>}’
+ extern void pthread_exit (void *__retval) __attribute__ ((__noreturn__));
+             ^~~~~~~~~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:251:31: error: expected expression before ‘Message’
+  pthread_create(&thread_read, Message, read_input, NULL);
+                               ^~~~~~~
+../src/main.c:251:2: error: too few arguments to function ‘pthread_create’
+  pthread_create(&thread_read, Message, read_input, NULL);
+  ^~~~~~~~~~~~~~
+In file included from ../src/main.c:2:0:
+/usr/include/pthread.h:234:12: note: declared here
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+13:09:04 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:89:15: error: incompatible type for argument 1 of ‘pthread_exit’
+  pthread_exit(message_recv);
+               ^~~~~~~~~~~~
+In file included from ../src/main.c:2:0:
+/usr/include/pthread.h:243:13: note: expected ‘void *’ but argument is of type ‘Message {aka struct <anonymous>}’
+ extern void pthread_exit (void *__retval) __attribute__ ((__noreturn__));
+             ^~~~~~~~~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:251:37: warning: passing argument 3 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+  pthread_create(&thread_read, NULL, read_input, NULL);
+                                     ^~~~~~~~~~
+In file included from ../src/main.c:2:0:
+/usr/include/pthread.h:234:12: note: expected ‘void * (*)(void *)’ but argument is of type ‘Message * (*)(void *) {aka struct <anonymous> * (*)(void *)}’
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+13:25:44 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:34:10: warning: variable ‘message_recv’ set but not used [-Wunused-but-set-variable]
+  Message message_recv;
+          ^~~~~~~~~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:251:37: warning: passing argument 3 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+  pthread_create(&thread_read, NULL, read_input, NULL);
+                                     ^~~~~~~~~~
+In file included from ../src/main.c:2:0:
+/usr/include/pthread.h:234:12: note: expected ‘void * (*)(void *)’ but argument is of type ‘Message * (*)(void *) {aka struct <anonymous> * (*)(void *)}’
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+gcc  -o "multithread"  ./src/leds_control.o ./src/main.o   -lpthread
+13:25:58 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:34:10: warning: variable ‘message_recv’ set but not used [-Wunused-but-set-variable]
+  Message message_recv;
+          ^~~~~~~~~~~~
+gcc  -o "multithread"  ./src/leds_control.o ./src/main.o   -lpthread
+13:30:51 **** Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_simu_multithread"  ./src/main.o   
+13:31:43 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:32:00 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:32:29 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:36:24 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/leds_control.d" -MT"src/leds_control.o" -o "src/leds_control.o" "../src/leds_control.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:9:37: error: ‘read_input’ undeclared (first use in this function)
+  pthread_create(&thread_read, NULL, read_input, NULL);
+                                     ^~~~~~~~~~
+../src/main.c:9:37: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:10:36: error: ‘change_number_app’ undeclared (first use in this function)
+  pthread_create(&thread_app, NULL, change_number_app, NULL);
+                                    ^~~~~~~~~~~~~~~~~
+../src/main.c:11:37: error: ‘send_message’ undeclared (first use in this function)
+  pthread_create(&thread_send, NULL, send_message, NULL);
+                                     ^~~~~~~~~~~~
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+13:37:42 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_simu_multithread"  ./src/leds_control.o ./src/main.o   
+./src/main.o: In function `main':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/101_simu_multithread/Debug/../src/main.c:22: undefined reference to `pthread_create'
+makefile:30: recipe for target '101_simu_multithread' failed
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/101_simu_multithread/Debug/../src/main.c:23: undefined reference to `pthread_create'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/101_simu_multithread/Debug/../src/main.c:24: undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make: *** [101_simu_multithread] Error 1
+13:39:06 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_simu_multithread"  ./src/leds_control.o ./src/main.o   
+./src/main.o: In function `main':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/101_simu_multithread/Debug/../src/main.c:22: undefined reference to `pthread_create'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/101_simu_multithread/Debug/../src/main.c:23: undefined reference to `pthread_create'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/101_simu_multithread/Debug/../src/main.c:24: undefined reference to `pthread_create'
+makefile:30: recipe for target '101_simu_multithread' failed
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/101_simu_multithread/Debug/../src/main.c:26: undefined reference to `pthread_join'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/101_simu_multithread/Debug/../src/main.c:27: undefined reference to `pthread_join'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/101_simu_multithread/Debug/../src/main.c:28: undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make: *** [101_simu_multithread] Error 1
+13:39:07 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+gcc -D_REENTRANT -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:34:10: warning: variable ‘message_recv’ set but not used [-Wunused-but-set-variable]
+  Message message_recv;
+          ^~~~~~~~~~~~
+At top level:
+../src/main.c:11:12: warning: ‘TabSize’ defined but not used [-Wunused-variable]
+ static int TabSize = 7;
+            ^~~~~~~
+gcc  -o "multithread"  ./src/leds_control.o ./src/main.o   -lpthread
+13:39:57 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc  -o "101_simu_multithread"  ./src/leds_control.o ./src/main.o   -lpthread
+13:39:58 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:44:19 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:37:2: error: expected ‘;’ before ‘return’
+  return 0;
+  ^~~~~~
+At top level:
+../src/main.c:7:24: warning: ‘mutex’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex;
+                        ^~~~~
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+13:44:19 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:44:20 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:44:33 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:7:24: warning: ‘mutex’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex;
+                        ^~~~~
+gcc  -o "101_simu_multithread"  ./src/leds_control.o ./src/main.o   -lpthread
+13:44:34 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:44:34 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:52:20 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:12:17: warning: passing argument 1 of ‘readbutton’ from incompatible pointer type [-Wincompatible-pointer-types]
+  if (readbutton(&message, 5) == LCRC_OK){
+                 ^
+In file included from ../src/main.c:2:0:
+../src/leds_control.h:35:6: note: expected ‘char *’ but argument is of type ‘int (*)[5]’
+ char readbutton(char *pReadData, char DataSize);
+      ^~~~~~~~~~
+At top level:
+../src/main.c:7:24: warning: ‘mutex’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex;
+                        ^~~~~
+gcc  -o "101_simu_multithread"  ./src/leds_control.o ./src/main.o   -lpthread
+13:52:20 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:52:21 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:52:43 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:12:18: warning: passing argument 1 of ‘readbutton’ from incompatible pointer type [-Wincompatible-pointer-types]
+  if ((readbutton(&message, 5)) == LCRC_OK){
+                  ^
+In file included from ../src/main.c:2:0:
+../src/leds_control.h:35:6: note: expected ‘char *’ but argument is of type ‘int (*)[5]’
+ char readbutton(char *pReadData, char DataSize);
+      ^~~~~~~~~~
+At top level:
+../src/main.c:7:24: warning: ‘mutex’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex;
+                        ^~~~~
+gcc  -o "101_simu_multithread"  ./src/leds_control.o ./src/main.o   -lpthread
+13:52:43 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:52:44 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:52:52 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:12:18: warning: passing argument 1 of ‘readbutton’ from incompatible pointer type [-Wincompatible-pointer-types]
+  if ((readbutton(message, 5)) == LCRC_OK){
+                  ^~~~~~~
+In file included from ../src/main.c:2:0:
+../src/leds_control.h:35:6: note: expected ‘char *’ but argument is of type ‘int *’
+ char readbutton(char *pReadData, char DataSize);
+      ^~~~~~~~~~
+At top level:
+../src/main.c:7:24: warning: ‘mutex’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex;
+                        ^~~~~
+gcc  -o "101_simu_multithread"  ./src/leds_control.o ./src/main.o   -lpthread
+13:52:52 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:52:53 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:53:54 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:7:24: warning: ‘mutex’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex;
+                        ^~~~~
+gcc  -o "101_simu_multithread"  ./src/leds_control.o ./src/main.o   -lpthread
+13:53:54 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:53:55 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:07:21 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:3:9: error: #include expects "FILENAME" or <FILENAME>
+ #include'fifo.h'
+         ^~~~~~~~
+../src/main.c:8:24: warning: ‘mutex’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex;
+                        ^~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+14:07:22 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:07:23 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:07:31 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:8:24: warning: ‘mutex’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex;
+                        ^~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+14:07:31 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:07:32 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:09:47 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:8:24: warning: ‘mutex’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex;
+                        ^~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+14:09:48 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:09:48 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:10:27 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:12:9: warning: unused variable ‘queue’ [-Wunused-variable]
+  Queue *queue = arg;
+         ^~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:61:49: error: incompatible type for argument 4 of ‘pthread_create’
+  pthread_create(&thread_read, NULL, read_input, queue);
+                                                 ^~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+In file included from ../src/main.c:4:0:
+/usr/include/pthread.h:234:12: note: expected ‘void * restrict’ but argument is of type ‘Queue {aka struct Queue}’
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+At top level:
+../src/main.c:8:24: warning: ‘mutex’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex;
+                        ^~~~~
+make: *** [src/main.o] Error 1
+14:10:28 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:10:28 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:10:49 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:12:9: warning: unused variable ‘queue’ [-Wunused-variable]
+  Queue *queue = arg;
+         ^~~~~
+At top level:
+../src/main.c:8:24: warning: ‘mutex’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex;
+                        ^~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+14:10:50 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:10:51 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:23:38 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:12:9: warning: unused variable ‘p_queue’ [-Wunused-variable]
+  Queue *p_queue = arg;
+         ^~~~~~~
+At top level:
+../src/main.c:8:24: warning: ‘mutex’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex;
+                        ^~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+14:23:39 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:23:39 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:26:27 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:8:24: warning: ‘mutex’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex;
+                        ^~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+14:26:28 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:26:29 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:26:40 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:60:37: warning: passing argument 3 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+  pthread_create(&thread_read, NULL, read_input, &queue);
+                                     ^~~~~~~~~~
+In file included from ../src/main.c:4:0:
+/usr/include/pthread.h:234:12: note: expected ‘void * (*)(void *)’ but argument is of type ‘void * (*)(Queue *) {aka void * (*)(struct Queue *)}’
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+At top level:
+../src/main.c:8:24: warning: ‘mutex’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex;
+                        ^~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+14:26:40 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:26:41 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:27:06 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:8:24: warning: ‘mutex’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex;
+                        ^~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+14:27:06 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:27:07 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:42:14 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:28:17: warning: passing argument 1 of ‘add_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+     add_element(&queue, 0);
+                 ^
+In file included from ../src/main.c:3:0:
+../src/fifo.h:26:6: note: expected ‘struct Queue *’ but argument is of type ‘void **’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/main.c:33:17: warning: passing argument 1 of ‘add_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+     add_element(&queue, 1);
+                 ^
+In file included from ../src/main.c:3:0:
+../src/fifo.h:26:6: note: expected ‘struct Queue *’ but argument is of type ‘void **’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+At top level:
+../src/main.c:8:24: warning: ‘mutex’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex;
+                        ^~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+14:42:15 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:42:15 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:42:47 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:8:24: warning: ‘mutex’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex;
+                        ^~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+14:42:48 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:42:48 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:02:20 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:49:2: error: ‘number’ undeclared (first use in this function)
+  number = pop_element(queue);
+  ^~~~~~
+../src/main.c:49:2: note: each undeclared identifier is reported only once for each function it appears in
+At top level:
+../src/main.c:8:24: warning: ‘mutex’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex;
+                        ^~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+15:02:21 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:02:22 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:02:34 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:49:6: warning: variable ‘number’ set but not used [-Wunused-but-set-variable]
+  int number;
+      ^~~~~~
+At top level:
+../src/main.c:8:24: warning: ‘mutex’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex;
+                        ^~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+15:02:35 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:02:35 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:16:05 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:85:15: error: ‘semaphore’ undeclared (first use in this function); did you mean ‘sem_post’?
+  sem_destroy(&semaphore);
+               ^~~~~~~~~
+               sem_post
+../src/main.c:85:15: note: each undeclared identifier is reported only once for each function it appears in
+At top level:
+../src/main.c:8:24: warning: ‘mutex’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex;
+                        ^~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+15:16:05 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:16:06 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:16:25 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:8:24: warning: ‘mutex’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex;
+                        ^~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+15:16:26 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:16:26 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:24:37 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+15:24:38 **** Incremental Build of configuration Debug for project 90_traitements ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/leds_control.d" -MT"src/leds_control.o" -o "src/leds_control.o" "../src/leds_control.c"
+../src/leds_control.c:69:22: error: conflicting types for ‘setLedColor’
+ LedControlReturnCode setLedColor(const unsigned int row,
+                      ^~~~~~~~~~~
+In file included from ../src/leds_control.c:1:0:
+../src/leds_control.h:28:22: note: previous declaration of ‘setLedColor’ was here
+ LedControlReturnCode setLedColor(const unsigned char command,
+                      ^~~~~~~~~~~
+src/subdir.mk:21: recipe for target 'src/leds_control.o' failed
+make: *** [src/leds_control.o] Error 1
+15:24:39 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:39:57 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘set_number’:
+../src/main.c:40:4: warning: implicit declaration of function ‘SetLedLine’; did you mean ‘getline’? [-Wimplicit-function-declaration]
+    SetLedLine(matrice,TabSize);
+    ^~~~~~~~~~
+    getline
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:207:3: error: too few arguments to function ‘set_number’
+   set_number();
+   ^~~~~~~~~~
+../src/main.c:27:6: note: declared here
+ void set_number(int TabSize){
+      ^~~~~~~~~~
+../src/main.c:210:3: error: too few arguments to function ‘set_number’
+   set_number();
+   ^~~~~~~~~~
+../src/main.c:27:6: note: declared here
+ void set_number(int TabSize){
+      ^~~~~~~~~~
+At top level:
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+15:39:57 **** Incremental Build of configuration Debug for project 90_traitements ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/leds_control.d" -MT"src/leds_control.o" -o "src/leds_control.o" "../src/leds_control.c"
+../src/leds_control.c:69:22: error: conflicting types for ‘setLedColor’
+ LedControlReturnCode setLedColor(const unsigned int row,
+                      ^~~~~~~~~~~
+In file included from ../src/leds_control.c:1:0:
+../src/leds_control.h:28:22: note: previous declaration of ‘setLedColor’ was here
+ LedControlReturnCode setLedColor(const unsigned char command,
+                      ^~~~~~~~~~~
+src/subdir.mk:21: recipe for target 'src/leds_control.o' failed
+make: *** [src/leds_control.o] Error 1
+15:39:58 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:41:32 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘set_number’:
+../src/main.c:40:4: warning: implicit declaration of function ‘SetLedLine’; did you mean ‘getline’? [-Wimplicit-function-declaration]
+    SetLedLine(matrice,TabSize);
+    ^~~~~~~~~~
+    getline
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:207:3: error: too few arguments to function ‘set_number’
+   set_number();
+   ^~~~~~~~~~
+../src/main.c:27:6: note: declared here
+ void set_number(int TabSize){
+      ^~~~~~~~~~
+../src/main.c:210:3: error: too few arguments to function ‘set_number’
+   set_number();
+   ^~~~~~~~~~
+../src/main.c:27:6: note: declared here
+ void set_number(int TabSize){
+      ^~~~~~~~~~
+At top level:
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+15:43:47 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘set_number’:
+../src/main.c:40:4: warning: implicit declaration of function ‘SetLedLine’; did you mean ‘getline’? [-Wimplicit-function-declaration]
+    SetLedLine(matrice,TabSize);
+    ^~~~~~~~~~
+    getline
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:207:3: error: too few arguments to function ‘set_number’
+   set_number();
+   ^~~~~~~~~~
+../src/main.c:27:6: note: declared here
+ void set_number(int TabSize){
+      ^~~~~~~~~~
+../src/main.c:210:3: error: too few arguments to function ‘set_number’
+   set_number();
+   ^~~~~~~~~~
+../src/main.c:27:6: note: declared here
+ void set_number(int TabSize){
+      ^~~~~~~~~~
+At top level:
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+src/subdir.mk:24: recipe for target 'src/main.o' failed

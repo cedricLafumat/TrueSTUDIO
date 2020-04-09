@@ -1,0 +1,95 @@
+#include<stdio.h>
+#include"leds_control.h"
+#include"fifo.h"
+#include<pthread.h>
+#include<unistd.h>
+#include<semaphore.h>
+
+static pthread_mutex_t mutex_number;
+static sem_t semaphore_input;
+static sem_t semaphore_display;
+
+
+
+
+
+
+
+void *read_input(void *queue){
+	char message[5];
+	if ((readbutton(message, 5)) == LCRC_OK){
+		for (int i = 0; i < 4; i++){
+			if (message[1] == 49){
+				// joueur 1
+			}
+			else if (message[1] == 50){
+				// joueur 2
+			}
+			if (message[2] == 100){
+				// left
+			}
+			else if (message[2] == 114){
+				// right
+			}
+			else if (message[2] == 100){
+				add_element(queue, 0);
+				sem_post(&semaphore_input);
+
+			}
+			else if (message[2] == 117){
+				add_element(queue, 1);
+				sem_post(&semaphore_input);
+			}
+			if (message[3] == 100){
+				// bouton appuyer
+			}
+			if (message[3] == 117){
+				// bouton relacher
+			}
+
+		}
+	}
+	pthread_exit(NULL);
+}
+
+void *change_number_app(void *queue){
+	sem_wait(&semaphore_input);
+	int instruction;
+	instruction = pop_element(queue);
+	if (instruction == 0){
+
+	}
+	else if(instruction == 1){
+
+	}
+	sem_post(&semaphore_display);
+	pthread_exit(NULL);
+}
+
+void *send_message(void *arg){
+	sem_wait(&semaphore_display);
+
+	pthread_exit(NULL);
+}
+
+int main(void){
+
+	pthread_t thread_read, thread_app, thread_send;
+	Queue queue;
+	init_queue(&queue);
+	sem_init(&semaphore_input, 0, 0);
+	sem_init(&semaphore_display, 0, 0);
+
+	pthread_create(&thread_read, NULL, read_input, &queue);
+	pthread_create(&thread_app, NULL, change_number_app, NULL);
+	pthread_create(&thread_send, NULL, send_message, NULL);
+
+	(void)pthread_join(thread_read, NULL);
+	(void)pthread_join(thread_app, NULL);
+	(void)pthread_join(thread_send, NULL);
+
+	sem_destroy(&semaphore_input);
+	sem_destroy(&semaphore_display);
+
+	return 0;
+}
