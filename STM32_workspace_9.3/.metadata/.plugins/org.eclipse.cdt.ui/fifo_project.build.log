@@ -1,6 +1,6 @@
-15:39:58 **** Incremental Build of configuration Debug for project fifo_project ****
+16:39:49 **** Incremental Build of configuration Debug for project fifo_project ****
 make -j4 all 
 make: Nothing to be done for 'all'.
 
-15:39:59 Build Finished (took 540ms)
+16:39:50 Build Finished (took 535ms)
 

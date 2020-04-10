@@ -18566,3 +18566,1813 @@ At top level:
                         ^~~~~~~~~~~~
 make: *** [src/main.o] Error 1
 src/subdir.mk:24: recipe for target 'src/main.o' failed
+15:50:57 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘set_number’:
+../src/main.c:40:4: warning: implicit declaration of function ‘SetLedLine’; did you mean ‘getline’? [-Wimplicit-function-declaration]
+    SetLedLine(matrice,TabSize);
+    ^~~~~~~~~~
+    getline
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:207:3: error: too few arguments to function ‘set_number’
+   set_number();
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+   ^~~~~~~~~~
+../src/main.c:27:6: note: declared here
+ void set_number(int TabSize){
+      ^~~~~~~~~~
+../src/main.c:210:3: error: too few arguments to function ‘set_number’
+   set_number();
+   ^~~~~~~~~~
+../src/main.c:27:6: note: declared here
+ void set_number(int TabSize){
+      ^~~~~~~~~~
+At top level:
+../src/main.c:218:7: warning: ‘SetLedLine’ defined but not used [-Wunused-function]
+  void SetLedLine(RGB **TabLine, int TabSize){
+       ^~~~~~~~~~
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+15:50:58 **** Incremental Build of configuration Debug for project 90_traitements ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/leds_control.d" -MT"src/leds_control.o" -o "src/leds_control.o" "../src/leds_control.c"
+../src/leds_control.c:69:22: error: conflicting types for ‘setLedColor’
+ LedControlReturnCode setLedColor(const unsigned int row,
+                      ^~~~~~~~~~~
+In file included from ../src/leds_control.c:1:0:
+../src/leds_control.h:28:22: note: previous declaration of ‘setLedColor’ was here
+src/subdir.mk:21: recipe for target 'src/leds_control.o' failed
+ LedControlReturnCode setLedColor(const unsigned char command,
+                      ^~~~~~~~~~~
+make: *** [src/leds_control.o] Error 1
+15:51:22 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘set_number’:
+../src/main.c:40:4: warning: implicit declaration of function ‘SetLedLine’; did you mean ‘getline’? [-Wimplicit-function-declaration]
+    SetLedLine(matrice,TabSize);
+    ^~~~~~~~~~
+    getline
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:207:3: error: too few arguments to function ‘set_number’
+   set_number();
+   ^~~~~~~~~~
+../src/main.c:27:6: note: declared here
+ void set_number(int TabSize){
+      ^~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+../src/main.c:210:3: error: too few arguments to function ‘set_number’
+   set_number();
+   ^~~~~~~~~~
+../src/main.c:27:6: note: declared here
+ void set_number(int TabSize){
+      ^~~~~~~~~~
+../src/main.c: In function ‘SetLedLine’:
+../src/main.c:221:17: warning: passing argument 1 of ‘setLedColor’ makes integer from pointer without a cast [-Wint-conversion]
+     setLedColor("R", line+1, col+1, TabLine[line][col].RValue, TabLine[line][col].GValue, TabLine[line][col].BValue, "\n");
+                 ^~~
+In file included from ../src/main.c:2:0:
+../src/leds_control.h:29:22: note: expected ‘unsigned int’ but argument is of type ‘char *’
+ LedControlReturnCode setLedColor(const unsigned int row,
+                      ^~~~~~~~~~~
+../src/main.c:221:5: error: too many arguments to function ‘setLedColor’
+     setLedColor("R", line+1, col+1, TabLine[line][col].RValue, TabLine[line][col].GValue, TabLine[line][col].BValue, "\n");
+     ^~~~~~~~~~~
+In file included from ../src/main.c:2:0:
+../src/leds_control.h:29:22: note: declared here
+ LedControlReturnCode setLedColor(const unsigned int row,
+                      ^~~~~~~~~~~
+At top level:
+../src/main.c:218:7: warning: ‘SetLedLine’ defined but not used [-Wunused-function]
+  void SetLedLine(RGB **TabLine, int TabSize){
+       ^~~~~~~~~~
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+15:51:22 **** Incremental Build of configuration Debug for project 90_traitements ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/leds_control.d" -MT"src/leds_control.o" -o "src/leds_control.o" "../src/leds_control.c"
+../src/leds_control.c:69:22: error: conflicting types for ‘setLedColor’
+ LedControlReturnCode setLedColor(const unsigned int row,
+                      ^~~~~~~~~~~
+In file included from ../src/leds_control.c:1:0:
+../src/leds_control.h:28:22: note: previous declaration of ‘setLedColor’ was here
+ LedControlReturnCode setLedColor(const unsigned char command,
+src/subdir.mk:21: recipe for target 'src/leds_control.o' failed
+                      ^~~~~~~~~~~
+make: *** [src/leds_control.o] Error 1
+15:53:07 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘SetLedLine’:
+../src/main.c:29:16: warning: passing argument 1 of ‘setLedColor’ makes integer from pointer without a cast [-Wint-conversion]
+    setLedColor("R", line+1, col+1, TabLine[line][col].RValue, TabLine[line][col].GValue, TabLine[line][col].BValue, "\n");
+                ^~~
+In file included from ../src/main.c:2:0:
+../src/leds_control.h:29:22: note: expected ‘unsigned int’ but argument is of type ‘char *’
+ LedControlReturnCode setLedColor(const unsigned int row,
+                      ^~~~~~~~~~~
+../src/main.c:29:4: error: too many arguments to function ‘setLedColor’
+    setLedColor("R", line+1, col+1, TabLine[line][col].RValue, TabLine[line][col].GValue, TabLine[line][col].BValue, "\n");
+    ^~~~~~~~~~~
+In file included from ../src/main.c:2:0:
+../src/leds_control.h:29:22: note: declared here
+ LedControlReturnCode setLedColor(const unsigned int row,
+                      ^~~~~~~~~~~
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:215:3: error: too few arguments to function ‘set_number’
+   set_number();
+   ^~~~~~~~~~
+../src/main.c:35:6: note: declared here
+ void set_number(int TabSize){
+      ^~~~~~~~~~
+../src/main.c:218:3: error: too few arguments to function ‘set_number’
+   set_number();
+   ^~~~~~~~~~
+../src/main.c:35:6: note: declared here
+ void set_number(int TabSize){
+      ^~~~~~~~~~
+At top level:
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+                        ^~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+15:53:23 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:215:3: error: too few arguments to function ‘set_number’
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+   set_number();
+   ^~~~~~~~~~
+../src/main.c:35:6: note: declared here
+ void set_number(int TabSize){
+      ^~~~~~~~~~
+../src/main.c:218:3: error: too few arguments to function ‘set_number’
+   set_number();
+   ^~~~~~~~~~
+../src/main.c:35:6: note: declared here
+ void set_number(int TabSize){
+      ^~~~~~~~~~
+At top level:
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+15:54:09 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+15:57:12 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:213:3: error: too few arguments to function ‘set_number’
+   set_number();
+   ^~~~~~~~~~
+../src/main.c:36:6: note: declared here
+ void set_number(int compteur){
+      ^~~~~~~~~~
+../src/main.c:216:3: error: too few arguments to function ‘set_number’
+   set_number();
+   ^~~~~~~~~~
+../src/main.c:36:6: note: declared here
+ void set_number(int compteur){
+      ^~~~~~~~~~
+At top level:
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+15:58:13 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+15:58:42 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:00:14 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+16:00:37 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:02:13 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+16:02:14 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:02:16 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:04:29 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from /usr/include/unistd.h:229:0,
+                 from ../src/main.c:5:
+../src/main.c:218:14: error: expected declaration specifiers or ‘...’ before ‘(’ token
+ pthread_exit(NULL);
+              ^
+../src/main.c:219:1: error: expected identifier or ‘(’ before ‘}’ token
+ }
+ ^
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+16:04:29 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:04:53 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+16:04:54 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:04:58 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:06:10 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+16:06:10 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:06:14 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:08:36 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+16:08:37 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:08:41 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:10:06 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+16:10:06 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:10:21 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:10:21 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:10:41 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:10:50 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:11:39 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+16:11:43 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:15:50 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:12:12: warning: ‘number_value’ defined but not used [-Wunused-variable]
+ static int number_value = 0;
+            ^~~~~~~~~~~~
+../src/main.c:11:12: warning: ‘TabSize’ defined but not used [-Wunused-variable]
+ static int TabSize = 7;
+            ^~~~~~~
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+16:15:58 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:16:44 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:17:40 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:18:33 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:12:12: warning: ‘number_value’ defined but not used [-Wunused-variable]
+ static int number_value = 0;
+            ^~~~~~~~~~~~
+../src/main.c:11:12: warning: ‘TabSize’ defined but not used [-Wunused-variable]
+ static int TabSize = 7;
+            ^~~~~~~
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+16:18:33 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:18:41 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:21:26 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:12:12: warning: ‘number_value’ defined but not used [-Wunused-variable]
+ static int number_value = 0;
+            ^~~~~~~~~~~~
+../src/main.c:11:12: warning: ‘TabSize’ defined but not used [-Wunused-variable]
+ static int TabSize = 7;
+            ^~~~~~~
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+16:21:27 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:21:30 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:23:28 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:231:9: error: ‘arg’ undeclared (first use in this function)
+  (void) arg;
+         ^~~
+../src/main.c:231:9: note: each undeclared identifier is reported only once for each function it appears in
+At top level:
+../src/main.c:12:12: warning: ‘number_value’ defined but not used [-Wunused-variable]
+ static int number_value = 0;
+            ^~~~~~~~~~~~
+../src/main.c:11:12: warning: ‘TabSize’ defined but not used [-Wunused-variable]
+ static int TabSize = 7;
+            ^~~~~~~
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+16:23:44 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:223:28: error: ‘queue’ undeclared (first use in this function); did you mean ‘Queue’?
+  instruction = pop_element(queue);
+                            ^~~~~
+                            Queue
+../src/main.c:223:28: note: each undeclared identifier is reported only once for each function it appears in
+At top level:
+../src/main.c:12:12: warning: ‘number_value’ defined but not used [-Wunused-variable]
+ static int number_value = 0;
+            ^~~~~~~~~~~~
+../src/main.c:11:12: warning: ‘TabSize’ defined but not used [-Wunused-variable]
+ static int TabSize = 7;
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+            ^~~~~~~
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+16:24:05 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:12:12: warning: ‘number_value’ defined but not used [-Wunused-variable]
+ static int number_value = 0;
+            ^~~~~~~~~~~~
+../src/main.c:11:12: warning: ‘TabSize’ defined but not used [-Wunused-variable]
+ static int TabSize = 7;
+            ^~~~~~~
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+16:24:08 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:24:49 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:12:12: warning: ‘number_value’ defined but not used [-Wunused-variable]
+ static int number_value = 0;
+            ^~~~~~~~~~~~
+../src/main.c:11:12: warning: ‘TabSize’ defined but not used [-Wunused-variable]
+ static int TabSize = 7;
+            ^~~~~~~
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+16:24:51 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:25:24 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:26:20 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:27:07 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:38:26 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:186:5: error: ‘g_active_player’ undeclared (first use in this function)
+     g_active_player = 1;
+     ^~~~~~~~~~~~~~~
+../src/main.c:186:5: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:187:5: error: ‘message_recv’ undeclared (first use in this function); did you mean ‘message’?
+     message_recv.player = g_active_player;
+     ^~~~~~~~~~~~
+     message
+../src/main.c:196:5: error: ‘direction’ undeclared (first use in this function)
+     direction = "left";
+     ^~~~~~~~~
+../src/main.c:216:5: error: ‘state_button’ undeclared (first use in this function); did you mean ‘readbutton’?
+     state_button = 0;
+     ^~~~~~~~~~~~
+     readbutton
+At top level:
+../src/main.c:12:12: warning: ‘number_value’ defined but not used [-Wunused-variable]
+ static int number_value = 0;
+            ^~~~~~~~~~~~
+../src/main.c:11:12: warning: ‘TabSize’ defined but not used [-Wunused-variable]
+ static int TabSize = 7;
+            ^~~~~~~
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+16:38:26 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:38:27 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:38:57 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:12:12: warning: ‘number_value’ defined but not used [-Wunused-variable]
+ static int number_value = 0;
+            ^~~~~~~~~~~~
+../src/main.c:11:12: warning: ‘TabSize’ defined but not used [-Wunused-variable]
+ static int TabSize = 7;
+            ^~~~~~~
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+16:38:58 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:38:58 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:39:12 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:39:49 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+16:39:49 **** Incremental Build of configuration Debug for project fifo_project ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:39:50 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:40:28 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:40:29 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:40:49 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+16:40:52 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:43:58 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:173:23: error: parameter 1 (‘queue’) has incomplete type
+ void *read_input(void queue){
+                       ^~~~~
+../src/main.c: In function ‘read_input’:
+../src/main.c:215:9: error: ‘arg’ undeclared (first use in this function)
+  (void) arg;
+         ^~~
+../src/main.c:215:9: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: At top level:
+../src/main.c:220:30: error: parameter 1 (‘queue’) has incomplete type
+ void *change_number_app(void queue){
+                              ^~~~~
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:231:9: error: ‘arg’ undeclared (first use in this function)
+  (void) arg;
+         ^~~
+At top level:
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+16:44:14 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:173:23: error: parameter 1 (‘queue’) has incomplete type
+ void *read_input(void queue){
+                       ^~~~~
+../src/main.c:219:30: error: parameter 1 (‘queue’) has incomplete type
+ void *change_number_app(void queue){
+                              ^~~~~
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+16:44:28 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+16:44:31 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:45:10 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+16:45:12 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:46:15 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:46:16 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:46:44 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:46:49 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:47:34 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+16:50:49 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:249:14: error: ‘queue’ undeclared (first use in this function); did you mean ‘Queue’?
+  init_queue(&queue);
+              ^~~~~
+              Queue
+../src/main.c:249:14: note: each undeclared identifier is reported only once for each function it appears in
+At top level:
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+16:51:01 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+16:51:04 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:51:30 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+16:51:32 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:52:31 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+16:52:33 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:52:43 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:52:45 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:53:42 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:55:23 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:226:3: warning: implicit declaration of function ‘set_number’; did you mean ‘setbuffer’? [-Wimplicit-function-declaration]
+   set_number(number_value++);
+   ^~~~~~~~~~
+   setbuffer
+../src/main.c:226:14: error: ‘number_value’ undeclared (first use in this function); did you mean ‘sem_getvalue’?
+   set_number(number_value++);
+              ^~~~~~~~~~~~
+              sem_getvalue
+../src/main.c:226:14: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function ‘main’:
+../src/main.c:250:12: error: ‘semaphore_input’ undeclared (first use in this function); did you mean ‘read_input’?
+  sem_init(&semaphore_input, 0, 0);
+            ^~~~~~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+            read_input
+../src/main.c:251:12: error: ‘semaphore_display’ undeclared (first use in this function); did you mean ‘semaphore_input’?
+  sem_init(&semaphore_display, 0, 0);
+            ^~~~~~~~~~~~~~~~~
+            semaphore_input
+make: *** [src/main.o] Error 1
+16:56:00 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+16:56:04 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:57:56 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:59:15 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+16:59:17 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:59:36 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:00:22 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:05:18 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:187:6: error: ‘g_active_player’ undeclared (first use in this function)
+      g_active_player = 1;
+      ^~~~~~~~~~~~~~~
+../src/main.c:187:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:188:6: error: ‘message_recv’ undeclared (first use in this function); did you mean ‘message’?
+      message_recv.player = g_active_player;
+      ^~~~~~~~~~~~
+      message
+../src/main.c:197:6: error: ‘direction’ undeclared (first use in this function)
+      direction = "left";
+      ^~~~~~~~~
+../src/main.c:217:6: error: ‘state_button’ undeclared (first use in this function); did you mean ‘readbutton’?
+      state_button = 0;
+      ^~~~~~~~~~~~
+      readbutton
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+17:05:18 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:06:02 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+17:06:02 **** Incremental Build of configuration Debug for project multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:06:13 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:09:14 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+17:09:16 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:10:13 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:12:12: warning: ‘number_value’ defined but not used [-Wunused-variable]
+ static int number_value = 0;
+            ^~~~~~~~~~~~
+../src/main.c:10:14: warning: ‘semaphore_display’ defined but not used [-Wunused-variable]
+ static sem_t semaphore_display;
+              ^~~~~~~~~~~~~~~~~
+../src/main.c:9:14: warning: ‘semaphore_input’ defined but not used [-Wunused-variable]
+ static sem_t semaphore_input;
+              ^~~~~~~~~~~~~~~
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+17:10:22 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:10:51 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:10:54 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:11:25 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:174:9: warning: unused variable ‘p_queue’ [-Wunused-variable]
+  Queue *p_queue = arg;
+         ^~~~~~~
+At top level:
+../src/main.c:10:14: warning: ‘semaphore_display’ defined but not used [-Wunused-variable]
+ static sem_t semaphore_display;
+              ^~~~~~~~~~~~~~~~~
+../src/main.c:9:14: warning: ‘semaphore_input’ defined but not used [-Wunused-variable]
+ static sem_t semaphore_input;
+              ^~~~~~~~~~~~~~~
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+17:11:46 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:11:48 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:12:16 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:12:12: warning: ‘number_value’ defined but not used [-Wunused-variable]
+ static int number_value = 0;
+            ^~~~~~~~~~~~
+../src/main.c:10:14: warning: ‘semaphore_display’ defined but not used [-Wunused-variable]
+ static sem_t semaphore_display;
+              ^~~~~~~~~~~~~~~~~
+../src/main.c:9:14: warning: ‘semaphore_input’ defined but not used [-Wunused-variable]
+ static sem_t semaphore_input;
+              ^~~~~~~~~~~~~~~
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+17:12:19 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:12:28 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:12:30 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:13:00 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:174:9: warning: unused variable ‘p_queue’ [-Wunused-variable]
+  Queue *p_queue = arg;
+         ^~~~~~~
+At top level:
+../src/main.c:12:12: warning: ‘number_value’ defined but not used [-Wunused-variable]
+ static int number_value = 0;
+            ^~~~~~~~~~~~
+../src/main.c:10:14: warning: ‘semaphore_display’ defined but not used [-Wunused-variable]
+ static sem_t semaphore_display;
+              ^~~~~~~~~~~~~~~~~
+../src/main.c:9:14: warning: ‘semaphore_input’ defined but not used [-Wunused-variable]
+ static sem_t semaphore_input;
+              ^~~~~~~~~~~~~~~
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+17:13:05 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:13:32 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:174:9: warning: unused variable ‘p_queue’ [-Wunused-variable]
+  Queue *p_queue = arg;
+         ^~~~~~~
+At top level:
+../src/main.c:12:12: warning: ‘number_value’ defined but not used [-Wunused-variable]
+ static int number_value = 0;
+            ^~~~~~~~~~~~
+../src/main.c:10:14: warning: ‘semaphore_display’ defined but not used [-Wunused-variable]
+ static sem_t semaphore_display;
+              ^~~~~~~~~~~~~~~~~
+../src/main.c:9:14: warning: ‘semaphore_input’ defined but not used [-Wunused-variable]
+ static sem_t semaphore_input;
+              ^~~~~~~~~~~~~~~
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+17:13:42 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:13:57 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:174:9: warning: unused variable ‘p_queue’ [-Wunused-variable]
+  Queue *p_queue = arg;
+         ^~~~~~~
+At top level:
+../src/main.c:12:12: warning: ‘number_value’ defined but not used [-Wunused-variable]
+ static int number_value = 0;
+            ^~~~~~~~~~~~
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+17:14:11 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:14:13 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:14:30 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:174:9: warning: unused variable ‘p_queue’ [-Wunused-variable]
+  Queue *p_queue = arg;
+         ^~~~~~~
+At top level:
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+17:14:39 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:14:41 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:15:15 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:174:9: warning: unused variable ‘p_queue’ [-Wunused-variable]
+  Queue *p_queue = arg;
+         ^~~~~~~
+At top level:
+../src/main.c:12:12: warning: ‘number_value’ defined but not used [-Wunused-variable]
+ static int number_value = 0;
+            ^~~~~~~~~~~~
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+17:15:17 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:15:39 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:174:9: warning: unused variable ‘p_queue’ [-Wunused-variable]
+  Queue *p_queue = arg;
+         ^~~~~~~
+At top level:
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+17:15:41 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:15:58 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:174:9: warning: unused variable ‘p_queue’ [-Wunused-variable]
+  Queue *p_queue = arg;
+         ^~~~~~~
+At top level:
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+17:16:09 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:16:15 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:17:08 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:174:9: warning: unused variable ‘p_queue’ [-Wunused-variable]
+  Queue *p_queue = arg;
+         ^~~~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:251:49: error: incompatible type for argument 4 of ‘pthread_create’
+  pthread_create(&thread_read, NULL, read_input, queue);
+                                                 ^~~~~
+In file included from ../src/main.c:4:0:
+/usr/include/pthread.h:234:12: note: expected ‘void * restrict’ but argument is of type ‘Queue {aka struct Queue}’
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+../src/main.c:253:55: error: incompatible type for argument 4 of ‘pthread_create’
+  pthread_create(&thread_app, NULL, change_number_app, queue);
+                                                       ^~~~~
+In file included from ../src/main.c:4:0:
+/usr/include/pthread.h:234:12: note: expected ‘void * restrict’ but argument is of type ‘Queue {aka struct Queue}’
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+At top level:
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+17:17:22 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:174:9: warning: unused variable ‘p_queue’ [-Wunused-variable]
+  Queue *p_queue = arg;
+         ^~~~~~~
+At top level:
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+17:17:31 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:17:33 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:19:37 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+17:19:39 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:21:11 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+17:21:13 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:22:00 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+17:22:12 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:22:13 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:23:30 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+17:23:32 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:24:04 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+17:24:06 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:24:29 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+17:24:31 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:25:20 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+17:25:22 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:26:55 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+17:26:57 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:28:17 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:8:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+17:28:19 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:28:41 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:28:43 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:45:30 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+17:46:46 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+17:46:49 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:50:07 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+17:50:18 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:50:51 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:50:52 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:10:27 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:13:02 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+21:13:17 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:14:18 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+21:14:23 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:16:25 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+21:16:27 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:17:59 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+21:23:13 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+21:23:18 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:30:09 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:296:52: error: ‘matrice’ undeclared (first use in this function); did you mean ‘mktime’?
+  pthread_create(&thread_send, NULL, send_message, *matrice);
+                                                    ^~~~~~~
+                                                    mktime
+../src/main.c:296:52: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:296:37: warning: passing argument 3 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+  pthread_create(&thread_send, NULL, send_message, *matrice);
+                                     ^~~~~~~~~~~~
+In file included from ../src/main.c:4:0:
+/usr/include/pthread.h:234:12: note: expected ‘void * (*)(void *)’ but argument is of type ‘void * (*)(RGB **) {aka void * (*)(struct <anonymous> **)}’
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+21:31:49 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘set_number’:
+../src/main.c:51:14: error: expected expression before ‘{’ token
+   matrice[7]={tabline_1,tabline_2,tabline_3,tabline_4,tabline_5,tabline_6,tabline_7};
+              ^
+../src/main.c:52:14: warning: passing argument 1 of ‘SetLedLine’ from incompatible pointer type [-Wincompatible-pointer-types]
+   SetLedLine(matrice);
+              ^~~~~~~
+../src/main.c:31:6: note: expected ‘RGB ** {aka struct <anonymous> **}’ but argument is of type ‘RGB * {aka struct <anonymous> *}’
+ void SetLedLine(RGB **TabLine){
+      ^~~~~~~~~~
+../src/main.c:50:7: warning: unused variable ‘tabline_7’ [-Wunused-variable]
+   RGB tabline_7[7]={bckgrd,bckgrd,number,bckgrd,bckgrd,bckgrd,number};
+       ^~~~~~~~~
+../src/main.c:49:7: warning: unused variable ‘tabline_6’ [-Wunused-variable]
+   RGB tabline_6[7]={bckgrd,bckgrd,number,bckgrd,bckgrd,bckgrd,number};
+       ^~~~~~~~~
+../src/main.c:48:7: warning: unused variable ‘tabline_5’ [-Wunused-variable]
+   RGB tabline_5[7]={number,bckgrd,number,bckgrd,number,bckgrd,number};
+       ^~~~~~~~~
+../src/main.c:47:7: warning: unused variable ‘tabline_4’ [-Wunused-variable]
+   RGB tabline_4[7]={bckgrd,number,number,bckgrd,bckgrd,number,number};
+       ^~~~~~~~~
+../src/main.c:46:7: warning: unused variable ‘tabline_3’ [-Wunused-variable]
+   RGB tabline_3[7]={bckgrd,bckgrd,number,bckgrd,bckgrd,bckgrd,number};
+       ^~~~~~~~~
+../src/main.c:45:7: warning: unused variable ‘tabline_2’ [-Wunused-variable]
+   RGB tabline_2[7]={bckgrd,bckgrd,bckgrd,bckgrd,bckgrd,bckgrd,bckgrd};
+       ^~~~~~~~~
+../src/main.c:44:7: warning: unused variable ‘tabline_1’ [-Wunused-variable]
+   RGB tabline_1[7]={bckgrd,bckgrd,bckgrd,bckgrd,bckgrd,bckgrd,bckgrd};
+       ^~~~~~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:298:37: warning: passing argument 3 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+  pthread_create(&thread_send, NULL, send_message, *matrice);
+                                     ^~~~~~~~~~~~
+In file included from ../src/main.c:4:0:
+/usr/include/pthread.h:234:12: note: expected ‘void * (*)(void *)’ but argument is of type ‘void * (*)(RGB **) {aka void * (*)(struct <anonymous> **)}’
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+../src/main.c:298:51: error: incompatible type for argument 4 of ‘pthread_create’
+  pthread_create(&thread_send, NULL, send_message, *matrice);
+                                                   ^
+In file included from ../src/main.c:4:0:
+/usr/include/pthread.h:234:12: note: expected ‘void * restrict’ but argument is of type ‘RGB {aka struct <anonymous>}’
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+21:32:08 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:298:37: warning: passing argument 3 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+  pthread_create(&thread_send, NULL, send_message, *matrice);
+                                     ^~~~~~~~~~~~
+In file included from ../src/main.c:4:0:
+/usr/include/pthread.h:234:12: note: expected ‘void * (*)(void *)’ but argument is of type ‘void * (*)(RGB **) {aka void * (*)(struct <anonymous> **)}’
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+../src/main.c:298:51: error: incompatible type for argument 4 of ‘pthread_create’
+  pthread_create(&thread_send, NULL, send_message, *matrice);
+                                                   ^
+In file included from ../src/main.c:4:0:
+/usr/include/pthread.h:234:12: note: expected ‘void * restrict’ but argument is of type ‘RGB {aka struct <anonymous>}’
+ extern int pthread_create (pthread_t *__restrict __newthread,
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+            ^~~~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+21:32:17 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:298:37: warning: passing argument 3 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+  pthread_create(&thread_send, NULL, send_message, matrice);
+                                     ^~~~~~~~~~~~
+In file included from ../src/main.c:4:0:
+/usr/include/pthread.h:234:12: note: expected ‘void * (*)(void *)’ but argument is of type ‘void * (*)(RGB **) {aka void * (*)(struct <anonymous> **)}’
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+21:32:29 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:298:37: warning: passing argument 3 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+  pthread_create(&thread_send, NULL, send_message, &matrice);
+                                     ^~~~~~~~~~~~
+In file included from ../src/main.c:4:0:
+/usr/include/pthread.h:234:12: note: expected ‘void * (*)(void *)’ but argument is of type ‘void * (*)(RGB **) {aka void * (*)(struct <anonymous> **)}’
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+21:33:19 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:298:37: warning: passing argument 3 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+  pthread_create(&thread_send, NULL, send_message, &matrice);
+                                     ^~~~~~~~~~~~
+In file included from ../src/main.c:4:0:
+/usr/include/pthread.h:234:12: note: expected ‘void * (*)(void *)’ but argument is of type ‘void * (*)(RGB **) {aka void * (*)(struct <anonymous> **)}’
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+21:34:49 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:34:55 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:35:11 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:35:13 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:35:41 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:298:37: warning: passing argument 3 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+  pthread_create(&thread_send, NULL, send_message, &matrice);
+                                     ^~~~~~~~~~~~
+In file included from ../src/main.c:4:0:
+/usr/include/pthread.h:234:12: note: expected ‘void * (*)(void *)’ but argument is of type ‘void * (*)(RGB **) {aka void * (*)(struct <anonymous> **)}’
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+21:35:43 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:36:17 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:300:37: warning: passing argument 3 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+  pthread_create(&thread_send, NULL, send_message, &matrice);
+                                     ^~~~~~~~~~~~
+In file included from ../src/main.c:4:0:
+/usr/include/pthread.h:234:12: note: expected ‘void * (*)(void *)’ but argument is of type ‘void * (*)(RGB **) {aka void * (*)(struct <anonymous> **)}’
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+21:36:19 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:36:46 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:300:37: warning: passing argument 3 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+  pthread_create(&thread_send, NULL, send_message, &matrice);
+                                     ^~~~~~~~~~~~
+In file included from ../src/main.c:4:0:
+/usr/include/pthread.h:234:12: note: expected ‘void * (*)(void *)’ but argument is of type ‘void * (*)(RGB **) {aka void * (*)(struct <anonymous> **)}’
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+21:36:48 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:39:56 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘set_number’:
+../src/main.c:52:3: warning: implicit declaration of function ‘send_message’ [-Wimplicit-function-declaration]
+   send_message(&matrice);
+   ^~~~~~~~~~~~
+../src/main.c: At top level:
+../src/main.c:285:7: error: conflicting types for ‘send_message’
+ void *send_message(RGB **TabLine){
+       ^~~~~~~~~~~~
+../src/main.c:52:3: note: previous implicit declaration of ‘send_message’ was here
+   send_message(&matrice);
+   ^~~~~~~~~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:312:37: warning: passing argument 3 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+  pthread_create(&thread_send, NULL, send_message, &matrice);
+                                     ^~~~~~~~~~~~
+In file included from ../src/main.c:4:0:
+/usr/include/pthread.h:234:12: note: expected ‘void * (*)(void *)’ but argument is of type ‘void * (*)(RGB **) {aka void * (*)(struct <anonymous> **)}’
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+21:40:40 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘set_number’:
+../src/main.c:52:3: warning: implicit declaration of function ‘send_message’ [-Wimplicit-function-declaration]
+   send_message(matrice);
+   ^~~~~~~~~~~~
+../src/main.c: At top level:
+../src/main.c:285:7: error: conflicting types for ‘send_message’
+ void *send_message(RGB **TabLine){
+       ^~~~~~~~~~~~
+../src/main.c:52:3: note: previous implicit declaration of ‘send_message’ was here
+   send_message(matrice);
+   ^~~~~~~~~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:312:37: warning: passing argument 3 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+  pthread_create(&thread_send, NULL, send_message, &matrice);
+                                     ^~~~~~~~~~~~
+In file included from ../src/main.c:4:0:
+/usr/include/pthread.h:234:12: note: expected ‘void * (*)(void *)’ but argument is of type ‘void * (*)(RGB **) {aka void * (*)(struct <anonymous> **)}’
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+21:41:27 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘set_number’:
+../src/main.c:52:3: warning: implicit declaration of function ‘send_message’ [-Wimplicit-function-declaration]
+   send_message(matrice);
+   ^~~~~~~~~~~~
+../src/main.c: At top level:
+../src/main.c:285:7: error: conflicting types for ‘send_message’
+ void *send_message(RGB *TabLine){
+       ^~~~~~~~~~~~
+../src/main.c:52:3: note: previous implicit declaration of ‘send_message’ was here
+   send_message(matrice);
+   ^~~~~~~~~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:312:37: warning: passing argument 3 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+  pthread_create(&thread_send, NULL, send_message, &matrice);
+                                     ^~~~~~~~~~~~
+In file included from ../src/main.c:4:0:
+/usr/include/pthread.h:234:12: note: expected ‘void * (*)(void *)’ but argument is of type ‘void * (*)(RGB *) {aka void * (*)(struct <anonymous> *)}’
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+21:44:34 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+21:44:55 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+21:51:01 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+21:51:28 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+21:51:36 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+23:28:01 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+23:28:04 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+23:28:57 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+23:28:59 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:08:34 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/fifo.c:56:5: error: conflicting types for ‘pop_element’
+ int pop_element(struct Queue *queue, int *content_element){
+     ^~~~~~~~~~~
+In file included from ../src/fifo.c:10:0:
+../src/fifo.h:29:5: note: previous declaration of ‘pop_element’ was here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/fifo.c: In function ‘pop_element’:
+../src/fifo.c:68:19: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+   content_element = element_to_remove->number; // je recup�re le contenu de l'element
+                   ^
+../src/fifo.c:73:9: warning: return makes integer from pointer without a cast [-Wint-conversion]
+  return content_element;
+         ^~~~~~~~~~~~~~~
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:246:3: error: too many arguments to function ‘pop_element’
+   pop_element(p_queue, &instruction);
+   ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:29:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/fifo.o' failed
+make: *** [src/fifo.o] Error 1
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** Waiting for unfinished jobs....
+make: *** [src/main.o] Error 1
+09:32:54 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/fifo.c: In function ‘pop_element’:
+../src/fifo.c:68:3: error: ‘content_element’ undeclared (first use in this function); did you mean ‘pop_element’?
+   content_element = element_to_remove->number; // je recup�re le contenu de l'element
+   ^~~~~~~~~~~~~~~
+   pop_element
+../src/fifo.c:68:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/fifo.c:74:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/fifo.o] Error 1
+make: *** Waiting for unfinished jobs....
+src/subdir.mk:24: recipe for target 'src/fifo.o' failed
+09:33:11 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+09:33:24 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:01:20 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:246:29: error: ‘p_queue’ undeclared (first use in this function); did you mean ‘Queue’?
+   instruction = pop_element(p_queue);
+                             ^~~~~~~
+                             Queue
+../src/main.c:246:29: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:242:9: warning: unused variable ‘p_queue_send’ [-Wunused-variable]
+  Queue *p_queue_send = arg2;
+         ^~~~~~~~~~~~
+../src/main.c:241:9: warning: unused variable ‘p_queue_read’ [-Wunused-variable]
+  Queue *p_queue_read = arg;
+         ^~~~~~~~~~~~
+../src/main.c: In function ‘send_message’:
+../src/main.c:273:9: warning: unused variable ‘p_queue’ [-Wunused-variable]
+  Queue *p_queue = arg;
+         ^~~~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:295:36: warning: passing argument 3 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+  pthread_create(&thread_app, NULL, change_number_app, &queue_read, &queue_display);
+                                    ^~~~~~~~~~~~~~~~~
+In file included from ../src/main.c:4:0:
+/usr/include/pthread.h:234:12: note: expected ‘void * (*)(void *)’ but argument is of type ‘void * (*)(void *, void *)’
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+../src/main.c:295:2: error: too many arguments to function ‘pthread_create’
+  pthread_create(&thread_app, NULL, change_number_app, &queue_read, &queue_display);
+  ^~~~~~~~~~~~~~
+In file included from ../src/main.c:4:0:
+/usr/include/pthread.h:234:12: note: declared here
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+10:01:38 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:242:9: warning: unused variable ‘p_queue_send’ [-Wunused-variable]
+  Queue *p_queue_send = arg2;
+         ^~~~~~~~~~~~
+../src/main.c: In function ‘send_message’:
+../src/main.c:273:9: warning: unused variable ‘p_queue’ [-Wunused-variable]
+  Queue *p_queue = arg;
+         ^~~~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:295:36: warning: passing argument 3 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+  pthread_create(&thread_app, NULL, change_number_app, &queue_read, &queue_display);
+                                    ^~~~~~~~~~~~~~~~~
+In file included from ../src/main.c:4:0:
+/usr/include/pthread.h:234:12: note: expected ‘void * (*)(void *)’ but argument is of type ‘void * (*)(void *, void *)’
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+../src/main.c:295:2: error: too many arguments to function ‘pthread_create’
+  pthread_create(&thread_app, NULL, change_number_app, &queue_read, &queue_display);
+  ^~~~~~~~~~~~~~
+In file included from ../src/main.c:4:0:
+/usr/include/pthread.h:234:12: note: declared here
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+10:26:08 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:242:9: warning: unused variable ‘p_queue_send’ [-Wunused-variable]
+  Queue *p_queue_send = arg2;
+         ^~~~~~~~~~~~
+../src/main.c: In function ‘send_message’:
+../src/main.c:273:9: warning: unused variable ‘p_queue’ [-Wunused-variable]
+  Queue *p_queue = arg;
+         ^~~~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:295:36: warning: passing argument 3 of ‘pthread_create’ from incompatible pointer type [-Wincompatible-pointer-types]
+  pthread_create(&thread_app, NULL, change_number_app, &queue_read);
+                                    ^~~~~~~~~~~~~~~~~
+In file included from ../src/main.c:4:0:
+/usr/include/pthread.h:234:12: note: expected ‘void * (*)(void *)’ but argument is of type ‘void * (*)(void *, void *)’
+ extern int pthread_create (pthread_t *__restrict __newthread,
+            ^~~~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+10:26:41 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘send_message’:
+../src/main.c:273:9: warning: unused variable ‘p_queue’ [-Wunused-variable]
+  Queue *p_queue = arg;
+         ^~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+10:41:35 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:227:18: error: incompatible type for argument 1 of ‘add_element’
+      add_element(queue_read, down);
+                  ^~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:28:6: note: expected ‘struct Queue *’ but argument is of type ‘Queue {aka struct Queue}’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/main.c:231:18: error: incompatible type for argument 1 of ‘add_element’
+      add_element(queue_read, up);
+                  ^~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:28:6: note: expected ‘struct Queue *’ but argument is of type ‘Queue {aka struct Queue}’
+ void add_element(struct Queue *queue, int number);
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+      ^~~~~~~~~~~
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:248:29: error: incompatible type for argument 1 of ‘pop_element’
+   instruction = pop_element(queue_read);
+                             ^~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:29:5: note: expected ‘struct Queue *’ but argument is of type ‘Queue {aka struct Queue}’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c:255:16: error: incompatible type for argument 1 of ‘add_element’
+    add_element(queue_display, number_value);
+                ^~~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:28:6: note: expected ‘struct Queue *’ but argument is of type ‘Queue {aka struct Queue}’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/main.c:265:16: error: incompatible type for argument 1 of ‘add_element’
+    add_element(queue_display, number_value);
+                ^~~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:28:6: note: expected ‘struct Queue *’ but argument is of type ‘Queue {aka struct Queue}’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/main.c: In function ‘send_message’:
+../src/main.c:278:34: error: incompatible type for argument 1 of ‘pop_element’
+  number_to_display = pop_element(queue_display);
+                                  ^~~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:29:5: note: expected ‘struct Queue *’ but argument is of type ‘Queue {aka struct Queue}’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c:276:6: warning: variable ‘number_to_display’ set but not used [-Wunused-but-set-variable]
+  int number_to_display = 0;
+      ^~~~~~~~~~~~~~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:297:18: error: ‘thread_send’ undeclared (first use in this function); did you mean ‘thread_read’?
+  pthread_create(&thread_send, NULL, send_message, NULL);
+                  ^~~~~~~~~~~
+                  thread_read
+../src/main.c:297:18: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/main.o] Error 1
+10:41:54 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘send_message’:
+../src/main.c:276:6: warning: variable ‘number_to_display’ set but not used [-Wunused-but-set-variable]
+  int number_to_display = 0;
+      ^~~~~~~~~~~~~~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:287:13: warning: passing argument 1 of ‘init_queue’ from incompatible pointer type [-Wincompatible-pointer-types]
+  init_queue(&queue_read);
+             ^
+In file included from ../src/main.c:3:0:
+../src/fifo.h:27:6: note: expected ‘struct Queue *’ but argument is of type ‘Queue ** {aka struct Queue **}’
+ void init_queue(struct Queue *queue);
+      ^~~~~~~~~~
+../src/main.c:288:13: warning: passing argument 1 of ‘init_queue’ from incompatible pointer type [-Wincompatible-pointer-types]
+  init_queue(&queue_display);
+             ^
+In file included from ../src/main.c:3:0:
+../src/fifo.h:27:6: note: expected ‘struct Queue *’ but argument is of type ‘Queue ** {aka struct Queue **}’
+ void init_queue(struct Queue *queue);
+      ^~~~~~~~~~
+../src/main.c:297:18: error: ‘thread_send’ undeclared (first use in this function); did you mean ‘thread_read’?
+  pthread_create(&thread_send, NULL, send_message, NULL);
+                  ^~~~~~~~~~~
+                  thread_read
+../src/main.c:297:18: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/main.o] Error 1
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+10:42:08 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘send_message’:
+../src/main.c:276:6: warning: variable ‘number_to_display’ set but not used [-Wunused-but-set-variable]
+  int number_to_display = 0;
+      ^~~~~~~~~~~~~~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:297:18: error: ‘thread_send’ undeclared (first use in this function); did you mean ‘thread_read’?
+  pthread_create(&thread_send, NULL, send_message, NULL);
+                  ^~~~~~~~~~~
+                  thread_read
+../src/main.c:297:18: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/main.o] Error 1
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+10:42:31 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘send_message’:
+../src/main.c:276:6: warning: variable ‘number_to_display’ set but not used [-Wunused-but-set-variable]
+  int number_to_display = 0;
+      ^~~~~~~~~~~~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+10:43:08 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+10:43:28 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:45:00 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:45:32 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:227:18: error: incompatible type for argument 1 of ‘add_element’
+      add_element(queue_read, down);
+                  ^~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:28:6: note: expected ‘struct Queue *’ but argument is of type ‘Queue {aka struct Queue}’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/main.c:231:18: error: incompatible type for argument 1 of ‘add_element’
+      add_element(queue_read, up);
+                  ^~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:28:6: note: expected ‘struct Queue *’ but argument is of type ‘Queue {aka struct Queue}’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:248:29: error: incompatible type for argument 1 of ‘pop_element’
+   instruction = pop_element(queue_read);
+                             ^~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:29:5: note: expected ‘struct Queue *’ but argument is of type ‘Queue {aka struct Queue}’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c:255:16: error: incompatible type for argument 1 of ‘add_element’
+    add_element(queue_display, number_value);
+                ^~~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:28:6: note: expected ‘struct Queue *’ but argument is of type ‘Queue {aka struct Queue}’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/main.c:265:16: error: incompatible type for argument 1 of ‘add_element’
+    add_element(queue_display, number_value);
+                ^~~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:28:6: note: expected ‘struct Queue *’ but argument is of type ‘Queue {aka struct Queue}’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/main.c: In function ‘send_message’:
+../src/main.c:278:34: error: incompatible type for argument 1 of ‘pop_element’
+  number_to_display = pop_element(queue_display);
+                                  ^~~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:29:5: note: expected ‘struct Queue *’ but argument is of type ‘Queue {aka struct Queue}’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:289:13: error: incompatible type for argument 1 of ‘init_queue’
+  init_queue(queue_read);
+             ^~~~~~~~~~
+In file included from ../src/main.c:3:0:
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+../src/fifo.h:27:6: note: expected ‘struct Queue *’ but argument is of type ‘Queue {aka struct Queue}’
+ void init_queue(struct Queue *queue);
+      ^~~~~~~~~~
+../src/main.c:290:13: error: incompatible type for argument 1 of ‘init_queue’
+  init_queue(queue_display);
+             ^~~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:27:6: note: expected ‘struct Queue *’ but argument is of type ‘Queue {aka struct Queue}’
+ void init_queue(struct Queue *queue);
+      ^~~~~~~~~~
+make: *** [src/main.o] Error 1
+10:46:09 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+10:46:14 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:46:33 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:49:39 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+10:49:41 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:06:23 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+11:06:25 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
