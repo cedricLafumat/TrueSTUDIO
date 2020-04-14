@@ -6,7 +6,7 @@
 <stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/101_simu_multithread/Debug/101_simu_multithread"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="101_simu_multithread"/>
 <booleanAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_AUTO_ATTR" value="true"/>
-<stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value="com.atollic.managedbuild.pctools.config.gnu.exe.debug.1105257187"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value="com.atollic.managedbuild.pctools.config.gnu.exe.debug.1581067942"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
 <listEntry value="/101_simu_multithread"/>
 </listAttribute>

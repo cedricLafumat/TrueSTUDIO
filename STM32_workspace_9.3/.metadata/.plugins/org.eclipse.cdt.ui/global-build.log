@@ -22533,3 +22533,3144 @@ In file included from ../src/leds_control.c:1:0:
                       ^~~~~~~~~~~
 make: *** [src/leds_control.o] Error 1
 src/subdir.mk:21: recipe for target 'src/leds_control.o' failed
+09:42:55 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:42:5: error: variably modified ‘actual_matrice’ at file scope
+ RGB actual_matrice[TabSize][TabSize];
+     ^~~~~~~~~~~~~~
+../src/main.c:42:5: error: variably modified ‘actual_matrice’ at file scope
+../src/main.c: In function ‘set_number’:
+../src/main.c:86:2: error: unknown type name ‘color’
+  color nbr_color = PLAYER_COLOR;
+  ^~~~~
+../src/main.c:86:20: error: ‘PLAYER_COLOR’ undeclared (first use in this function)
+  color nbr_color = PLAYER_COLOR;
+                    ^~~~~~~~~~~~
+../src/main.c:86:20: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:87:2: error: unknown type name ‘color’
+  color bckgrnd_color = BACKGROUND;
+  ^~~~~
+../src/main.c:87:24: error: ‘BACKGROUND’ undeclared (first use in this function)
+  color bckgrnd_color = BACKGROUND;
+                        ^~~~~~~~~~
+../src/main.c:88:26: error: ‘TAB_SIZE’ undeclared (first use in this function); did you mean ‘_T_SIZE’?
+  for (int row = 0; row < TAB_SIZE; row++) {
+                          ^~~~~~~~
+                          _T_SIZE
+../src/main.c:93:6: error: ‘matrix’ undeclared (first use in this function)
+      matrix.board[row][col] = nbr_color;
+      ^~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+09:43:39 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:42:5: error: variably modified ‘actual_matrice’ at file scope
+ RGB actual_matrice[TabSize][TabSize];
+     ^~~~~~~~~~~~~~
+../src/main.c:42:5: error: variably modified ‘actual_matrice’ at file scope
+../src/main.c:44:1: warning: data definition has no type or storage class
+ PLAYER_COLOR = White;
+ ^~~~~~~~~~~~
+../src/main.c:44:1: warning: type defaults to ‘int’ in declaration of ‘PLAYER_COLOR’ [-Wimplicit-int]
+../src/main.c:44:16: error: incompatible types when initializing type ‘int’ using type ‘RGB {aka const struct <anonymous>}’
+ PLAYER_COLOR = White;
+                ^~~~~
+../src/main.c:45:1: warning: data definition has no type or storage class
+ BACKGROUND = Black;
+ ^~~~~~~~~~
+../src/main.c:45:1: warning: type defaults to ‘int’ in declaration of ‘BACKGROUND’ [-Wimplicit-int]
+../src/main.c:45:14: error: incompatible types when initializing type ‘int’ using type ‘RGB {aka const struct <anonymous>}’
+ BACKGROUND = Black;
+              ^~~~~
+../src/main.c: In function ‘set_number’:
+../src/main.c:89:2: error: unknown type name ‘color’
+  color nbr_color = PLAYER_COLOR;
+  ^~~~~
+../src/main.c:90:2: error: unknown type name ‘color’
+  color bckgrnd_color = BACKGROUND;
+  ^~~~~
+../src/main.c:91:26: error: ‘TAB_SIZE’ undeclared (first use in this function); did you mean ‘_T_SIZE’?
+  for (int row = 0; row < TAB_SIZE; row++) {
+                          ^~~~~~~~
+                          _T_SIZE
+../src/main.c:91:26: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:96:6: error: ‘matrix’ undeclared (first use in this function)
+      matrix.board[row][col] = nbr_color;
+      ^~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+09:44:33 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:42:5: error: variably modified ‘actual_matrice’ at file scope
+ RGB actual_matrice[TabSize][TabSize];
+     ^~~~~~~~~~~~~~
+../src/main.c:42:5: error: variably modified ‘actual_matrice’ at file scope
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+../src/main.c:44:1: warning: data definition has no type or storage class
+ PLAYER_COLOR = White;
+ ^~~~~~~~~~~~
+../src/main.c:44:1: warning: type defaults to ‘int’ in declaration of ‘PLAYER_COLOR’ [-Wimplicit-int]
+../src/main.c:44:16: error: incompatible types when initializing type ‘int’ using type ‘RGB {aka const struct <anonymous>}’
+ PLAYER_COLOR = White;
+                ^~~~~
+../src/main.c:45:1: warning: data definition has no type or storage class
+ BACKGROUND = Black;
+ ^~~~~~~~~~
+../src/main.c:45:1: warning: type defaults to ‘int’ in declaration of ‘BACKGROUND’ [-Wimplicit-int]
+../src/main.c:45:14: error: incompatible types when initializing type ‘int’ using type ‘RGB {aka const struct <anonymous>}’
+ BACKGROUND = Black;
+              ^~~~~
+../src/main.c: In function ‘set_number’:
+../src/main.c:89:2: error: unknown type name ‘color’
+  color nbr_color = PLAYER_COLOR;
+  ^~~~~
+../src/main.c:90:2: error: unknown type name ‘color’
+  color bckgrnd_color = BACKGROUND;
+  ^~~~~
+../src/main.c:92:27: error: ‘TAB_SIZE’ undeclared (first use in this function); did you mean ‘_T_SIZE’?
+   for (int col = 0; col < TAB_SIZE; col++) {
+                           ^~~~~~~~
+                           _T_SIZE
+../src/main.c:92:27: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:96:6: error: ‘matrix’ undeclared (first use in this function)
+      matrix.board[row][col] = nbr_color;
+      ^~~~~~
+make: *** [src/main.o] Error 1
+09:44:42 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:42:5: error: variably modified ‘actual_matrice’ at file scope
+ RGB actual_matrice[TabSize][TabSize];
+     ^~~~~~~~~~~~~~
+../src/main.c:42:5: error: variably modified ‘actual_matrice’ at file scope
+../src/main.c:44:1: warning: data definition has no type or storage class
+ PLAYER_COLOR = White;
+ ^~~~~~~~~~~~
+../src/main.c:44:1: warning: type defaults to ‘int’ in declaration of ‘PLAYER_COLOR’ [-Wimplicit-int]
+../src/main.c:44:16: error: incompatible types when initializing type ‘int’ using type ‘RGB {aka const struct <anonymous>}’
+ PLAYER_COLOR = White;
+                ^~~~~
+../src/main.c:45:1: warning: data definition has no type or storage class
+ BACKGROUND = Black;
+ ^~~~~~~~~~
+../src/main.c:45:1: warning: type defaults to ‘int’ in declaration of ‘BACKGROUND’ [-Wimplicit-int]
+../src/main.c:45:14: error: incompatible types when initializing type ‘int’ using type ‘RGB {aka const struct <anonymous>}’
+ BACKGROUND = Black;
+              ^~~~~
+../src/main.c: In function ‘set_number’:
+../src/main.c:89:2: error: unknown type name ‘color’
+  color nbr_color = PLAYER_COLOR;
+  ^~~~~
+../src/main.c:90:2: error: unknown type name ‘color’
+  color bckgrnd_color = BACKGROUND;
+  ^~~~~
+../src/main.c:96:6: error: ‘matrix’ undeclared (first use in this function)
+      matrix.board[row][col] = nbr_color;
+      ^~~~~~
+../src/main.c:96:6: note: each undeclared identifier is reported only once for each function it appears in
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+09:45:24 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:42:5: error: variably modified ‘actual_matrx’ at file scope
+ RGB actual_matrx[TabSize][TabSize];
+     ^~~~~~~~~~~~
+../src/main.c:42:5: error: variably modified ‘actual_matrx’ at file scope
+../src/main.c:43:5: error: variably modified ‘matrix’ at file scope
+ RGB matrix[TabSize][TabSize];
+     ^~~~~~
+../src/main.c:43:5: error: variably modified ‘matrix’ at file scope
+../src/main.c:45:1: warning: data definition has no type or storage class
+ PLAYER_COLOR = White;
+ ^~~~~~~~~~~~
+../src/main.c:45:1: warning: type defaults to ‘int’ in declaration of ‘PLAYER_COLOR’ [-Wimplicit-int]
+../src/main.c:45:16: error: incompatible types when initializing type ‘int’ using type ‘RGB {aka const struct <anonymous>}’
+ PLAYER_COLOR = White;
+                ^~~~~
+../src/main.c:46:1: warning: data definition has no type or storage class
+ BACKGROUND = Black;
+ ^~~~~~~~~~
+../src/main.c:46:1: warning: type defaults to ‘int’ in declaration of ‘BACKGROUND’ [-Wimplicit-int]
+../src/main.c:46:14: error: incompatible types when initializing type ‘int’ using type ‘RGB {aka const struct <anonymous>}’
+ BACKGROUND = Black;
+              ^~~~~
+../src/main.c: In function ‘SetLedMatrice’:
+../src/main.c:75:38: error: ‘actual_matrice’ undeclared (first use in this function); did you mean ‘actual_matrx’?
+    if ((TabLine[line][col].RValue != actual_matrice[line][col].RValue) ||
+                                      ^~~~~~~~~~~~~~
+                                      actual_matrx
+../src/main.c:75:38: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function ‘set_number’:
+../src/main.c:90:2: error: unknown type name ‘color’
+  color nbr_color = PLAYER_COLOR;
+  ^~~~~
+../src/main.c:91:2: error: unknown type name ‘color’
+  color bckgrnd_color = BACKGROUND;
+  ^~~~~
+../src/main.c:97:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:99:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:110:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:112:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:123:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:125:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:135:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:137:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:149:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:151:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:163:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:165:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:175:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:177:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:189:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:191:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:203:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:205:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:216:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:218:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+09:52:21 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:42:5: error: variably modified ‘actual_matrx’ at file scope
+ RGB actual_matrx[TabSize][TabSize];
+     ^~~~~~~~~~~~
+../src/main.c:42:5: error: variably modified ‘actual_matrx’ at file scope
+../src/main.c:43:5: error: variably modified ‘matrix’ at file scope
+ RGB matrix[TabSize][TabSize];
+     ^~~~~~
+../src/main.c:43:5: error: variably modified ‘matrix’ at file scope
+../src/main.c:45:1: warning: data definition has no type or storage class
+ PLAYER_COLOR = White;
+ ^~~~~~~~~~~~
+../src/main.c:45:1: warning: type defaults to ‘int’ in declaration of ‘PLAYER_COLOR’ [-Wimplicit-int]
+../src/main.c:45:16: error: incompatible types when initializing type ‘int’ using type ‘RGB {aka const struct <anonymous>}’
+ PLAYER_COLOR = White;
+                ^~~~~
+../src/main.c:46:1: warning: data definition has no type or storage class
+ BACKGROUND = Black;
+ ^~~~~~~~~~
+../src/main.c:46:1: warning: type defaults to ‘int’ in declaration of ‘BACKGROUND’ [-Wimplicit-int]
+../src/main.c:46:14: error: incompatible types when initializing type ‘int’ using type ‘RGB {aka const struct <anonymous>}’
+ BACKGROUND = Black;
+              ^~~~~
+../src/main.c: In function ‘SetLedMatrice’:
+../src/main.c:75:38: error: ‘actual_matrice’ undeclared (first use in this function); did you mean ‘actual_matrx’?
+    if ((TabLine[line][col].RValue != actual_matrice[line][col].RValue) ||
+                                      ^~~~~~~~~~~~~~
+                                      actual_matrx
+../src/main.c:75:38: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function ‘set_number’:
+../src/main.c:90:2: error: unknown type name ‘color’
+  color nbr_color = PLAYER_COLOR;
+  ^~~~~
+../src/main.c:91:2: error: unknown type name ‘color’
+  color bckgrnd_color = BACKGROUND;
+  ^~~~~
+../src/main.c:97:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:99:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:110:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:112:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:123:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:125:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:135:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:137:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:149:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:151:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:163:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:165:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:175:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:177:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:189:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:191:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:203:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:205:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:216:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:218:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+09:52:49 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:42:5: error: variably modified ‘actual_matrx’ at file scope
+ RGB actual_matrx[TabSize][TabSize];
+     ^~~~~~~~~~~~
+../src/main.c:42:5: error: variably modified ‘actual_matrx’ at file scope
+../src/main.c:43:5: error: variably modified ‘matrix’ at file scope
+ RGB matrix[TabSize][TabSize];
+     ^~~~~~
+../src/main.c:43:5: error: variably modified ‘matrix’ at file scope
+../src/main.c:45:1: warning: data definition has no type or storage class
+ PLAYER_COLOR = White;
+ ^~~~~~~~~~~~
+../src/main.c:45:1: warning: type defaults to ‘int’ in declaration of ‘PLAYER_COLOR’ [-Wimplicit-int]
+../src/main.c:45:16: error: incompatible types when initializing type ‘int’ using type ‘RGB {aka const struct <anonymous>}’
+ PLAYER_COLOR = White;
+                ^~~~~
+../src/main.c:46:1: warning: data definition has no type or storage class
+ BACKGROUND = Black;
+ ^~~~~~~~~~
+../src/main.c:46:1: warning: type defaults to ‘int’ in declaration of ‘BACKGROUND’ [-Wimplicit-int]
+../src/main.c:46:14: error: incompatible types when initializing type ‘int’ using type ‘RGB {aka const struct <anonymous>}’
+ BACKGROUND = Black;
+              ^~~~~
+../src/main.c: In function ‘SetLedMatrice’:
+../src/main.c:75:38: error: ‘actual_matrix’ undeclared (first use in this function); did you mean ‘actual_matrx’?
+    if ((TabLine[line][col].RValue != actual_matrix[line][col].RValue) ||
+                                      ^~~~~~~~~~~~~
+                                      actual_matrx
+../src/main.c:75:38: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function ‘set_number’:
+../src/main.c:90:2: error: unknown type name ‘color’
+  color nbr_color = PLAYER_COLOR;
+  ^~~~~
+../src/main.c:91:2: error: unknown type name ‘color’
+  color bckgrnd_color = BACKGROUND;
+  ^~~~~
+../src/main.c:97:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:99:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+            ^
+../src/main.c:110:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:112:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:123:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:125:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:135:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:137:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:149:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:151:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:163:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:165:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:175:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:177:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:189:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:191:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:203:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:205:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:216:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:218:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+make: *** [src/main.o] Error 1
+09:53:52 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:42:5: error: variably modified ‘actual_matrx’ at file scope
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+ RGB actual_matrx[TabSize][TabSize];
+     ^~~~~~~~~~~~
+../src/main.c:42:5: error: variably modified ‘actual_matrx’ at file scope
+../src/main.c:43:5: error: variably modified ‘matrix’ at file scope
+ RGB matrix[TabSize][TabSize];
+     ^~~~~~
+../src/main.c:43:5: error: variably modified ‘matrix’ at file scope
+../src/main.c:45:20: error: initializer element is not constant
+ RGB PLAYER_COLOR = White;
+                    ^~~~~
+../src/main.c:46:18: error: initializer element is not constant
+ RGB BACKGROUND = Black;
+                  ^~~~~
+../src/main.c: In function ‘SetLedMatrice’:
+../src/main.c:75:38: error: ‘actual_matrix’ undeclared (first use in this function); did you mean ‘actual_matrx’?
+    if ((TabLine[line][col].RValue != actual_matrix[line][col].RValue) ||
+                                      ^~~~~~~~~~~~~
+                                      actual_matrx
+../src/main.c:75:38: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function ‘set_number’:
+../src/main.c:90:2: error: unknown type name ‘color’
+  color nbr_color = PLAYER_COLOR;
+  ^~~~~
+../src/main.c:90:20: error: incompatible types when initializing type ‘int’ using type ‘RGB {aka struct <anonymous>}’
+  color nbr_color = PLAYER_COLOR;
+                    ^~~~~~~~~~~~
+../src/main.c:91:2: error: unknown type name ‘color’
+  color bckgrnd_color = BACKGROUND;
+  ^~~~~
+../src/main.c:91:24: error: incompatible types when initializing type ‘int’ using type ‘RGB {aka struct <anonymous>}’
+  color bckgrnd_color = BACKGROUND;
+                        ^~~~~~~~~~
+../src/main.c:97:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:99:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:110:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:112:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:123:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:125:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:135:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:137:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:149:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:151:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:163:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:165:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:175:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:177:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:189:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:191:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:203:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:205:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:216:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:218:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+make: *** [src/main.o] Error 1
+12:58:10 **** Incremental Build of configuration Debug for project 100_coeur_de_jeu ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+12:58:10 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:43:5: error: variably modified ‘matrix’ at file scope
+ RGB matrix[TabSize][TabSize];
+     ^~~~~~
+../src/main.c:43:5: error: variably modified ‘matrix’ at file scope
+../src/main.c:45:20: error: initializer element is not constant
+ RGB PLAYER_COLOR = White;
+                    ^~~~~
+../src/main.c:46:18: error: initializer element is not constant
+ RGB BACKGROUND = Black;
+                  ^~~~~
+../src/main.c: In function ‘SetLedMatrice’:
+../src/main.c:75:38: error: ‘actual_matrix’ undeclared (first use in this function)
+    if ((TabLine[line][col].RValue != actual_matrix[line][col].RValue) ||
+                                      ^~~~~~~~~~~~~
+../src/main.c:75:38: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function ‘set_number’:
+../src/main.c:97:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:99:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:110:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:112:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:123:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:125:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:135:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:137:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:149:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:151:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:163:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:165:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:175:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:177:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:189:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:191:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:203:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:205:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:216:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:218:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+13:05:09 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:4:0:
+../src/game.h:35:8: error: redefinition of ‘struct Queue’
+ struct Queue {
+        ^~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:26:16: note: originally defined here
+ typedef struct Queue
+                ^~~~~
+In file included from ../src/main.c:4:0:
+../src/game.h:71:5: error: conflicting types for ‘pop_element’
+ int pop_element(queue *queue, char *value);
+     ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:38:5: note: previous declaration of ‘pop_element’ was here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c:44:5: error: variably modified ‘matrix’ at file scope
+ RGB matrix[TabSize][TabSize];
+     ^~~~~~
+../src/main.c:44:5: error: variably modified ‘matrix’ at file scope
+In file included from ../src/main.c:4:0:
+../src/game.h:17:22: error: conflicting types for ‘blue’
+ #define PLAYER_COLOR blue
+                      ^
+../src/main.c:46:5: note: in expansion of macro ‘PLAYER_COLOR’
+ RGB PLAYER_COLOR = White;
+     ^~~~~~~~~~~~
+../src/game.h:53:64: note: previous definition of ‘blue’ was here
+ static color white = { 255, 255, 255 }, green = { 0, 255, 0 }, blue = { 0, 0,
+                                                                ^~~~
+../src/main.c:46:20: error: initializer element is not constant
+ RGB PLAYER_COLOR = White;
+                    ^~~~~
+In file included from ../src/main.c:4:0:
+../src/game.h:18:20: error: conflicting types for ‘black’
+ #define BACKGROUND black
+                    ^
+../src/main.c:47:5: note: in expansion of macro ‘BACKGROUND’
+ RGB BACKGROUND = Black;
+     ^~~~~~~~~~
+../src/game.h:55:13: note: previous definition of ‘black’ was here
+   255, 0 }, black = { 0, 0, 0 };
+             ^~~~~
+../src/main.c:47:18: error: initializer element is not constant
+ RGB BACKGROUND = Black;
+                  ^~~~~
+../src/main.c: In function ‘SetLedMatrice’:
+../src/main.c:76:38: error: ‘actual_matrix’ undeclared (first use in this function); did you mean ‘init_matrix’?
+    if ((TabLine[line][col].RValue != actual_matrix[line][col].RValue) ||
+                                      ^~~~~~~~~~~~~
+                                      init_matrix
+../src/main.c:76:38: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function ‘set_number’:
+../src/main.c:98:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:100:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:111:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:113:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:124:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:126:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:136:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:138:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:150:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:152:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:164:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:166:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:176:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:178:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:190:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:192:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:204:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:206:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:217:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:219:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:483:17: error: too few arguments to function ‘pop_element’
+   instruction = pop_element(&p_queue_read);
+                 ^~~~~~~~~~~
+In file included from ../src/main.c:4:0:
+../src/game.h:71:5: note: declared here
+ int pop_element(queue *queue, char *value);
+     ^~~~~~~~~~~
+../src/main.c: In function ‘send_message’:
+../src/main.c:515:23: error: too few arguments to function ‘pop_element’
+   number_to_display = pop_element(&p_queue_display);
+                       ^~~~~~~~~~~
+In file included from ../src/main.c:4:0:
+../src/game.h:71:5: note: declared here
+ int pop_element(queue *queue, char *value);
+     ^~~~~~~~~~~
+At top level:
+../src/game.h:55:13: warning: ‘black’ defined but not used [-Wunused-variable]
+   255, 0 }, black = { 0, 0, 0 };
+             ^~~~~
+../src/game.h:54:57: warning: ‘yellow’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+                                                         ^~~~~~
+../src/game.h:54:31: warning: ‘purple’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+                               ^~~~~~
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+../src/game.h:54:10: warning: ‘red’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+          ^~~
+../src/game.h:53:64: warning: ‘blue’ defined but not used [-Wunused-variable]
+ static color white = { 255, 255, 255 }, green = { 0, 255, 0 }, blue = { 0, 0,
+                                                                ^~~~
+../src/game.h:53:41: warning: ‘green’ defined but not used [-Wunused-variable]
+ static color white = { 255, 255, 255 }, green = { 0, 255, 0 }, blue = { 0, 0,
+                                         ^~~~~
+../src/game.h:53:14: warning: ‘white’ defined but not used [-Wunused-variable]
+ static color white = { 255, 255, 255 }, green = { 0, 255, 0 }, blue = { 0, 0,
+              ^~~~~
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../src/game.c:8:0:
+../src/game.h:54:57: warning: ‘yellow’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+                                                         ^~~~~~
+../src/game.h:54:31: warning: ‘purple’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+                               ^~~~~~
+../src/game.h:54:10: warning: ‘red’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+          ^~~
+../src/game.h:53:41: warning: ‘green’ defined but not used [-Wunused-variable]
+ static color white = { 255, 255, 255 }, green = { 0, 255, 0 }, blue = { 0, 0,
+                                         ^~~~~
+../src/game.h:53:14: warning: ‘white’ defined but not used [-Wunused-variable]
+ static color white = { 255, 255, 255 }, green = { 0, 255, 0 }, blue = { 0, 0,
+              ^~~~~
+13:05:25 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:4:0:
+../src/game.h:35:8: error: redefinition of ‘struct Queue’
+ struct Queue {
+        ^~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:26:16: note: originally defined here
+ typedef struct Queue
+                ^~~~~
+In file included from ../src/main.c:4:0:
+../src/game.h:71:5: error: conflicting types for ‘pop_element’
+ int pop_element(queue *queue, char *value);
+     ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:38:5: note: previous declaration of ‘pop_element’ was here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c:44:5: error: variably modified ‘matrix’ at file scope
+ RGB matrix[TabSize][TabSize];
+     ^~~~~~
+../src/main.c:44:5: error: variably modified ‘matrix’ at file scope
+../src/main.c: In function ‘SetLedMatrice’:
+../src/main.c:74:38: error: ‘actual_matrix’ undeclared (first use in this function); did you mean ‘init_matrix’?
+    if ((TabLine[line][col].RValue != actual_matrix[line][col].RValue) ||
+                                      ^~~~~~~~~~~~~
+                                      init_matrix
+../src/main.c:74:38: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../src/main.c:4:0:
+../src/main.c: In function ‘set_number’:
+../src/game.h:17:22: error: invalid initializer
+ #define PLAYER_COLOR blue
+                      ^
+../src/main.c:89:18: note: in expansion of macro ‘PLAYER_COLOR’
+  RGB nbr_color = PLAYER_COLOR;
+                  ^~~~~~~~~~~~
+../src/game.h:18:20: error: invalid initializer
+ #define BACKGROUND black
+                    ^
+../src/main.c:90:22: note: in expansion of macro ‘BACKGROUND’
+  RGB bckgrnd_color = BACKGROUND;
+                      ^~~~~~~~~~
+../src/main.c:96:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:98:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:109:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:111:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:122:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+../src/main.c:124:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:134:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:136:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:148:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:150:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:162:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:164:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:174:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:176:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:188:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:190:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:202:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:204:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:215:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:217:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:481:17: error: too few arguments to function ‘pop_element’
+   instruction = pop_element(&p_queue_read);
+                 ^~~~~~~~~~~
+In file included from ../src/main.c:4:0:
+../src/game.h:71:5: note: declared here
+ int pop_element(queue *queue, char *value);
+     ^~~~~~~~~~~
+../src/main.c: In function ‘send_message’:
+../src/main.c:513:23: error: too few arguments to function ‘pop_element’
+   number_to_display = pop_element(&p_queue_display);
+                       ^~~~~~~~~~~
+In file included from ../src/main.c:4:0:
+../src/game.h:71:5: note: declared here
+ int pop_element(queue *queue, char *value);
+     ^~~~~~~~~~~
+At top level:
+../src/game.h:54:57: warning: ‘yellow’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+                                                         ^~~~~~
+../src/game.h:54:31: warning: ‘purple’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+                               ^~~~~~
+../src/game.h:54:10: warning: ‘red’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+          ^~~
+../src/game.h:53:41: warning: ‘green’ defined but not used [-Wunused-variable]
+ static color white = { 255, 255, 255 }, green = { 0, 255, 0 }, blue = { 0, 0,
+                                         ^~~~~
+../src/game.h:53:14: warning: ‘white’ defined but not used [-Wunused-variable]
+ static color white = { 255, 255, 255 }, green = { 0, 255, 0 }, blue = { 0, 0,
+              ^~~~~
+make: *** [src/main.o] Error 1
+13:05:41 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:4:0:
+../src/game.h:35:8: error: redefinition of ‘struct Queue’
+ struct Queue {
+        ^~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:26:16: note: originally defined here
+ typedef struct Queue
+                ^~~~~
+../src/game.c: In function ‘send_message’:
+../src/game.c:205:2: warning: implicit declaration of function ‘push’; did you mean ‘puts’? [-Wimplicit-function-declaration]
+  push(queue, message);
+  ^~~~
+  puts
+../src/game.c: In function ‘receive_message’:
+../src/game.c:211:21: warning: implicit declaration of function ‘pop_element’ [-Wimplicit-function-declaration]
+  int return_value = pop_element(queue, message);
+                     ^~~~~~~~~~~
+../src/main.c:44:5: error: variably modified ‘matrix’ at file scope
+ RGB matrix[TabSize][TabSize];
+     ^~~~~~
+../src/main.c:44:5: error: variably modified ‘matrix’ at file scope
+../src/main.c: In function ‘SetLedMatrice’:
+../src/main.c:74:38: error: ‘actual_matrix’ undeclared (first use in this function); did you mean ‘init_matrix’?
+    if ((TabLine[line][col].RValue != actual_matrix[line][col].RValue) ||
+                                      ^~~~~~~~~~~~~
+                                      init_matrix
+../src/main.c:74:38: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../src/main.c:4:0:
+../src/main.c: In function ‘set_number’:
+../src/game.h:17:22: error: invalid initializer
+ #define PLAYER_COLOR blue
+                      ^
+../src/main.c:89:18: note: in expansion of macro ‘PLAYER_COLOR’
+  RGB nbr_color = PLAYER_COLOR;
+                  ^~~~~~~~~~~~
+../src/game.h:18:20: error: invalid initializer
+ #define BACKGROUND black
+                    ^
+../src/main.c:90:22: note: in expansion of macro ‘BACKGROUND’
+  RGB bckgrnd_color = BACKGROUND;
+                      ^~~~~~~~~~
+../src/main.c:96:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:98:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+In file included from ../src/game.c:8:0:
+At top level:
+../src/main.c:109:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:111:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/game.h:54:57: warning: ‘yellow’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+                                                         ^~~~~~
+../src/game.h:54:31: warning: ‘purple’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+                               ^~~~~~
+../src/game.h:54:10: warning: ‘red’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+          ^~~
+../src/game.h:53:41: warning: ‘green’ defined but not used [-Wunused-variable]
+ static color white = { 255, 255, 255 }, green = { 0, 255, 0 }, blue = { 0, 0,
+                                         ^~~~~
+../src/game.h:53:14: warning: ‘white’ defined but not used [-Wunused-variable]
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+ static color white = { 255, 255, 255 }, green = { 0, 255, 0 }, blue = { 0, 0,
+              ^~~~~
+../src/main.c:122:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:124:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:134:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:136:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:148:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:150:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:162:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:164:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:174:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:176:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:188:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:190:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:202:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:204:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:215:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:217:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+In file included from ../src/main.c:4:0:
+At top level:
+../src/game.h:54:57: warning: ‘yellow’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+                                                         ^~~~~~
+../src/game.h:54:31: warning: ‘purple’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+                               ^~~~~~
+../src/game.h:54:10: warning: ‘red’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+          ^~~
+../src/game.h:53:41: warning: ‘green’ defined but not used [-Wunused-variable]
+ static color white = { 255, 255, 255 }, green = { 0, 255, 0 }, blue = { 0, 0,
+                                         ^~~~~
+../src/game.h:53:14: warning: ‘white’ defined but not used [-Wunused-variable]
+ static color white = { 255, 255, 255 }, green = { 0, 255, 0 }, blue = { 0, 0,
+              ^~~~~
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+13:06:10 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:4:0:
+../src/game.h:35:8: error: redefinition of ‘struct Queue’
+ struct Queue {
+        ^~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:26:16: note: originally defined here
+ typedef struct Queue
+                ^~~~~
+../src/game.c: In function ‘init_matrix’:
+../src/game.c:24:36: error: ‘black’ undeclared (first use in this function); did you mean ‘clock’?
+    matrix.board[row][col].RValue = black.RValue;
+                                    ^~~~~
+                                    clock
+../src/game.c:24:36: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../src/game.c:8:0:
+../src/game.c: In function ‘set_number’:
+../src/game.h:17:22: error: ‘blue’ undeclared (first use in this function)
+ #define PLAYER_COLOR blue
+                      ^
+../src/game.c:37:20: note: in expansion of macro ‘PLAYER_COLOR’
+  color nbr_color = PLAYER_COLOR;
+                    ^~~~~~~~~~~~
+../src/game.h:18:20: error: ‘black’ undeclared (first use in this function); did you mean ‘clock’?
+ #define BACKGROUND black
+                    ^
+../src/game.c:38:24: note: in expansion of macro ‘BACKGROUND’
+  color bckgrnd_color = BACKGROUND;
+                        ^~~~~~~~~~
+../src/game.c: In function ‘send_message’:
+../src/game.c:205:2: warning: implicit declaration of function ‘push’; did you mean ‘puts’? [-Wimplicit-function-declaration]
+  push(queue, message);
+  ^~~~
+  puts
+../src/game.c: In function ‘receive_message’:
+../src/game.c:211:21: warning: implicit declaration of function ‘pop_element’ [-Wimplicit-function-declaration]
+  int return_value = pop_element(queue, message);
+                     ^~~~~~~~~~~
+../src/main.c:44:5: error: variably modified ‘matrix’ at file scope
+ RGB matrix[TabSize][TabSize];
+     ^~~~~~
+../src/main.c:44:5: error: variably modified ‘matrix’ at file scope
+src/subdir.mk:27: recipe for target 'src/game.o' failed
+make: *** [src/game.o] Error 1
+../src/main.c: In function ‘SetLedMatrice’:
+make: *** Waiting for unfinished jobs....
+../src/main.c:74:38: error: ‘actual_matrix’ undeclared (first use in this function); did you mean ‘init_matrix’?
+    if ((TabLine[line][col].RValue != actual_matrix[line][col].RValue) ||
+                                      ^~~~~~~~~~~~~
+                                      init_matrix
+../src/main.c:74:38: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../src/main.c:4:0:
+../src/main.c: In function ‘set_number’:
+../src/game.h:17:22: error: ‘blue’ undeclared (first use in this function); did you mean ‘Blue’?
+ #define PLAYER_COLOR blue
+                      ^
+../src/main.c:89:18: note: in expansion of macro ‘PLAYER_COLOR’
+  RGB nbr_color = PLAYER_COLOR;
+                  ^~~~~~~~~~~~
+../src/game.h:18:20: error: ‘black’ undeclared (first use in this function); did you mean ‘Black’?
+ #define BACKGROUND black
+                    ^
+../src/main.c:90:22: note: in expansion of macro ‘BACKGROUND’
+  RGB bckgrnd_color = BACKGROUND;
+                      ^~~~~~~~~~
+../src/main.c:96:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:98:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:109:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:111:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:122:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:124:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:134:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:136:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+            ^
+../src/main.c:148:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:150:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:162:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:164:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:174:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:176:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:188:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:190:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:202:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:204:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:215:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:217:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+make: *** [src/main.o] Error 1
+13:07:16 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/game.c:8:0:
+../src/game.h:53:7: error: unknown type name ‘RGB’
+ const RGB Red={255,0,0};
+       ^~~
+../src/game.h:53:20: warning: excess elements in scalar initializer
+ const RGB Red={255,0,0};
+                    ^
+../src/game.h:53:20: note: (near initialization for ‘Red’)
+../src/game.h:53:22: warning: excess elements in scalar initializer
+ const RGB Red={255,0,0};
+                      ^
+../src/game.h:53:22: note: (near initialization for ‘Red’)
+../src/game.h:54:7: error: unknown type name ‘RGB’
+ const RGB Green={0,255,0};
+       ^~~
+../src/game.h:54:20: warning: excess elements in scalar initializer
+ const RGB Green={0,255,0};
+                    ^~~
+../src/game.h:54:20: note: (near initialization for ‘Green’)
+../src/game.h:54:24: warning: excess elements in scalar initializer
+ const RGB Green={0,255,0};
+                        ^
+../src/game.h:54:24: note: (near initialization for ‘Green’)
+../src/game.h:55:7: error: unknown type name ‘RGB’
+ const RGB Blue={0,0,255};
+       ^~~
+../src/game.h:55:19: warning: excess elements in scalar initializer
+ const RGB Blue={0,0,255};
+                   ^
+../src/game.h:55:19: note: (near initialization for ‘Blue’)
+../src/game.h:55:21: warning: excess elements in scalar initializer
+ const RGB Blue={0,0,255};
+                     ^~~
+../src/game.h:55:21: note: (near initialization for ‘Blue’)
+../src/game.h:56:7: error: unknown type name ‘RGB’
+ const RGB White={255,255,255};
+       ^~~
+../src/game.h:56:22: warning: excess elements in scalar initializer
+ const RGB White={255,255,255};
+                      ^~~
+../src/game.h:56:22: note: (near initialization for ‘White’)
+../src/game.h:56:26: warning: excess elements in scalar initializer
+ const RGB White={255,255,255};
+                          ^~~
+../src/game.h:56:26: note: (near initialization for ‘White’)
+../src/game.h:57:7: error: unknown type name ‘RGB’
+ const RGB Purple={255,0,255};
+       ^~~
+../src/game.h:57:23: warning: excess elements in scalar initializer
+ const RGB Purple={255,0,255};
+                       ^
+../src/game.h:57:23: note: (near initialization for ‘Purple’)
+../src/game.h:57:25: warning: excess elements in scalar initializer
+ const RGB Purple={255,0,255};
+                         ^~~
+../src/game.h:57:25: note: (near initialization for ‘Purple’)
+../src/game.h:58:7: error: unknown type name ‘RGB’
+ const RGB Yellow={255,255,0};
+       ^~~
+../src/game.h:58:23: warning: excess elements in scalar initializer
+ const RGB Yellow={255,255,0};
+                       ^~~
+../src/game.h:58:23: note: (near initialization for ‘Yellow’)
+../src/game.h:58:27: warning: excess elements in scalar initializer
+ const RGB Yellow={255,255,0};
+                           ^
+../src/game.h:58:27: note: (near initialization for ‘Yellow’)
+../src/game.h:59:7: error: unknown type name ‘RGB’
+ const RGB Black={0,0,0};
+       ^~~
+../src/game.h:59:20: warning: excess elements in scalar initializer
+ const RGB Black={0,0,0};
+                    ^
+../src/game.h:59:20: note: (near initialization for ‘Black’)
+../src/game.h:59:22: warning: excess elements in scalar initializer
+ const RGB Black={0,0,0};
+                      ^
+../src/game.h:59:22: note: (near initialization for ‘Black’)
+../src/game.c: In function ‘init_matrix’:
+../src/game.c:24:36: error: ‘black’ undeclared (first use in this function); did you mean ‘Black’?
+    matrix.board[row][col].RValue = black.RValue;
+                                    ^~~~~
+                                    Black
+../src/game.c:24:36: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../src/game.c:8:0:
+../src/game.c: In function ‘set_number’:
+../src/game.h:17:22: error: invalid initializer
+ #define PLAYER_COLOR Blue
+                      ^
+../src/game.c:37:20: note: in expansion of macro ‘PLAYER_COLOR’
+  color nbr_color = PLAYER_COLOR;
+                    ^~~~~~~~~~~~
+../src/game.h:18:20: error: invalid initializer
+ #define BACKGROUND Black
+                    ^
+../src/game.c:38:24: note: in expansion of macro ‘BACKGROUND’
+  color bckgrnd_color = BACKGROUND;
+                        ^~~~~~~~~~
+In file included from ../src/main.c:4:0:
+../src/game.h:35:8: error: redefinition of ‘struct Queue’
+ struct Queue {
+        ^~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:26:16: note: originally defined here
+ typedef struct Queue
+                ^~~~~
+In file included from ../src/main.c:4:0:
+../src/game.h:53:7: error: unknown type name ‘RGB’
+ const RGB Red={255,0,0};
+       ^~~
+../src/game.h:53:20: warning: excess elements in scalar initializer
+ const RGB Red={255,0,0};
+                    ^
+../src/game.c: In function ‘send_message’:
+../src/game.c:205:2: warning: implicit declaration of function ‘push’; did you mean ‘puts’? [-Wimplicit-function-declaration]
+  push(queue, message);
+  ^~~~
+  puts
+../src/game.h:53:20: note: (near initialization for ‘Red’)
+../src/game.h:53:22: warning: excess elements in scalar initializer
+ const RGB Red={255,0,0};
+                      ^
+../src/game.c: In function ‘receive_message’:
+../src/game.c:211:21: warning: implicit declaration of function ‘pop_element’ [-Wimplicit-function-declaration]
+  int return_value = pop_element(queue, message);
+                     ^~~~~~~~~~~
+../src/game.h:53:22: note: (near initialization for ‘Red’)
+../src/game.h:54:7: error: unknown type name ‘RGB’
+ const RGB Green={0,255,0};
+       ^~~
+../src/game.h:54:20: warning: excess elements in scalar initializer
+ const RGB Green={0,255,0};
+                    ^~~
+../src/game.h:54:20: note: (near initialization for ‘Green’)
+../src/game.h:54:24: warning: excess elements in scalar initializer
+ const RGB Green={0,255,0};
+                        ^
+../src/game.h:54:24: note: (near initialization for ‘Green’)
+../src/game.h:55:7: error: unknown type name ‘RGB’
+ const RGB Blue={0,0,255};
+       ^~~
+../src/game.h:55:19: warning: excess elements in scalar initializer
+ const RGB Blue={0,0,255};
+src/subdir.mk:27: recipe for target 'src/game.o' failed
+                   ^
+../src/game.h:55:19: note: (near initialization for ‘Blue’)
+../src/game.h:55:21: warning: excess elements in scalar initializer
+ const RGB Blue={0,0,255};
+                     ^~~
+../src/game.h:55:21: note: (near initialization for ‘Blue’)
+../src/game.h:56:7: error: unknown type name ‘RGB’
+ const RGB White={255,255,255};
+       ^~~
+../src/game.h:56:22: warning: excess elements in scalar initializer
+ const RGB White={255,255,255};
+                      ^~~
+../src/game.h:56:22: note: (near initialization for ‘White’)
+../src/game.h:56:26: warning: excess elements in scalar initializer
+ const RGB White={255,255,255};
+                          ^~~
+../src/game.h:56:26: note: (near initialization for ‘White’)
+../src/game.h:57:7: error: unknown type name ‘RGB’
+ const RGB Purple={255,0,255};
+       ^~~
+../src/game.h:57:23: warning: excess elements in scalar initializer
+ const RGB Purple={255,0,255};
+                       ^
+../src/game.h:57:23: note: (near initialization for ‘Purple’)
+../src/game.h:57:25: warning: excess elements in scalar initializer
+ const RGB Purple={255,0,255};
+                         ^~~
+../src/game.h:57:25: note: (near initialization for ‘Purple’)
+../src/game.h:58:7: error: unknown type name ‘RGB’
+ const RGB Yellow={255,255,0};
+       ^~~
+../src/game.h:58:23: warning: excess elements in scalar initializer
+ const RGB Yellow={255,255,0};
+                       ^~~
+../src/game.h:58:23: note: (near initialization for ‘Yellow’)
+../src/game.h:58:27: warning: excess elements in scalar initializer
+ const RGB Yellow={255,255,0};
+                           ^
+../src/game.h:58:27: note: (near initialization for ‘Yellow’)
+../src/game.h:59:7: error: unknown type name ‘RGB’
+ const RGB Black={0,0,0};
+       ^~~
+../src/game.h:59:20: warning: excess elements in scalar initializer
+ const RGB Black={0,0,0};
+                    ^
+../src/game.h:59:20: note: (near initialization for ‘Black’)
+../src/game.h:59:22: warning: excess elements in scalar initializer
+ const RGB Black={0,0,0};
+                      ^
+../src/game.h:59:22: note: (near initialization for ‘Black’)
+../src/main.c:36:5: error: variably modified ‘matrix’ at file scope
+ RGB matrix[TabSize][TabSize];
+     ^~~~~~
+../src/main.c:36:5: error: variably modified ‘matrix’ at file scope
+make: *** [src/game.o] Error 1
+make: *** Waiting for unfinished jobs....
+../src/main.c: In function ‘SetLedMatrice’:
+../src/main.c:66:38: error: ‘actual_matrix’ undeclared (first use in this function); did you mean ‘init_matrix’?
+    if ((TabLine[line][col].RValue != actual_matrix[line][col].RValue) ||
+                                      ^~~~~~~~~~~~~
+                                      init_matrix
+../src/main.c:66:38: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../src/main.c:4:0:
+../src/main.c: In function ‘set_number’:
+../src/game.h:17:22: error: invalid initializer
+ #define PLAYER_COLOR Blue
+                      ^
+../src/main.c:81:18: note: in expansion of macro ‘PLAYER_COLOR’
+  RGB nbr_color = PLAYER_COLOR;
+                  ^~~~~~~~~~~~
+../src/game.h:18:20: error: invalid initializer
+ #define BACKGROUND Black
+                    ^
+../src/main.c:82:22: note: in expansion of macro ‘BACKGROUND’
+  RGB bckgrnd_color = BACKGROUND;
+                      ^~~~~~~~~~
+../src/main.c:88:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:90:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:101:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:103:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:114:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:116:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:126:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:128:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:140:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:142:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:154:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:156:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:166:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:168:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:180:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:182:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:194:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:196:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:207:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:209:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+13:07:36 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:4:0:
+../src/game.h:35:8: error: redefinition of ‘struct Queue’
+ struct Queue {
+        ^~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:26:16: note: originally defined here
+ typedef struct Queue
+                ^~~~~
+../src/main.c:44:5: error: variably modified ‘matrix’ at file scope
+ RGB matrix[TabSize][TabSize];
+     ^~~~~~
+../src/main.c:44:5: error: variably modified ‘matrix’ at file scope
+../src/main.c: In function ‘SetLedMatrice’:
+../src/main.c:74:38: error: ‘actual_matrix’ undeclared (first use in this function); did you mean ‘init_matrix’?
+    if ((TabLine[line][col].RValue != actual_matrix[line][col].RValue) ||
+                                      ^~~~~~~~~~~~~
+                                      init_matrix
+../src/main.c:74:38: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function ‘set_number’:
+../src/main.c:96:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:98:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:109:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:111:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:122:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:124:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:134:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:136:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:148:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:150:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:162:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:164:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:174:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:176:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:188:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:190:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:202:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:204:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+../src/main.c:215:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:217:12: error: request for member ‘board’ in something not a structure or union
+      matrix.board[row][col] = bckgrnd_color;
+            ^
+make: *** [src/main.o] Error 1
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+make: *** Waiting for unfinished jobs....
+../src/game.c: In function ‘init_matrix’:
+../src/game.c:24:36: error: ‘black’ undeclared (first use in this function); did you mean ‘clock’?
+    matrix.board[row][col].RValue = black.RValue;
+                                    ^~~~~
+                                    clock
+../src/game.c:24:36: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../src/game.c:8:0:
+../src/game.c: In function ‘set_number’:
+../src/game.h:17:22: error: ‘Blue’ undeclared (first use in this function)
+ #define PLAYER_COLOR Blue
+                      ^
+../src/game.c:37:20: note: in expansion of macro ‘PLAYER_COLOR’
+  color nbr_color = PLAYER_COLOR;
+                    ^~~~~~~~~~~~
+../src/game.h:18:20: error: ‘Black’ undeclared (first use in this function); did you mean ‘clock’?
+ #define BACKGROUND Black
+                    ^
+../src/game.c:38:24: note: in expansion of macro ‘BACKGROUND’
+  color bckgrnd_color = BACKGROUND;
+                        ^~~~~~~~~~
+../src/game.c: In function ‘send_message’:
+../src/game.c:205:2: warning: implicit declaration of function ‘push’; did you mean ‘puts’? [-Wimplicit-function-declaration]
+  push(queue, message);
+  ^~~~
+  puts
+../src/game.c: In function ‘receive_message’:
+../src/game.c:211:21: warning: implicit declaration of function ‘pop_element’ [-Wimplicit-function-declaration]
+  int return_value = pop_element(queue, message);
+                     ^~~~~~~~~~~
+src/subdir.mk:27: recipe for target 'src/game.o' failed
+make: *** [src/game.o] Error 1
+13:08:46 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:4:0:
+../src/game.h:35:8: error: redefinition of ‘struct Queue’
+ struct Queue {
+        ^~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:26:16: note: originally defined here
+ typedef struct Queue
+                ^~~~~
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+../src/main.c: In function ‘SetLedMatrice’:
+../src/main.c:70:38: error: ‘actual_matrix’ undeclared (first use in this function); did you mean ‘init_matrix’?
+    if ((TabLine[line][col].RValue != actual_matrix[line][col].RValue) ||
+                                      ^~~~~~~~~~~~~
+                                      init_matrix
+../src/main.c:70:38: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function ‘set_number’:
+../src/main.c:92:6: error: ‘matrix’ undeclared (first use in this function); did you mean ‘Matrix’?
+      matrix.board[row][col] = nbr_color;
+      ^~~~~~
+      Matrix
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+../src/game.c: In function ‘init_matrix’:
+../src/game.c:24:36: error: ‘black’ undeclared (first use in this function); did you mean ‘clock’?
+    matrix.board[row][col].RValue = black.RValue;
+                                    ^~~~~
+                                    clock
+../src/game.c:24:36: note: each undeclared identifier is reported only once for each function it appears in
+../src/game.c: In function ‘set_number’:
+../src/game.c:37:2: error: unknown type name ‘color’
+  color nbr_color = PLAYER_COLOR;
+  ^~~~~
+In file included from ../src/game.c:8:0:
+../src/game.h:17:22: error: ‘Blue’ undeclared (first use in this function)
+ #define PLAYER_COLOR Blue
+                      ^
+../src/game.c:37:20: note: in expansion of macro ‘PLAYER_COLOR’
+  color nbr_color = PLAYER_COLOR;
+                    ^~~~~~~~~~~~
+../src/game.c:38:2: error: unknown type name ‘color’
+  color bckgrnd_color = BACKGROUND;
+  ^~~~~
+In file included from ../src/game.c:8:0:
+../src/game.h:18:20: error: ‘Black’ undeclared (first use in this function); did you mean ‘clock’?
+ #define BACKGROUND Black
+                    ^
+../src/game.c:38:24: note: in expansion of macro ‘BACKGROUND’
+  color bckgrnd_color = BACKGROUND;
+                        ^~~~~~~~~~
+../src/game.c:44:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = nbr_color;
+                             ^
+../src/game.c:46:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = bckgrnd_color;
+                             ^
+../src/game.c:57:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = nbr_color;
+                             ^
+../src/game.c:59:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = bckgrnd_color;
+                             ^
+../src/game.c:70:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = nbr_color;
+                             ^
+../src/game.c:72:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = bckgrnd_color;
+                             ^
+../src/game.c:82:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = nbr_color;
+                             ^
+../src/game.c:84:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = bckgrnd_color;
+                             ^
+../src/game.c:96:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = nbr_color;
+                             ^
+../src/game.c:98:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = bckgrnd_color;
+                             ^
+../src/game.c:110:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = nbr_color;
+                             ^
+../src/game.c:112:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = bckgrnd_color;
+                             ^
+../src/game.c:122:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = nbr_color;
+                             ^
+../src/game.c:124:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = bckgrnd_color;
+                             ^
+../src/game.c:136:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = nbr_color;
+                             ^
+../src/game.c:138:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = bckgrnd_color;
+                             ^
+../src/game.c:150:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = nbr_color;
+                             ^
+../src/game.c:152:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = bckgrnd_color;
+                             ^
+../src/game.c:163:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = nbr_color;
+                             ^
+../src/game.c:165:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = bckgrnd_color;
+                             ^
+../src/game.c: In function ‘send_message’:
+../src/game.c:205:2: warning: implicit declaration of function ‘push’; did you mean ‘puts’? [-Wimplicit-function-declaration]
+  push(queue, message);
+  ^~~~
+  puts
+../src/game.c: In function ‘receive_message’:
+../src/game.c:211:21: warning: implicit declaration of function ‘pop_element’ [-Wimplicit-function-declaration]
+  int return_value = pop_element(queue, message);
+                     ^~~~~~~~~~~
+make: *** [src/game.o] Error 1
+src/subdir.mk:27: recipe for target 'src/game.o' failed
+13:09:22 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:4:0:
+../src/game.h:35:8: error: redefinition of ‘struct Queue’
+ struct Queue {
+        ^~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:26:16: note: originally defined here
+ typedef struct Queue
+                ^~~~~
+In file included from ../src/main.c:4:0:
+../src/game.h:49:12: error: ‘TAB_SIZE’ undeclared here (not in a function); did you mean ‘_T_SIZE’?
+  RGB board[TAB_SIZE][TAB_SIZE];
+            ^~~~~~~~
+            _T_SIZE
+../src/main.c: In function ‘SetLedMatrice’:
+../src/main.c:69:38: error: ‘actual_matrix’ undeclared (first use in this function); did you mean ‘init_matrix’?
+    if ((TabLine[line][col].RValue != actual_matrix[line][col].RValue) ||
+                                      ^~~~~~~~~~~~~
+                                      init_matrix
+../src/main.c:69:38: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function ‘set_number’:
+../src/main.c:91:6: error: ‘matrix’ undeclared (first use in this function); did you mean ‘Matrix’?
+      matrix.board[row][col] = nbr_color;
+      ^~~~~~
+      Matrix
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../src/game.c:8:0:
+../src/game.h:49:12: error: ‘TAB_SIZE’ undeclared here (not in a function); did you mean ‘_T_SIZE’?
+  RGB board[TAB_SIZE][TAB_SIZE];
+            ^~~~~~~~
+            _T_SIZE
+../src/game.c: In function ‘init_matrix’:
+../src/game.c:24:36: error: ‘black’ undeclared (first use in this function); did you mean ‘clock’?
+    matrix.board[row][col].RValue = black.RValue;
+                                    ^~~~~
+                                    clock
+../src/game.c:24:36: note: each undeclared identifier is reported only once for each function it appears in
+../src/game.c: In function ‘set_number’:
+../src/game.c:37:2: error: unknown type name ‘color’
+  color nbr_color = PLAYER_COLOR;
+  ^~~~~
+In file included from ../src/game.c:8:0:
+../src/game.h:17:22: error: ‘Blue’ undeclared (first use in this function)
+ #define PLAYER_COLOR Blue
+                      ^
+../src/game.c:37:20: note: in expansion of macro ‘PLAYER_COLOR’
+  color nbr_color = PLAYER_COLOR;
+                    ^~~~~~~~~~~~
+../src/game.c:38:2: error: unknown type name ‘color’
+  color bckgrnd_color = BACKGROUND;
+  ^~~~~
+In file included from ../src/game.c:8:0:
+../src/game.h:18:20: error: ‘Black’ undeclared (first use in this function); did you mean ‘clock’?
+ #define BACKGROUND Black
+                    ^
+../src/game.c:38:24: note: in expansion of macro ‘BACKGROUND’
+  color bckgrnd_color = BACKGROUND;
+                        ^~~~~~~~~~
+src/subdir.mk:27: recipe for target 'src/game.o' failed
+../src/game.c: In function ‘send_message’:
+../src/game.c:205:2: warning: implicit declaration of function ‘push’; did you mean ‘puts’? [-Wimplicit-function-declaration]
+  push(queue, message);
+  ^~~~
+  puts
+../src/game.c: In function ‘receive_message’:
+../src/game.c:211:21: warning: implicit declaration of function ‘pop_element’ [-Wimplicit-function-declaration]
+  int return_value = pop_element(queue, message);
+                     ^~~~~~~~~~~
+make: *** [src/game.o] Error 1
+13:10:04 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:4:0:
+../src/game.h:35:8: error: redefinition of ‘struct Queue’
+ struct Queue {
+        ^~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:26:16: note: originally defined here
+ typedef struct Queue
+                ^~~~~
+In file included from ../src/main.c:4:0:
+../src/game.h:49:12: error: ‘TAB_SIZE’ undeclared here (not in a function); did you mean ‘_T_SIZE’?
+  RGB board[TAB_SIZE][TAB_SIZE];
+            ^~~~~~~~
+            _T_SIZE
+../src/main.c: In function ‘SetLedMatrice’:
+../src/main.c:63:38: error: ‘actual_matrix’ undeclared (first use in this function); did you mean ‘init_matrix’?
+    if ((TabLine[line][col].RValue != actual_matrix[line][col].RValue) ||
+                                      ^~~~~~~~~~~~~
+                                      init_matrix
+../src/main.c:63:38: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function ‘set_number’:
+../src/main.c:85:6: error: ‘matrix’ undeclared (first use in this function); did you mean ‘Matrix’?
+      matrix.board[row][col] = nbr_color;
+      ^~~~~~
+      Matrix
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../src/game.c:8:0:
+../src/game.h:49:12: error: ‘TAB_SIZE’ undeclared here (not in a function); did you mean ‘_T_SIZE’?
+  RGB board[TAB_SIZE][TAB_SIZE];
+            ^~~~~~~~
+            _T_SIZE
+../src/game.c: In function ‘set_number’:
+../src/game.c:37:2: error: unknown type name ‘color’
+  color nbr_color = PLAYER_COLOR;
+  ^~~~~
+In file included from ../src/game.c:8:0:
+../src/game.h:17:22: error: incompatible types when initializing type ‘int’ using type ‘RGB {aka const struct <anonymous>}’
+ #define PLAYER_COLOR Blue
+                      ^
+../src/game.c:37:20: note: in expansion of macro ‘PLAYER_COLOR’
+  color nbr_color = PLAYER_COLOR;
+                    ^~~~~~~~~~~~
+../src/game.c:38:2: error: unknown type name ‘color’
+  color bckgrnd_color = BACKGROUND;
+  ^~~~~
+In file included from ../src/game.c:8:0:
+../src/game.h:18:20: error: incompatible types when initializing type ‘int’ using type ‘RGB {aka const struct <anonymous>}’
+ #define BACKGROUND Black
+                    ^
+../src/game.c:38:24: note: in expansion of macro ‘BACKGROUND’
+  color bckgrnd_color = BACKGROUND;
+                        ^~~~~~~~~~
+../src/game.c: In function ‘send_message’:
+../src/game.c:205:2: warning: implicit declaration of function ‘push’; did you mean ‘puts’? [-Wimplicit-function-declaration]
+  push(queue, message);
+  ^~~~
+  puts
+../src/game.c: In function ‘receive_message’:
+../src/game.c:211:21: warning: implicit declaration of function ‘pop_element’ [-Wimplicit-function-declaration]
+  int return_value = pop_element(queue, message);
+                     ^~~~~~~~~~~
+make: *** [src/game.o] Error 1
+src/subdir.mk:27: recipe for target 'src/game.o' failed
+13:10:24 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/game.c: In function ‘init_matrix’:
+../src/game.c:22:26: error: ‘TAB_SIZE’ undeclared (first use in this function); did you mean ‘_T_SIZE’?
+  for (int row = 0; row < TAB_SIZE; row++) {
+                          ^~~~~~~~
+                          _T_SIZE
+../src/game.c:22:26: note: each undeclared identifier is reported only once for each function it appears in
+../src/game.c: In function ‘set_number’:
+../src/game.c:37:2: error: unknown type name ‘color’
+  color nbr_color = PLAYER_COLOR;
+  ^~~~~
+In file included from ../src/game.c:8:0:
+../src/game.h:17:22: error: incompatible types when initializing type ‘int’ using type ‘RGB {aka const struct <anonymous>}’
+ #define PLAYER_COLOR Blue
+                      ^
+../src/game.c:37:20: note: in expansion of macro ‘PLAYER_COLOR’
+  color nbr_color = PLAYER_COLOR;
+                    ^~~~~~~~~~~~
+../src/game.c:38:2: error: unknown type name ‘color’
+  color bckgrnd_color = BACKGROUND;
+  ^~~~~
+In file included from ../src/game.c:8:0:
+../src/game.h:18:20: error: incompatible types when initializing type ‘int’ using type ‘RGB {aka const struct <anonymous>}’
+ #define BACKGROUND Black
+                    ^
+../src/game.c:38:24: note: in expansion of macro ‘BACKGROUND’
+  color bckgrnd_color = BACKGROUND;
+                        ^~~~~~~~~~
+../src/game.c:39:26: error: ‘TAB_SIZE’ undeclared (first use in this function); did you mean ‘_T_SIZE’?
+  for (int row = 0; row < TAB_SIZE; row++) {
+                          ^~~~~~~~
+                          _T_SIZE
+../src/game.c:44:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = nbr_color;
+                             ^
+../src/game.c:46:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = bckgrnd_color;
+                             ^
+../src/game.c:57:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = nbr_color;
+                             ^
+../src/game.c:59:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = bckgrnd_color;
+                             ^
+../src/game.c:70:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = nbr_color;
+                             ^
+../src/game.c:72:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = bckgrnd_color;
+                             ^
+../src/game.c:82:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = nbr_color;
+                             ^
+../src/game.c:84:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = bckgrnd_color;
+                             ^
+../src/game.c:96:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = nbr_color;
+                             ^
+../src/game.c:98:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = bckgrnd_color;
+                             ^
+../src/game.c:110:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = nbr_color;
+                             ^
+../src/game.c:112:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = bckgrnd_color;
+                             ^
+../src/game.c:122:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+src/subdir.mk:27: recipe for target 'src/game.o' failed
+      matrix.board[row][col] = nbr_color;
+                             ^
+../src/game.c:124:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = bckgrnd_color;
+                             ^
+../src/game.c:136:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = nbr_color;
+                             ^
+../src/game.c:138:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = bckgrnd_color;
+                             ^
+../src/game.c:150:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = nbr_color;
+                             ^
+../src/game.c:152:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = bckgrnd_color;
+                             ^
+../src/game.c:163:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = nbr_color;
+                             ^
+../src/game.c:165:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = bckgrnd_color;
+                             ^
+../src/game.c: In function ‘send_message’:
+../src/game.c:205:2: warning: implicit declaration of function ‘push’; did you mean ‘puts’? [-Wimplicit-function-declaration]
+  push(queue, message);
+  ^~~~
+  puts
+../src/game.c: In function ‘receive_message’:
+../src/game.c:211:21: warning: implicit declaration of function ‘pop_element’ [-Wimplicit-function-declaration]
+  int return_value = pop_element(queue, message);
+                     ^~~~~~~~~~~
+../src/game.c: In function ‘show_board’:
+../src/game.c:235:28: error: ‘TAB_SIZE’ undeclared (first use in this function); did you mean ‘_T_SIZE’?
+    for (int row = 0; row < TAB_SIZE; row++) {
+                            ^~~~~~~~
+                            _T_SIZE
+make: *** [src/game.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../src/main.c:4:0:
+../src/game.h:35:8: error: redefinition of ‘struct Queue’
+ struct Queue {
+        ^~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:26:16: note: originally defined here
+ typedef struct Queue
+                ^~~~~
+../src/main.c: In function ‘SetLedMatrice’:
+../src/main.c:63:38: error: ‘actual_matrix’ undeclared (first use in this function); did you mean ‘init_matrix’?
+    if ((TabLine[line][col].RValue != actual_matrix[line][col].RValue) ||
+                                      ^~~~~~~~~~~~~
+                                      init_matrix
+../src/main.c:63:38: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function ‘set_number’:
+../src/main.c:85:6: error: ‘matrix’ undeclared (first use in this function); did you mean ‘Matrix’?
+      matrix.board[row][col] = nbr_color;
+      ^~~~~~
+      Matrix
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+13:10:44 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/game.c: In function ‘set_number’:
+../src/game.c:37:2: error: unknown type name ‘color’
+  color nbr_color = PLAYER_COLOR;
+  ^~~~~
+In file included from ../src/main.c:4:0:
+../src/game.h:35:8: error: redefinition of ‘struct Queue’
+ struct Queue {
+        ^~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:26:16: note: originally defined here
+ typedef struct Queue
+                ^~~~~
+In file included from ../src/game.c:8:0:
+../src/game.h:17:22: error: incompatible types when initializing type ‘int’ using type ‘RGB {aka const struct <anonymous>}’
+ #define PLAYER_COLOR Blue
+                      ^
+../src/game.c:37:20: note: in expansion of macro ‘PLAYER_COLOR’
+  color nbr_color = PLAYER_COLOR;
+                    ^~~~~~~~~~~~
+../src/game.c:38:2: error: unknown type name ‘color’
+  color bckgrnd_color = BACKGROUND;
+  ^~~~~
+In file included from ../src/game.c:8:0:
+../src/game.h:18:20: error: incompatible types when initializing type ‘int’ using type ‘RGB {aka const struct <anonymous>}’
+ #define BACKGROUND Black
+                    ^
+../src/game.c:38:24: note: in expansion of macro ‘BACKGROUND’
+  color bckgrnd_color = BACKGROUND;
+                        ^~~~~~~~~~
+../src/game.c:44:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = nbr_color;
+                             ^
+../src/game.c:46:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = bckgrnd_color;
+                             ^
+../src/game.c:57:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = nbr_color;
+                             ^
+../src/game.c:59:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = bckgrnd_color;
+                             ^
+../src/game.c:70:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = nbr_color;
+                             ^
+../src/game.c:72:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = bckgrnd_color;
+                             ^
+../src/game.c:82:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = nbr_color;
+                             ^
+../src/main.c: In function ‘SetLedMatrice’:
+../src/game.c:84:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = bckgrnd_color;
+                             ^
+../src/main.c:63:38: error: ‘actual_matrix’ undeclared (first use in this function); did you mean ‘init_matrix’?
+    if ((TabLine[line][col].RValue != actual_matrix[line][col].RValue) ||
+                                      ^~~~~~~~~~~~~
+                                      init_matrix
+../src/main.c:63:38: note: each undeclared identifier is reported only once for each function it appears in
+../src/game.c:96:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = nbr_color;
+                             ^
+../src/game.c:98:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = bckgrnd_color;
+                             ^
+../src/game.c:110:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+      matrix.board[row][col] = nbr_color;
+                             ^
+../src/game.c:112:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = bckgrnd_color;
+                             ^
+../src/game.c:122:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = nbr_color;
+src/subdir.mk:27: recipe for target 'src/game.o' failed
+                             ^
+../src/game.c:124:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = bckgrnd_color;
+                             ^
+../src/game.c:136:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = nbr_color;
+                             ^
+../src/game.c:138:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = bckgrnd_color;
+                             ^
+../src/main.c: In function ‘set_number’:
+../src/main.c:85:6: error: ‘matrix’ undeclared (first use in this function); did you mean ‘Matrix’?
+      matrix.board[row][col] = nbr_color;
+      ^~~~~~
+      Matrix
+../src/game.c:150:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = nbr_color;
+                             ^
+../src/game.c:152:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = bckgrnd_color;
+                             ^
+../src/game.c:163:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = nbr_color;
+                             ^
+../src/game.c:165:29: error: incompatible types when assigning to type ‘RGB {aka struct <anonymous>}’ from type ‘int’
+      matrix.board[row][col] = bckgrnd_color;
+                             ^
+../src/game.c: In function ‘send_message’:
+../src/game.c:205:2: warning: implicit declaration of function ‘push’; did you mean ‘puts’? [-Wimplicit-function-declaration]
+  push(queue, message);
+  ^~~~
+  puts
+../src/game.c: In function ‘receive_message’:
+../src/game.c:211:21: warning: implicit declaration of function ‘pop_element’ [-Wimplicit-function-declaration]
+  int return_value = pop_element(queue, message);
+                     ^~~~~~~~~~~
+../src/game.c: In function ‘show_board’:
+../src/game.c:235:28: error: ‘TAB_SIZE’ undeclared (first use in this function); did you mean ‘_T_SIZE’?
+    for (int row = 0; row < TAB_SIZE; row++) {
+                            ^~~~~~~~
+                            _T_SIZE
+../src/game.c:235:28: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [src/game.o] Error 1
+13:11:31 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:4:0:
+../src/game.h:35:8: error: redefinition of ‘struct Queue’
+ struct Queue {
+        ^~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:26:16: note: originally defined here
+ typedef struct Queue
+                ^~~~~
+../src/main.c: In function ‘SetLedMatrice’:
+../src/main.c:63:38: error: ‘actual_matrix’ undeclared (first use in this function); did you mean ‘init_matrix’?
+    if ((TabLine[line][col].RValue != actual_matrix[line][col].RValue) ||
+                                      ^~~~~~~~~~~~~
+                                      init_matrix
+../src/main.c:63:38: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function ‘set_number’:
+../src/main.c:85:6: error: ‘matrix’ undeclared (first use in this function); did you mean ‘Matrix’?
+      matrix.board[row][col] = nbr_color;
+      ^~~~~~
+      Matrix
+../src/game.c: In function ‘send_message’:
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+../src/game.c:205:2: warning: implicit declaration of function ‘push’; did you mean ‘puts’? [-Wimplicit-function-declaration]
+  push(queue, message);
+  ^~~~
+  puts
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+src/subdir.mk:27: recipe for target 'src/game.o' failed
+../src/game.c: In function ‘receive_message’:
+../src/game.c:211:21: warning: implicit declaration of function ‘pop_element’ [-Wimplicit-function-declaration]
+  int return_value = pop_element(queue, message);
+                     ^~~~~~~~~~~
+../src/game.c: In function ‘show_board’:
+../src/game.c:235:28: error: ‘TAB_SIZE’ undeclared (first use in this function); did you mean ‘_T_SIZE’?
+    for (int row = 0; row < TAB_SIZE; row++) {
+                            ^~~~~~~~
+                            _T_SIZE
+../src/game.c:235:28: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/game.o] Error 1
+13:12:01 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:4:0:
+../src/game.h:35:8: error: redefinition of ‘struct Queue’
+ struct Queue {
+        ^~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:26:16: note: originally defined here
+ typedef struct Queue
+                ^~~~~
+../src/main.c: In function ‘SetLedMatrice’:
+../src/main.c:63:38: error: ‘actual_matrix’ undeclared (first use in this function); did you mean ‘init_matrix’?
+    if ((TabLine[line][col].RValue != actual_matrix[line][col].RValue) ||
+                                      ^~~~~~~~~~~~~
+                                      init_matrix
+../src/main.c:63:38: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function ‘set_number’:
+../src/main.c:85:6: error: ‘matrix’ undeclared (first use in this function); did you mean ‘Matrix’?
+      matrix.board[row][col] = nbr_color;
+      ^~~~~~
+      Matrix
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../src/game.c:9:0:
+../src/fifo.h:26:16: error: redefinition of ‘struct Queue’
+ typedef struct Queue
+                ^~~~~
+In file included from ../src/game.c:8:0:
+../src/game.h:34:16: note: originally defined here
+ typedef struct Queue queue;
+                ^~~~~
+../src/game.c: In function ‘send_message’:
+../src/game.c:206:2: warning: implicit declaration of function ‘push’; did you mean ‘puts’? [-Wimplicit-function-declaration]
+  push(queue, message);
+  ^~~~
+  puts
+../src/game.c: In function ‘receive_message’:
+../src/game.c:212:33: warning: passing argument 1 of ‘pop_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+  int return_value = pop_element(queue, message);
+                                 ^~~~~
+In file included from ../src/game.c:9:0:
+../src/fifo.h:38:5: note: expected ‘struct Queue *’ but argument is of type ‘queue * {aka struct Queue *}’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/game.c:212:21: error: too many arguments to function ‘pop_element’
+  int return_value = pop_element(queue, message);
+                     ^~~~~~~~~~~
+In file included from ../src/game.c:9:0:
+../src/fifo.h:38:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/game.c: In function ‘show_board’:
+../src/game.c:236:28: error: ‘TAB_SIZE’ undeclared (first use in this function); did you mean ‘_T_SIZE’?
+    for (int row = 0; row < TAB_SIZE; row++) {
+                            ^~~~~~~~
+                            _T_SIZE
+../src/game.c:236:28: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/game.o] Error 1
+src/subdir.mk:27: recipe for target 'src/game.o' failed
+13:12:15 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:4:0:
+../src/game.h:35:8: error: redefinition of ‘struct Queue’
+ struct Queue {
+        ^~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:26:16: note: originally defined here
+ typedef struct Queue
+                ^~~~~
+../src/main.c: In function ‘SetLedMatrice’:
+../src/main.c:63:38: error: ‘actual_matrix’ undeclared (first use in this function); did you mean ‘init_matrix’?
+    if ((TabLine[line][col].RValue != actual_matrix[line][col].RValue) ||
+                                      ^~~~~~~~~~~~~
+                                      init_matrix
+../src/main.c:63:38: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function ‘set_number’:
+../src/main.c:85:6: error: ‘matrix’ undeclared (first use in this function); did you mean ‘Matrix’?
+      matrix.board[row][col] = nbr_color;
+      ^~~~~~
+      Matrix
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../src/game.c:9:0:
+../src/fifo.h:26:16: error: redefinition of ‘struct Queue’
+ typedef struct Queue
+                ^~~~~
+In file included from ../src/game.c:8:0:
+../src/game.h:34:16: note: originally defined here
+ typedef struct Queue queue;
+                ^~~~~
+../src/game.c: In function ‘send_message’:
+../src/game.c:206:2: warning: implicit declaration of function ‘push’; did you mean ‘puts’? [-Wimplicit-function-declaration]
+  push(queue, message);
+  ^~~~
+  puts
+../src/game.c: In function ‘receive_message’:
+../src/game.c:212:33: warning: passing argument 1 of ‘pop_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+  int return_value = pop_element(queue, message);
+                                 ^~~~~
+In file included from ../src/game.c:9:0:
+../src/fifo.h:38:5: note: expected ‘struct Queue *’ but argument is of type ‘queue * {aka struct Queue *}’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/game.c:212:21: error: too many arguments to function ‘pop_element’
+  int return_value = pop_element(queue, message);
+                     ^~~~~~~~~~~
+In file included from ../src/game.c:9:0:
+../src/fifo.h:38:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/game.c: In function ‘show_board’:
+../src/game.c:237:29: error: ‘TAB_SIZE’ undeclared (first use in this function); did you mean ‘_T_SIZE’?
+     for (int col = 0; col < TAB_SIZE; col++) {
+                             ^~~~~~~~
+                             _T_SIZE
+../src/game.c:237:29: note: each undeclared identifier is reported only once for each function it appears in
+src/subdir.mk:27: recipe for target 'src/game.o' failed
+make: *** [src/game.o] Error 1
+13:12:21 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/game.c:9:0:
+../src/fifo.h:26:16: error: redefinition of ‘struct Queue’
+ typedef struct Queue
+                ^~~~~
+In file included from ../src/game.c:8:0:
+../src/game.h:34:16: note: originally defined here
+ typedef struct Queue queue;
+                ^~~~~
+../src/game.c: In function ‘send_message’:
+../src/game.c:206:2: warning: implicit declaration of function ‘push’; did you mean ‘puts’? [-Wimplicit-function-declaration]
+  push(queue, message);
+  ^~~~
+  puts
+../src/game.c: In function ‘receive_message’:
+../src/game.c:212:33: warning: passing argument 1 of ‘pop_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+  int return_value = pop_element(queue, message);
+                                 ^~~~~
+In file included from ../src/game.c:9:0:
+../src/fifo.h:38:5: note: expected ‘struct Queue *’ but argument is of type ‘queue * {aka struct Queue *}’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/game.c:212:21: error: too many arguments to function ‘pop_element’
+  int return_value = pop_element(queue, message);
+                     ^~~~~~~~~~~
+In file included from ../src/game.c:9:0:
+../src/fifo.h:38:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/game.c: In function ‘show_board’:
+../src/game.c:237:29: error: ‘TAB_SIZE’ undeclared (first use in this function); did you mean ‘_T_SIZE’?
+     for (int col = 0; col < TAB_SIZE; col++) {
+                             ^~~~~~~~
+                             _T_SIZE
+../src/game.c:237:29: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/game.o] Error 1
+src/subdir.mk:27: recipe for target 'src/game.o' failed
+make: *** Waiting for unfinished jobs....
+In file included from ../src/main.c:4:0:
+../src/game.h:35:8: error: redefinition of ‘struct Queue’
+ struct Queue {
+        ^~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:26:16: note: originally defined here
+ typedef struct Queue
+                ^~~~~
+../src/main.c: In function ‘SetLedMatrice’:
+../src/main.c:63:38: error: ‘actual_matrix’ undeclared (first use in this function); did you mean ‘init_matrix’?
+    if ((TabLine[line][col].RValue != actual_matrix[line][col].RValue) ||
+                                      ^~~~~~~~~~~~~
+                                      init_matrix
+../src/main.c:63:38: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function ‘set_number’:
+../src/main.c:85:6: error: ‘matrix’ undeclared (first use in this function); did you mean ‘Matrix’?
+      matrix.board[row][col] = nbr_color;
+      ^~~~~~
+      Matrix
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+13:12:24 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:4:0:
+../src/game.h:35:8: error: redefinition of ‘struct Queue’
+ struct Queue {
+        ^~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:26:16: note: originally defined here
+ typedef struct Queue
+                ^~~~~
+../src/main.c: In function ‘SetLedMatrice’:
+../src/main.c:63:38: error: ‘actual_matrix’ undeclared (first use in this function); did you mean ‘init_matrix’?
+    if ((TabLine[line][col].RValue != actual_matrix[line][col].RValue) ||
+                                      ^~~~~~~~~~~~~
+                                      init_matrix
+../src/main.c:63:38: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function ‘set_number’:
+../src/main.c:85:6: error: ‘matrix’ undeclared (first use in this function); did you mean ‘Matrix’?
+      matrix.board[row][col] = nbr_color;
+      ^~~~~~
+      Matrix
+make: *** [src/main.o] Error 1
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+make: *** Waiting for unfinished jobs....
+In file included from ../src/game.c:9:0:
+../src/fifo.h:26:16: error: redefinition of ‘struct Queue’
+ typedef struct Queue
+                ^~~~~
+In file included from ../src/game.c:8:0:
+../src/game.h:34:16: note: originally defined here
+ typedef struct Queue queue;
+                ^~~~~
+../src/game.c: In function ‘send_message’:
+../src/game.c:206:2: warning: implicit declaration of function ‘push’; did you mean ‘puts’? [-Wimplicit-function-declaration]
+  push(queue, message);
+  ^~~~
+  puts
+../src/game.c: In function ‘receive_message’:
+../src/game.c:212:33: warning: passing argument 1 of ‘pop_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+  int return_value = pop_element(queue, message);
+                                 ^~~~~
+In file included from ../src/game.c:9:0:
+../src/fifo.h:38:5: note: expected ‘struct Queue *’ but argument is of type ‘queue * {aka struct Queue *}’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/game.c:212:21: error: too many arguments to function ‘pop_element’
+  int return_value = pop_element(queue, message);
+                     ^~~~~~~~~~~
+In file included from ../src/game.c:9:0:
+../src/fifo.h:38:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+src/subdir.mk:27: recipe for target 'src/game.o' failed
+make: *** [src/game.o] Error 1
+13:16:58 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:4:0:
+../src/game.h:35:8: error: redefinition of ‘struct Queue’
+ struct Queue {
+        ^~~~~
+In file included from ../src/game.c:9:0:
+../src/fifo.h:26:16: error: redefinition of ‘struct Queue’
+ typedef struct Queue
+                ^~~~~
+In file included from ../src/game.c:8:0:
+../src/game.h:34:16: note: originally defined here
+ typedef struct Queue queue;
+                ^~~~~
+../src/game.c: In function ‘send_message’:
+../src/game.c:206:2: warning: implicit declaration of function ‘push’; did you mean ‘puts’? [-Wimplicit-function-declaration]
+  push(queue, message);
+  ^~~~
+  puts
+In file included from ../src/main.c:3:0:
+../src/fifo.h:26:16: note: originally defined here
+ typedef struct Queue
+                ^~~~~
+../src/game.c: In function ‘receive_message’:
+../src/game.c:212:33: warning: passing argument 1 of ‘pop_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+  int return_value = pop_element(queue, message);
+                                 ^~~~~
+In file included from ../src/game.c:9:0:
+../src/fifo.h:38:5: note: expected ‘struct Queue *’ but argument is of type ‘queue * {aka struct Queue *}’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/game.c:212:21: error: too many arguments to function ‘pop_element’
+  int return_value = pop_element(queue, message);
+                     ^~~~~~~~~~~
+In file included from ../src/game.c:9:0:
+../src/fifo.h:38:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+make: *** [src/game.o] Error 1
+src/subdir.mk:27: recipe for target 'src/game.o' failed
+make: *** Waiting for unfinished jobs....
+../src/main.c: In function ‘SetLedMatrice’:
+../src/main.c:63:38: error: ‘actual_matrix’ undeclared (first use in this function); did you mean ‘init_matrix’?
+    if ((TabLine[line][col].RValue != actual_matrix[line][col].RValue) ||
+                                      ^~~~~~~~~~~~~
+                                      init_matrix
+../src/main.c:63:38: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function ‘set_number’:
+../src/main.c:85:12: error: expected identifier or ‘(’ before ‘.’ token
+      Matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:87:6: error: expected expression before ‘Matrix’
+      Matrix.board[row][col] = bckgrnd_color;
+      ^~~~~~
+../src/main.c:98:12: error: expected identifier or ‘(’ before ‘.’ token
+      Matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:100:6: error: expected expression before ‘Matrix’
+      Matrix.board[row][col] = bckgrnd_color;
+      ^~~~~~
+../src/main.c:111:12: error: expected identifier or ‘(’ before ‘.’ token
+      Matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:113:6: error: expected expression before ‘Matrix’
+      Matrix.board[row][col] = bckgrnd_color;
+      ^~~~~~
+../src/main.c:123:12: error: expected identifier or ‘(’ before ‘.’ token
+      Matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:125:6: error: expected expression before ‘Matrix’
+      Matrix.board[row][col] = bckgrnd_color;
+      ^~~~~~
+../src/main.c:137:12: error: expected identifier or ‘(’ before ‘.’ token
+      Matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:139:6: error: expected expression before ‘Matrix’
+      Matrix.board[row][col] = bckgrnd_color;
+      ^~~~~~
+../src/main.c:151:12: error: expected identifier or ‘(’ before ‘.’ token
+      Matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:153:6: error: expected expression before ‘Matrix’
+      Matrix.board[row][col] = bckgrnd_color;
+      ^~~~~~
+../src/main.c:163:12: error: expected identifier or ‘(’ before ‘.’ token
+      Matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:165:6: error: expected expression before ‘Matrix’
+      Matrix.board[row][col] = bckgrnd_color;
+      ^~~~~~
+../src/main.c:177:12: error: expected identifier or ‘(’ before ‘.’ token
+      Matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:179:6: error: expected expression before ‘Matrix’
+      Matrix.board[row][col] = bckgrnd_color;
+      ^~~~~~
+../src/main.c:191:12: error: expected identifier or ‘(’ before ‘.’ token
+      Matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:193:6: error: expected expression before ‘Matrix’
+      Matrix.board[row][col] = bckgrnd_color;
+      ^~~~~~
+../src/main.c:204:12: error: expected identifier or ‘(’ before ‘.’ token
+      Matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:206:6: error: expected expression before ‘Matrix’
+      Matrix.board[row][col] = bckgrnd_color;
+      ^~~~~~
+../src/main.c:79:6: warning: unused variable ‘bckgrnd_color’ [-Wunused-variable]
+  RGB bckgrnd_color = BACKGROUND;
+      ^~~~~~~~~~~~~
+../src/main.c:78:6: warning: unused variable ‘nbr_color’ [-Wunused-variable]
+  RGB nbr_color = PLAYER_COLOR;
+      ^~~~~~~~~
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+13:17:35 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:4:0:
+../src/game.h:35:8: error: redefinition of ‘struct Queue’
+ struct Queue {
+        ^~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:26:16: note: originally defined here
+ typedef struct Queue
+                ^~~~~
+../src/main.c: In function ‘SetLedMatrice’:
+../src/main.c:63:38: error: ‘actual_matrix’ undeclared (first use in this function); did you mean ‘init_matrix’?
+    if ((TabLine[line][col].RValue != actual_matrix[line][col].RValue) ||
+                                      ^~~~~~~~~~~~~
+                                      init_matrix
+../src/main.c:63:38: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function ‘set_number’:
+../src/main.c:85:16: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘.’ token
+      RGB Matrix.board[row][col] = nbr_color;
+                ^
+../src/main.c:85:16: error: expected expression before ‘.’ token
+../src/main.c:87:6: error: expected expression before ‘RGB’
+      RGB Matrix.board[row][col] = bckgrnd_color;
+      ^~~
+../src/main.c:98:16: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘.’ token
+      RGB Matrix.board[row][col] = nbr_color;
+                ^
+../src/main.c:98:16: error: expected expression before ‘.’ token
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+../src/main.c:100:6: error: expected expression before ‘RGB’
+src/subdir.mk:27: recipe for target 'src/game.o' failed
+      RGB Matrix.board[row][col] = bckgrnd_color;
+      ^~~
+../src/main.c:111:16: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘.’ token
+      RGB Matrix.board[row][col] = nbr_color;
+                ^
+../src/main.c:111:16: error: expected expression before ‘.’ token
+../src/main.c:113:6: error: expected expression before ‘RGB’
+      RGB Matrix.board[row][col] = bckgrnd_color;
+      ^~~
+../src/main.c:123:16: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘.’ token
+      RGB Matrix.board[row][col] = nbr_color;
+                ^
+../src/main.c:123:16: error: expected expression before ‘.’ token
+../src/main.c:125:6: error: expected expression before ‘RGB’
+      RGB Matrix.board[row][col] = bckgrnd_color;
+      ^~~
+../src/main.c:137:12: error: expected identifier or ‘(’ before ‘.’ token
+      Matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:139:6: error: expected expression before ‘Matrix’
+      Matrix.board[row][col] = bckgrnd_color;
+      ^~~~~~
+../src/main.c:151:12: error: expected identifier or ‘(’ before ‘.’ token
+      Matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:153:6: error: expected expression before ‘Matrix’
+      Matrix.board[row][col] = bckgrnd_color;
+      ^~~~~~
+../src/main.c:163:12: error: expected identifier or ‘(’ before ‘.’ token
+      Matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:165:6: error: expected expression before ‘Matrix’
+      Matrix.board[row][col] = bckgrnd_color;
+      ^~~~~~
+../src/main.c:177:12: error: expected identifier or ‘(’ before ‘.’ token
+      Matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:179:6: error: expected expression before ‘Matrix’
+      Matrix.board[row][col] = bckgrnd_color;
+      ^~~~~~
+In file included from ../src/game.c:9:0:
+../src/fifo.h:26:16: error: redefinition of ‘struct Queue’
+ typedef struct Queue
+                ^~~~~
+In file included from ../src/game.c:8:0:
+../src/game.h:34:16: note: originally defined here
+ typedef struct Queue queue;
+                ^~~~~
+../src/main.c:191:12: error: expected identifier or ‘(’ before ‘.’ token
+      Matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:193:6: error: expected expression before ‘Matrix’
+      Matrix.board[row][col] = bckgrnd_color;
+      ^~~~~~
+../src/main.c:204:12: error: expected identifier or ‘(’ before ‘.’ token
+      Matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:206:6: error: expected expression before ‘Matrix’
+      Matrix.board[row][col] = bckgrnd_color;
+      ^~~~~~
+../src/main.c:79:6: warning: unused variable ‘bckgrnd_color’ [-Wunused-variable]
+  RGB bckgrnd_color = BACKGROUND;
+      ^~~~~~~~~~~~~
+../src/game.c: In function ‘send_message’:
+../src/game.c:206:2: warning: implicit declaration of function ‘push’; did you mean ‘puts’? [-Wimplicit-function-declaration]
+  push(queue, message);
+  ^~~~
+  puts
+../src/game.c: In function ‘receive_message’:
+../src/game.c:212:33: warning: passing argument 1 of ‘pop_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+  int return_value = pop_element(queue, message);
+                                 ^~~~~
+In file included from ../src/game.c:9:0:
+../src/fifo.h:38:5: note: expected ‘struct Queue *’ but argument is of type ‘queue * {aka struct Queue *}’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/game.c:212:21: error: too many arguments to function ‘pop_element’
+  int return_value = pop_element(queue, message);
+                     ^~~~~~~~~~~
+In file included from ../src/game.c:9:0:
+../src/fifo.h:38:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [src/game.o] Error 1
+13:25:26 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:2:0:
+../src/game.h:55:13: warning: ‘black’ defined but not used [-Wunused-variable]
+   255, 0 }, black = { 0, 0, 0 };
+             ^~~~~
+../src/game.h:54:57: warning: ‘yellow’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+                                                         ^~~~~~
+../src/game.h:54:31: warning: ‘purple’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+                               ^~~~~~
+../src/game.h:54:10: warning: ‘red’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+          ^~~
+../src/game.h:53:64: warning: ‘blue’ defined but not used [-Wunused-variable]
+ static color white = { 255, 255, 255 }, green = { 0, 255, 0 }, blue = { 0, 0,
+                                                                ^~~~
+../src/game.h:53:41: warning: ‘green’ defined but not used [-Wunused-variable]
+ static color white = { 255, 255, 255 }, green = { 0, 255, 0 }, blue = { 0, 0,
+                                         ^~~~~
+../src/game.h:53:14: warning: ‘white’ defined but not used [-Wunused-variable]
+ static color white = { 255, 255, 255 }, green = { 0, 255, 0 }, blue = { 0, 0,
+              ^~~~~
+In file included from ../src/game.c:8:0:
+../src/game.h:54:57: warning: ‘yellow’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+                                                         ^~~~~~
+../src/game.h:54:31: warning: ‘purple’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+                               ^~~~~~
+../src/game.h:54:10: warning: ‘red’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+          ^~~
+../src/game.h:53:41: warning: ‘green’ defined but not used [-Wunused-variable]
+ static color white = { 255, 255, 255 }, green = { 0, 255, 0 }, blue = { 0, 0,
+                                         ^~~~~
+../src/game.h:53:14: warning: ‘white’ defined but not used [-Wunused-variable]
+ static color white = { 255, 255, 255 }, green = { 0, 255, 0 }, blue = { 0, 0,
+              ^~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+./src/game.o: In function `pop_element':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/101_simu_multithread/Debug/../src/game.c:190: multiple definition of `pop_element'
+./src/fifo.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/101_simu_multithread/Debug/../src/fifo.c:57: first defined here
+collect2: error: ld returned 1 exit status
+make: *** [101_simu_multithread] Error 1
+makefile:30: recipe for target '101_simu_multithread' failed
+13:31:22 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+13:31:34 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:46:34 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘set_number’:
+../src/main.c:75:3: warning: implicit declaration of function ‘SetLedMatrice’; did you mean ‘SetLedLine’? [-Wimplicit-function-declaration]
+   SetLedMatrice(matrice);
+   ^~~~~~~~~~~~~
+   SetLedLine
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:320:17: warning: implicit declaration of function ‘pop_element’; did you mean ‘add_element’? [-Wimplicit-function-declaration]
+   instruction = pop_element(&p_queue_read);
+                 ^~~~~~~~~~~
+                 add_element
+At top level:
+../src/main.c:22:12: warning: ‘TabSize’ defined but not used [-Wunused-variable]
+ static int TabSize = 7;
+            ^~~~~~~
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+./src/main.o: In function `set_number':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/101_simu_multithread/Debug/../src/main.c:75: undefined reference to `SetLedMatrice'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/101_simu_multithread/Debug/../src/main.c:88: undefined reference to `SetLedMatrice'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/101_simu_multithread/Debug/../src/main.c:101: undefined reference to `SetLedMatrice'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/101_simu_multithread/Debug/../src/main.c:114: undefined reference to `SetLedMatrice'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/101_simu_multithread/Debug/../src/main.c:127: undefined reference to `SetLedMatrice'
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/101_simu_multithread/Debug/../src/main.c:140: more undefined references to `SetLedMatrice' follow
+./src/main.o: In function `change_number_app':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/101_simu_multithread/Debug/../src/main.c:320: undefined reference to `pop_element'
+./src/main.o: In function `send_message':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/101_simu_multithread/Debug/../src/main.c:352: undefined reference to `pop_element'
+collect2: error: ld returned 1 exit status
+makefile:30: recipe for target '101_simu_multithread' failed
+make: *** [101_simu_multithread] Error 1
+13:46:52 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+./src/main.o: In function `set_number':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/101_simu_multithread/Debug/../src/main.c:75: undefined reference to `SetLedMatrice'
+makefile:30: recipe for target '101_simu_multithread' failed
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/101_simu_multithread/Debug/../src/main.c:88: undefined reference to `SetLedMatrice'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/101_simu_multithread/Debug/../src/main.c:101: undefined reference to `SetLedMatrice'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/101_simu_multithread/Debug/../src/main.c:114: undefined reference to `SetLedMatrice'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/101_simu_multithread/Debug/../src/main.c:127: undefined reference to `SetLedMatrice'
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/101_simu_multithread/Debug/../src/main.c:140: more undefined references to `SetLedMatrice' follow
+collect2: error: ld returned 1 exit status
+make: *** [101_simu_multithread] Error 1
+13:47:14 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘set_number’:
+../src/main.c:75:3: error: too few arguments to function ‘SetLedMatrice’
+   SetLedMatrice(matrice);
+   ^~~~~~~~~~~~~
+../src/main.c:54:6: note: declared here
+ void SetLedMatrice(RGB **TabLine, int TabSize){
+      ^~~~~~~~~~~~~
+../src/main.c:88:3: error: too few arguments to function ‘SetLedMatrice’
+   SetLedMatrice(matrice);
+   ^~~~~~~~~~~~~
+../src/main.c:54:6: note: declared here
+ void SetLedMatrice(RGB **TabLine, int TabSize){
+      ^~~~~~~~~~~~~
+../src/main.c:101:3: error: too few arguments to function ‘SetLedMatrice’
+   SetLedMatrice(matrice);
+   ^~~~~~~~~~~~~
+../src/main.c:54:6: note: declared here
+ void SetLedMatrice(RGB **TabLine, int TabSize){
+      ^~~~~~~~~~~~~
+../src/main.c:114:3: error: too few arguments to function ‘SetLedMatrice’
+   SetLedMatrice(matrice);
+   ^~~~~~~~~~~~~
+../src/main.c:54:6: note: declared here
+ void SetLedMatrice(RGB **TabLine, int TabSize){
+      ^~~~~~~~~~~~~
+../src/main.c:127:3: error: too few arguments to function ‘SetLedMatrice’
+   SetLedMatrice(matrice);
+   ^~~~~~~~~~~~~
+../src/main.c:54:6: note: declared here
+ void SetLedMatrice(RGB **TabLine, int TabSize){
+      ^~~~~~~~~~~~~
+../src/main.c:140:3: error: too few arguments to function ‘SetLedMatrice’
+   SetLedMatrice(matrice);
+   ^~~~~~~~~~~~~
+../src/main.c:54:6: note: declared here
+ void SetLedMatrice(RGB **TabLine, int TabSize){
+      ^~~~~~~~~~~~~
+../src/main.c:153:3: error: too few arguments to function ‘SetLedMatrice’
+   SetLedMatrice(matrice);
+   ^~~~~~~~~~~~~
+../src/main.c:54:6: note: declared here
+ void SetLedMatrice(RGB **TabLine, int TabSize){
+      ^~~~~~~~~~~~~
+../src/main.c:166:3: error: too few arguments to function ‘SetLedMatrice’
+   SetLedMatrice(matrice);
+   ^~~~~~~~~~~~~
+../src/main.c:54:6: note: declared here
+ void SetLedMatrice(RGB **TabLine, int TabSize){
+      ^~~~~~~~~~~~~
+../src/main.c:179:3: error: too few arguments to function ‘SetLedMatrice’
+   SetLedMatrice(matrice);
+   ^~~~~~~~~~~~~
+../src/main.c:54:6: note: declared here
+ void SetLedMatrice(RGB **TabLine, int TabSize){
+      ^~~~~~~~~~~~~
+../src/main.c:192:3: error: too few arguments to function ‘SetLedMatrice’
+   SetLedMatrice(matrice);
+   ^~~~~~~~~~~~~
+../src/main.c:54:6: note: declared here
+ void SetLedMatrice(RGB **TabLine, int TabSize){
+      ^~~~~~~~~~~~~
+../src/main.c:205:3: error: too few arguments to function ‘SetLedMatrice’
+   SetLedMatrice(matrice);
+   ^~~~~~~~~~~~~
+../src/main.c:54:6: note: declared here
+ void SetLedMatrice(RGB **TabLine, int TabSize){
+      ^~~~~~~~~~~~~
+../src/main.c:218:3: error: too few arguments to function ‘SetLedMatrice’
+   SetLedMatrice(matrice);
+   ^~~~~~~~~~~~~
+../src/main.c:54:6: note: declared here
+ void SetLedMatrice(RGB **TabLine, int TabSize){
+      ^~~~~~~~~~~~~
+../src/main.c:231:3: error: too few arguments to function ‘SetLedMatrice’
+   SetLedMatrice(matrice);
+   ^~~~~~~~~~~~~
+../src/main.c:54:6: note: declared here
+ void SetLedMatrice(RGB **TabLine, int TabSize){
+      ^~~~~~~~~~~~~
+../src/main.c:244:3: error: too few arguments to function ‘SetLedMatrice’
+   SetLedMatrice(matrice);
+   ^~~~~~~~~~~~~
+../src/main.c:54:6: note: declared here
+ void SetLedMatrice(RGB **TabLine, int TabSize){
+      ^~~~~~~~~~~~~
+../src/main.c:257:3: error: too few arguments to function ‘SetLedMatrice’
+   SetLedMatrice(matrice);
+   ^~~~~~~~~~~~~
+../src/main.c:54:6: note: declared here
+ void SetLedMatrice(RGB **TabLine, int TabSize){
+      ^~~~~~~~~~~~~
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:320:17: warning: implicit declaration of function ‘pop_element’; did you mean ‘add_element’? [-Wimplicit-function-declaration]
+   instruction = pop_element(&p_queue_read);
+                 ^~~~~~~~~~~
+                 add_element
+At top level:
+../src/main.c:22:12: warning: ‘TabSize’ defined but not used [-Wunused-variable]
+ static int TabSize = 7;
+            ^~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+13:47:33 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:320:17: warning: implicit declaration of function ‘pop_element’; did you mean ‘add_element’? [-Wimplicit-function-declaration]
+   instruction = pop_element(&p_queue_read);
+                 ^~~~~~~~~~~
+                 add_element
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+13:47:59 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+13:51:58 **** Build of configuration Debug for project 102_new_simu_multithread ****
+make -j4 all 
+Cannot run program "make": Unknown reason
+13:53:43 **** Incremental Build of configuration Debug for project 102_new_simu_multithread ****
+make -j4 all 
+Cannot run program "make": Unknown reason
+13:54:11 **** Incremental Build of configuration Debug for project 102_new_simu_multithread ****
+make -j4 all 
+Cannot run program "make": Unknown reason
+13:54:14 **** Incremental Build of configuration Debug for project 102_new_simu_multithread ****
+make -j4 all 
+Cannot run program "make": Unknown reason
+13:55:28 **** Incremental Build of configuration Debug for project 102_new_simu_multithread ****
+make -j4 all 
+Cannot run program "make": Unknown reason
+13:56:01 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+Cannot run program "make": Unknown reason
+13:56:13 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+Cannot run program "make": Unknown reason
+13:56:24 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+Cannot run program "make": Unknown reason
+14:00:51 **** Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+Cannot run program "make": Unknown reason
+14:01:07 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+Cannot run program "make": Unknown reason
+14:01:12 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+Cannot run program "make": Unknown reason
+14:01:30 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+Cannot run program "make": Unknown reason
+14:01:31 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+make -j4 all 
+Cannot run program "make": Unknown reason
+14:02:35 **** Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+Cannot run program "make": Unknown reason
+14:02:42 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+Cannot run program "make": Unknown reason
+14:03:50 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+Cannot run program "make": Unknown reason
+14:07:09 **** Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "simu_multithread"  ./src/main.o   
+14:07:33 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:08:51 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/leds_control.d" -MT"src/leds_control.o" -o "src/leds_control.o" "../src/leds_control.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+14:09:00 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:09:46 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:09:48 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:12:41 **** Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "simu_new_multithread"  ./src/main.o   
+14:12:50 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:13:05 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:13:31 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:16:13 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/leds_control.d" -MT"src/leds_control.o" -o "src/leds_control.o" "../src/leds_control.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/game.c:8:0:
+../src/game.h:54:57: warning: ‘yellow’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+                                                         ^~~~~~
+../src/game.h:54:31: warning: ‘purple’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+                               ^~~~~~
+../src/game.h:54:10: warning: ‘red’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+          ^~~
+../src/game.h:53:41: warning: ‘green’ defined but not used [-Wunused-variable]
+ static color white = { 255, 255, 255 }, green = { 0, 255, 0 }, blue = { 0, 0,
+                                         ^~~~~
+../src/game.h:53:14: warning: ‘white’ defined but not used [-Wunused-variable]
+ static color white = { 255, 255, 255 }, green = { 0, 255, 0 }, blue = { 0, 0,
+              ^~~~~
+In file included from ../src/main.c:2:0:
+../src/game.h:55:13: warning: ‘black’ defined but not used [-Wunused-variable]
+   255, 0 }, black = { 0, 0, 0 };
+             ^~~~~
+../src/game.h:54:57: warning: ‘yellow’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+                                                         ^~~~~~
+../src/game.h:54:31: warning: ‘purple’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+                               ^~~~~~
+../src/game.h:54:10: warning: ‘red’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+          ^~~
+../src/game.h:53:64: warning: ‘blue’ defined but not used [-Wunused-variable]
+ static color white = { 255, 255, 255 }, green = { 0, 255, 0 }, blue = { 0, 0,
+                                                                ^~~~
+../src/game.h:53:41: warning: ‘green’ defined but not used [-Wunused-variable]
+ static color white = { 255, 255, 255 }, green = { 0, 255, 0 }, blue = { 0, 0,
+                                         ^~~~~
+../src/game.h:53:14: warning: ‘white’ defined but not used [-Wunused-variable]
+ static color white = { 255, 255, 255 }, green = { 0, 255, 0 }, blue = { 0, 0,
+              ^~~~~
+gcc  -o "simu_new_multithread"  ./src/game.o ./src/leds_control.o ./src/main.o   
+./src/game.o: In function `send_message':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_new_multithread/Debug/../src/game.c:206: undefined reference to `sem_post'
+./src/game.o: In function `receive_message':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_new_multithread/Debug/../src/game.c:210: undefined reference to `sem_wait'
+makefile:30: recipe for target 'simu_new_multithread' failed
+./src/main.o: In function `main':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_new_multithread/Debug/../src/main.c:7: undefined reference to `debug_setlevel'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_new_multithread/Debug/../src/main.c:17: undefined reference to `sem_init'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_new_multithread/Debug/../src/main.c:18: undefined reference to `sem_init'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_new_multithread/Debug/../src/main.c:27: undefined reference to `pthread_create'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_new_multithread/Debug/../src/main.c:32: undefined reference to `pthread_create'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_new_multithread/Debug/../src/main.c:38: undefined reference to `pthread_create'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_new_multithread/Debug/../src/main.c:43: undefined reference to `pthread_join'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_new_multithread/Debug/../src/main.c:44: undefined reference to `pthread_join'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_new_multithread/Debug/../src/main.c:45: undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make: *** [simu_new_multithread] Error 1
+14:16:17 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/debug.d" -MT"src/debug.o" -o "src/debug.o" "../src/debug.c"
+gcc  -o "simu_new_multithread"  ./src/debug.o ./src/game.o ./src/leds_control.o ./src/main.o   
+./src/game.o: In function `send_message':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_new_multithread/Debug/../src/game.c:206: undefined reference to `sem_post'
+makefile:30: recipe for target 'simu_new_multithread' failed
+./src/game.o: In function `receive_message':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_new_multithread/Debug/../src/game.c:210: undefined reference to `sem_wait'
+./src/main.o: In function `main':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_new_multithread/Debug/../src/main.c:17: undefined reference to `sem_init'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_new_multithread/Debug/../src/main.c:18: undefined reference to `sem_init'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_new_multithread/Debug/../src/main.c:27: undefined reference to `pthread_create'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_new_multithread/Debug/../src/main.c:32: undefined reference to `pthread_create'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_new_multithread/Debug/../src/main.c:38: undefined reference to `pthread_create'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_new_multithread/Debug/../src/main.c:43: undefined reference to `pthread_join'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_new_multithread/Debug/../src/main.c:44: undefined reference to `pthread_join'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_new_multithread/Debug/../src/main.c:45: undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make: *** [simu_new_multithread] Error 1
+14:17:53 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:2:0:
+../src/game.h:55:13: warning: ‘black’ defined but not used [-Wunused-variable]
+   255, 0 }, black = { 0, 0, 0 };
+             ^~~~~
+../src/game.h:54:57: warning: ‘yellow’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+                                                         ^~~~~~
+../src/game.h:54:31: warning: ‘purple’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+                               ^~~~~~
+../src/game.h:54:10: warning: ‘red’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+          ^~~
+../src/game.h:53:64: warning: ‘blue’ defined but not used [-Wunused-variable]
+ static color white = { 255, 255, 255 }, green = { 0, 255, 0 }, blue = { 0, 0,
+                                                                ^~~~
+../src/game.h:53:41: warning: ‘green’ defined but not used [-Wunused-variable]
+ static color white = { 255, 255, 255 }, green = { 0, 255, 0 }, blue = { 0, 0,
+                                         ^~~~~
+../src/game.h:53:14: warning: ‘white’ defined but not used [-Wunused-variable]
+ static color white = { 255, 255, 255 }, green = { 0, 255, 0 }, blue = { 0, 0,
+              ^~~~~
+gcc  -o "simu_new_multithread"  ./src/debug.o ./src/game.o ./src/leds_control.o ./src/main.o   
+./src/game.o: In function `send_message':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_new_multithread/Debug/../src/game.c:206: undefined reference to `sem_post'
+./src/game.o: In function `receive_message':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_new_multithread/Debug/../src/game.c:210: undefined reference to `sem_wait'
+./src/main.o: In function `main':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_new_multithread/Debug/../src/main.c:19: undefined reference to `sem_init'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_new_multithread/Debug/../src/main.c:20: undefined reference to `sem_init'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_new_multithread/Debug/../src/main.c:29: undefined reference to `pthread_create'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_new_multithread/Debug/../src/main.c:34: undefined reference to `pthread_create'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_new_multithread/Debug/../src/main.c:40: undefined reference to `pthread_create'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_new_multithread/Debug/../src/main.c:45: undefined reference to `pthread_join'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_new_multithread/Debug/../src/main.c:46: undefined reference to `pthread_join'
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_new_multithread/Debug/../src/main.c:47: undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make: *** [simu_new_multithread] Error 1
+makefile:30: recipe for target 'simu_new_multithread' failed
+14:18:11 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+gcc  -o "simu_new_multithread"  ./src/debug.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+14:18:30 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:2:0:
+../src/game.h:55:13: warning: ‘black’ defined but not used [-Wunused-variable]
+   255, 0 }, black = { 0, 0, 0 };
+             ^~~~~
+../src/game.h:54:57: warning: ‘yellow’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+                                                         ^~~~~~
+../src/game.h:54:31: warning: ‘purple’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+                               ^~~~~~
+../src/game.h:54:10: warning: ‘red’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+          ^~~
+../src/game.h:53:64: warning: ‘blue’ defined but not used [-Wunused-variable]
+ static color white = { 255, 255, 255 }, green = { 0, 255, 0 }, blue = { 0, 0,
+                                                                ^~~~
+../src/game.h:53:41: warning: ‘green’ defined but not used [-Wunused-variable]
+ static color white = { 255, 255, 255 }, green = { 0, 255, 0 }, blue = { 0, 0,
+                                         ^~~~~
+../src/game.h:53:14: warning: ‘white’ defined but not used [-Wunused-variable]
+ static color white = { 255, 255, 255 }, green = { 0, 255, 0 }, blue = { 0, 0,
+              ^~~~~
+gcc  -o "simu_new_multithread"  ./src/debug.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+14:22:02 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:27:54 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:27:58 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:32:32 **** Build of configuration Debug for project simu_test_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "simu_test_multithread"  ./src/main.o   
+15:32:45 **** Incremental Build of configuration Debug for project simu_test_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:32:47 **** Incremental Build of configuration Debug for project simu_test_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:32:58 **** Incremental Build of configuration Debug for project simu_test_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+15:33:58 **** Incremental Build of configuration Debug for project simu_test_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/debug.d" -MT"src/debug.o" -o "src/debug.o" "../src/debug.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/leds_control.d" -MT"src/leds_control.o" -o "src/leds_control.o" "../src/leds_control.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "simu_test_multithread"  ./src/debug.o ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+15:35:18 **** Incremental Build of configuration Debug for project simu_test_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.

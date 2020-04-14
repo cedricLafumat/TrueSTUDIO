@@ -1,0 +1,6 @@
+13:55:28 **** Incremental Build of configuration Debug for project 102_new_simu_multithread ****
+make -j4 all 
+Cannot run program "make": Unknown reason
+
+13:55:28 Build Finished (took 6ms)
+
