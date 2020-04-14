@@ -29,7 +29,6 @@ void add_element(struct Queue *queue, int val_number){
 	pthread_mutex_lock(&mutex_queue);
 
 	new_element->number = val_number;
-//	new_element->player = player;
 	new_element->next = NULL;
 
 	if(queue->head != NULL){ // La liste a au moins 1 élément

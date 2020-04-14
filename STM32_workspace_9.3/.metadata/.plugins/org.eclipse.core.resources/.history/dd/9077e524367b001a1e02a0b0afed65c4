@@ -41,15 +41,14 @@ const RGB Black={0,0,0};
 
 
 
-RGB tabline_1_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
-RGB tabline_2_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
-RGB tabline_3_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
-RGB tabline_4_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
-RGB tabline_5_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
-RGB tabline_6_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
-RGB tabline_7_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
-RGB *actual_matice[7]={tabline_1_actual_matice,tabline_2_actual_matice,tabline_3_actual_matice,
-		tabline_4_actual_matice,tabline_5_actual_matice,tabline_6_actual_matice,tabline_7_actual_matice};
+RGB tabline_1[7]={Black,Black,Black,Black,Black,Black,Black};
+RGB tabline_2[7]={Black,Black,Black,Black,Black,Black,Black};
+RGB tabline_3[7]={Black,Black,Black,Black,Black,Black,Black};
+RGB tabline_4[7]={Black,Black,Black,Black,Black,Black,Black};
+RGB tabline_5[7]={Black,Black,Black,Black,Black,Black,Black};
+RGB tabline_6[7]={Black,Black,Black,Black,Black,Black,Black};
+RGB tabline_7[7]={Black,Black,Black,Black,Black,Black,Black};
+RGB *actual_matice[7]={tabline_1,tabline_2,tabline_3,tabline_4,tabline_5,tabline_6,tabline_7};
 
 
 /*

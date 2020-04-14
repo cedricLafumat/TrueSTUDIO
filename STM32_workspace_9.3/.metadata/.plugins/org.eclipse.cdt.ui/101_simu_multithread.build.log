@@ -1,6 +1,210 @@
-11:06:25 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
+16:18:26 **** Incremental Build of configuration Debug for project 101_simu_multithread ****
 make -j4 all 
-make: Nothing to be done for 'all'.
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+../src/main.c:44:33: error: initializer element is not constant
+ RGB tabline_1_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                 ^~~~~
+../src/main.c:44:33: note: (near initialization for ‘tabline_1_actual_matice[0]’)
+../src/main.c:44:39: error: initializer element is not constant
+ RGB tabline_1_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                       ^~~~~
+../src/main.c:44:39: note: (near initialization for ‘tabline_1_actual_matice[1]’)
+../src/main.c:44:45: error: initializer element is not constant
+ RGB tabline_1_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                             ^~~~~
+../src/main.c:44:45: note: (near initialization for ‘tabline_1_actual_matice[2]’)
+../src/main.c:44:51: error: initializer element is not constant
+ RGB tabline_1_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                                   ^~~~~
+../src/main.c:44:51: note: (near initialization for ‘tabline_1_actual_matice[3]’)
+../src/main.c:44:57: error: initializer element is not constant
+ RGB tabline_1_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                                         ^~~~~
+../src/main.c:44:57: note: (near initialization for ‘tabline_1_actual_matice[4]’)
+../src/main.c:44:63: error: initializer element is not constant
+ RGB tabline_1_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                                               ^~~~~
+../src/main.c:44:63: note: (near initialization for ‘tabline_1_actual_matice[5]’)
+../src/main.c:44:69: error: initializer element is not constant
+ RGB tabline_1_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                                                     ^~~~~
+../src/main.c:44:69: note: (near initialization for ‘tabline_1_actual_matice[6]’)
+../src/main.c:45:33: error: initializer element is not constant
+ RGB tabline_2_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                 ^~~~~
+../src/main.c:45:33: note: (near initialization for ‘tabline_2_actual_matice[0]’)
+../src/main.c:45:39: error: initializer element is not constant
+ RGB tabline_2_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                       ^~~~~
+../src/main.c:45:39: note: (near initialization for ‘tabline_2_actual_matice[1]’)
+../src/main.c:45:45: error: initializer element is not constant
+ RGB tabline_2_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                             ^~~~~
+../src/main.c:45:45: note: (near initialization for ‘tabline_2_actual_matice[2]’)
+../src/main.c:45:51: error: initializer element is not constant
+ RGB tabline_2_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                                   ^~~~~
+../src/main.c:45:51: note: (near initialization for ‘tabline_2_actual_matice[3]’)
+../src/main.c:45:57: error: initializer element is not constant
+ RGB tabline_2_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                                         ^~~~~
+../src/main.c:45:57: note: (near initialization for ‘tabline_2_actual_matice[4]’)
+../src/main.c:45:63: error: initializer element is not constant
+ RGB tabline_2_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                                               ^~~~~
+../src/main.c:45:63: note: (near initialization for ‘tabline_2_actual_matice[5]’)
+../src/main.c:45:69: error: initializer element is not constant
+ RGB tabline_2_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                                                     ^~~~~
+../src/main.c:45:69: note: (near initialization for ‘tabline_2_actual_matice[6]’)
+../src/main.c:46:33: error: initializer element is not constant
+ RGB tabline_3_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                 ^~~~~
+../src/main.c:46:33: note: (near initialization for ‘tabline_3_actual_matice[0]’)
+../src/main.c:46:39: error: initializer element is not constant
+ RGB tabline_3_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                       ^~~~~
+../src/main.c:46:39: note: (near initialization for ‘tabline_3_actual_matice[1]’)
+../src/main.c:46:45: error: initializer element is not constant
+ RGB tabline_3_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                             ^~~~~
+../src/main.c:46:45: note: (near initialization for ‘tabline_3_actual_matice[2]’)
+../src/main.c:46:51: error: initializer element is not constant
+ RGB tabline_3_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                                   ^~~~~
+../src/main.c:46:51: note: (near initialization for ‘tabline_3_actual_matice[3]’)
+../src/main.c:46:57: error: initializer element is not constant
+ RGB tabline_3_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                                         ^~~~~
+../src/main.c:46:57: note: (near initialization for ‘tabline_3_actual_matice[4]’)
+../src/main.c:46:63: error: initializer element is not constant
+ RGB tabline_3_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                                               ^~~~~
+../src/main.c:46:63: note: (near initialization for ‘tabline_3_actual_matice[5]’)
+../src/main.c:46:69: error: initializer element is not constant
+ RGB tabline_3_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                                                     ^~~~~
+../src/main.c:46:69: note: (near initialization for ‘tabline_3_actual_matice[6]’)
+../src/main.c:47:33: error: initializer element is not constant
+ RGB tabline_4_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                 ^~~~~
+../src/main.c:47:33: note: (near initialization for ‘tabline_4_actual_matice[0]’)
+../src/main.c:47:39: error: initializer element is not constant
+ RGB tabline_4_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                       ^~~~~
+../src/main.c:47:39: note: (near initialization for ‘tabline_4_actual_matice[1]’)
+../src/main.c:47:45: error: initializer element is not constant
+ RGB tabline_4_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                             ^~~~~
+../src/main.c:47:45: note: (near initialization for ‘tabline_4_actual_matice[2]’)
+../src/main.c:47:51: error: initializer element is not constant
+ RGB tabline_4_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                                   ^~~~~
+../src/main.c:47:51: note: (near initialization for ‘tabline_4_actual_matice[3]’)
+../src/main.c:47:57: error: initializer element is not constant
+ RGB tabline_4_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                                         ^~~~~
+../src/main.c:47:57: note: (near initialization for ‘tabline_4_actual_matice[4]’)
+../src/main.c:47:63: error: initializer element is not constant
+ RGB tabline_4_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                                               ^~~~~
+../src/main.c:47:63: note: (near initialization for ‘tabline_4_actual_matice[5]’)
+../src/main.c:47:69: error: initializer element is not constant
+ RGB tabline_4_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                                                     ^~~~~
+../src/main.c:47:69: note: (near initialization for ‘tabline_4_actual_matice[6]’)
+../src/main.c:48:33: error: initializer element is not constant
+ RGB tabline_5_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                 ^~~~~
+../src/main.c:48:33: note: (near initialization for ‘tabline_5_actual_matice[0]’)
+../src/main.c:48:39: error: initializer element is not constant
+ RGB tabline_5_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                       ^~~~~
+../src/main.c:48:39: note: (near initialization for ‘tabline_5_actual_matice[1]’)
+../src/main.c:48:45: error: initializer element is not constant
+ RGB tabline_5_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                             ^~~~~
+../src/main.c:48:45: note: (near initialization for ‘tabline_5_actual_matice[2]’)
+../src/main.c:48:51: error: initializer element is not constant
+ RGB tabline_5_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                                   ^~~~~
+../src/main.c:48:51: note: (near initialization for ‘tabline_5_actual_matice[3]’)
+../src/main.c:48:57: error: initializer element is not constant
+ RGB tabline_5_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                                         ^~~~~
+../src/main.c:48:57: note: (near initialization for ‘tabline_5_actual_matice[4]’)
+../src/main.c:48:63: error: initializer element is not constant
+ RGB tabline_5_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                                               ^~~~~
+../src/main.c:48:63: note: (near initialization for ‘tabline_5_actual_matice[5]’)
+../src/main.c:48:69: error: initializer element is not constant
+ RGB tabline_5_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                                                     ^~~~~
+../src/main.c:48:69: note: (near initialization for ‘tabline_5_actual_matice[6]’)
+../src/main.c:49:33: error: initializer element is not constant
+ RGB tabline_6_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                 ^~~~~
+../src/main.c:49:33: note: (near initialization for ‘tabline_6_actual_matice[0]’)
+../src/main.c:49:39: error: initializer element is not constant
+ RGB tabline_6_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                       ^~~~~
+../src/main.c:49:39: note: (near initialization for ‘tabline_6_actual_matice[1]’)
+../src/main.c:49:45: error: initializer element is not constant
+ RGB tabline_6_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                             ^~~~~
+../src/main.c:49:45: note: (near initialization for ‘tabline_6_actual_matice[2]’)
+../src/main.c:49:51: error: initializer element is not constant
+ RGB tabline_6_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                                   ^~~~~
+../src/main.c:49:51: note: (near initialization for ‘tabline_6_actual_matice[3]’)
+../src/main.c:49:57: error: initializer element is not constant
+ RGB tabline_6_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                                         ^~~~~
+../src/main.c:49:57: note: (near initialization for ‘tabline_6_actual_matice[4]’)
+../src/main.c:49:63: error: initializer element is not constant
+ RGB tabline_6_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                                               ^~~~~
+../src/main.c:49:63: note: (near initialization for ‘tabline_6_actual_matice[5]’)
+../src/main.c:49:69: error: initializer element is not constant
+ RGB tabline_6_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                                                     ^~~~~
+../src/main.c:49:69: note: (near initialization for ‘tabline_6_actual_matice[6]’)
+../src/main.c:50:33: error: initializer element is not constant
+ RGB tabline_7_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                 ^~~~~
+../src/main.c:50:33: note: (near initialization for ‘tabline_7_actual_matice[0]’)
+../src/main.c:50:39: error: initializer element is not constant
+ RGB tabline_7_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                       ^~~~~
+../src/main.c:50:39: note: (near initialization for ‘tabline_7_actual_matice[1]’)
+../src/main.c:50:45: error: initializer element is not constant
+ RGB tabline_7_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                             ^~~~~
+../src/main.c:50:45: note: (near initialization for ‘tabline_7_actual_matice[2]’)
+../src/main.c:50:51: error: initializer element is not constant
+ RGB tabline_7_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                                   ^~~~~
+../src/main.c:50:51: note: (near initialization for ‘tabline_7_actual_matice[3]’)
+../src/main.c:50:57: error: initializer element is not constant
+ RGB tabline_7_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                                         ^~~~~
+../src/main.c:50:57: note: (near initialization for ‘tabline_7_actual_matice[4]’)
+../src/main.c:50:63: error: initializer element is not constant
+ RGB tabline_7_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                                               ^~~~~
+../src/main.c:50:63: note: (near initialization for ‘tabline_7_actual_matice[5]’)
+../src/main.c:50:69: error: initializer element is not constant
+ RGB tabline_7_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
+                                                                     ^~~~~
+../src/main.c:50:69: note: (near initialization for ‘tabline_7_actual_matice[6]’)
+../src/main.c: In function ‘SetLedMatrice’:
+../src/main.c:71:38: error: ‘actual_matrice’ undeclared (first use in this function); did you mean ‘actual_matice’?
+    if ((TabLine[line][col].RValue != actual_matrice[line][col].RValue) ||
+                                      ^~~~~~~~~~~~~~
+                                      actual_matice
+../src/main.c:71:38: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/main.o] Error 1
 
-11:06:26 Build Finished (took 490ms)
+16:18:27 Build Finished (took 655ms)
 

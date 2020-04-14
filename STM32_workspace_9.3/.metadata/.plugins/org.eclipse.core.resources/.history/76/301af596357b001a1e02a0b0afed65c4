@@ -41,15 +41,14 @@ const RGB Black={0,0,0};
 
 
 
-RGB tabline_1_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
-RGB tabline_2_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
-RGB tabline_3_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
-RGB tabline_4_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
-RGB tabline_5_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
-RGB tabline_6_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
-RGB tabline_7_actual_matice[7]={Black,Black,Black,Black,Black,Black,Black};
-RGB *actual_matice[7]={tabline_1_actual_matice,tabline_2_actual_matice,tabline_3_actual_matice,
-		tabline_4_actual_matice,tabline_5_actual_matice,tabline_6_actual_matice,tabline_7_actual_matice};
+RGB tabline_1[7]={Black,Black,Black,Black,Black,Black,Black};
+RGB tabline_2[7]={Black,Black,Black,Black,Black,Black,Black};
+RGB tabline_3[7]={Black,Black,Black,Black,Black,Black,Black};
+RGB tabline_4[7]={Black,Black,Black,Black,Black,Black,Black};
+RGB tabline_5[7]={Black,Black,Black,Black,Black,Black,Black};
+RGB tabline_6[7]={Black,Black,Black,Black,Black,Black,Black};
+RGB tabline_7[7]={Black,Black,Black,Black,Black,Black,Black};
+RGB *actual_matice[7]={tabline_1,tabline_2,tabline_3,tabline_4,tabline_5,tabline_6,tabline_7};
 
 
 /*
@@ -62,17 +61,16 @@ RGB *actual_matice[7]={tabline_1_actual_matice,tabline_2_actual_matice,tabline_3
  * -----------------------------------------------------------------------------------------------------------------------------------
  */
 
-void SetLedMatrice(RGB **TabLine){
+void SetLedMatrice(RGB **TabLine, RGB **actual_matrice){
 	for (int line=0; line<TabSize; line++){
 		for(int col = 0; col < TabSize; col++){
 			// comparaison avec matrice precedente
 			// si color de ma led est diffente
 			// alors setledcolod
-			if ((TabLine[line][col].RValue != actual_matrice[line][col].RValue) ||
-				(TabLine[line][col].GValue != actual_matrice[line][col].GValue) ||
-				(TabLine[line][col].BValue != actual_matrice[line][col].BValue)){
-				setLedColor(line+1, col+1, TabLine[line][col].RValue, TabLine[line][col].GValue, TabLine[line][col].BValue);
-				// mettre à jour la matrice
+			if ((TabLine[line][col].RValue != actual_matrice[line][col].RValue) ||  (TabLine[line][col].GValue != actual_matrice[line][col].GValue)
+					|| (TabLine[line][col].BValue != actual_matrice[line][col].BValue)){
+					setLedColor(line+1, col+1, TabLine[line][col].RValue, TabLine[line][col].GValue, TabLine[line][col].BValue);
+					// mettre à jour la matrice
 			}
 			else{
 
@@ -94,7 +92,7 @@ void set_number(int number){
 		RGB tabline_6[7]={bckgrd,bckgrd,number,bckgrd,bckgrd,bckgrd,number};
 		RGB tabline_7[7]={bckgrd,bckgrd,number,bckgrd,bckgrd,bckgrd,number};
 		RGB *matrice[7]={tabline_1,tabline_2,tabline_3,tabline_4,tabline_5,tabline_6,tabline_7};
-		SetLedMatrice(matrice);
+		SetLedMatrice(matrice, &actual_matrice);
 	}
 	if (number==13){
 		RGB bckgrd = Black;
@@ -107,7 +105,7 @@ void set_number(int number){
 		RGB tabline_6[7]={bckgrd,bckgrd,number,bckgrd,bckgrd,bckgrd,number};
 		RGB tabline_7[7]={bckgrd,bckgrd,number,bckgrd,number,number,number};
 		RGB *matrice[7]={tabline_1,tabline_2,tabline_3,tabline_4,tabline_5,tabline_6,tabline_7};
-		SetLedMatrice(matrice);
+		SetLedMatrice(matrice, actual_matrice);
 	}
 	if (number==12){
 		RGB bckgrd = Black;
@@ -120,7 +118,7 @@ void set_number(int number){
 		RGB tabline_6[7]={bckgrd,bckgrd,number,bckgrd,number,bckgrd,bckgrd};
 		RGB tabline_7[7]={bckgrd,bckgrd,number,bckgrd,number,number,number};
 		RGB *matrice[7]={tabline_1,tabline_2,tabline_3,tabline_4,tabline_5,tabline_6,tabline_7};
-		SetLedMatrice(matrice);
+		SetLedMatrice(matrice, actual_matrice);
 	}
 	if (number==11){
 		RGB bckgrd = Black;
@@ -133,7 +131,7 @@ void set_number(int number){
 		RGB tabline_6[7]={bckgrd,bckgrd,number,bckgrd,bckgrd,bckgrd,number};
 		RGB tabline_7[7]={bckgrd,bckgrd,number,bckgrd,bckgrd,bckgrd,number};
 		RGB *matrice[7]={tabline_1,tabline_2,tabline_3,tabline_4,tabline_5,tabline_6,tabline_7};
-		SetLedMatrice(matrice);
+		SetLedMatrice(matrice, actual_matrice);
 	}
 	if (number==10){
 		RGB bckgrd = Black;
@@ -146,7 +144,7 @@ void set_number(int number){
 		RGB tabline_6[7]={bckgrd,bckgrd,number,bckgrd,number,bckgrd,number};
 		RGB tabline_7[7]={bckgrd,bckgrd,number,bckgrd,number,number,number};
 		RGB *matrice[7]={tabline_1,tabline_2,tabline_3,tabline_4,tabline_5,tabline_6,tabline_7};
-		SetLedMatrice(matrice);
+		SetLedMatrice(matrice, actual_matrice);
 	}
 	if (number==9){
 		RGB bckgrd = Black;
@@ -159,7 +157,7 @@ void set_number(int number){
 		RGB tabline_6[7]={bckgrd,bckgrd,bckgrd,bckgrd,bckgrd,number,bckgrd};
 		RGB tabline_7[7]={bckgrd,bckgrd,number,number,number,bckgrd,bckgrd};
 		RGB *matrice[7]={tabline_1,tabline_2,tabline_3,tabline_4,tabline_5,tabline_6,tabline_7};
-		SetLedMatrice(matrice);
+		SetLedMatrice(matrice, actual_matrice);
 	}
 	else if (number==8){
 		RGB bckgrd = Black;
@@ -172,7 +170,7 @@ void set_number(int number){
 		RGB tabline_6[7]={bckgrd,number,bckgrd,bckgrd,bckgrd,number,bckgrd};
 		RGB tabline_7[7]={bckgrd,bckgrd,number,number,number,bckgrd,bckgrd};
 		RGB *matrice[7]={tabline_1,tabline_2,tabline_3,tabline_4,tabline_5,tabline_6,tabline_7};
-		SetLedMatrice(matrice);
+		SetLedMatrice(matrice, actual_matrice);
 	}
 	else if (number==7){
 		RGB bckgrd = Black;
@@ -185,7 +183,7 @@ void set_number(int number){
 		RGB tabline_6[7]={bckgrd,bckgrd,number,bckgrd,bckgrd,bckgrd,bckgrd};
 		RGB tabline_7[7]={bckgrd,number,bckgrd,bckgrd,bckgrd,bckgrd,bckgrd};
 		RGB *matrice[7]={tabline_1,tabline_2,tabline_3,tabline_4,tabline_5,tabline_6,tabline_7};
-		SetLedMatrice(matrice);
+		SetLedMatrice(matrice, actual_matrice);
 	}
 	else if (number==6){
 		RGB bckgrd = Black;
@@ -198,7 +196,7 @@ void set_number(int number){
 		RGB tabline_6[7]={bckgrd,number,bckgrd,bckgrd,bckgrd,number,bckgrd};
 		RGB tabline_7[7]={bckgrd,bckgrd,number,number,number,bckgrd,bckgrd};
 		RGB *matrice[7]={tabline_1,tabline_2,tabline_3,tabline_4,tabline_5,tabline_6,tabline_7};
-		SetLedMatrice(matrice);
+		SetLedMatrice(matrice, actual_matrice);
 	}
 	else if (number==5){
 		RGB bckgrd = Black;
@@ -211,7 +209,7 @@ void set_number(int number){
 		RGB tabline_6[7]={bckgrd,bckgrd,bckgrd,bckgrd,bckgrd,number,bckgrd};
 		RGB tabline_7[7]={bckgrd,number,number,number,number,bckgrd,bckgrd};
 		RGB *matrice[7]={tabline_1,tabline_2,tabline_3,tabline_4,tabline_5,tabline_6,tabline_7};
-		SetLedMatrice(matrice);
+		SetLedMatrice(matrice, actual_matrice);
 	}
 	else if (number==4){
 		RGB bckgrd = Black;
@@ -224,7 +222,7 @@ void set_number(int number){
 		RGB tabline_6[7]={bckgrd,bckgrd,bckgrd,bckgrd,number,bckgrd,bckgrd};
 		RGB tabline_7[7]={bckgrd,bckgrd,bckgrd,bckgrd,number,bckgrd,bckgrd};
 		RGB *matrice[7]={tabline_1,tabline_2,tabline_3,tabline_4,tabline_5,tabline_6,tabline_7};
-		SetLedMatrice(matrice);
+		SetLedMatrice(matrice, actual_matrice);
 	}
 	else if (number==3){
 		RGB bckgrd = Black;
@@ -237,7 +235,7 @@ void set_number(int number){
 		RGB tabline_6[7]={bckgrd,bckgrd,bckgrd,bckgrd,bckgrd,number,bckgrd};
 		RGB tabline_7[7]={bckgrd,number,number,number,number,bckgrd,bckgrd};
 		RGB *matrice[7]={tabline_1,tabline_2,tabline_3,tabline_4,tabline_5,tabline_6,tabline_7};
-		SetLedMatrice(matrice);
+		SetLedMatrice(matrice, actual_matrice);
 	}
 	else if (number==2){
 		RGB bckgrd = Black;
@@ -250,7 +248,7 @@ void set_number(int number){
 		RGB tabline_6[7]={bckgrd,number,bckgrd,bckgrd,bckgrd,bckgrd,bckgrd};
 		RGB tabline_7[7]={bckgrd,number,number,number,number,number,bckgrd};
 		RGB *matrice[7]={tabline_1,tabline_2,tabline_3,tabline_4,tabline_5,tabline_6,tabline_7};
-		SetLedMatrice(matrice);
+		SetLedMatrice(matrice, actual_matrice);
 	}
 	else if (number==1){
 		RGB bckgrd = Black;
@@ -263,7 +261,7 @@ void set_number(int number){
 		RGB tabline_6[7]={bckgrd,bckgrd,bckgrd,bckgrd,number,bckgrd,bckgrd};
 		RGB tabline_7[7]={bckgrd,bckgrd,bckgrd,bckgrd,number,bckgrd,bckgrd};
 		RGB *matrice[7]={tabline_1,tabline_2,tabline_3,tabline_4,tabline_5,tabline_6,tabline_7};
-		SetLedMatrice(matrice);
+		SetLedMatrice(matrice, actual_matrice);
 	}
 	else if (number==0){
 		RGB bckgrd = Black;
@@ -276,7 +274,7 @@ void set_number(int number){
 		RGB tabline_6[7]={bckgrd,number,bckgrd,bckgrd,bckgrd,number,bckgrd};
 		RGB tabline_7[7]={bckgrd,bckgrd,number,number,number,bckgrd,bckgrd};
 		RGB *matrice[7]={tabline_1,tabline_2,tabline_3,tabline_4,tabline_5,tabline_6,tabline_7};
-		SetLedMatrice(matrice);
+		SetLedMatrice(matrice, actual_matrice);
 	}
 }
 

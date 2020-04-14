@@ -9,19 +9,19 @@
 #define FIFO_H_
 
 
-typedef struct Element
+/*typedef struct Element
 {
     int number; // contenu de mon element
     struct Element *next; // pointeur vers l'element suivant
-}Element;
+}Element;*/
 
 
-/*typedef struct Element
+typedef struct Element
 {
 	int player;
     int movement; // contenu de mon element
     struct Element *next; // pointeur vers l'element suivant
-}Element;*/
+}Element;
 
 typedef struct Queue
 {

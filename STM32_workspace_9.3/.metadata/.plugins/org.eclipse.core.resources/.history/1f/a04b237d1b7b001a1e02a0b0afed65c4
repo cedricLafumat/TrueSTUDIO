@@ -17,7 +17,7 @@ void init_queue(struct Queue *queue){
 	queue-> tail = NULL;
 }
 
-void add_element(struct Queue *queue, int val_number){
+void add_element(struct Queue *queue, int val_number, int player){
 	//creation d'une structure 'new_element' de type Element et allocation d'un espace mémoire de la taille de la structure
 
 	// a tester avec sizeof Element (qui est la taille de la struct)
@@ -29,7 +29,7 @@ void add_element(struct Queue *queue, int val_number){
 	pthread_mutex_lock(&mutex_queue);
 
 	new_element->number = val_number;
-//	new_element->player = player;
+	new_element->
 	new_element->next = NULL;
 
 	if(queue->head != NULL){ // La liste a au moins 1 élément

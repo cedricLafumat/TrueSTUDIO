@@ -33,13 +33,13 @@ void gp4_init(void) {
 	debug_printf(10, "Joueur actif : %d\n\n", g_active_player);
 	g_token_top_selector = 4;
 	// ------------- SET TEST EGALITE
-	g_matrice[0][0] = PLAYER_1;
+	/*g_matrice[0][0] = PLAYER_1;
 	g_matrice[1][0] = PLAYER_1;
 	g_matrice[2][0] = PLAYER_1;
 	g_matrice[3][0] = PLAYER_2;
 	g_matrice[4][0] = PLAYER_1;
 	g_matrice[5][0] = PLAYER_1;
-	g_matrice[6][0] = PLAYER_1;
+	g_matrice[6][0] = PLAYER_1;*/
 	// ------------- SET RANDOM
 	/*g_matrice[0][0] = PLAYER_1;
 	g_matrice[1][0] = PLAYER_1;
