@@ -171,7 +171,7 @@ void set_number(int nbr) {
 void push(queue *queue, char *input) {
 	user_input *new_input = malloc(sizeof(*new_input));
 	if (new_input == NULL) {
-		printf("erreur alloc mémoire push\n");
+		printf("erreur alloc memoire push\n");
 	}
 	new_input->value = *input;
 	new_input->next = NULL;

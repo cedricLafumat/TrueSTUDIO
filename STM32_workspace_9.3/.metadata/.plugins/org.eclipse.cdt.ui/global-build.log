@@ -25674,3 +25674,2353 @@ gcc  -o "simu_test_multithread"  ./src/debug.o ./src/fifo.o ./src/leds_control.o
 15:35:18 **** Incremental Build of configuration Debug for project simu_test_multithread ****
 make -j4 all 
 make: Nothing to be done for 'all'.
+16:04:19 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:04:21 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:35:21 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:35:21 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:35:22 **** Incremental Build of configuration Debug for project simu_test_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘set_number’:
+../src/main.c:60:2: error: unknown type name ‘color’
+  color nbr_color = PLAYER_COLOR;
+  ^~~~~
+../src/main.c:60:20: error: ‘PLAYER_COLOR’ undeclared (first use in this function)
+  color nbr_color = PLAYER_COLOR;
+                    ^~~~~~~~~~~~
+../src/main.c:60:20: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:61:2: error: unknown type name ‘color’
+  color bckgrnd_color = BACKGROUND;
+  ^~~~~
+../src/main.c:61:24: error: ‘BACKGROUND’ undeclared (first use in this function)
+  color bckgrnd_color = BACKGROUND;
+                        ^~~~~~~~~~
+../src/main.c:62:26: error: ‘TAB_SIZE’ undeclared (first use in this function); did you mean ‘_T_SIZE’?
+  for (int row = 0; row < TAB_SIZE; row++) {
+                          ^~~~~~~~
+                          _T_SIZE
+../src/main.c:67:6: error: ‘matrix’ undeclared (first use in this function); did you mean ‘Matrix’?
+      matrix.board[row][col] = nbr_color;
+      ^~~~~~
+      Matrix
+make: *** [src/main.o] Error 1
+src/subdir.mk:30: recipe for target 'src/main.o' failed
+08:36:03 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:36:03 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:36:04 **** Incremental Build of configuration Debug for project simu_test_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘set_number’:
+../src/main.c:62:26: error: ‘TAB_SIZE’ undeclared (first use in this function); did you mean ‘_T_SIZE’?
+  for (int row = 0; row < TAB_SIZE; row++) {
+                          ^~~~~~~~
+                          _T_SIZE
+../src/main.c:62:26: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:67:6: error: ‘matrix’ undeclared (first use in this function); did you mean ‘Matrix’?
+      matrix.board[row][col] = nbr_color;
+      ^~~~~~
+      Matrix
+src/subdir.mk:30: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+08:36:26 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:36:27 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:36:27 **** Incremental Build of configuration Debug for project simu_test_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘set_number’:
+../src/main.c:67:6: error: ‘matrix’ undeclared (first use in this function); did you mean ‘Matrix’?
+      matrix.board[row][col] = nbr_color;
+src/subdir.mk:30: recipe for target 'src/main.o' failed
+      ^~~~~~
+      Matrix
+../src/main.c:67:6: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/main.o] Error 1
+08:37:09 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:37:09 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:37:10 **** Incremental Build of configuration Debug for project simu_test_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘set_number’:
+../src/main.c:67:12: error: expected identifier or ‘(’ before ‘.’ token
+      Matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:69:6: error: expected expression before ‘Matrix’
+      Matrix.board[row][col] = bckgrnd_color;
+      ^~~~~~
+../src/main.c:80:12: error: expected identifier or ‘(’ before ‘.’ token
+      Matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:82:6: error: expected expression before ‘Matrix’
+      Matrix.board[row][col] = bckgrnd_color;
+      ^~~~~~
+../src/main.c:93:12: error: expected identifier or ‘(’ before ‘.’ token
+      Matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:95:6: error: expected expression before ‘Matrix’
+      Matrix.board[row][col] = bckgrnd_color;
+      ^~~~~~
+../src/main.c:105:12: error: expected identifier or ‘(’ before ‘.’ token
+      Matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:107:6: error: expected expression before ‘Matrix’
+      Matrix.board[row][col] = bckgrnd_color;
+      ^~~~~~
+../src/main.c:119:12: error: expected identifier or ‘(’ before ‘.’ token
+      Matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:121:6: error: expected expression before ‘Matrix’
+      Matrix.board[row][col] = bckgrnd_color;
+      ^~~~~~
+../src/main.c:133:12: error: expected identifier or ‘(’ before ‘.’ token
+      Matrix.board[row][col] = nbr_color;
+            ^
+src/subdir.mk:30: recipe for target 'src/main.o' failed
+../src/main.c:135:6: error: expected expression before ‘Matrix’
+      Matrix.board[row][col] = bckgrnd_color;
+      ^~~~~~
+../src/main.c:145:12: error: expected identifier or ‘(’ before ‘.’ token
+      Matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:147:6: error: expected expression before ‘Matrix’
+      Matrix.board[row][col] = bckgrnd_color;
+      ^~~~~~
+../src/main.c:159:12: error: expected identifier or ‘(’ before ‘.’ token
+      Matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:161:6: error: expected expression before ‘Matrix’
+      Matrix.board[row][col] = bckgrnd_color;
+      ^~~~~~
+../src/main.c:173:12: error: expected identifier or ‘(’ before ‘.’ token
+      Matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:175:6: error: expected expression before ‘Matrix’
+      Matrix.board[row][col] = bckgrnd_color;
+      ^~~~~~
+../src/main.c:186:12: error: expected identifier or ‘(’ before ‘.’ token
+      Matrix.board[row][col] = nbr_color;
+            ^
+../src/main.c:188:6: error: expected expression before ‘Matrix’
+      Matrix.board[row][col] = bckgrnd_color;
+      ^~~~~~
+../src/main.c:61:6: warning: unused variable ‘bckgrnd_color’ [-Wunused-variable]
+  RGB bckgrnd_color = BACKGROUND;
+      ^~~~~~~~~~~~~
+../src/main.c:60:6: warning: unused variable ‘nbr_color’ [-Wunused-variable]
+  RGB nbr_color = PLAYER_COLOR;
+      ^~~~~~~~~
+make: *** [src/main.o] Error 1
+08:41:51 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:41:51 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:41:52 **** Incremental Build of configuration Debug for project simu_test_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘init_matrix’:
+../src/main.c:61:26: error: ‘TAB_SIZE’ undeclared (first use in this function); did you mean ‘_T_SIZE’?
+  for (int row = 0; row < TAB_SIZE; row++) {
+                          ^~~~~~~~
+                          _T_SIZE
+../src/main.c:61:26: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:63:37: error: ‘black’ undeclared (first use in this function); did you mean ‘Black’?
+    matrice.board[row][col].RValue = black.RValue;
+                                     ^~~~~
+                                     Black
+../src/main.c:71:2: error: ‘matrix’ undeclared (first use in this function); did you mean ‘Matrix’?
+  matrix.init = INIT_OK;
+  ^~~~~~
+  Matrix
+../src/main.c:71:16: error: ‘INIT_OK’ undeclared (first use in this function)
+  matrix.init = INIT_OK;
+                ^~~~~~~
+../src/main.c:72:2: error: ‘actual_display’ undeclared (first use in this function); did you mean ‘p_queue_display’?
+  actual_display.init = INIT_OK;
+  ^~~~~~~~~~~~~~
+  p_queue_display
+make: *** [src/main.o] Error 1
+src/subdir.mk:30: recipe for target 'src/main.o' failed
+08:42:08 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:42:08 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:42:09 **** Incremental Build of configuration Debug for project simu_test_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘init_matrix’:
+../src/main.c:61:26: error: ‘TAB_SIZE’ undeclared (first use in this function); did you mean ‘_T_SIZE’?
+  for (int row = 0; row < TAB_SIZE; row++) {
+                          ^~~~~~~~
+                          _T_SIZE
+../src/main.c:61:26: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:63:37: error: ‘black’ undeclared (first use in this function); did you mean ‘Black’?
+    matrice.board[row][col].RValue = black.RValue;
+                                     ^~~~~
+                                     Black
+../src/main.c:71:17: error: ‘INIT_OK’ undeclared (first use in this function)
+  matrice.init = INIT_OK;
+                 ^~~~~~~
+src/subdir.mk:30: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+08:42:27 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:42:27 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:42:28 **** Incremental Build of configuration Debug for project simu_test_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘init_matrix’:
+../src/main.c:61:26: error: ‘TAB_SIZE’ undeclared (first use in this function); did you mean ‘_T_SIZE’?
+  for (int row = 0; row < TAB_SIZE; row++) {
+src/subdir.mk:30: recipe for target 'src/main.o' failed
+                          ^~~~~~~~
+                          _T_SIZE
+../src/main.c:61:26: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:71:17: error: ‘INIT_OK’ undeclared (first use in this function)
+  matrice.init = INIT_OK;
+                 ^~~~~~~
+make: *** [src/main.o] Error 1
+08:45:33 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:45:34 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:45:34 **** Incremental Build of configuration Debug for project simu_test_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "simu_test_multithread"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+08:48:22 **** Incremental Build of configuration Debug for project simu_test_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:52:34 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:52:34 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:52:35 **** Incremental Build of configuration Debug for project simu_test_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘send_message’:
+../src/main.c:308:7: warning: implicit declaration of function ‘receive_message’; did you mean ‘send_message’? [-Wimplicit-function-declaration]
+   if (receive_message(queue_app_display, (char *) &user_input, MSG_LENGHT)
+       ^~~~~~~~~~~~~~~
+       send_message
+../src/main.c:308:23: error: ‘queue_app_display’ undeclared (first use in this function); did you mean ‘p_queue_display’?
+src/subdir.mk:30: recipe for target 'src/main.o' failed
+   if (receive_message(queue_app_display, (char *) &user_input, MSG_LENGHT)
+                       ^~~~~~~~~~~~~~~~~
+                       p_queue_display
+../src/main.c:308:23: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:308:64: error: ‘MSG_LENGHT’ undeclared (first use in this function); did you mean ‘_SC_LONG_BIT’?
+   if (receive_message(queue_app_display, (char *) &user_input, MSG_LENGHT)
+                                                                ^~~~~~~~~~
+                                                                _SC_LONG_BIT
+make: *** [src/main.o] Error 1
+08:58:15 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:58:15 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:58:16 **** Incremental Build of configuration Debug for project simu_test_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘send_message’:
+../src/main.c:313:7: warning: implicit declaration of function ‘receive_message’; did you mean ‘send_message’? [-Wimplicit-function-declaration]
+   if (receive_message(queue_app_display, (char *) &user_input, MSG_LENGHT)
+       ^~~~~~~~~~~~~~~
+src/subdir.mk:30: recipe for target 'src/main.o' failed
+       send_message
+../src/main.c:313:23: error: ‘queue_app_display’ undeclared (first use in this function); did you mean ‘p_queue_display’?
+   if (receive_message(queue_app_display, (char *) &user_input, MSG_LENGHT)
+                       ^~~~~~~~~~~~~~~~~
+                       p_queue_display
+../src/main.c:313:23: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/main.o] Error 1
+08:58:54 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:58:54 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:58:55 **** Incremental Build of configuration Debug for project simu_test_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘send_message’:
+../src/main.c:313:7: warning: implicit declaration of function ‘receive_message’; did you mean ‘send_message’? [-Wimplicit-function-declaration]
+   if (receive_message(p_queue_display, (char *) &user_input, MSG_LENGHT)
+       ^~~~~~~~~~~~~~~
+       send_message
+gcc  -o "simu_test_multithread"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+./src/main.o: In function `send_message':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_test_multithread/Debug/../src/main.c:313: undefined reference to `receive_message'
+collect2: error: ld returned 1 exit status
+makefile:30: recipe for target 'simu_test_multithread' failed
+make: *** [simu_test_multithread] Error 1
+08:59:58 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:59:58 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:59:59 **** Incremental Build of configuration Debug for project simu_test_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:216:19: error: unknown type name ‘queue’; did you mean ‘Queue’?
+ void send_message(queue *queue, char *message, int message_lenght) {
+                   ^~~~~
+                   Queue
+../src/main.c:221:21: error: unknown type name ‘queue’; did you mean ‘Queue’?
+ int receive_message(queue *queue, char *message, int message_lenght) {
+                     ^~~~~
+                     Queue
+../src/main.c: In function ‘send_message’:
+../src/main.c:326:7: warning: implicit declaration of function ‘receive_message’; did you mean ‘send_message’? [-Wimplicit-function-declaration]
+   if (receive_message(p_queue_display, (char *) &user_input, MSG_LENGHT)
+       ^~~~~~~~~~~~~~~
+       send_message
+src/subdir.mk:30: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+09:00:25 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:00:26 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:00:26 **** Incremental Build of configuration Debug for project simu_test_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘send_message’:
+../src/main.c:217:21: warning: passing argument 2 of ‘add_element’ makes integer from pointer without a cast [-Wint-conversion]
+  add_element(queue, message);
+                     ^~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:37:6: note: expected ‘int’ but argument is of type ‘char *’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/main.c:218:17: error: ‘Queue {aka struct Queue}’ has no member named ‘semaphore’
+  sem_post(&queue->semaphore);
+                 ^~
+../src/main.c: In function ‘receive_message’:
+../src/main.c:222:17: error: ‘Queue {aka struct Queue}’ has no member named ‘semaphore’
+  sem_wait(&queue->semaphore);
+                 ^~
+../src/main.c:223:21: error: too many arguments to function ‘pop_element’
+  int return_value = pop_element(queue, message);
+                     ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:38:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c: At top level:
+../src/main.c:313:7: error: conflicting types for ‘send_message’
+ void *send_message(void *arg){
+       ^~~~~~~~~~~~
+../src/main.c:216:6: note: previous definition of ‘send_message’ was here
+ void send_message(Queue *queue, char *message, int message_lenght) {
+      ^~~~~~~~~~~~
+../src/main.c: In function ‘send_message’:
+../src/main.c:326:23: error: incompatible type for argument 1 of ‘receive_message’
+   if (receive_message(p_queue_display, (char *) &user_input, MSG_LENGHT)
+                       ^~~~~~~~~~~~~~~
+../src/main.c:221:5: note: expected ‘Queue * {aka struct Queue *}’ but argument is of type ‘Queue {aka struct Queue}’
+ int receive_message(Queue *queue, char *message, int message_lenght) {
+     ^~~~~~~~~~~~~~~
+src/subdir.mk:30: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+09:03:25 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:03:25 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:03:26 **** Incremental Build of configuration Debug for project simu_test_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘send_message’:
+../src/main.c:217:21: warning: passing argument 2 of ‘add_element’ makes integer from pointer without a cast [-Wint-conversion]
+  add_element(queue, message);
+                     ^~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:37:6: note: expected ‘int’ but argument is of type ‘char *’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/main.c:218:17: error: ‘Queue {aka struct Queue}’ has no member named ‘semaphore’
+  sem_post(&queue->semaphore);
+                 ^~
+../src/main.c: In function ‘receive_message’:
+../src/main.c:222:17: error: ‘Queue {aka struct Queue}’ has no member named ‘semaphore’
+  sem_wait(&queue->semaphore);
+                 ^~
+../src/main.c:223:21: error: too many arguments to function ‘pop_element’
+  int return_value = pop_element(queue, message);
+                     ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:38:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c: In function ‘queue_init’:
+../src/main.c:228:16: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+  Queue *list = malloc(sizeof(*list));
+                ^~~~~~
+../src/main.c:228:16: warning: incompatible implicit declaration of built-in function ‘malloc’
+../src/main.c:228:16: note: include ‘<stdlib.h>’ or provide a declaration of ‘malloc’
+../src/main.c:229:6: error: ‘Queue {aka struct Queue}’ has no member named ‘first’
+  list->first = NULL;
+      ^~
+../src/main.c:230:6: error: ‘Queue {aka struct Queue}’ has no member named ‘last’
+  list->last = NULL;
+      ^~
+../src/main.c: At top level:
+../src/main.c:320:7: error: conflicting types for ‘send_message’
+ void *send_message(void *arg){
+       ^~~~~~~~~~~~
+../src/main.c:216:6: note: previous definition of ‘send_message’ was here
+src/subdir.mk:30: recipe for target 'src/main.o' failed
+ void send_message(Queue *queue, char *message, int message_lenght) {
+      ^~~~~~~~~~~~
+../src/main.c: In function ‘send_message’:
+../src/main.c:333:23: error: incompatible type for argument 1 of ‘receive_message’
+   if (receive_message(p_queue_display, (char *) &user_input, MSG_LENGHT)
+                       ^~~~~~~~~~~~~~~
+../src/main.c:221:5: note: expected ‘Queue * {aka struct Queue *}’ but argument is of type ‘Queue {aka struct Queue}’
+ int receive_message(Queue *queue, char *message, int message_lenght) {
+     ^~~~~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+09:10:02 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:10:02 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:10:03 **** Incremental Build of configuration Debug for project simu_test_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘send_message’:
+../src/main.c:217:21: warning: passing argument 2 of ‘add_element’ makes integer from pointer without a cast [-Wint-conversion]
+  add_element(queue, message);
+                     ^~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:37:6: note: expected ‘int’ but argument is of type ‘char *’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/main.c:218:17: error: ‘Queue {aka struct Queue}’ has no member named ‘semaphore’
+  sem_post(&queue->semaphore);
+                 ^~
+../src/main.c: In function ‘receive_message’:
+../src/main.c:222:17: error: ‘Queue {aka struct Queue}’ has no member named ‘semaphore’
+  sem_wait(&queue->semaphore);
+                 ^~
+../src/main.c:223:21: error: too many arguments to function ‘pop_element’
+  int return_value = pop_element(queue, message);
+                     ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:38:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c: In function ‘queue_init’:
+../src/main.c:228:16: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+  Queue *list = malloc(sizeof(*list));
+                ^~~~~~
+../src/main.c:228:16: warning: incompatible implicit declaration of built-in function ‘malloc’
+../src/main.c:228:16: note: include ‘<stdlib.h>’ or provide a declaration of ‘malloc’
+../src/main.c:229:6: error: ‘Queue {aka struct Queue}’ has no member named ‘first’
+  list->first = NULL;
+      ^~
+../src/main.c:230:6: error: ‘Queue {aka struct Queue}’ has no member named ‘last’
+  list->last = NULL;
+      ^~
+../src/main.c: At top level:
+../src/main.c:320:7: error: conflicting types for ‘send_message’
+ void *send_message(void *arg){
+       ^~~~~~~~~~~~
+../src/main.c:216:6: note: previous definition of ‘send_message’ was here
+ void send_message(Queue *queue, char *message, int message_lenght) {
+      ^~~~~~~~~~~~
+../src/main.c: In function ‘send_message’:
+../src/main.c:333:23: error: incompatible type for argument 1 of ‘receive_message’
+   if (receive_message(p_queue_display, (char *) &user_input, MSG_LENGHT)
+                       ^~~~~~~~~~~~~~~
+../src/main.c:221:5: note: expected ‘Queue * {aka struct Queue *}’ but argument is of type ‘Queue {aka struct Queue}’
+ int receive_message(Queue *queue, char *message, int message_lenght) {
+     ^~~~~~~~~~~~~~~
+src/subdir.mk:30: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+../src/fifo.c:20:6: error: conflicting types for ‘add_element’
+ void add_element(struct Queue *queue, char *val_number){
+      ^~~~~~~~~~~
+In file included from ../src/fifo.c:10:0:
+../src/fifo.h:37:6: note: previous declaration of ‘add_element’ was here
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/fifo.c: In function ‘add_element’:
+../src/fifo.c:31:22: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+  new_element->number = val_number;
+                      ^
+src/subdir.mk:30: recipe for target 'src/fifo.o' failed
+make: *** [src/fifo.o] Error 1
+09:31:28 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:31:43 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:44:26 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:42:5: error: variably modified ‘actual_matrice’ at file scope
+ RGB actual_matrice[TabSize][TabSize];
+     ^~~~~~~~~~~~~~
+../src/main.c:42:5: error: variably modified ‘actual_matrice’ at file scope
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+09:45:13 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:42:12: error: variably modified ‘actual_matrice’ at file scope
+ static RGB actual_matrice[TabSize][TabSize];
+            ^~~~~~~~~~~~~~
+../src/main.c:42:12: error: variably modified ‘actual_matrice’ at file scope
+make: *** [src/main.o] Error 1
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+09:47:02 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+09:47:52 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:50:22 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+09:50:56 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+09:51:10 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:52:59 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+09:53:01 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:55:00 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+09:55:07 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:55:45 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+09:55:49 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:56:21 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:57:05 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:57:28 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:57:30 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:40:10 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+10:40:17 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:40:54 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:50:05 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘send_message’:
+../src/main.c:283:21: warning: passing argument 2 of ‘add_element’ makes integer from pointer without a cast [-Wint-conversion]
+  add_element(queue, message);
+                     ^~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:37:6: note: expected ‘int’ but argument is of type ‘char *’
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/main.c:284:17: error: ‘Queue {aka struct Queue}’ has no member named ‘semaphore’
+  sem_post(&queue->semaphore);
+                 ^~
+../src/main.c: In function ‘receive_message’:
+../src/main.c:288:17: error: ‘Queue {aka struct Queue}’ has no member named ‘semaphore’
+  sem_wait(&queue->semaphore);
+                 ^~
+../src/main.c:289:21: error: too many arguments to function ‘pop_element’
+  int return_value = pop_element(queue, message);
+                     ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:38:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c: At top level:
+../src/main.c:378:7: error: conflicting types for ‘send_message’
+ void *send_message(void *arg){
+       ^~~~~~~~~~~~
+../src/main.c:282:6: note: previous definition of ‘send_message’ was here
+ void send_message(Queue *queue, char *message, int message_lenght) {
+      ^~~~~~~~~~~~
+make: *** [src/main.o] Error 1
+10:50:06 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+In file included from ../src/game.c:8:0:
+../src/game.h:54:57: warning: ‘yellow’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+                                                         ^~~~~~
+../src/game.h:54:31: warning: ‘purple’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+                               ^~~~~~
+../src/game.h:54:10: warning: ‘red’ defined but not used [-Wunused-variable]
+   255 }, red = { 255, 0, 0 }, purple = { 255, 0, 255 }, yellow = { 255,
+          ^~~
+../src/game.h:53:41: warning: ‘green’ defined but not used [-Wunused-variable]
+ static color white = { 255, 255, 255 }, green = { 0, 255, 0 }, blue = { 0, 0,
+                                         ^~~~~
+../src/game.h:53:14: warning: ‘white’ defined but not used [-Wunused-variable]
+ static color white = { 255, 255, 255 }, green = { 0, 255, 0 }, blue = { 0, 0,
+              ^~~~~
+gcc  -o "simu_new_multithread"  ./src/debug.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+10:55:03 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:3:0:
+../src/fifo.h:30:2: error: unknown type name ‘pthread_mutex_t’
+  pthread_mutex_t mutex_number;
+  ^~~~~~~~~~~~~~~
+../src/fifo.h:31:2: error: unknown type name ‘sem_t’
+  sem_t semaphore;
+  ^~~~~
+../src/fifo.h:38:1: error: unknown type name ‘sem_t’
+ sem_t semaphore_input;
+ ^~~~~
+../src/fifo.h:39:1: error: unknown type name ‘sem_t’
+ sem_t semaphore_display;
+ ^~~~~
+In file included from ../src/fifo.c:10:0:
+../src/fifo.h:31:2: error: unknown type name ‘sem_t’
+  sem_t semaphore;
+  ^~~~~
+../src/fifo.h:38:1: error: unknown type name ‘sem_t’; did you mean ‘key_t’?
+ sem_t semaphore_input;
+ ^~~~~
+ key_t
+../src/fifo.h:39:1: error: unknown type name ‘sem_t’; did you mean ‘key_t’?
+ sem_t semaphore_display;
+ ^~~~~
+ key_t
+../src/main.c: In function ‘send_message’:
+../src/main.c:279:21: warning: passing argument 2 of ‘add_element’ makes integer from pointer without a cast [-Wint-conversion]
+  add_element(queue, message);
+                     ^~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:44:6: note: expected ‘int’ but argument is of type ‘char *’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/main.c:280:11: warning: passing argument 1 of ‘sem_post’ from incompatible pointer type [-Wincompatible-pointer-types]
+  sem_post(&queue->semaphore);
+           ^
+make: *** [src/fifo.o] Error 1
+make: *** Waiting for unfinished jobs....
+src/subdir.mk:24: recipe for target 'src/fifo.o' failed
+In file included from ../src/main.c:6:0:
+/usr/include/semaphore.h:68:12: note: expected ‘sem_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int sem_post (sem_t *__sem) __THROWNL;
+            ^~~~~~~~
+../src/main.c: In function ‘receive_message’:
+../src/main.c:284:11: warning: passing argument 1 of ‘sem_wait’ from incompatible pointer type [-Wincompatible-pointer-types]
+  sem_wait(&queue->semaphore);
+           ^
+In file included from ../src/main.c:6:0:
+/usr/include/semaphore.h:53:12: note: expected ‘sem_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int sem_wait (sem_t *__sem);
+            ^~~~~~~~
+../src/main.c:285:21: error: too many arguments to function ‘pop_element’
+  int return_value = pop_element(queue, message);
+                     ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:45:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c: In function ‘read_input’:
+../src/main.c:327:15: warning: passing argument 1 of ‘sem_post’ from incompatible pointer type [-Wincompatible-pointer-types]
+      sem_post(&semaphore_input);
+               ^
+In file included from ../src/main.c:6:0:
+/usr/include/semaphore.h:68:12: note: expected ‘sem_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int sem_post (sem_t *__sem) __THROWNL;
+            ^~~~~~~~
+../src/main.c:331:15: warning: passing argument 1 of ‘sem_post’ from incompatible pointer type [-Wincompatible-pointer-types]
+      sem_post(&semaphore_input);
+               ^
+In file included from ../src/main.c:6:0:
+/usr/include/semaphore.h:68:12: note: expected ‘sem_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+ extern int sem_post (sem_t *__sem) __THROWNL;
+            ^~~~~~~~
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:347:12: warning: passing argument 1 of ‘sem_wait’ from incompatible pointer type [-Wincompatible-pointer-types]
+   sem_wait(&semaphore_input);
+            ^
+In file included from ../src/main.c:6:0:
+/usr/include/semaphore.h:53:12: note: expected ‘sem_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int sem_wait (sem_t *__sem);
+            ^~~~~~~~
+../src/main.c:350:24: error: ‘mutex_number’ undeclared (first use in this function); did you mean ‘set_number’?
+    pthread_mutex_lock(&mutex_number);
+                        ^~~~~~~~~~~~
+                        set_number
+../src/main.c:350:24: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:357:13: warning: passing argument 1 of ‘sem_post’ from incompatible pointer type [-Wincompatible-pointer-types]
+    sem_post(&semaphore_display);
+             ^
+In file included from ../src/main.c:6:0:
+/usr/include/semaphore.h:68:12: note: expected ‘sem_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int sem_post (sem_t *__sem) __THROWNL;
+            ^~~~~~~~
+../src/main.c:367:13: warning: passing argument 1 of ‘sem_post’ from incompatible pointer type [-Wincompatible-pointer-types]
+    sem_post(&semaphore_display);
+             ^
+In file included from ../src/main.c:6:0:
+/usr/include/semaphore.h:68:12: note: expected ‘sem_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int sem_post (sem_t *__sem) __THROWNL;
+            ^~~~~~~~
+../src/main.c: At top level:
+../src/main.c:374:7: error: conflicting types for ‘send_message’
+ void *send_message(void *arg){
+       ^~~~~~~~~~~~
+../src/main.c:278:6: note: previous definition of ‘send_message’ was here
+ void send_message(Queue *queue, char *message, int message_lenght) {
+      ^~~~~~~~~~~~
+../src/main.c: In function ‘send_message’:
+../src/main.c:378:12: warning: passing argument 1 of ‘sem_wait’ from incompatible pointer type [-Wincompatible-pointer-types]
+   sem_wait(&semaphore_display);
+            ^
+In file included from ../src/main.c:6:0:
+/usr/include/semaphore.h:53:12: note: expected ‘sem_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int sem_wait (sem_t *__sem);
+            ^~~~~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:393:11: warning: passing argument 1 of ‘sem_init’ from incompatible pointer type [-Wincompatible-pointer-types]
+  sem_init(&semaphore_input, 0, 0);
+           ^
+In file included from ../src/main.c:6:0:
+/usr/include/semaphore.h:35:12: note: expected ‘sem_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int sem_init (sem_t *__sem, int __pshared, unsigned int __value)
+            ^~~~~~~~
+../src/main.c:394:11: warning: passing argument 1 of ‘sem_init’ from incompatible pointer type [-Wincompatible-pointer-types]
+  sem_init(&semaphore_display, 0, 0);
+           ^
+In file included from ../src/main.c:6:0:
+/usr/include/semaphore.h:35:12: note: expected ‘sem_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int sem_init (sem_t *__sem, int __pshared, unsigned int __value)
+            ^~~~~~~~
+../src/main.c:408:14: warning: passing argument 1 of ‘sem_destroy’ from incompatible pointer type [-Wincompatible-pointer-types]
+  sem_destroy(&semaphore_input);
+              ^
+In file included from ../src/main.c:6:0:
+/usr/include/semaphore.h:38:12: note: expected ‘sem_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int sem_destroy (sem_t *__sem) __THROW;
+            ^~~~~~~~~~~
+../src/main.c:409:14: warning: passing argument 1 of ‘sem_destroy’ from incompatible pointer type [-Wincompatible-pointer-types]
+  sem_destroy(&semaphore_display);
+              ^
+In file included from ../src/main.c:6:0:
+/usr/include/semaphore.h:38:12: note: expected ‘sem_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int sem_destroy (sem_t *__sem) __THROW;
+            ^~~~~~~~~~~
+make: *** [src/main.o] Error 1
+10:55:04 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:55:44 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/fifo.c:10:0:
+../src/fifo.h:31:2: error: unknown type name ‘sem_t’
+  sem_t semaphore;
+  ^~~~~
+../src/fifo.h:38:1: error: unknown type name ‘sem_t’; did you mean ‘key_t’?
+ sem_t semaphore_input;
+ ^~~~~
+ key_t
+../src/fifo.h:39:1: error: unknown type name ‘sem_t’; did you mean ‘key_t’?
+ sem_t semaphore_display;
+ ^~~~~
+ key_t
+In file included from ../src/main.c:3:0:
+../src/fifo.h:30:2: error: unknown type name ‘pthread_mutex_t’
+  pthread_mutex_t mutex;
+  ^~~~~~~~~~~~~~~
+../src/fifo.h:31:2: error: unknown type name ‘sem_t’
+  sem_t semaphore;
+  ^~~~~
+../src/fifo.h:38:1: error: unknown type name ‘sem_t’
+ sem_t semaphore_input;
+ ^~~~~
+../src/fifo.h:39:1: error: unknown type name ‘sem_t’
+ sem_t semaphore_display;
+ ^~~~~
+src/subdir.mk:24: recipe for target 'src/fifo.o' failed
+make: *** [src/fifo.o] Error 1
+make: *** Waiting for unfinished jobs....
+../src/main.c: In function ‘send_message’:
+../src/main.c:280:21: warning: passing argument 2 of ‘add_element’ makes integer from pointer without a cast [-Wint-conversion]
+  add_element(queue, message);
+                     ^~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:44:6: note: expected ‘int’ but argument is of type ‘char *’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/main.c:281:11: warning: passing argument 1 of ‘sem_post’ from incompatible pointer type [-Wincompatible-pointer-types]
+  sem_post(&queue->semaphore);
+           ^
+In file included from ../src/main.c:6:0:
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+/usr/include/semaphore.h:68:12: note: expected ‘sem_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int sem_post (sem_t *__sem) __THROWNL;
+            ^~~~~~~~
+../src/main.c: In function ‘receive_message’:
+../src/main.c:285:11: warning: passing argument 1 of ‘sem_wait’ from incompatible pointer type [-Wincompatible-pointer-types]
+  sem_wait(&queue->semaphore);
+           ^
+In file included from ../src/main.c:6:0:
+/usr/include/semaphore.h:53:12: note: expected ‘sem_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int sem_wait (sem_t *__sem);
+            ^~~~~~~~
+../src/main.c:286:21: error: too many arguments to function ‘pop_element’
+  int return_value = pop_element(queue, message);
+                     ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:45:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c: In function ‘read_input’:
+../src/main.c:328:15: warning: passing argument 1 of ‘sem_post’ from incompatible pointer type [-Wincompatible-pointer-types]
+      sem_post(&semaphore_input);
+               ^
+In file included from ../src/main.c:6:0:
+/usr/include/semaphore.h:68:12: note: expected ‘sem_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int sem_post (sem_t *__sem) __THROWNL;
+            ^~~~~~~~
+../src/main.c:332:15: warning: passing argument 1 of ‘sem_post’ from incompatible pointer type [-Wincompatible-pointer-types]
+      sem_post(&semaphore_input);
+               ^
+In file included from ../src/main.c:6:0:
+/usr/include/semaphore.h:68:12: note: expected ‘sem_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int sem_post (sem_t *__sem) __THROWNL;
+            ^~~~~~~~
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:348:12: warning: passing argument 1 of ‘sem_wait’ from incompatible pointer type [-Wincompatible-pointer-types]
+   sem_wait(&semaphore_input);
+            ^
+In file included from ../src/main.c:6:0:
+/usr/include/semaphore.h:53:12: note: expected ‘sem_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int sem_wait (sem_t *__sem);
+            ^~~~~~~~
+../src/main.c:358:13: warning: passing argument 1 of ‘sem_post’ from incompatible pointer type [-Wincompatible-pointer-types]
+    sem_post(&semaphore_display);
+             ^
+In file included from ../src/main.c:6:0:
+/usr/include/semaphore.h:68:12: note: expected ‘sem_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int sem_post (sem_t *__sem) __THROWNL;
+            ^~~~~~~~
+../src/main.c:368:13: warning: passing argument 1 of ‘sem_post’ from incompatible pointer type [-Wincompatible-pointer-types]
+    sem_post(&semaphore_display);
+             ^
+In file included from ../src/main.c:6:0:
+/usr/include/semaphore.h:68:12: note: expected ‘sem_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int sem_post (sem_t *__sem) __THROWNL;
+            ^~~~~~~~
+../src/main.c: At top level:
+../src/main.c:375:7: error: conflicting types for ‘send_message’
+ void *send_message(void *arg){
+       ^~~~~~~~~~~~
+../src/main.c:279:6: note: previous definition of ‘send_message’ was here
+ void send_message(Queue *queue, char *message, int message_lenght) {
+      ^~~~~~~~~~~~
+../src/main.c: In function ‘send_message’:
+../src/main.c:379:12: warning: passing argument 1 of ‘sem_wait’ from incompatible pointer type [-Wincompatible-pointer-types]
+   sem_wait(&semaphore_display);
+            ^
+In file included from ../src/main.c:6:0:
+/usr/include/semaphore.h:53:12: note: expected ‘sem_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int sem_wait (sem_t *__sem);
+            ^~~~~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:394:11: warning: passing argument 1 of ‘sem_init’ from incompatible pointer type [-Wincompatible-pointer-types]
+  sem_init(&semaphore_input, 0, 0);
+           ^
+In file included from ../src/main.c:6:0:
+/usr/include/semaphore.h:35:12: note: expected ‘sem_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int sem_init (sem_t *__sem, int __pshared, unsigned int __value)
+            ^~~~~~~~
+../src/main.c:395:11: warning: passing argument 1 of ‘sem_init’ from incompatible pointer type [-Wincompatible-pointer-types]
+  sem_init(&semaphore_display, 0, 0);
+           ^
+In file included from ../src/main.c:6:0:
+/usr/include/semaphore.h:35:12: note: expected ‘sem_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int sem_init (sem_t *__sem, int __pshared, unsigned int __value)
+            ^~~~~~~~
+../src/main.c:409:14: warning: passing argument 1 of ‘sem_destroy’ from incompatible pointer type [-Wincompatible-pointer-types]
+  sem_destroy(&semaphore_input);
+              ^
+In file included from ../src/main.c:6:0:
+/usr/include/semaphore.h:38:12: note: expected ‘sem_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int sem_destroy (sem_t *__sem) __THROW;
+            ^~~~~~~~~~~
+../src/main.c:410:14: warning: passing argument 1 of ‘sem_destroy’ from incompatible pointer type [-Wincompatible-pointer-types]
+  sem_destroy(&semaphore_display);
+              ^
+In file included from ../src/main.c:6:0:
+/usr/include/semaphore.h:38:12: note: expected ‘sem_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int sem_destroy (sem_t *__sem) __THROW;
+            ^~~~~~~~~~~
+make: *** [src/main.o] Error 1
+10:55:44 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:56:10 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘send_message’:
+../src/main.c:280:21: warning: passing argument 2 of ‘add_element’ makes integer from pointer without a cast [-Wint-conversion]
+  add_element(queue, message);
+                     ^~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘int’ but argument is of type ‘char *’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/main.c: In function ‘receive_message’:
+../src/main.c:286:21: error: too many arguments to function ‘pop_element’
+  int return_value = pop_element(queue, message);
+                     ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c: At top level:
+../src/main.c:375:7: error: conflicting types for ‘send_message’
+ void *send_message(void *arg){
+       ^~~~~~~~~~~~
+../src/main.c:279:6: note: previous definition of ‘send_message’ was here
+ void send_message(Queue *queue, char *message, int message_lenght) {
+      ^~~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+10:56:10 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:58:55 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘send_message’:
+../src/main.c:280:21: warning: passing argument 2 of ‘add_element’ makes integer from pointer without a cast [-Wint-conversion]
+  add_element(queue, message);
+                     ^~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘int’ but argument is of type ‘char *’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/main.c: In function ‘receive_message’:
+../src/main.c:286:21: error: too many arguments to function ‘pop_element’
+  int return_value = pop_element(queue, message);
+                     ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+10:58:56 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:00:17 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/fifo.c:20:6: error: conflicting types for ‘add_element’
+ void add_element(struct Queue *queue, char val_number){
+      ^~~~~~~~~~~
+In file included from ../src/fifo.c:10:0:
+../src/fifo.h:46:6: note: previous declaration of ‘add_element’ was here
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/main.c: In function ‘send_message’:
+../src/main.c:280:21: warning: passing argument 2 of ‘add_element’ makes integer from pointer without a cast [-Wint-conversion]
+  add_element(queue, message);
+                     ^~~~~~~
+src/subdir.mk:24: recipe for target 'src/fifo.o' failed
+make: *** [src/fifo.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘int’ but argument is of type ‘char *’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/main.c: In function ‘receive_message’:
+../src/main.c:286:21: error: too many arguments to function ‘pop_element’
+  int return_value = pop_element(queue, message);
+                     ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+11:00:18 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:00:37 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/fifo.c: In function ‘add_element’:
+../src/fifo.c:31:22: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+  new_element->number = val_number;
+                      ^
+../src/main.c: In function ‘receive_message’:
+../src/main.c:286:21: error: too many arguments to function ‘pop_element’
+  int return_value = pop_element(queue, message);
+                     ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c: In function ‘read_input’:
+../src/main.c:327:33: warning: passing argument 2 of ‘add_element’ makes pointer from integer without a cast [-Wint-conversion]
+      add_element(&p_queue_read, down);
+                                 ^~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘char *’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, char *number);
+      ^~~~~~~~~~~
+../src/main.c:331:33: warning: passing argument 2 of ‘add_element’ makes pointer from integer without a cast [-Wint-conversion]
+      add_element(&p_queue_read, up);
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+                                 ^~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘char *’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, char *number);
+      ^~~~~~~~~~~
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:356:34: warning: passing argument 2 of ‘add_element’ makes pointer from integer without a cast [-Wint-conversion]
+    add_element(&p_queue_display, number_value);
+                                  ^~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘char *’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, char *number);
+      ^~~~~~~~~~~
+../src/main.c:366:34: warning: passing argument 2 of ‘add_element’ makes pointer from integer without a cast [-Wint-conversion]
+    add_element(&p_queue_display, number_value);
+                                  ^~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘char *’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, char *number);
+      ^~~~~~~~~~~
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+11:00:38 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:01:05 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/fifo.c: In function ‘pop_element’:
+../src/fifo.c:69:19: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+   content_element = element_to_remove->number; // je recup�re le contenu de l'element
+                   ^
+../src/fifo.c: In function ‘print_queue’:
+../src/fifo.c:89:12: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+   printf("%d -> ", element_to_print->number); // j'affiche le contenu de mon element
+           ~^       ~~~~~~~~~~~~~~~~~~~~~~~~
+           %s
+../src/main.c: In function ‘receive_message’:
+../src/main.c:286:21: error: too many arguments to function ‘pop_element’
+  int return_value = pop_element(queue, message);
+                     ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+../src/fifo.h:47:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c: In function ‘read_input’:
+../src/main.c:327:33: warning: passing argument 2 of ‘add_element’ makes pointer from integer without a cast [-Wint-conversion]
+      add_element(&p_queue_read, down);
+                                 ^~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘char *’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, char *number);
+      ^~~~~~~~~~~
+../src/main.c:331:33: warning: passing argument 2 of ‘add_element’ makes pointer from integer without a cast [-Wint-conversion]
+      add_element(&p_queue_read, up);
+                                 ^~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘char *’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, char *number);
+      ^~~~~~~~~~~
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:356:34: warning: passing argument 2 of ‘add_element’ makes pointer from integer without a cast [-Wint-conversion]
+    add_element(&p_queue_display, number_value);
+                                  ^~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘char *’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, char *number);
+      ^~~~~~~~~~~
+../src/main.c:366:34: warning: passing argument 2 of ‘add_element’ makes pointer from integer without a cast [-Wint-conversion]
+    add_element(&p_queue_display, number_value);
+                                  ^~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘char *’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, char *number);
+      ^~~~~~~~~~~
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+11:01:06 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:01:19 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/fifo.c: In function ‘pop_element’:
+../src/fifo.c:69:19: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+   content_element = element_to_remove->number; // je recup�re le contenu de l'element
+                   ^
+../src/fifo.c: In function ‘print_queue’:
+../src/fifo.c:89:12: warning: format ‘%c’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+   printf("%c -> ", element_to_print->number); // j'affiche le contenu de mon element
+           ~^       ~~~~~~~~~~~~~~~~~~~~~~~~
+           %s
+../src/main.c: In function ‘receive_message’:
+../src/main.c:286:21: error: too many arguments to function ‘pop_element’
+  int return_value = pop_element(queue, message);
+                     ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c: In function ‘read_input’:
+../src/main.c:327:33: warning: passing argument 2 of ‘add_element’ makes pointer from integer without a cast [-Wint-conversion]
+      add_element(&p_queue_read, down);
+                                 ^~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘char *’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, char *number);
+      ^~~~~~~~~~~
+../src/main.c:331:33: warning: passing argument 2 of ‘add_element’ makes pointer from integer without a cast [-Wint-conversion]
+      add_element(&p_queue_read, up);
+                                 ^~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘char *’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, char *number);
+      ^~~~~~~~~~~
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:356:34: warning: passing argument 2 of ‘add_element’ makes pointer from integer without a cast [-Wint-conversion]
+    add_element(&p_queue_display, number_value);
+                                  ^~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘char *’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, char *number);
+      ^~~~~~~~~~~
+../src/main.c:366:34: warning: passing argument 2 of ‘add_element’ makes pointer from integer without a cast [-Wint-conversion]
+    add_element(&p_queue_display, number_value);
+                                  ^~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘char *’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, char *number);
+      ^~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+11:01:19 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:01:25 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/fifo.c: In function ‘pop_element’:
+../src/fifo.c:69:19: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+   content_element = element_to_remove->number; // je recup�re le contenu de l'element
+                   ^
+../src/main.c: In function ‘receive_message’:
+../src/main.c:286:21: error: too many arguments to function ‘pop_element’
+  int return_value = pop_element(queue, message);
+                     ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c: In function ‘read_input’:
+../src/main.c:327:33: warning: passing argument 2 of ‘add_element’ makes pointer from integer without a cast [-Wint-conversion]
+      add_element(&p_queue_read, down);
+                                 ^~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘char *’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, char *number);
+      ^~~~~~~~~~~
+../src/main.c:331:33: warning: passing argument 2 of ‘add_element’ makes pointer from integer without a cast [-Wint-conversion]
+      add_element(&p_queue_read, up);
+                                 ^~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘char *’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, char *number);
+      ^~~~~~~~~~~
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:356:34: warning: passing argument 2 of ‘add_element’ makes pointer from integer without a cast [-Wint-conversion]
+    add_element(&p_queue_display, number_value);
+                                  ^~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘char *’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, char *number);
+      ^~~~~~~~~~~
+../src/main.c:366:34: warning: passing argument 2 of ‘add_element’ makes pointer from integer without a cast [-Wint-conversion]
+    add_element(&p_queue_display, number_value);
+                                  ^~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘char *’ but argument is of type ‘int’
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+ void add_element(struct Queue *queue, char *number);
+      ^~~~~~~~~~~
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+11:01:26 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:01:39 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘receive_message’:
+../src/main.c:286:21: error: too many arguments to function ‘pop_element’
+  int return_value = pop_element(queue, message);
+                     ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c: In function ‘read_input’:
+../src/main.c:327:33: warning: passing argument 2 of ‘add_element’ makes pointer from integer without a cast [-Wint-conversion]
+      add_element(&p_queue_read, down);
+                                 ^~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘char *’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, char *number);
+      ^~~~~~~~~~~
+../src/main.c:331:33: warning: passing argument 2 of ‘add_element’ makes pointer from integer without a cast [-Wint-conversion]
+      add_element(&p_queue_read, up);
+                                 ^~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘char *’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, char *number);
+      ^~~~~~~~~~~
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:356:34: warning: passing argument 2 of ‘add_element’ makes pointer from integer without a cast [-Wint-conversion]
+    add_element(&p_queue_display, number_value);
+                                  ^~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘char *’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, char *number);
+      ^~~~~~~~~~~
+../src/main.c:366:34: warning: passing argument 2 of ‘add_element’ makes pointer from integer without a cast [-Wint-conversion]
+    add_element(&p_queue_display, number_value);
+                                  ^~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘char *’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, char *number);
+      ^~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+../src/fifo.c: In function ‘pop_element’:
+../src/fifo.c:74:9: warning: return makes integer from pointer without a cast [-Wint-conversion]
+  return content_element;
+         ^~~~~~~~~~~~~~~
+11:01:40 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:02:27 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/fifo.c:57:7: error: conflicting types for ‘pop_element’
+ char *pop_element(struct Queue *queue){
+       ^~~~~~~~~~~
+../src/main.c: In function ‘receive_message’:
+../src/main.c:286:23: error: too many arguments to function ‘pop_element’
+  char *return_value = pop_element(queue, message);
+                       ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c:286:23: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  char *return_value = pop_element(queue, message);
+                       ^~~~~~~~~~~
+../src/main.c:287:9: warning: return makes integer from pointer without a cast [-Wint-conversion]
+  return return_value;
+         ^~~~~~~~~~~~
+../src/main.c: In function ‘read_input’:
+../src/main.c:327:33: warning: passing argument 2 of ‘add_element’ makes pointer from integer without a cast [-Wint-conversion]
+      add_element(&p_queue_read, down);
+                                 ^~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘char *’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, char *number);
+      ^~~~~~~~~~~
+../src/main.c:331:33: warning: passing argument 2 of ‘add_element’ makes pointer from integer without a cast [-Wint-conversion]
+      add_element(&p_queue_read, up);
+                                 ^~
+In file included from ../src/fifo.c:10:0:
+../src/fifo.h:47:5: note: previous declaration of ‘pop_element’ was here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/fifo.o' failed
+make: *** [src/fifo.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘char *’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, char *number);
+      ^~~~~~~~~~~
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:356:34: warning: passing argument 2 of ‘add_element’ makes pointer from integer without a cast [-Wint-conversion]
+    add_element(&p_queue_display, number_value);
+                                  ^~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘char *’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, char *number);
+      ^~~~~~~~~~~
+../src/main.c:366:34: warning: passing argument 2 of ‘add_element’ makes pointer from integer without a cast [-Wint-conversion]
+    add_element(&p_queue_display, number_value);
+                                  ^~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘char *’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, char *number);
+      ^~~~~~~~~~~
+make: *** [src/main.o] Error 1
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+11:02:28 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:02:40 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/fifo.c:57:7: error: conflicting types for ‘pop_element’
+ char *pop_element(struct Queue *queue){
+       ^~~~~~~~~~~
+In file included from ../src/fifo.c:10:0:
+../src/fifo.h:47:5: note: previous declaration of ‘pop_element’ was here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+make: *** [src/fifo.o] Error 1
+make: *** Waiting for unfinished jobs....
+src/subdir.mk:24: recipe for target 'src/fifo.o' failed
+../src/main.c: In function ‘receive_message’:
+../src/main.c:286:23: error: too many arguments to function ‘pop_element’
+  char *return_value = pop_element(queue, message);
+                       ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c:286:23: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+  char *return_value = pop_element(queue, message);
+                       ^~~~~~~~~~~
+../src/main.c: In function ‘read_input’:
+../src/main.c:327:33: warning: passing argument 2 of ‘add_element’ makes pointer from integer without a cast [-Wint-conversion]
+      add_element(&p_queue_read, down);
+                                 ^~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘char *’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, char *number);
+      ^~~~~~~~~~~
+../src/main.c:331:33: warning: passing argument 2 of ‘add_element’ makes pointer from integer without a cast [-Wint-conversion]
+      add_element(&p_queue_read, up);
+                                 ^~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘char *’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, char *number);
+      ^~~~~~~~~~~
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:356:34: warning: passing argument 2 of ‘add_element’ makes pointer from integer without a cast [-Wint-conversion]
+    add_element(&p_queue_display, number_value);
+                                  ^~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘char *’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, char *number);
+      ^~~~~~~~~~~
+../src/main.c:366:34: warning: passing argument 2 of ‘add_element’ makes pointer from integer without a cast [-Wint-conversion]
+    add_element(&p_queue_display, number_value);
+                                  ^~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘char *’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, char *number);
+      ^~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+11:02:40 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:06:49 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/fifo.c:57:7: error: conflicting types for ‘pop_element’
+ char *pop_element(struct Queue *queue){
+       ^~~~~~~~~~~
+In file included from ../src/fifo.c:10:0:
+../src/fifo.h:47:5: note: previous declaration of ‘pop_element’ was here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c: In function ‘read_input’:
+../src/main.c:317:33: warning: passing argument 2 of ‘add_element’ makes pointer from integer without a cast [-Wint-conversion]
+      add_element(&p_queue_read, down);
+                                 ^~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘char *’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, char *number);
+      ^~~~~~~~~~~
+../src/main.c:321:33: warning: passing argument 2 of ‘add_element’ makes pointer from integer without a cast [-Wint-conversion]
+      add_element(&p_queue_read, up);
+                                 ^~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘char *’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, char *number);
+      ^~~~~~~~~~~
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:346:34: warning: passing argument 2 of ‘add_element’ makes pointer from integer without a cast [-Wint-conversion]
+    add_element(&p_queue_display, number_value);
+                                  ^~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘char *’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, char *number);
+      ^~~~~~~~~~~
+../src/main.c:356:34: warning: passing argument 2 of ‘add_element’ makes pointer from integer without a cast [-Wint-conversion]
+    add_element(&p_queue_display, number_value);
+                                  ^~~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/fifo.o' failed
+make: *** [src/fifo.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘char *’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, char *number);
+      ^~~~~~~~~~~
+11:06:49 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:08:37 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/fifo.c:10:0:
+../src/fifo.h:45:48: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘)’ token
+ void init_queue(struct Queue *queue);int number);
+                                                ^
+../src/fifo.c: In function ‘add_element’:
+../src/fifo.c:31:22: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  new_element->number = val_number;
+                      ^
+../src/fifo.c: At top level:
+../src/fifo.c:57:6: error: conflicting types for ‘pop_element’
+ char pop_element(struct Queue *queue){
+      ^~~~~~~~~~~
+In file included from ../src/fifo.c:10:0:
+../src/fifo.h:46:5: note: previous declaration of ‘pop_element’ was here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/fifo.c: In function ‘pop_element’:
+../src/fifo.c:74:9: warning: return makes integer from pointer without a cast [-Wint-conversion]
+src/subdir.mk:24: recipe for target 'src/fifo.o' failed
+  return content_element;
+         ^~~~~~~~~~~~~~~
+make: *** [src/fifo.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../src/main.c:3:0:
+../src/fifo.h:45:48: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘)’ token
+ void init_queue(struct Queue *queue);int number);
+                                                ^
+../src/main.c: In function ‘read_input’:
+../src/main.c:317:6: warning: implicit declaration of function ‘add_element’; did you mean ‘pop_element’? [-Wimplicit-function-declaration]
+      add_element(&p_queue_read, down);
+      ^~~~~~~~~~~
+      pop_element
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+11:08:38 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:08:55 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:3:0:
+../src/fifo.h:45:48: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘)’ token
+ void init_queue(struct Queue *queue);int number);
+                                                ^
+In file included from ../src/fifo.c:10:0:
+../src/fifo.h:45:48: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘)’ token
+ void init_queue(struct Queue *queue);int number);
+                                                ^
+../src/fifo.c: In function ‘add_element’:
+../src/fifo.c:31:22: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  new_element->number = val_number;
+                      ^
+../src/main.c: In function ‘read_input’:
+../src/fifo.c: In function ‘pop_element’:
+../src/fifo.c:69:19: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+   content_element = element_to_remove->number; // je recup�re le contenu de l'element
+                   ^
+../src/main.c:317:6: warning: implicit declaration of function ‘add_element’; did you mean ‘pop_element’? [-Wimplicit-function-declaration]
+      add_element(&p_queue_read, down);
+      ^~~~~~~~~~~
+      pop_element
+src/subdir.mk:24: recipe for target 'src/fifo.o' failed
+make: *** [src/fifo.o] Error 1
+make: *** Waiting for unfinished jobs....
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+11:08:56 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:09:32 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/fifo.c: In function ‘add_element’:
+../src/fifo.c:31:22: warning: assignment makes pointer from integer without a cast [-Wint-conversion]
+  new_element->number = val_number;
+                      ^
+../src/fifo.c: In function ‘pop_element’:
+../src/fifo.c:69:19: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+   content_element = element_to_remove->number; // je recup�re le contenu de l'element
+                   ^
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+11:09:33 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:10:15 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/fifo.c: In function ‘print_queue’:
+../src/fifo.c:89:12: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘int’ [-Wformat=]
+   printf("%s -> ", element_to_print->number); // j'affiche le contenu de mon element
+           ~^       ~~~~~~~~~~~~~~~~~~~~~~~~
+           %d
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+11:10:16 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:10:25 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+11:10:26 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:23:03 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘send_message’:
+../src/main.c:286:30: error: incompatible type for argument 2 of ‘add_element’
+   add_element(&p_queue_read, message);
+                              ^~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘Element {aka struct Element}’ but argument is of type ‘Element * {aka struct Element *}’
+ void add_element(struct Queue *queue, Element number);
+      ^~~~~~~~~~~
+../src/main.c: In function ‘read_input’:
+../src/main.c:329:33: error: incompatible type for argument 2 of ‘add_element’
+      add_element(&p_queue_read, down);
+                                 ^~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘Element {aka struct Element}’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, Element number);
+      ^~~~~~~~~~~
+../src/main.c:333:33: error: incompatible type for argument 2 of ‘add_element’
+      add_element(&p_queue_read, up);
+                                 ^~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘Element {aka struct Element}’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, Element number);
+      ^~~~~~~~~~~
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:358:34: error: incompatible type for argument 2 of ‘add_element’
+    add_element(&p_queue_display, number_value);
+                                  ^~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘Element {aka struct Element}’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, Element number);
+      ^~~~~~~~~~~
+../src/main.c:368:34: error: incompatible type for argument 2 of ‘add_element’
+    add_element(&p_queue_display, number_value);
+                                  ^~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘Element {aka struct Element}’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, Element number);
+      ^~~~~~~~~~~
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+11:23:04 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:24:08 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/fifo.c:20:6: error: conflicting types for ‘add_element’
+ void add_element(struct Queue *queue, int val_number){
+      ^~~~~~~~~~~
+In file included from ../src/fifo.c:10:0:
+../src/fifo.h:46:6: note: previous declaration of ‘add_element’ was here
+ void add_element(struct Queue *queue, Element number);
+      ^~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/fifo.o' failed
+make: *** [src/fifo.o] Error 1
+make: *** Waiting for unfinished jobs....
+../src/main.c: In function ‘read_input’:
+../src/main.c:328:33: error: incompatible type for argument 2 of ‘add_element’
+      add_element(&p_queue_read, down);
+                                 ^~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘Element {aka struct Element}’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, Element number);
+      ^~~~~~~~~~~
+../src/main.c:332:33: error: incompatible type for argument 2 of ‘add_element’
+      add_element(&p_queue_read, up);
+                                 ^~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘Element {aka struct Element}’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, Element number);
+      ^~~~~~~~~~~
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:357:34: error: incompatible type for argument 2 of ‘add_element’
+    add_element(&p_queue_display, number_value);
+                                  ^~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘Element {aka struct Element}’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, Element number);
+      ^~~~~~~~~~~
+../src/main.c:367:34: error: incompatible type for argument 2 of ‘add_element’
+    add_element(&p_queue_display, number_value);
+                                  ^~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘Element {aka struct Element}’ but argument is of type ‘int’
+ void add_element(struct Queue *queue, Element number);
+      ^~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+11:24:09 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:24:22 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+11:24:23 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:31:47 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘send_message’:
+../src/main.c:287:15: error: incompatible type for argument 1 of ‘add_element’
+   add_element(p_queue_read, message);
+               ^~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘struct Queue *’ but argument is of type ‘Queue {aka struct Queue}’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/main.c:288:13: error: ‘queue_push_app’ undeclared (first use in this function)
+   sem_post(&queue_push_app->semaphore);
+             ^~~~~~~~~~~~~~
+../src/main.c:288:13: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:291:15: error: ‘queue_app_display’ undeclared (first use in this function); did you mean ‘p_queue_display’?
+   add_element(queue_app_display, message);
+               ^~~~~~~~~~~~~~~~~
+               p_queue_display
+../src/main.c:292:28: error: invalid type argument of ‘->’ (have ‘Queue {aka struct Queue}’)
+   sem_post(&p_queue_display->semaphore);
+                            ^~
+../src/main.c: In function ‘receive_message’:
+../src/main.c:298:25: error: invalid type argument of ‘->’ (have ‘Queue {aka struct Queue}’)
+   sem_wait(&p_queue_read->semaphore);
+                         ^~
+../src/main.c:299:30: error: incompatible type for argument 1 of ‘pop_element’
+   return_value = pop_element(p_queue_read, message);
+                              ^~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: expected ‘struct Queue *’ but argument is of type ‘Queue {aka struct Queue}’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c:299:18: error: too many arguments to function ‘pop_element’
+   return_value = pop_element(p_queue_read, message);
+                  ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c:302:28: error: invalid type argument of ‘->’ (have ‘Queue {aka struct Queue}’)
+   sem_wait(&p_queue_display->semaphore);
+                            ^~
+../src/main.c:303:30: error: incompatible type for argument 1 of ‘pop_element’
+   return_value = pop_element(p_queue_display, message);
+                              ^~~~~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: expected ‘struct Queue *’ but argument is of type ‘Queue {aka struct Queue}’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c:303:18: error: too many arguments to function ‘pop_element’
+   return_value = pop_element(p_queue_display, message);
+                  ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c: In function ‘read_input’:
+../src/main.c:321:19: warning: passing argument 1 of ‘readbutton’ makes pointer from integer without a cast [-Wint-conversion]
+   if ((readbutton(message, 5)) == LCRC_OK){
+                   ^~~~~~~
+In file included from ../src/main.c:2:0:
+../src/leds_control.h:35:6: note: expected ‘char *’ but argument is of type ‘int’
+ char readbutton(char *pReadData, char DataSize);
+      ^~~~~~~~~~
+../src/main.c:324:26: error: subscripted value is neither array nor pointer nor vector
+      printf("%d", message[i]);
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+                          ^
+../src/main.c:327:27: error: subscripted value is neither array nor pointer nor vector
+      printf("%d-", message[i]);
+                           ^
+../src/main.c:331:15: error: subscripted value is neither array nor pointer nor vector
+    if (message[3] == 117){
+               ^
+../src/main.c:332:16: error: subscripted value is neither array nor pointer nor vector
+     if (message[1] == 49){
+                ^
+../src/main.c:335:21: error: subscripted value is neither array nor pointer nor vector
+     else if (message[1] == 50){
+                     ^
+../src/main.c:338:16: error: subscripted value is neither array nor pointer nor vector
+     if (message[2] == 108){
+                ^
+../src/main.c:341:20: error: subscripted value is neither array nor pointer nor vector
+     else if(message[2] == 114){
+                    ^
+../src/main.c:344:20: error: subscripted value is neither array nor pointer nor vector
+     else if(message[2] == 100){
+                    ^
+../src/main.c:348:20: error: subscripted value is neither array nor pointer nor vector
+     else if(message[2] == 117){
+                    ^
+../src/main.c: In function ‘receive_message’:
+../src/main.c:405:5: warning: ‘main’ is normally a non-static function [-Wmain]
+ int main(void){
+     ^~~~
+../src/main.c:431:1: error: expected declaration or statement at end of input
+ }
+ ^
+At top level:
+../src/main.c:405:5: warning: ‘main’ defined but not used [-Wunused-function]
+ int main(void){
+     ^~~~
+../src/main.c:21:13: warning: ‘message’ defined but not used [-Wunused-variable]
+ static char message[5];
+             ^~~~~~~
+make: *** [src/main.o] Error 1
+11:31:47 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:32:23 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘send_message’:
+../src/main.c:287:15: error: incompatible type for argument 1 of ‘add_element’
+   add_element(p_queue_read, message);
+               ^~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘struct Queue *’ but argument is of type ‘Queue {aka struct Queue}’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/main.c:288:25: error: invalid type argument of ‘->’ (have ‘Queue {aka struct Queue}’)
+   sem_post(&p_queue_read->semaphore);
+                         ^~
+../src/main.c:291:15: error: incompatible type for argument 1 of ‘add_element’
+   add_element(p_queue_display, message);
+               ^~~~~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘struct Queue *’ but argument is of type ‘Queue {aka struct Queue}’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/main.c:292:28: error: invalid type argument of ‘->’ (have ‘Queue {aka struct Queue}’)
+   sem_post(&p_queue_display->semaphore);
+                            ^~
+../src/main.c: In function ‘receive_message’:
+../src/main.c:298:25: error: invalid type argument of ‘->’ (have ‘Queue {aka struct Queue}’)
+   sem_wait(&p_queue_read->semaphore);
+                         ^~
+../src/main.c:299:30: error: incompatible type for argument 1 of ‘pop_element’
+   return_value = pop_element(p_queue_read, message);
+                              ^~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: expected ‘struct Queue *’ but argument is of type ‘Queue {aka struct Queue}’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c:299:18: error: too many arguments to function ‘pop_element’
+   return_value = pop_element(p_queue_read, message);
+                  ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c:302:28: error: invalid type argument of ‘->’ (have ‘Queue {aka struct Queue}’)
+   sem_wait(&p_queue_display->semaphore);
+                            ^~
+../src/main.c:303:30: error: incompatible type for argument 1 of ‘pop_element’
+   return_value = pop_element(p_queue_display, message);
+                              ^~~~~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: expected ‘struct Queue *’ but argument is of type ‘Queue {aka struct Queue}’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c:303:18: error: too many arguments to function ‘pop_element’
+   return_value = pop_element(p_queue_display, message);
+                  ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: declared here
+ int pop_element(struct Queue *queue);
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+     ^~~~~~~~~~~
+../src/main.c: In function ‘read_input’:
+../src/main.c:321:19: warning: passing argument 1 of ‘readbutton’ makes pointer from integer without a cast [-Wint-conversion]
+   if ((readbutton(message, 5)) == LCRC_OK){
+                   ^~~~~~~
+In file included from ../src/main.c:2:0:
+../src/leds_control.h:35:6: note: expected ‘char *’ but argument is of type ‘int’
+ char readbutton(char *pReadData, char DataSize);
+      ^~~~~~~~~~
+../src/main.c:324:26: error: subscripted value is neither array nor pointer nor vector
+      printf("%d", message[i]);
+                          ^
+../src/main.c:327:27: error: subscripted value is neither array nor pointer nor vector
+      printf("%d-", message[i]);
+                           ^
+../src/main.c:331:15: error: subscripted value is neither array nor pointer nor vector
+    if (message[3] == 117){
+               ^
+../src/main.c:332:16: error: subscripted value is neither array nor pointer nor vector
+     if (message[1] == 49){
+                ^
+../src/main.c:335:21: error: subscripted value is neither array nor pointer nor vector
+     else if (message[1] == 50){
+                     ^
+../src/main.c:338:16: error: subscripted value is neither array nor pointer nor vector
+     if (message[2] == 108){
+                ^
+../src/main.c:341:20: error: subscripted value is neither array nor pointer nor vector
+     else if(message[2] == 114){
+                    ^
+../src/main.c:344:20: error: subscripted value is neither array nor pointer nor vector
+     else if(message[2] == 100){
+                    ^
+../src/main.c:348:20: error: subscripted value is neither array nor pointer nor vector
+     else if(message[2] == 117){
+                    ^
+../src/main.c: In function ‘receive_message’:
+../src/main.c:405:5: warning: ‘main’ is normally a non-static function [-Wmain]
+ int main(void){
+     ^~~~
+../src/main.c:431:1: error: expected declaration or statement at end of input
+ }
+ ^
+At top level:
+../src/main.c:405:5: warning: ‘main’ defined but not used [-Wunused-function]
+ int main(void){
+     ^~~~
+../src/main.c:21:13: warning: ‘message’ defined but not used [-Wunused-variable]
+ static char message[5];
+             ^~~~~~~
+make: *** [src/main.o] Error 1
+11:32:24 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:33:29 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘send_message’:
+../src/main.c:287:15: error: incompatible type for argument 1 of ‘add_element’
+   add_element(p_queue_read, message);
+               ^~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘struct Queue *’ but argument is of type ‘Queue {aka struct Queue}’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/main.c:288:25: error: invalid type argument of ‘->’ (have ‘Queue {aka struct Queue}’)
+   sem_post(&p_queue_read->semaphore);
+                         ^~
+../src/main.c:291:15: error: incompatible type for argument 1 of ‘add_element’
+   add_element(p_queue_display, message);
+               ^~~~~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:46:6: note: expected ‘struct Queue *’ but argument is of type ‘Queue {aka struct Queue}’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/main.c:292:28: error: invalid type argument of ‘->’ (have ‘Queue {aka struct Queue}’)
+   sem_post(&p_queue_display->semaphore);
+                            ^~
+../src/main.c: In function ‘receive_message’:
+../src/main.c:299:25: error: invalid type argument of ‘->’ (have ‘Queue {aka struct Queue}’)
+   sem_wait(&p_queue_read->semaphore);
+                         ^~
+../src/main.c:300:30: error: incompatible type for argument 1 of ‘pop_element’
+   return_value = pop_element(p_queue_read, message);
+                              ^~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: expected ‘struct Queue *’ but argument is of type ‘Queue {aka struct Queue}’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c:300:18: error: too many arguments to function ‘pop_element’
+   return_value = pop_element(p_queue_read, message);
+                  ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c:303:28: error: invalid type argument of ‘->’ (have ‘Queue {aka struct Queue}’)
+   sem_wait(&p_queue_display->semaphore);
+                            ^~
+../src/main.c:304:30: error: incompatible type for argument 1 of ‘pop_element’
+   return_value = pop_element(p_queue_display, message);
+                              ^~~~~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: expected ‘struct Queue *’ but argument is of type ‘Queue {aka struct Queue}’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c:304:18: error: too many arguments to function ‘pop_element’
+   return_value = pop_element(p_queue_display, message);
+                  ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: declared here
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+make: *** [src/main.o] Error 1
+11:33:30 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:34:30 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘send_message’:
+../src/main.c:288:25: error: invalid type argument of ‘->’ (have ‘Queue {aka struct Queue}’)
+   sem_post(&p_queue_read->semaphore);
+                         ^~
+../src/main.c:292:28: error: invalid type argument of ‘->’ (have ‘Queue {aka struct Queue}’)
+   sem_post(&p_queue_display->semaphore);
+                            ^~
+../src/main.c: In function ‘receive_message’:
+../src/main.c:299:25: error: invalid type argument of ‘->’ (have ‘Queue {aka struct Queue}’)
+   sem_wait(&p_queue_read->semaphore);
+                         ^~
+../src/main.c:300:30: error: incompatible type for argument 1 of ‘pop_element’
+   return_value = pop_element(p_queue_read, message);
+                              ^~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: expected ‘struct Queue *’ but argument is of type ‘Queue {aka struct Queue}’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c:300:18: error: too many arguments to function ‘pop_element’
+   return_value = pop_element(p_queue_read, message);
+                  ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c:303:28: error: invalid type argument of ‘->’ (have ‘Queue {aka struct Queue}’)
+   sem_wait(&p_queue_display->semaphore);
+                            ^~
+../src/main.c:304:30: error: incompatible type for argument 1 of ‘pop_element’
+   return_value = pop_element(p_queue_display, message);
+                              ^~~~~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: expected ‘struct Queue *’ but argument is of type ‘Queue {aka struct Queue}’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c:304:18: error: too many arguments to function ‘pop_element’
+   return_value = pop_element(p_queue_display, message);
+                  ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+make: *** [src/main.o] Error 1
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+11:34:31 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:34:41 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘send_message’:
+../src/main.c:288:25: error: invalid type argument of ‘->’ (have ‘Queue {aka struct Queue}’)
+   sem_post(&p_queue_read->semaphore);
+                         ^~
+../src/main.c:292:28: error: invalid type argument of ‘->’ (have ‘Queue {aka struct Queue}’)
+   sem_post(&p_queue_display->semaphore);
+                            ^~
+../src/main.c: In function ‘receive_message’:
+../src/main.c:299:25: error: invalid type argument of ‘->’ (have ‘Queue {aka struct Queue}’)
+   sem_wait(&p_queue_read->semaphore);
+                         ^~
+../src/main.c:300:18: error: too many arguments to function ‘pop_element’
+   return_value = pop_element(&p_queue_read, message);
+                  ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c:303:28: error: invalid type argument of ‘->’ (have ‘Queue {aka struct Queue}’)
+   sem_wait(&p_queue_display->semaphore);
+                            ^~
+../src/main.c:304:18: error: too many arguments to function ‘pop_element’
+   return_value = pop_element(&p_queue_display, message);
+                  ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+make: *** [src/main.o] Error 1
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+11:34:42 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:35:25 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘send_message’:
+../src/main.c:288:25: error: invalid type argument of ‘->’ (have ‘Queue {aka struct Queue}’)
+   sem_post(&p_queue_read->semaphore);
+                         ^~
+../src/main.c: In function ‘receive_message’:
+../src/main.c:299:25: error: invalid type argument of ‘->’ (have ‘Queue {aka struct Queue}’)
+   sem_wait(&p_queue_read->semaphore);
+                         ^~
+../src/main.c:300:18: error: too many arguments to function ‘pop_element’
+   return_value = pop_element(&p_queue_read, message);
+                  ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c:303:28: error: invalid type argument of ‘->’ (have ‘Queue {aka struct Queue}’)
+   sem_wait(&p_queue_display->semaphore);
+                            ^~
+../src/main.c:304:18: error: too many arguments to function ‘pop_element’
+   return_value = pop_element(&p_queue_display, message);
+                  ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+11:35:25 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:36:01 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘receive_message’:
+../src/main.c:300:18: error: too many arguments to function ‘pop_element’
+   return_value = pop_element(&p_queue_read, message);
+                  ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c:304:18: error: too many arguments to function ‘pop_element’
+   return_value = pop_element(&p_queue_display, message);
+                  ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+11:36:01 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:36:38 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘change_number_app’:
+../src/main.c:368:17: error: too few arguments to function ‘pop_element’
+   instruction = pop_element(&p_queue_read);
+                 ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: declared here
+ int pop_element(struct Queue *queue, int message);
+     ^~~~~~~~~~~
+../src/main.c: In function ‘show_board’:
+../src/main.c:399:23: error: too few arguments to function ‘pop_element’
+   number_to_display = pop_element(&p_queue_display);
+                       ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:47:5: note: declared here
+ int pop_element(struct Queue *queue, int message);
+     ^~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+11:36:38 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:37:39 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+11:37:40 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:37:43 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:37:44 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:40:58 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:346:19: error: incompatible type for argument 1 of ‘send_message’
+      send_message(&p_queue_read, down, 1);
+                   ^
+../src/main.c:285:6: note: expected ‘QUEUE_ID {aka enum <anonymous>}’ but argument is of type ‘Queue * {aka struct Queue *}’
+ void send_message(QUEUE_ID queue, int message, int message_lenght) {
+      ^~~~~~~~~~~~
+../src/main.c:349:19: error: incompatible type for argument 1 of ‘send_message’
+      send_message(&p_queue_read, up, 1);
+                   ^
+../src/main.c:285:6: note: expected ‘QUEUE_ID {aka enum <anonymous>}’ but argument is of type ‘Queue * {aka struct Queue *}’
+ void send_message(QUEUE_ID queue, int message, int message_lenght) {
+      ^~~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+11:40:59 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:41:19 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:346:19: error: invalid type argument of unary ‘*’ (have ‘Queue {aka struct Queue}’)
+      send_message(*p_queue_read, down, 1);
+                   ^~~~~~~~~~~~~
+../src/main.c:349:19: error: invalid type argument of unary ‘*’ (have ‘Queue {aka struct Queue}’)
+      send_message(*p_queue_read, up, 1);
+                   ^~~~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+11:41:19 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:41:27 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘read_input’:
+../src/main.c:346:19: error: incompatible type for argument 1 of ‘send_message’
+      send_message(p_queue_read, down, 1);
+                   ^~~~~~~~~~~~
+../src/main.c:285:6: note: expected ‘QUEUE_ID {aka enum <anonymous>}’ but argument is of type ‘Queue {aka struct Queue}’
+ void send_message(QUEUE_ID queue, int message, int message_lenght) {
+      ^~~~~~~~~~~~
+../src/main.c:349:19: error: incompatible type for argument 1 of ‘send_message’
+      send_message(p_queue_read, up, 1);
+                   ^~~~~~~~~~~~
+../src/main.c:285:6: note: expected ‘QUEUE_ID {aka enum <anonymous>}’ but argument is of type ‘Queue {aka struct Queue}’
+ void send_message(QUEUE_ID queue, int message, int message_lenght) {
+      ^~~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+11:41:27 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:42:37 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+11:42:38 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:46:42 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+11:46:42 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:47:05 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:51:17 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘show_board’:
+../src/main.c:398:51: warning: passing argument 2 of ‘receive_message’ makes integer from pointer without a cast [-Wint-conversion]
+   number_to_display = receive_message(QUEUE_SEND, message, 1);
+                                                   ^~~~~~~
+../src/main.c:296:5: note: expected ‘int’ but argument is of type ‘char *’
+ int receive_message(QUEUE_ID queue, int message, int message_lenght) {
+     ^~~~~~~~~~~~~~~
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+11:51:18 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:51:31 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+11:51:32 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:51:49 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:55:52 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+11:55:53 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:56:06 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:58:51 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+11:58:52 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:04:47 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+13:04:48 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:05:10 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:07:48 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘set_number’:
+../src/main.c:282:17: warning: comparison between pointer and integer
+  else if (number==NULL){
+                 ^~
+../src/main.c:284:7: warning: unused variable ‘number’ [-Wunused-variable]
+   RGB number = White;
+       ^~~~~~
+../src/main.c: In function ‘show_board’:
+../src/main.c:403:13: warning: passing argument 1 of ‘set_number’ makes integer from pointer without a cast [-Wint-conversion]
+  set_number(NULL);
+             ^~~~
+../src/main.c:86:6: note: expected ‘int’ but argument is of type ‘void *’
+ void set_number(int number){
+      ^~~~~~~~~~
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+13:07:49 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:08:04 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:08:16 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:08:34 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:08:35 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:08:36 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:09:40 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/leds_control.o ./src/main.o   -lpthread
+13:09:41 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:09:47 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:09:48 **** Incremental Build of configuration Debug for project simu_new_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:09:50 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.

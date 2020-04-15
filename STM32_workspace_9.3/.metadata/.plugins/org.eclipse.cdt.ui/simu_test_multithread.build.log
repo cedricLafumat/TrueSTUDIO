@@ -1,6 +1,71 @@
-15:35:18 **** Incremental Build of configuration Debug for project simu_test_multithread ****
+09:10:03 **** Incremental Build of configuration Debug for project simu_test_multithread ****
 make -j4 all 
-make: Nothing to be done for 'all'.
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘send_message’:
+../src/main.c:217:21: warning: passing argument 2 of ‘add_element’ makes integer from pointer without a cast [-Wint-conversion]
+  add_element(queue, message);
+                     ^~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:37:6: note: expected ‘int’ but argument is of type ‘char *’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/main.c:218:17: error: ‘Queue {aka struct Queue}’ has no member named ‘semaphore’
+  sem_post(&queue->semaphore);
+                 ^~
+../src/main.c: In function ‘receive_message’:
+../src/main.c:222:17: error: ‘Queue {aka struct Queue}’ has no member named ‘semaphore’
+  sem_wait(&queue->semaphore);
+                 ^~
+../src/main.c:223:21: error: too many arguments to function ‘pop_element’
+  int return_value = pop_element(queue, message);
+                     ^~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/fifo.h:38:5: note: declared here
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c: In function ‘queue_init’:
+../src/main.c:228:16: warning: implicit declaration of function ‘malloc’ [-Wimplicit-function-declaration]
+  Queue *list = malloc(sizeof(*list));
+                ^~~~~~
+../src/main.c:228:16: warning: incompatible implicit declaration of built-in function ‘malloc’
+../src/main.c:228:16: note: include ‘<stdlib.h>’ or provide a declaration of ‘malloc’
+../src/main.c:229:6: error: ‘Queue {aka struct Queue}’ has no member named ‘first’
+  list->first = NULL;
+      ^~
+../src/main.c:230:6: error: ‘Queue {aka struct Queue}’ has no member named ‘last’
+  list->last = NULL;
+      ^~
+../src/main.c: At top level:
+../src/main.c:320:7: error: conflicting types for ‘send_message’
+ void *send_message(void *arg){
+       ^~~~~~~~~~~~
+../src/main.c:216:6: note: previous definition of ‘send_message’ was here
+ void send_message(Queue *queue, char *message, int message_lenght) {
+      ^~~~~~~~~~~~
+../src/main.c: In function ‘send_message’:
+../src/main.c:333:23: error: incompatible type for argument 1 of ‘receive_message’
+   if (receive_message(p_queue_display, (char *) &user_input, MSG_LENGHT)
+                       ^~~~~~~~~~~~~~~
+../src/main.c:221:5: note: expected ‘Queue * {aka struct Queue *}’ but argument is of type ‘Queue {aka struct Queue}’
+ int receive_message(Queue *queue, char *message, int message_lenght) {
+     ^~~~~~~~~~~~~~~
+src/subdir.mk:30: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+../src/fifo.c:20:6: error: conflicting types for ‘add_element’
+ void add_element(struct Queue *queue, char *val_number){
+      ^~~~~~~~~~~
+In file included from ../src/fifo.c:10:0:
+../src/fifo.h:37:6: note: previous declaration of ‘add_element’ was here
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/fifo.c: In function ‘add_element’:
+../src/fifo.c:31:22: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+  new_element->number = val_number;
+                      ^
+src/subdir.mk:30: recipe for target 'src/fifo.o' failed
+make: *** [src/fifo.o] Error 1
 
-15:35:18 Build Finished (took 461ms)
+09:10:03 Build Finished (took 520ms)
 

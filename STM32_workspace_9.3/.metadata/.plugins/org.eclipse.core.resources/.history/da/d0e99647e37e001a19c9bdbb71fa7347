@@ -1,0 +1,13 @@
+/*
+ * game.h
+ *
+ *  Created on: 14 Apr 2020
+ *      Author: cedric
+ */
+
+#ifndef GAME_H_
+#define GAME_H_
+
+void set_number(int nbr);
+
+#endif /* GAME_H_ */

@@ -16,20 +16,21 @@
  */
 
 
-static pthread_mutex_t mutex_number;
-static sem_t semaphore_input;
-static sem_t semaphore_display;
 static int TabSize = 7;
 static int number_value = 0;
 static char message[5];
-static Queue p_queue_read;
-static Queue p_queue_display;
+static int max_number = 14;
+static pthread_mutex_t mutex_number;
+
 
 typedef struct{
 	int RValue;
 	int GValue;
 	int BValue;
 }RGB;
+
+
+typedef enum {QUEUE_READ, QUEUE_SEND} QUEUE_ID;
 
 const RGB Red={255,0,0};
 const RGB Green={0,255,0};
@@ -38,6 +39,9 @@ const RGB White={255,255,255};
 const RGB Purple={255,0,255};
 const RGB Yellow={255,255,0};
 const RGB Black={0,0,0};
+
+static RGB actual_matrice[7][7];
+char init_matrice_is_ok = 0;
 
 
 
@@ -52,11 +56,31 @@ const RGB Black={0,0,0};
  */
 
 void SetLedMatrice(RGB **TabLine){
+	int cpt_change_led = 0;
 	for (int line=0; line<TabSize; line++){
 		for(int col = 0; col < TabSize; col++){
-			setLedColor(line+1, col+1, TabLine[line][col].RValue, TabLine[line][col].GValue, TabLine[line][col].BValue);
+			if (init_matrice_is_ok == 0){
+				actual_matrice[line][col].RValue =  TabLine[line][col].RValue;
+				actual_matrice[line][col].GValue =  TabLine[line][col].GValue;
+				actual_matrice[line][col].BValue =  TabLine[line][col].BValue;
+				setLedColor(line+1, col+1, TabLine[line][col].RValue, TabLine[line][col].GValue, TabLine[line][col].BValue);
+				cpt_change_led ++;
+			}
+			else{
+				if ((TabLine[line][col].RValue != actual_matrice[line][col].RValue) ||
+					(TabLine[line][col].GValue != actual_matrice[line][col].GValue) ||
+					(TabLine[line][col].BValue != actual_matrice[line][col].BValue)){
+					setLedColor(line+1, col+1, TabLine[line][col].RValue, TabLine[line][col].GValue, TabLine[line][col].BValue);
+					actual_matrice[line][col].RValue =  TabLine[line][col].RValue;
+					actual_matrice[line][col].GValue =  TabLine[line][col].GValue;
+					actual_matrice[line][col].BValue =  TabLine[line][col].BValue;
+					cpt_change_led ++;
+				}
+			}
 		}
 	}
+	init_matrice_is_ok = 1;
+	printf("nb led mis a jour : %d\n", cpt_change_led);
 }
 
 
@@ -258,6 +282,31 @@ void set_number(int number){
 	}
 }
 
+
+void send_message(QUEUE_ID queue, int message, int message_lenght) {
+	if (queue == QUEUE_READ) {
+		add_element(&p_queue_read, message);
+		sem_post(&p_queue_read.semaphore);
+	}
+	if (queue == QUEUE_SEND) {
+		add_element(&p_queue_display, message);
+		sem_post(&p_queue_display.semaphore);
+	}
+}
+
+int receive_message(QUEUE_ID queue, int message, int message_lenght) {
+	int return_value;
+	if (queue == QUEUE_READ) {
+		sem_wait(&p_queue_read.semaphore);
+		return_value = pop_element(&p_queue_read);
+	}
+	if (queue == QUEUE_SEND) {
+		sem_wait(&p_queue_display.semaphore);
+		return_value = pop_element(&p_queue_display);
+	}
+	return return_value;
+}
+
 /*
  * -----------------------------------------------------------------------------------------------------------------------------------
  *
@@ -295,12 +344,10 @@ void *read_input(void *arg){
 					// right
 				}
 				else if(message[2] == 100){
-					add_element(&p_queue_read, down);
-					sem_post(&semaphore_input);
+					send_message(QUEUE_READ, down, 1);
 				}
 				else if(message[2] == 117){
-					add_element(&p_queue_read, up);
-					sem_post(&semaphore_input);
+					send_message(QUEUE_READ, up, 1);
 				}
 			}
 		}
@@ -310,46 +357,40 @@ void *read_input(void *arg){
 }
 
 
-void *change_number_app(void *arg){
-	//	Queue *p_queue_read = arg;
-	//	Queue *p_queue_send = arg2;
-	int instruction;
-//	int number_value = begin_number;
+void *application(void *arg){
+	int instruction = 0;
+	int message = 0;
 	while(1){
-		sem_wait(&semaphore_input);
-		instruction = pop_element(&p_queue_read);
+		instruction = receive_message(QUEUE_READ, message, 1);
 		if (instruction == down){
 			pthread_mutex_lock(&mutex_number);
 			number_value -= 1;
 			if (number_value < 0){
-				number_value = 14;
+				number_value = max_number;
 			}
-			add_element(&p_queue_display, number_value);
 			pthread_mutex_unlock(&mutex_number);
-			sem_post(&semaphore_display);
+			send_message(QUEUE_SEND, number_value, 1);
 		}
 		else if(instruction == up){
 			pthread_mutex_lock(&mutex_number);
 			number_value += 1;
-			if (number_value > 14){
+			if (number_value > max_number){
 				number_value = 0;
 			}
-			add_element(&p_queue_display, number_value);
 			pthread_mutex_unlock(&mutex_number);
-			sem_post(&semaphore_display);
+			send_message(QUEUE_SEND, number_value, 1);
 		}
 	}
 	(void) arg;
 	pthread_exit(NULL);
 }
 
-void *send_message(void *arg){
-	//	Queue *p_queue = arg;
+void *show_board(void *arg){
 	int number_to_display = 0;
+	int message = 0;
 	set_number(0);
 	while (1){
-		sem_wait(&semaphore_display);
-		number_to_display = pop_element(&p_queue_display);
+		number_to_display = receive_message(QUEUE_SEND, message, 1);
 		set_number(number_to_display);
 	}
 	(void) arg;
@@ -369,9 +410,9 @@ int main(void){
 	printf("Creation thread de lecture\n");
 	pthread_create(&thread_read, NULL, read_input, NULL);
 	printf("Creation thread d'application\n");
-	pthread_create(&thread_app, NULL, change_number_app, NULL);
+	pthread_create(&thread_app, NULL, application, NULL);
 	printf("Creation thread d'envoi\n");
-	pthread_create(&thread_send, NULL, send_message, NULL);
+	pthread_create(&thread_send, NULL, show_board, NULL);
 
 
 	(void)pthread_join(thread_read, NULL);

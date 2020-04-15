@@ -17,41 +17,23 @@ void init_queue(struct Queue *queue){
 	queue-> tail = NULL;
 }
 
-void add_element(struct Queue *queue, int val_number){
-	//creation d'une structure 'new_element' de type Element et allocation d'un espace mémoire de la taille de la structure
-
-	// a tester avec sizeof Element (qui est la taille de la struct)
-	Element *new_element = malloc(sizeof(*new_element));
-	if(queue == NULL){
-		exit(EXIT_FAILURE);
-		// a changer, mettre un return si ça a fonctionner ou non
+void push(queue *queue, char *input) {
+	user_input *new_input = malloc(sizeof(*new_input));
+	if (new_input == NULL) {
+		printf("erreur alloc mÃ©moire push\n");
 	}
-	pthread_mutex_lock(&mutex_queue);
-
-	new_element->number = val_number;
-//	new_element->player = player;
-	new_element->next = NULL;
-
-	if(queue->head != NULL){ // La liste a au moins 1 élément
-
-		// --------------- FIFO
-		Element *actual_tail = queue->tail; // creation d'une structure 'actual_tail' pour avec les donnees du tail (dernier element)
-		actual_tail->next = new_element; // je mets le pointeur de l'element actuel vers le nouvel element
-		queue->tail = new_element; // le nouvel element devient le tail de la liste
-
-		// --------------- LIFO
-//		Element *actual_head = queue->head;
-//		new_element->next = actual_head;
-//		queue->head = new_element;
-
+	new_input->value = *input;
+	new_input->next = NULL;
+	pthread_mutex_lock(&queue->mutex);
+	if (queue->first != NULL) {
+		user_input *first_input = queue->last;
+		first_input->next = new_input;
+		queue->last = new_input;
+	} else {
+		queue->first = new_input;
+		queue->last = new_input;
 	}
-	else{ // Le pointeur vers le 1er élément n'existe pas, ma liste est vide
-		queue->head = new_element;
-		queue->tail = new_element;
-	}
-//	printf("J'ajoute %d à ma liste // adresse %p\n", val_number, queue->tail);
-	pthread_mutex_unlock(&mutex_queue);
-
+	pthread_mutex_unlock(&queue->mutex);
 }
 
 int pop_element(struct Queue *queue){
