@@ -28024,3 +28024,960 @@ make: Nothing to be done for 'all'.
 13:09:50 **** Incremental Build of configuration Debug for project simu_multithread ****
 make -j4 all 
 make: Nothing to be done for 'all'.
+13:22:15 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/game.c:8:0:
+../src/game.h:15:8: error: unknown type name ‘pthread_mutex_t’
+ static pthread_mutex_t mutex_number;
+        ^~~~~~~~~~~~~~~
+In file included from ../src/main.c:3:0:
+../src/game.h:15:8: error: unknown type name ‘pthread_mutex_t’
+ static pthread_mutex_t mutex_number;
+        ^~~~~~~~~~~~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:9:2: warning: implicit declaration of function ‘openLink’ [-Wimplicit-function-declaration]
+  openLink();
+  ^~~~~~~~
+../src/main.c:10:2: error: unknown type name ‘pthread_t’
+  pthread_t thread_read;
+  ^~~~~~~~~
+../src/main.c:11:2: error: unknown type name ‘pthread_t’
+  pthread_t thread_app;
+  ^~~~~~~~~
+../src/main.c:12:2: error: unknown type name ‘pthread_t’
+  pthread_t thread_send;
+  ^~~~~~~~~
+../src/main.c:13:2: warning: implicit declaration of function ‘init_queue’ [-Wimplicit-function-declaration]
+  init_queue(&p_queue_read);
+  ^~~~~~~~~~
+../src/main.c:13:14: error: ‘p_queue_read’ undeclared (first use in this function); did you mean ‘thread_read’?
+  init_queue(&p_queue_read);
+              ^~~~~~~~~~~~
+              thread_read
+../src/main.c:13:14: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:14:14: error: ‘p_queue_display’ undeclared (first use in this function); did you mean ‘p_queue_read’?
+  init_queue(&p_queue_display);
+              ^~~~~~~~~~~~~~~
+              p_queue_read
+../src/main.c:15:2: warning: implicit declaration of function ‘sem_init’ [-Wimplicit-function-declaration]
+  sem_init(&semaphore_input, 0, 0);
+  ^~~~~~~~
+../src/main.c:15:12: error: ‘semaphore_input’ undeclared (first use in this function); did you mean ‘read_input’?
+  sem_init(&semaphore_input, 0, 0);
+            ^~~~~~~~~~~~~~~
+            read_input
+../src/game.c: In function ‘SetLedMatrice’:
+../src/game.c:65:2: warning: implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]
+  printf("nb led mis a jour : %d\n", cpt_change_led);
+  ^~~~~~
+../src/game.c:65:2: warning: incompatible implicit declaration of built-in function ‘printf’
+../src/game.c:65:2: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+../src/main.c:16:12: error: ‘semaphore_display’ undeclared (first use in this function); did you mean ‘semaphore_input’?
+  sem_init(&semaphore_display, 0, 0);
+            ^~~~~~~~~~~~~~~~~
+            semaphore_input
+../src/game.c: In function ‘read_input’:
+../src/game.c:308:6: warning: incompatible implicit declaration of built-in function ‘printf’
+      printf("%d", message[i]);
+      ^~~~~~
+../src/game.c:308:6: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+../src/game.c:311:6: warning: incompatible implicit declaration of built-in function ‘printf’
+      printf("%d-", message[i]);
+      ^~~~~~
+../src/game.c:311:6: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+../src/game.c:314:4: warning: incompatible implicit declaration of built-in function ‘printf’
+    printf("\n");
+    ^~~~~~
+../src/game.c:314:4: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+../src/game.c: In function ‘application’:
+../src/game.c:348:23: warning: passing argument 1 of ‘pthread_mutex_lock’ from incompatible pointer type [-Wincompatible-pointer-types]
+    pthread_mutex_lock(&mutex_number);
+                       ^
+In file included from ../src/fifo.h:11:0,
+                 from ../src/game.c:10:
+/usr/include/pthread.h:763:12: note: expected ‘pthread_mutex_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int pthread_mutex_lock (pthread_mutex_t *__mutex)
+            ^~~~~~~~~~~~~~~~~~
+../src/game.c:353:25: warning: passing argument 1 of ‘pthread_mutex_unlock’ from incompatible pointer type [-Wincompatible-pointer-types]
+    pthread_mutex_unlock(&mutex_number);
+                         ^
+In file included from ../src/fifo.h:11:0,
+                 from ../src/game.c:10:
+/usr/include/pthread.h:774:12: note: expected ‘pthread_mutex_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int pthread_mutex_unlock (pthread_mutex_t *__mutex)
+            ^~~~~~~~~~~~~~~~~~~~
+../src/game.c:357:23: warning: passing argument 1 of ‘pthread_mutex_lock’ from incompatible pointer type [-Wincompatible-pointer-types]
+    pthread_mutex_lock(&mutex_number);
+                       ^
+In file included from ../src/fifo.h:11:0,
+                 from ../src/game.c:10:
+/usr/include/pthread.h:763:12: note: expected ‘pthread_mutex_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int pthread_mutex_lock (pthread_mutex_t *__mutex)
+            ^~~~~~~~~~~~~~~~~~
+../src/game.c:362:25: warning: passing argument 1 of ‘pthread_mutex_unlock’ from incompatible pointer type [-Wincompatible-pointer-types]
+    pthread_mutex_unlock(&mutex_number);
+                         ^
+In file included from ../src/fifo.h:11:0,
+                 from ../src/game.c:10:
+/usr/include/pthread.h:774:12: note: expected ‘pthread_mutex_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int pthread_mutex_unlock (pthread_mutex_t *__mutex)
+            ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:19:2: warning: implicit declaration of function ‘pthread_create’ [-Wimplicit-function-declaration]
+  pthread_create(&thread_read, NULL, read_input, NULL);
+  ^~~~~~~~~~~~~~
+../src/main.c:26:8: warning: implicit declaration of function ‘pthread_join’ [-Wimplicit-function-declaration]
+  (void)pthread_join(thread_read, NULL);
+        ^~~~~~~~~~~~
+../src/main.c:30:2: warning: implicit declaration of function ‘sem_destroy’ [-Wimplicit-function-declaration]
+  sem_destroy(&semaphore_input);
+  ^~~~~~~~~~~
+../src/main.c:32:2: warning: implicit declaration of function ‘closeLink’ [-Wimplicit-function-declaration]
+  closeLink();
+  ^~~~~~~~~
+In file included from ../src/main.c:3:0:
+At top level:
+../src/game.h:35:12: warning: ‘actual_matrice’ defined but not used [-Wunused-variable]
+ static RGB actual_matrice[7][7];
+            ^~~~~~~~~~~~~~
+../src/game.h:15:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+../src/game.h:14:12: warning: ‘max_number’ defined but not used [-Wunused-variable]
+ static int max_number = 14;
+            ^~~~~~~~~~
+../src/game.h:13:13: warning: ‘message’ defined but not used [-Wunused-variable]
+ static char message[5];
+             ^~~~~~~
+../src/game.h:12:12: warning: ‘number_value’ defined but not used [-Wunused-variable]
+ static int number_value = 0;
+            ^~~~~~~~~~~~
+../src/game.h:11:12: warning: ‘TabSize’ defined but not used [-Wunused-variable]
+ static int TabSize = 7;
+            ^~~~~~~
+make: *** [src/game.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [src/main.o] Error 1
+src/subdir.mk:27: recipe for target 'src/game.o' failed
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+13:23:19 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/game.c:8:0:
+../src/game.h:15:8: error: unknown type name ‘pthread_mutex_t’
+ static pthread_mutex_t mutex_number;
+        ^~~~~~~~~~~~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:11:2: warning: implicit declaration of function ‘openLink’; did you mean ‘unlink’? [-Wimplicit-function-declaration]
+  openLink();
+  ^~~~~~~~
+  unlink
+../src/main.c:15:2: warning: implicit declaration of function ‘init_queue’ [-Wimplicit-function-declaration]
+  init_queue(&p_queue_read);
+  ^~~~~~~~~~
+../src/main.c:15:14: error: ‘p_queue_read’ undeclared (first use in this function); did you mean ‘thread_read’?
+  init_queue(&p_queue_read);
+              ^~~~~~~~~~~~
+              thread_read
+../src/main.c:15:14: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:16:14: error: ‘p_queue_display’ undeclared (first use in this function); did you mean ‘p_queue_read’?
+  init_queue(&p_queue_display);
+              ^~~~~~~~~~~~~~~
+              p_queue_read
+../src/main.c:17:12: error: ‘semaphore_input’ undeclared (first use in this function); did you mean ‘read_input’?
+  sem_init(&semaphore_input, 0, 0);
+            ^~~~~~~~~~~~~~~
+            read_input
+../src/main.c:18:12: error: ‘semaphore_display’ undeclared (first use in this function); did you mean ‘semaphore_input’?
+  sem_init(&semaphore_display, 0, 0);
+            ^~~~~~~~~~~~~~~~~
+            semaphore_input
+../src/main.c:34:2: warning: implicit declaration of function ‘closeLink’; did you mean ‘close’? [-Wimplicit-function-declaration]
+  closeLink();
+  ^~~~~~~~~
+  close
+In file included from ../src/main.c:5:0:
+At top level:
+../src/game.h:35:12: warning: ‘actual_matrice’ defined but not used [-Wunused-variable]
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+ static RGB actual_matrice[7][7];
+            ^~~~~~~~~~~~~~
+../src/game.h:15:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+../src/game.h:14:12: warning: ‘max_number’ defined but not used [-Wunused-variable]
+ static int max_number = 14;
+            ^~~~~~~~~~
+../src/game.h:13:13: warning: ‘message’ defined but not used [-Wunused-variable]
+ static char message[5];
+             ^~~~~~~
+../src/game.h:12:12: warning: ‘number_value’ defined but not used [-Wunused-variable]
+ static int number_value = 0;
+            ^~~~~~~~~~~~
+../src/game.h:11:12: warning: ‘TabSize’ defined but not used [-Wunused-variable]
+ static int TabSize = 7;
+            ^~~~~~~
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+../src/game.c: In function ‘SetLedMatrice’:
+../src/game.c:65:2: warning: implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]
+  printf("nb led mis a jour : %d\n", cpt_change_led);
+  ^~~~~~
+../src/game.c:65:2: warning: incompatible implicit declaration of built-in function ‘printf’
+../src/game.c:65:2: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+../src/game.c: In function ‘read_input’:
+../src/game.c:308:6: warning: incompatible implicit declaration of built-in function ‘printf’
+      printf("%d", message[i]);
+      ^~~~~~
+../src/game.c:308:6: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+../src/game.c:311:6: warning: incompatible implicit declaration of built-in function ‘printf’
+      printf("%d-", message[i]);
+      ^~~~~~
+../src/game.c:311:6: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+../src/game.c:314:4: warning: incompatible implicit declaration of built-in function ‘printf’
+    printf("\n");
+    ^~~~~~
+../src/game.c:314:4: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+../src/game.c: In function ‘application’:
+../src/game.c:348:23: warning: passing argument 1 of ‘pthread_mutex_lock’ from incompatible pointer type [-Wincompatible-pointer-types]
+    pthread_mutex_lock(&mutex_number);
+                       ^
+In file included from ../src/fifo.h:11:0,
+                 from ../src/game.c:10:
+/usr/include/pthread.h:763:12: note: expected ‘pthread_mutex_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int pthread_mutex_lock (pthread_mutex_t *__mutex)
+            ^~~~~~~~~~~~~~~~~~
+../src/game.c:353:25: warning: passing argument 1 of ‘pthread_mutex_unlock’ from incompatible pointer type [-Wincompatible-pointer-types]
+    pthread_mutex_unlock(&mutex_number);
+                         ^
+In file included from ../src/fifo.h:11:0,
+                 from ../src/game.c:10:
+/usr/include/pthread.h:774:12: note: expected ‘pthread_mutex_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int pthread_mutex_unlock (pthread_mutex_t *__mutex)
+            ^~~~~~~~~~~~~~~~~~~~
+src/subdir.mk:27: recipe for target 'src/game.o' failed
+../src/game.c:357:23: warning: passing argument 1 of ‘pthread_mutex_lock’ from incompatible pointer type [-Wincompatible-pointer-types]
+    pthread_mutex_lock(&mutex_number);
+                       ^
+In file included from ../src/fifo.h:11:0,
+                 from ../src/game.c:10:
+/usr/include/pthread.h:763:12: note: expected ‘pthread_mutex_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int pthread_mutex_lock (pthread_mutex_t *__mutex)
+            ^~~~~~~~~~~~~~~~~~
+../src/game.c:362:25: warning: passing argument 1 of ‘pthread_mutex_unlock’ from incompatible pointer type [-Wincompatible-pointer-types]
+    pthread_mutex_unlock(&mutex_number);
+                         ^
+In file included from ../src/fifo.h:11:0,
+                 from ../src/game.c:10:
+/usr/include/pthread.h:774:12: note: expected ‘pthread_mutex_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int pthread_mutex_unlock (pthread_mutex_t *__mutex)
+            ^~~~~~~~~~~~~~~~~~~~
+make: *** [src/game.o] Error 1
+13:24:17 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/game.c:8:0:
+../src/game.h:15:8: error: unknown type name ‘pthread_mutex_t’
+ static pthread_mutex_t mutex_number;
+        ^~~~~~~~~~~~~~~
+../src/game.c: In function ‘SetLedMatrice’:
+../src/game.c:66:2: warning: implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]
+  printf("nb led mis a jour : %d\n", cpt_change_led);
+  ^~~~~~
+../src/game.c:66:2: warning: incompatible implicit declaration of built-in function ‘printf’
+../src/game.c:66:2: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+../src/game.c: In function ‘read_input’:
+../src/game.c:309:6: warning: incompatible implicit declaration of built-in function ‘printf’
+      printf("%d", message[i]);
+      ^~~~~~
+../src/game.c:309:6: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+../src/game.c:312:6: warning: incompatible implicit declaration of built-in function ‘printf’
+      printf("%d-", message[i]);
+      ^~~~~~
+../src/game.c:312:6: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+../src/game.c:315:4: warning: incompatible implicit declaration of built-in function ‘printf’
+    printf("\n");
+    ^~~~~~
+../src/game.c:315:4: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+../src/game.c: In function ‘application’:
+../src/game.c:349:23: warning: passing argument 1 of ‘pthread_mutex_lock’ from incompatible pointer type [-Wincompatible-pointer-types]
+    pthread_mutex_lock(&mutex_number);
+                       ^
+In file included from ../src/fifo.h:11:0,
+                 from ../src/game.c:10:
+/usr/include/pthread.h:763:12: note: expected ‘pthread_mutex_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int pthread_mutex_lock (pthread_mutex_t *__mutex)
+            ^~~~~~~~~~~~~~~~~~
+../src/game.c:354:25: warning: passing argument 1 of ‘pthread_mutex_unlock’ from incompatible pointer type [-Wincompatible-pointer-types]
+    pthread_mutex_unlock(&mutex_number);
+                         ^
+In file included from ../src/fifo.h:11:0,
+                 from ../src/game.c:10:
+/usr/include/pthread.h:774:12: note: expected ‘pthread_mutex_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int pthread_mutex_unlock (pthread_mutex_t *__mutex)
+            ^~~~~~~~~~~~~~~~~~~~
+../src/game.c:358:23: warning: passing argument 1 of ‘pthread_mutex_lock’ from incompatible pointer type [-Wincompatible-pointer-types]
+    pthread_mutex_lock(&mutex_number);
+                       ^
+In file included from ../src/fifo.h:11:0,
+                 from ../src/game.c:10:
+/usr/include/pthread.h:763:12: note: expected ‘pthread_mutex_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+ extern int pthread_mutex_lock (pthread_mutex_t *__mutex)
+            ^~~~~~~~~~~~~~~~~~
+../src/game.c:363:25: warning: passing argument 1 of ‘pthread_mutex_unlock’ from incompatible pointer type [-Wincompatible-pointer-types]
+    pthread_mutex_unlock(&mutex_number);
+                         ^
+In file included from ../src/fifo.h:11:0,
+                 from ../src/game.c:10:
+/usr/include/pthread.h:774:12: note: expected ‘pthread_mutex_t * {aka union <anonymous> *}’ but argument is of type ‘int *’
+src/subdir.mk:27: recipe for target 'src/game.o' failed
+ extern int pthread_mutex_unlock (pthread_mutex_t *__mutex)
+            ^~~~~~~~~~~~~~~~~~~~
+make: *** [src/game.o] Error 1
+make: *** Waiting for unfinished jobs....
+../src/main.c: In function ‘main’:
+../src/main.c:11:2: warning: implicit declaration of function ‘openLink’; did you mean ‘unlink’? [-Wimplicit-function-declaration]
+  openLink();
+  ^~~~~~~~
+  unlink
+../src/main.c:15:2: warning: implicit declaration of function ‘init_queue’ [-Wimplicit-function-declaration]
+  init_queue(&p_queue_read);
+  ^~~~~~~~~~
+../src/main.c:15:14: error: ‘p_queue_read’ undeclared (first use in this function); did you mean ‘thread_read’?
+  init_queue(&p_queue_read);
+              ^~~~~~~~~~~~
+              thread_read
+../src/main.c:15:14: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:16:14: error: ‘p_queue_display’ undeclared (first use in this function); did you mean ‘p_queue_read’?
+  init_queue(&p_queue_display);
+              ^~~~~~~~~~~~~~~
+              p_queue_read
+../src/main.c:17:12: error: ‘semaphore_input’ undeclared (first use in this function); did you mean ‘read_input’?
+  sem_init(&semaphore_input, 0, 0);
+            ^~~~~~~~~~~~~~~
+            read_input
+../src/main.c:18:12: error: ‘semaphore_display’ undeclared (first use in this function); did you mean ‘semaphore_input’?
+  sem_init(&semaphore_display, 0, 0);
+            ^~~~~~~~~~~~~~~~~
+            semaphore_input
+../src/main.c:34:2: warning: implicit declaration of function ‘closeLink’; did you mean ‘close’? [-Wimplicit-function-declaration]
+  closeLink();
+  ^~~~~~~~~
+  close
+In file included from ../src/main.c:5:0:
+At top level:
+../src/game.h:15:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+../src/game.h:14:12: warning: ‘max_number’ defined but not used [-Wunused-variable]
+ static int max_number = 14;
+            ^~~~~~~~~~
+../src/game.h:13:13: warning: ‘message’ defined but not used [-Wunused-variable]
+ static char message[5];
+             ^~~~~~~
+../src/game.h:12:12: warning: ‘number_value’ defined but not used [-Wunused-variable]
+ static int number_value = 0;
+            ^~~~~~~~~~~~
+../src/game.h:11:12: warning: ‘TabSize’ defined but not used [-Wunused-variable]
+ static int TabSize = 7;
+            ^~~~~~~
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+13:24:42 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:11:2: warning: implicit declaration of function ‘openLink’; did you mean ‘unlink’? [-Wimplicit-function-declaration]
+  openLink();
+  ^~~~~~~~
+  unlink
+../src/main.c:15:2: warning: implicit declaration of function ‘init_queue’ [-Wimplicit-function-declaration]
+  init_queue(&p_queue_read);
+  ^~~~~~~~~~
+../src/main.c:15:14: error: ‘p_queue_read’ undeclared (first use in this function); did you mean ‘thread_read’?
+  init_queue(&p_queue_read);
+              ^~~~~~~~~~~~
+              thread_read
+../src/main.c:15:14: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:16:14: error: ‘p_queue_display’ undeclared (first use in this function); did you mean ‘p_queue_read’?
+  init_queue(&p_queue_display);
+              ^~~~~~~~~~~~~~~
+              p_queue_read
+../src/main.c:17:12: error: ‘semaphore_input’ undeclared (first use in this function); did you mean ‘read_input’?
+  sem_init(&semaphore_input, 0, 0);
+            ^~~~~~~~~~~~~~~
+            read_input
+../src/game.c: In function ‘SetLedMatrice’:
+../src/game.c:71:2: warning: implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]
+  printf("nb led mis a jour : %d\n", cpt_change_led);
+  ^~~~~~
+../src/game.c:71:2: warning: incompatible implicit declaration of built-in function ‘printf’
+../src/game.c:71:2: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+../src/main.c:18:12: error: ‘semaphore_display’ undeclared (first use in this function); did you mean ‘semaphore_input’?
+  sem_init(&semaphore_display, 0, 0);
+            ^~~~~~~~~~~~~~~~~
+            semaphore_input
+../src/main.c:34:2: warning: implicit declaration of function ‘closeLink’; did you mean ‘close’? [-Wimplicit-function-declaration]
+  closeLink();
+  ^~~~~~~~~
+  close
+../src/game.c: In function ‘read_input’:
+../src/game.c:314:6: warning: incompatible implicit declaration of built-in function ‘printf’
+      printf("%d", message[i]);
+      ^~~~~~
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+../src/game.c:314:6: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+../src/game.c:317:6: warning: incompatible implicit declaration of built-in function ‘printf’
+      printf("%d-", message[i]);
+      ^~~~~~
+../src/game.c:317:6: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+../src/game.c:320:4: warning: incompatible implicit declaration of built-in function ‘printf’
+    printf("\n");
+    ^~~~~~
+../src/game.c:320:4: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+13:25:33 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:11:2: warning: implicit declaration of function ‘openLink’; did you mean ‘unlink’? [-Wimplicit-function-declaration]
+  openLink();
+  ^~~~~~~~
+  unlink
+../src/main.c:15:2: warning: implicit declaration of function ‘init_queue’ [-Wimplicit-function-declaration]
+  init_queue(&p_queue_read);
+  ^~~~~~~~~~
+../src/main.c:15:14: error: ‘p_queue_read’ undeclared (first use in this function); did you mean ‘thread_read’?
+  init_queue(&p_queue_read);
+              ^~~~~~~~~~~~
+              thread_read
+../src/main.c:15:14: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:16:14: error: ‘p_queue_display’ undeclared (first use in this function); did you mean ‘p_queue_read’?
+  init_queue(&p_queue_display);
+              ^~~~~~~~~~~~~~~
+              p_queue_read
+../src/main.c:17:12: error: ‘semaphore_input’ undeclared (first use in this function); did you mean ‘read_input’?
+  sem_init(&semaphore_input, 0, 0);
+            ^~~~~~~~~~~~~~~
+            read_input
+../src/main.c:18:12: error: ‘semaphore_display’ undeclared (first use in this function); did you mean ‘semaphore_input’?
+  sem_init(&semaphore_display, 0, 0);
+            ^~~~~~~~~~~~~~~~~
+            semaphore_input
+../src/main.c:34:2: warning: implicit declaration of function ‘closeLink’; did you mean ‘close’? [-Wimplicit-function-declaration]
+  closeLink();
+  ^~~~~~~~~
+  close
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+13:26:01 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:16:2: warning: implicit declaration of function ‘init_queue’ [-Wimplicit-function-declaration]
+  init_queue(&p_queue_read);
+  ^~~~~~~~~~
+../src/main.c:16:14: error: ‘p_queue_read’ undeclared (first use in this function); did you mean ‘thread_read’?
+  init_queue(&p_queue_read);
+              ^~~~~~~~~~~~
+              thread_read
+../src/main.c:16:14: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:17:14: error: ‘p_queue_display’ undeclared (first use in this function); did you mean ‘p_queue_read’?
+  init_queue(&p_queue_display);
+              ^~~~~~~~~~~~~~~
+              p_queue_read
+../src/main.c:18:12: error: ‘semaphore_input’ undeclared (first use in this function); did you mean ‘read_input’?
+  sem_init(&semaphore_input, 0, 0);
+            ^~~~~~~~~~~~~~~
+            read_input
+../src/main.c:19:12: error: ‘semaphore_display’ undeclared (first use in this function); did you mean ‘semaphore_input’?
+  sem_init(&semaphore_display, 0, 0);
+            ^~~~~~~~~~~~~~~~~
+            semaphore_input
+make: *** [src/main.o] Error 1
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+13:26:18 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:23: multiple definition of `Red'
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:23: first defined here
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:24: multiple definition of `Green'
+makefile:30: recipe for target 'simu_multithread' failed
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:24: first defined here
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:25: multiple definition of `Blue'
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:25: first defined here
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:26: multiple definition of `White'
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:26: first defined here
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:27: multiple definition of `Purple'
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:27: first defined here
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:28: multiple definition of `Yellow'
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:28: first defined here
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:29: multiple definition of `Black'
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:29: first defined here
+collect2: error: ld returned 1 exit status
+make: *** [simu_multithread] Error 1
+13:27:53 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:21: multiple definition of `Red'
+makefile:30: recipe for target 'simu_multithread' failed
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:21: first defined here
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:22: multiple definition of `Green'
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:22: first defined here
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:23: multiple definition of `Blue'
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:23: first defined here
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:24: multiple definition of `White'
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:24: first defined here
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:25: multiple definition of `Purple'
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:25: first defined here
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:26: multiple definition of `Yellow'
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:26: first defined here
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:27: multiple definition of `Black'
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:27: first defined here
+collect2: error: ld returned 1 exit status
+make: *** [simu_multithread] Error 1
+13:29:02 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:21: multiple definition of `Red'
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:21: first defined here
+makefile:30: recipe for target 'simu_multithread' failed
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:22: multiple definition of `Green'
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:22: first defined here
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:23: multiple definition of `Blue'
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:23: first defined here
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:24: multiple definition of `White'
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:24: first defined here
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:25: multiple definition of `Purple'
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:25: first defined here
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:26: multiple definition of `Yellow'
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:26: first defined here
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:27: multiple definition of `Black'
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:27: first defined here
+collect2: error: ld returned 1 exit status
+make: *** [simu_multithread] Error 1
+13:29:43 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+../src/game.c: In function ‘send_message’:
+../src/game.c:276:3: warning: implicit declaration of function ‘add_element’ [-Wimplicit-function-declaration]
+   add_element(&p_queue_read, message);
+   ^~~~~~~~~~~
+../src/game.c:276:16: error: ‘p_queue_read’ undeclared (first use in this function)
+   add_element(&p_queue_read, message);
+                ^~~~~~~~~~~~
+../src/game.c:276:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/game.c:280:16: error: ‘p_queue_display’ undeclared (first use in this function); did you mean ‘p_queue_read’?
+   add_element(&p_queue_display, message);
+                ^~~~~~~~~~~~~~~
+                p_queue_read
+../src/game.c: In function ‘receive_message’:
+../src/game.c:288:13: error: ‘p_queue_read’ undeclared (first use in this function)
+   sem_wait(&p_queue_read.semaphore);
+             ^~~~~~~~~~~~
+../src/game.c:289:18: warning: implicit declaration of function ‘pop_element’ [-Wimplicit-function-declaration]
+   return_value = pop_element(&p_queue_read);
+                  ^~~~~~~~~~~
+../src/game.c:292:13: error: ‘p_queue_display’ undeclared (first use in this function); did you mean ‘p_queue_read’?
+   sem_wait(&p_queue_display.semaphore);
+             ^~~~~~~~~~~~~~~
+             p_queue_read
+../src/game.c: In function ‘read_input’:
+../src/game.c:335:31: error: ‘down’ undeclared (first use in this function); did you mean ‘chown’?
+      send_message(QUEUE_READ, down, 1);
+                               ^~~~
+                               chown
+../src/game.c:338:31: error: ‘up’ undeclared (first use in this function); did you mean ‘dup’?
+      send_message(QUEUE_READ, up, 1);
+                               ^~
+                               dup
+../src/game.c: In function ‘application’:
+../src/game.c:353:22: error: ‘down’ undeclared (first use in this function); did you mean ‘chown’?
+   if (instruction == down){
+                      ^~~~
+                      chown
+../src/game.c:362:26: error: ‘up’ undeclared (first use in this function); did you mean ‘dup’?
+   else if(instruction == up){
+src/subdir.mk:27: recipe for target 'src/game.o' failed
+                          ^~
+                          dup
+make: *** [src/game.o] Error 1
+13:30:34 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:17:14: error: ‘p_queue_read’ undeclared (first use in this function); did you mean ‘thread_read’?
+  init_queue(&p_queue_read);
+              ^~~~~~~~~~~~
+              thread_read
+../src/main.c:17:14: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:18:14: error: ‘p_queue_display’ undeclared (first use in this function); did you mean ‘p_queue_read’?
+  init_queue(&p_queue_display);
+              ^~~~~~~~~~~~~~~
+              p_queue_read
+../src/main.c:19:12: error: ‘semaphore_input’ undeclared (first use in this function); did you mean ‘read_input’?
+  sem_init(&semaphore_input, 0, 0);
+            ^~~~~~~~~~~~~~~
+            read_input
+../src/main.c:20:12: error: ‘semaphore_display’ undeclared (first use in this function); did you mean ‘semaphore_input’?
+  sem_init(&semaphore_display, 0, 0);
+            ^~~~~~~~~~~~~~~~~
+            semaphore_input
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+13:30:49 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/game.c:8:0:
+../src/game.h:29:1: error: unknown type name ‘sem_t’
+ sem_t semaphore_input;
+ ^~~~~
+../src/game.h:30:1: error: unknown type name ‘sem_t’
+ sem_t semaphore_display;
+ ^~~~~
+../src/game.h:31:1: error: unknown type name ‘Queue’
+ Queue p_queue_read;
+ ^~~~~
+../src/game.h:32:1: error: unknown type name ‘Queue’
+ Queue p_queue_display;
+ ^~~~~
+../src/game.c: In function ‘send_message’:
+../src/game.c:277:15: warning: passing argument 1 of ‘add_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+   add_element(&p_queue_read, message);
+               ^
+In file included from ../src/game.c:10:0:
+../src/fifo.h:35:6: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/game.c:278:25: error: request for member ‘semaphore’ in something not a structure or union
+   sem_post(&p_queue_read.semaphore);
+                         ^
+../src/game.c:281:15: warning: passing argument 1 of ‘add_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+   add_element(&p_queue_display, message);
+               ^
+In file included from ../src/game.c:10:0:
+../src/fifo.h:35:6: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/game.c:282:28: error: request for member ‘semaphore’ in something not a structure or union
+   sem_post(&p_queue_display.semaphore);
+                            ^
+../src/game.c: In function ‘receive_message’:
+../src/game.c:289:25: error: request for member ‘semaphore’ in something not a structure or union
+   sem_wait(&p_queue_read.semaphore);
+                         ^
+../src/game.c:290:30: warning: passing argument 1 of ‘pop_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+   return_value = pop_element(&p_queue_read);
+                              ^
+In file included from ../src/game.c:10:0:
+../src/fifo.h:36:5: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/game.c:293:28: error: request for member ‘semaphore’ in something not a structure or union
+   sem_wait(&p_queue_display.semaphore);
+                            ^
+../src/game.c:294:30: warning: passing argument 1 of ‘pop_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+   return_value = pop_element(&p_queue_display);
+                              ^
+In file included from ../src/game.c:10:0:
+../src/fifo.h:36:5: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+src/subdir.mk:27: recipe for target 'src/game.o' failed
+make: *** [src/game.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../src/main.c:5:0:
+../src/game.h:31:1: error: unknown type name ‘Queue’
+ Queue p_queue_read;
+ ^~~~~
+../src/game.h:32:1: error: unknown type name ‘Queue’
+ Queue p_queue_display;
+ ^~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:17:13: warning: passing argument 1 of ‘init_queue’ from incompatible pointer type [-Wincompatible-pointer-types]
+  init_queue(&p_queue_read);
+             ^
+In file included from ../src/main.c:7:0:
+../src/fifo.h:34:6: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ void init_queue(struct Queue *queue);
+      ^~~~~~~~~~
+../src/main.c:18:13: warning: passing argument 1 of ‘init_queue’ from incompatible pointer type [-Wincompatible-pointer-types]
+  init_queue(&p_queue_display);
+             ^
+In file included from ../src/main.c:7:0:
+../src/fifo.h:34:6: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ void init_queue(struct Queue *queue);
+      ^~~~~~~~~~
+make: *** [src/main.o] Error 1
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+13:31:05 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:21: multiple definition of `Red'
+makefile:30: recipe for target 'simu_multithread' failed
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:21: first defined here
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:22: multiple definition of `Green'
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:22: first defined here
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:23: multiple definition of `Blue'
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:23: first defined here
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:24: multiple definition of `White'
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:24: first defined here
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:25: multiple definition of `Purple'
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:25: first defined here
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:26: multiple definition of `Yellow'
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:26: first defined here
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:27: multiple definition of `Black'
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:27: first defined here
+collect2: error: ld returned 1 exit status
+make: *** [simu_multithread] Error 1
+13:31:47 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:11:1: error: unknown type name ‘Queue’
+ Queue p_queue_read;
+ ^~~~~
+../src/main.c:12:1: error: unknown type name ‘Queue’
+ Queue p_queue_display;
+ ^~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:20:2: warning: implicit declaration of function ‘init_queue’ [-Wimplicit-function-declaration]
+  init_queue(&p_queue_read);
+  ^~~~~~~~~~
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+../src/game.c: In function ‘send_message’:
+../src/game.c:277:16: error: ‘p_queue_read’ undeclared (first use in this function)
+   add_element(&p_queue_read, message);
+                ^~~~~~~~~~~~
+../src/game.c:277:16: note: each undeclared identifier is reported only once for each function it appears in
+../src/game.c:281:16: error: ‘p_queue_display’ undeclared (first use in this function); did you mean ‘p_queue_read’?
+   add_element(&p_queue_display, message);
+                ^~~~~~~~~~~~~~~
+                p_queue_read
+../src/game.c: In function ‘receive_message’:
+../src/game.c:289:13: error: ‘p_queue_read’ undeclared (first use in this function)
+   sem_wait(&p_queue_read.semaphore);
+             ^~~~~~~~~~~~
+../src/game.c:293:13: error: ‘p_queue_display’ undeclared (first use in this function); did you mean ‘p_queue_read’?
+   sem_wait(&p_queue_display.semaphore);
+             ^~~~~~~~~~~~~~~
+             p_queue_read
+src/subdir.mk:27: recipe for target 'src/game.o' failed
+make: *** [src/game.o] Error 1
+13:32:16 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/game.c:8:0:
+../src/game.h:29:1: error: unknown type name ‘sem_t’
+ sem_t semaphore_input;
+ ^~~~~
+../src/game.h:30:1: error: unknown type name ‘sem_t’
+ sem_t semaphore_display;
+ ^~~~~
+../src/game.h:31:1: error: unknown type name ‘Queue’
+ Queue p_queue_read;
+ ^~~~~
+../src/game.h:32:1: error: unknown type name ‘Queue’
+ Queue p_queue_display;
+ ^~~~~
+../src/game.c: In function ‘send_message’:
+../src/game.c:277:15: warning: passing argument 1 of ‘add_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+   add_element(&p_queue_read, message);
+               ^
+In file included from ../src/game.c:10:0:
+../src/fifo.h:36:6: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/game.c:278:25: error: request for member ‘semaphore’ in something not a structure or union
+   sem_post(&p_queue_read.semaphore);
+                         ^
+In file included from ../src/main.c:5:0:
+../src/game.h:31:1: error: unknown type name ‘Queue’
+ Queue p_queue_read;
+ ^~~~~
+../src/game.c:281:15: warning: passing argument 1 of ‘add_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+   add_element(&p_queue_display, message);
+               ^
+In file included from ../src/game.c:10:0:
+../src/fifo.h:36:6: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/game.c:282:28: error: request for member ‘semaphore’ in something not a structure or union
+   sem_post(&p_queue_display.semaphore);
+                            ^
+../src/game.c: In function ‘receive_message’:
+../src/game.c:289:25: error: request for member ‘semaphore’ in something not a structure or union
+   sem_wait(&p_queue_read.semaphore);
+                         ^
+../src/game.c:290:30: warning: passing argument 1 of ‘pop_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+   return_value = pop_element(&p_queue_read);
+                              ^
+In file included from ../src/game.c:10:0:
+../src/fifo.h:37:5: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/game.c:293:28: error: request for member ‘semaphore’ in something not a structure or union
+   sem_wait(&p_queue_display.semaphore);
+                            ^
+../src/game.c:294:30: warning: passing argument 1 of ‘pop_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+   return_value = pop_element(&p_queue_display);
+                              ^
+In file included from ../src/game.c:10:0:
+../src/fifo.h:37:5: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/game.h:32:1: error: unknown type name ‘Queue’
+ Queue p_queue_display;
+ ^~~~~
+make: *** [src/game.o] Error 1
+make: *** Waiting for unfinished jobs....
+src/subdir.mk:27: recipe for target 'src/game.o' failed
+../src/main.c: In function ‘main’:
+../src/main.c:16:2: warning: implicit declaration of function ‘init_queue’ [-Wimplicit-function-declaration]
+  init_queue(&p_queue_read);
+  ^~~~~~~~~~
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+13:32:30 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/game.c:8:0:
+../src/game.h:29:1: error: unknown type name ‘sem_t’
+ sem_t semaphore_input;
+ ^~~~~
+../src/game.h:30:1: error: unknown type name ‘sem_t’
+ sem_t semaphore_display;
+ ^~~~~
+../src/game.h:31:1: error: unknown type name ‘Queue’
+ Queue p_queue_read;
+ ^~~~~
+../src/game.h:32:1: error: unknown type name ‘Queue’
+ Queue p_queue_display;
+ ^~~~~
+In file included from ../src/main.c:5:0:
+../src/game.h:31:1: error: unknown type name ‘Queue’
+ Queue p_queue_read;
+ ^~~~~
+../src/game.h:32:1: error: unknown type name ‘Queue’
+ Queue p_queue_display;
+ ^~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:16:13: warning: passing argument 1 of ‘init_queue’ from incompatible pointer type [-Wincompatible-pointer-types]
+  init_queue(&p_queue_read);
+             ^
+In file included from ../src/main.c:7:0:
+../src/fifo.h:35:6: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ void init_queue(struct Queue *queue);
+      ^~~~~~~~~~
+../src/main.c:17:13: warning: passing argument 1 of ‘init_queue’ from incompatible pointer type [-Wincompatible-pointer-types]
+  init_queue(&p_queue_display);
+             ^
+In file included from ../src/main.c:7:0:
+../src/fifo.h:35:6: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ void init_queue(struct Queue *queue);
+      ^~~~~~~~~~
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+../src/game.c: In function ‘send_message’:
+../src/game.c:277:15: warning: passing argument 1 of ‘add_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+   add_element(&p_queue_read, message);
+               ^
+In file included from ../src/game.c:10:0:
+../src/fifo.h:36:6: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/game.c:278:25: error: request for member ‘semaphore’ in something not a structure or union
+   sem_post(&p_queue_read.semaphore);
+                         ^
+../src/game.c:281:15: warning: passing argument 1 of ‘add_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+   add_element(&p_queue_display, message);
+               ^
+In file included from ../src/game.c:10:0:
+../src/fifo.h:36:6: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/game.c:282:28: error: request for member ‘semaphore’ in something not a structure or union
+   sem_post(&p_queue_display.semaphore);
+                            ^
+../src/game.c: In function ‘receive_message’:
+../src/game.c:289:25: error: request for member ‘semaphore’ in something not a structure or union
+   sem_wait(&p_queue_read.semaphore);
+                         ^
+../src/game.c:290:30: warning: passing argument 1 of ‘pop_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+   return_value = pop_element(&p_queue_read);
+                              ^
+In file included from ../src/game.c:10:0:
+../src/fifo.h:37:5: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/game.c:293:28: error: request for member ‘semaphore’ in something not a structure or union
+   sem_wait(&p_queue_display.semaphore);
+                            ^
+../src/game.c:294:30: warning: passing argument 1 of ‘pop_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+   return_value = pop_element(&p_queue_display);
+                              ^
+In file included from ../src/game.c:10:0:
+../src/fifo.h:37:5: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+src/subdir.mk:27: recipe for target 'src/game.o' failed
+make: *** [src/game.o] Error 1
+13:33:08 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:21: multiple definition of `Red'
+makefile:30: recipe for target 'simu_multithread' failed
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:21: first defined here
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:22: multiple definition of `Green'
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:22: first defined here
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:23: multiple definition of `Blue'
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:23: first defined here
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:24: multiple definition of `White'
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:24: first defined here
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:25: multiple definition of `Purple'
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:25: first defined here
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:26: multiple definition of `Yellow'
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:26: first defined here
+./src/main.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:27: multiple definition of `Black'
+./src/game.o:/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.h:27: first defined here
+collect2: error: ld returned 1 exit status
+make: *** [simu_multithread] Error 1
+13:34:36 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+13:35:00 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:35:11 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.

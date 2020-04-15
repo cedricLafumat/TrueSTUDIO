@@ -35,7 +35,6 @@ sem_t semaphore_display;
 Queue p_queue_read;
 Queue p_queue_display;
 
-
 void init_queue(struct Queue *queue);
 void add_element(struct Queue *queue, int number);
 int pop_element(struct Queue *queue);

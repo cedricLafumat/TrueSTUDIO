@@ -8,6 +8,7 @@
 
 
 
+
 int main(void){
 	openLink();
 	pthread_t thread_read;

@@ -1,6 +1,6 @@
-13:09:50 **** Incremental Build of configuration Debug for project simu_multithread ****
+13:35:11 **** Incremental Build of configuration Debug for project simu_multithread ****
 make -j4 all 
 make: Nothing to be done for 'all'.
 
-13:09:50 Build Finished (took 496ms)
+13:35:12 Build Finished (took 545ms)
 

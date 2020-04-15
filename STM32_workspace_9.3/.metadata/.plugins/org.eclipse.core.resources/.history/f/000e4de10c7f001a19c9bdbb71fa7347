@@ -30,10 +30,6 @@ typedef enum {left, right, up, down} movement_t;
 
 typedef enum {player_1, player_2} player_t;
 
-sem_t semaphore_input;
-sem_t semaphore_display;
-Queue p_queue_read;
-Queue p_queue_display;
 
 
 void init_queue(struct Queue *queue);
