@@ -28981,3 +28981,645 @@ make: Nothing to be done for 'all'.
 13:35:11 **** Incremental Build of configuration Debug for project simu_multithread ****
 make -j4 all 
 make: Nothing to be done for 'all'.
+13:38:38 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:16:14: error: ‘p_queue_read’ undeclared (first use in this function); did you mean ‘thread_read’?
+  init_queue(&p_queue_read);
+              ^~~~~~~~~~~~
+              thread_read
+../src/main.c:16:14: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:17:14: error: ‘p_queue_display’ undeclared (first use in this function); did you mean ‘p_queue_read’?
+  init_queue(&p_queue_display);
+              ^~~~~~~~~~~~~~~
+              p_queue_read
+../src/main.c:18:12: error: ‘semaphore_input’ undeclared (first use in this function); did you mean ‘read_input’?
+  sem_init(&semaphore_input, 0, 0);
+            ^~~~~~~~~~~~~~~
+            read_input
+../src/main.c:19:12: error: ‘semaphore_display’ undeclared (first use in this function); did you mean ‘semaphore_input’?
+  sem_init(&semaphore_display, 0, 0);
+            ^~~~~~~~~~~~~~~~~
+            semaphore_input
+../src/game.c: In function ‘send_message’:
+../src/game.c:283:16: error: ‘p_queue_read’ undeclared (first use in this function)
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+   add_element(&p_queue_read, message);
+                ^~~~~~~~~~~~
+../src/game.c:283:16: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+../src/game.c:287:16: error: ‘p_queue_display’ undeclared (first use in this function); did you mean ‘p_queue_read’?
+   add_element(&p_queue_display, message);
+                ^~~~~~~~~~~~~~~
+                p_queue_read
+../src/game.c: In function ‘receive_message’:
+../src/game.c:295:13: error: ‘p_queue_read’ undeclared (first use in this function)
+   sem_wait(&p_queue_read.semaphore);
+             ^~~~~~~~~~~~
+../src/game.c:299:13: error: ‘p_queue_display’ undeclared (first use in this function); did you mean ‘p_queue_read’?
+   sem_wait(&p_queue_display.semaphore);
+             ^~~~~~~~~~~~~~~
+             p_queue_read
+make: *** [src/game.o] Error 1
+src/subdir.mk:27: recipe for target 'src/game.o' failed
+13:39:27 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/game.c:10:0:
+../src/fifo.h:17:1: error: unknown type name ‘Queue’
+ Queue p_queue_read;
+ ^~~~~
+../src/fifo.h:18:1: error: unknown type name ‘Queue’
+ Queue p_queue_display;
+ ^~~~~
+In file included from ../src/main.c:7:0:
+../src/fifo.h:17:1: error: unknown type name ‘Queue’
+ Queue p_queue_read;
+ ^~~~~
+../src/fifo.h:18:1: error: unknown type name ‘Queue’
+ Queue p_queue_display;
+ ^~~~~
+../src/game.c: In function ‘send_message’:
+../src/game.c:283:15: warning: passing argument 1 of ‘add_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+   add_element(&p_queue_read, message);
+               ^
+In file included from ../src/game.c:10:0:
+../src/fifo.h:42:6: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/game.c:284:25: error: request for member ‘semaphore’ in something not a structure or union
+   sem_post(&p_queue_read.semaphore);
+                         ^
+../src/game.c:287:15: warning: passing argument 1 of ‘add_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+   add_element(&p_queue_display, message);
+               ^
+In file included from ../src/game.c:10:0:
+../src/fifo.h:42:6: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/game.c:288:28: error: request for member ‘semaphore’ in something not a structure or union
+   sem_post(&p_queue_display.semaphore);
+                            ^
+../src/game.c: In function ‘receive_message’:
+../src/game.c:295:25: error: request for member ‘semaphore’ in something not a structure or union
+   sem_wait(&p_queue_read.semaphore);
+                         ^
+../src/game.c:296:30: warning: passing argument 1 of ‘pop_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+   return_value = pop_element(&p_queue_read);
+                              ^
+In file included from ../src/game.c:10:0:
+../src/fifo.h:43:5: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/game.c:299:28: error: request for member ‘semaphore’ in something not a structure or union
+   sem_wait(&p_queue_display.semaphore);
+                            ^
+../src/game.c:300:30: warning: passing argument 1 of ‘pop_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+   return_value = pop_element(&p_queue_display);
+                              ^
+In file included from ../src/game.c:10:0:
+../src/fifo.h:43:5: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:16:13: warning: passing argument 1 of ‘init_queue’ from incompatible pointer type [-Wincompatible-pointer-types]
+  init_queue(&p_queue_read);
+             ^
+src/subdir.mk:27: recipe for target 'src/game.o' failed
+make: *** [src/game.o] Error 1
+In file included from ../src/main.c:7:0:
+../src/fifo.h:41:6: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ void init_queue(struct Queue *queue);
+      ^~~~~~~~~~
+make: *** Waiting for unfinished jobs....
+../src/main.c:17:13: warning: passing argument 1 of ‘init_queue’ from incompatible pointer type [-Wincompatible-pointer-types]
+  init_queue(&p_queue_display);
+             ^
+In file included from ../src/main.c:7:0:
+../src/fifo.h:41:6: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ void init_queue(struct Queue *queue);
+      ^~~~~~~~~~
+make: *** [src/main.o] Error 1
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+In file included from ../src/fifo.c:10:0:
+../src/fifo.h:17:1: error: unknown type name ‘Queue’
+ Queue p_queue_read;
+ ^~~~~
+../src/fifo.h:18:1: error: unknown type name ‘Queue’
+ Queue p_queue_display;
+ ^~~~~
+src/subdir.mk:27: recipe for target 'src/fifo.o' failed
+make: *** [src/fifo.o] Error 1
+13:39:34 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/game.c:10:0:
+../src/fifo.h:17:1: error: unknown type name ‘Queue’
+ Queue p_queue_read;
+ ^~~~~
+In file included from ../src/main.c:7:0:
+../src/fifo.h:17:1: error: unknown type name ‘Queue’
+ Queue p_queue_read;
+ ^~~~~
+../src/fifo.h:18:1: error: unknown type name ‘Queue’
+ Queue p_queue_display;
+ ^~~~~
+../src/main.c: In function ‘main’:
+../src/main.c:16:13: warning: passing argument 1 of ‘init_queue’ from incompatible pointer type [-Wincompatible-pointer-types]
+  init_queue(&p_queue_read);
+             ^
+In file included from ../src/main.c:7:0:
+../src/fifo.h:41:6: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ void init_queue(struct Queue *queue);
+      ^~~~~~~~~~
+../src/main.c:17:13: warning: passing argument 1 of ‘init_queue’ from incompatible pointer type [-Wincompatible-pointer-types]
+  init_queue(&p_queue_display);
+             ^
+In file included from ../src/main.c:7:0:
+../src/fifo.h:41:6: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ void init_queue(struct Queue *queue);
+      ^~~~~~~~~~
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+../src/fifo.h:18:1: error: unknown type name ‘Queue’
+ Queue p_queue_display;
+ ^~~~~
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+../src/game.c: In function ‘send_message’:
+../src/game.c:283:15: warning: passing argument 1 of ‘add_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+   add_element(&p_queue_read, message);
+               ^
+In file included from ../src/game.c:10:0:
+../src/fifo.h:42:6: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/game.c:284:25: error: request for member ‘semaphore’ in something not a structure or union
+   sem_post(&p_queue_read.semaphore);
+                         ^
+../src/game.c:287:15: warning: passing argument 1 of ‘add_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+   add_element(&p_queue_display, message);
+               ^
+In file included from ../src/game.c:10:0:
+../src/fifo.h:42:6: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ void add_element(struct Queue *queue, int number);
+      ^~~~~~~~~~~
+../src/game.c:288:28: error: request for member ‘semaphore’ in something not a structure or union
+   sem_post(&p_queue_display.semaphore);
+                            ^
+../src/game.c: In function ‘receive_message’:
+../src/game.c:295:25: error: request for member ‘semaphore’ in something not a structure or union
+   sem_wait(&p_queue_read.semaphore);
+                         ^
+../src/game.c:296:30: warning: passing argument 1 of ‘pop_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+   return_value = pop_element(&p_queue_read);
+                              ^
+In file included from ../src/game.c:10:0:
+../src/fifo.h:43:5: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+../src/game.c:299:28: error: request for member ‘semaphore’ in something not a structure or union
+   sem_wait(&p_queue_display.semaphore);
+                            ^
+../src/game.c:300:30: warning: passing argument 1 of ‘pop_element’ from incompatible pointer type [-Wincompatible-pointer-types]
+   return_value = pop_element(&p_queue_display);
+                              ^
+In file included from ../src/game.c:10:0:
+../src/fifo.h:43:5: note: expected ‘struct Queue *’ but argument is of type ‘int *’
+ int pop_element(struct Queue *queue);
+     ^~~~~~~~~~~
+src/subdir.mk:27: recipe for target 'src/game.o' failed
+make: *** [src/game.o] Error 1
+In file included from ../src/fifo.c:10:0:
+../src/fifo.h:17:1: error: unknown type name ‘Queue’
+ Queue p_queue_read;
+ ^~~~~
+../src/fifo.h:18:1: error: unknown type name ‘Queue’
+ Queue p_queue_display;
+ ^~~~~
+src/subdir.mk:27: recipe for target 'src/fifo.o' failed
+make: *** [src/fifo.o] Error 1
+13:40:08 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+13:45:40 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:21:25 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+14:22:58 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+14:23:34 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:23:37 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:26:19 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+14:26:21 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:27:33 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+14:27:37 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:02:37 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/game.c:294:6: error: conflicting types for ‘send_message’
+ void send_message(QUEUE_ID queue, char *message, int message_lenght) {
+      ^~~~~~~~~~~~
+In file included from ../src/game.c:8:0:
+../src/game.h:26:6: note: previous declaration of ‘send_message’ was here
+ void send_message(QUEUE_ID queue, int message, int message_lenght);
+      ^~~~~~~~~~~~
+../src/game.c:305:5: error: conflicting types for ‘receive_message’
+ int receive_message(QUEUE_ID queue, char *message, int message_lenght) {
+     ^~~~~~~~~~~~~~~
+In file included from ../src/game.c:8:0:
+../src/game.h:27:5: note: previous declaration of ‘receive_message’ was here
+ int receive_message(QUEUE_ID queue, int message, int message_lenght);
+     ^~~~~~~~~~~~~~~
+../src/game.c: In function ‘application’:
+../src/game.c:383:29: warning: passing argument 2 of ‘send_message’ makes pointer from integer without a cast [-Wint-conversion]
+    send_message(QUEUE_SEND, number_value, 1);
+                             ^~~~~~~~~~~~
+../src/game.c:294:6: note: expected ‘char *’ but argument is of type ‘int’
+ void send_message(QUEUE_ID queue, char *message, int message_lenght) {
+      ^~~~~~~~~~~~
+../src/game.c:392:29: warning: passing argument 2 of ‘send_message’ makes pointer from integer without a cast [-Wint-conversion]
+    send_message(QUEUE_SEND, number_value, 1);
+                             ^~~~~~~~~~~~
+../src/game.c:294:6: note: expected ‘char *’ but argument is of type ‘int’
+ void send_message(QUEUE_ID queue, char *message, int message_lenght) {
+      ^~~~~~~~~~~~
+../src/game.c:372:6: warning: variable ‘instruction’ set but not used [-Wunused-but-set-variable]
+  int instruction = 0;
+      ^~~~~~~~~~~
+../src/game.c: In function ‘show_board’:
+../src/game.c:404:51: warning: passing argument 2 of ‘receive_message’ makes pointer from integer without a cast [-Wint-conversion]
+   number_to_display = receive_message(QUEUE_SEND, message, 1);
+                                                   ^~~~~~~
+../src/game.c:305:5: note: expected ‘char *’ but argument is of type ‘int’
+ int receive_message(QUEUE_ID queue, char *message, int message_lenght) {
+     ^~~~~~~~~~~~~~~
+src/subdir.mk:27: recipe for target 'src/game.o' failed
+make: *** [src/game.o] Error 1
+make: *** Waiting for unfinished jobs....
+../src/fifo.c: In function ‘pop_element’:
+../src/fifo.c:72:27: error: ‘element’ undeclared (first use in this function); did you mean ‘Element’?
+   memcpy(content_element, element);
+                           ^~~~~~~
+                           Element
+../src/fifo.c:72:27: note: each undeclared identifier is reported only once for each function it appears in
+../src/fifo.c:72:3: error: too few arguments to function ‘memcpy’
+   memcpy(content_element, element);
+   ^~~~~~
+In file included from ../src/fifo.c:12:0:
+/usr/include/string.h:42:14: note: declared here
+ extern void *memcpy (void *__restrict __dest, const void *__restrict __src,
+              ^~~~~~
+../src/fifo.c:73:19: error: assignment to expression with array type
+   content_element = element_to_remove->command; // je recup�re le contenu de l'element
+                   ^
+../src/fifo.c: In function ‘print_queue’:
+../src/fifo.c:93:36: error: ‘Element {aka struct Element}’ has no member named ‘number’
+   printf("%d -> ", element_to_print->number); // j'affiche le contenu de mon element
+                                    ^~
+src/subdir.mk:27: recipe for target 'src/fifo.o' failed
+make: *** [src/fifo.o] Error 1
+16:03:44 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+../src/game.c:294:6: error: conflicting types for ‘send_message’
+ void send_message(QUEUE_ID queue, char *message, int message_lenght) {
+      ^~~~~~~~~~~~
+In file included from ../src/game.c:8:0:
+../src/game.h:26:6: note: previous declaration of ‘send_message’ was here
+ void send_message(QUEUE_ID queue, int message, int message_lenght);
+      ^~~~~~~~~~~~
+../src/game.c:305:5: error: conflicting types for ‘receive_message’
+ int receive_message(QUEUE_ID queue, char *message, int message_lenght) {
+     ^~~~~~~~~~~~~~~
+In file included from ../src/game.c:8:0:
+../src/game.h:27:5: note: previous declaration of ‘receive_message’ was here
+ int receive_message(QUEUE_ID queue, int message, int message_lenght);
+     ^~~~~~~~~~~~~~~
+../src/game.c: In function ‘application’:
+../src/game.c:383:29: warning: passing argument 2 of ‘send_message’ makes pointer from integer without a cast [-Wint-conversion]
+    send_message(QUEUE_SEND, number_value, 1);
+                             ^~~~~~~~~~~~
+../src/game.c:294:6: note: expected ‘char *’ but argument is of type ‘int’
+ void send_message(QUEUE_ID queue, char *message, int message_lenght) {
+      ^~~~~~~~~~~~
+../src/game.c:392:29: warning: passing argument 2 of ‘send_message’ makes pointer from integer without a cast [-Wint-conversion]
+    send_message(QUEUE_SEND, number_value, 1);
+                             ^~~~~~~~~~~~
+../src/game.c:294:6: note: expected ‘char *’ but argument is of type ‘int’
+ void send_message(QUEUE_ID queue, char *message, int message_lenght) {
+      ^~~~~~~~~~~~
+../src/game.c:372:6: warning: variable ‘instruction’ set but not used [-Wunused-but-set-variable]
+  int instruction = 0;
+      ^~~~~~~~~~~
+../src/game.c: In function ‘show_board’:
+../src/game.c:404:51: warning: passing argument 2 of ‘receive_message’ makes pointer from integer without a cast [-Wint-conversion]
+   number_to_display = receive_message(QUEUE_SEND, message, 1);
+                                                   ^~~~~~~
+../src/game.c:305:5: note: expected ‘char *’ but argument is of type ‘int’
+ int receive_message(QUEUE_ID queue, char *message, int message_lenght) {
+     ^~~~~~~~~~~~~~~
+make: *** [src/game.o] Error 1
+make: *** Waiting for unfinished jobs....
+src/subdir.mk:27: recipe for target 'src/game.o' failed
+../src/fifo.c: In function ‘pop_element’:
+../src/fifo.c:72:27: error: ‘element’ undeclared (first use in this function); did you mean ‘Element’?
+   memcpy(content_element, element);
+                           ^~~~~~~
+                           Element
+../src/fifo.c:72:27: note: each undeclared identifier is reported only once for each function it appears in
+../src/fifo.c:72:3: error: too few arguments to function ‘memcpy’
+   memcpy(content_element, element);
+   ^~~~~~
+In file included from ../src/fifo.c:12:0:
+/usr/include/string.h:42:14: note: declared here
+ extern void *memcpy (void *__restrict __dest, const void *__restrict __src,
+              ^~~~~~
+../src/fifo.c:73:19: error: assignment to expression with array type
+   content_element = element_to_remove->command; // je recup�re le contenu de l'element
+                   ^
+make: *** [src/fifo.o] Error 1
+src/subdir.mk:27: recipe for target 'src/fifo.o' failed
+16:04:23 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/fifo.c: In function ‘pop_element’:
+../src/fifo.c:72:27: error: ‘element’ undeclared (first use in this function); did you mean ‘Element’?
+   memcpy(content_element, element);
+                           ^~~~~~~
+                           Element
+../src/fifo.c:72:27: note: each undeclared identifier is reported only once for each function it appears in
+../src/fifo.c:72:3: error: too few arguments to function ‘memcpy’
+   memcpy(content_element, element);
+   ^~~~~~
+In file included from ../src/fifo.c:12:0:
+/usr/include/string.h:42:14: note: declared here
+ extern void *memcpy (void *__restrict __dest, const void *__restrict __src,
+              ^~~~~~
+../src/fifo.c:73:19: error: assignment to expression with array type
+   content_element = element_to_remove->command; // je recup�re le contenu de l'element
+                   ^
+src/subdir.mk:27: recipe for target 'src/fifo.o' failed
+make: *** [src/fifo.o] Error 1
+make: *** Waiting for unfinished jobs....
+../src/game.c: In function ‘application’:
+../src/game.c:383:29: warning: passing argument 2 of ‘send_message’ makes pointer from integer without a cast [-Wint-conversion]
+    send_message(QUEUE_SEND, number_value, 1);
+                             ^~~~~~~~~~~~
+../src/game.c:294:6: note: expected ‘char *’ but argument is of type ‘int’
+ void send_message(QUEUE_ID queue, char *message, int message_lenght) {
+      ^~~~~~~~~~~~
+../src/game.c:392:29: warning: passing argument 2 of ‘send_message’ makes pointer from integer without a cast [-Wint-conversion]
+    send_message(QUEUE_SEND, number_value, 1);
+                             ^~~~~~~~~~~~
+../src/game.c:294:6: note: expected ‘char *’ but argument is of type ‘int’
+ void send_message(QUEUE_ID queue, char *message, int message_lenght) {
+      ^~~~~~~~~~~~
+../src/game.c:372:6: warning: variable ‘instruction’ set but not used [-Wunused-but-set-variable]
+  int instruction = 0;
+      ^~~~~~~~~~~
+../src/game.c: In function ‘show_board’:
+../src/game.c:404:51: warning: passing argument 2 of ‘receive_message’ makes pointer from integer without a cast [-Wint-conversion]
+   number_to_display = receive_message(QUEUE_SEND, message, 1);
+                                                   ^~~~~~~
+../src/game.c:305:5: note: expected ‘char *’ but argument is of type ‘int’
+ int receive_message(QUEUE_ID queue, char *message, int message_lenght) {
+     ^~~~~~~~~~~~~~~
+16:05:54 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+../src/fifo.c: In function ‘pop_element’:
+../src/fifo.c:73:19: error: assignment to expression with array type
+   content_element = element_to_remove->command; // je recup�re le contenu de l'element
+                   ^
+src/subdir.mk:27: recipe for target 'src/fifo.o' failed
+make: *** [src/fifo.o] Error 1
+16:06:04 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+16:07:22 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+../src/game.c: In function ‘application’:
+../src/game.c:383:29: warning: passing argument 2 of ‘send_message’ makes pointer from integer without a cast [-Wint-conversion]
+    send_message(QUEUE_SEND, number_value, 1);
+                             ^~~~~~~~~~~~
+../src/game.c:294:6: note: expected ‘char *’ but argument is of type ‘int’
+ void send_message(QUEUE_ID queue, char *message, int message_lenght) {
+      ^~~~~~~~~~~~
+../src/game.c:392:29: warning: passing argument 2 of ‘send_message’ makes pointer from integer without a cast [-Wint-conversion]
+    send_message(QUEUE_SEND, number_value, 1);
+                             ^~~~~~~~~~~~
+../src/game.c:294:6: note: expected ‘char *’ but argument is of type ‘int’
+ void send_message(QUEUE_ID queue, char *message, int message_lenght) {
+      ^~~~~~~~~~~~
+../src/game.c:372:6: warning: variable ‘instruction’ set but not used [-Wunused-but-set-variable]
+  int instruction = 0;
+      ^~~~~~~~~~~
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+16:08:33 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+../src/game.c: In function ‘application’:
+../src/game.c:383:29: warning: passing argument 2 of ‘send_message’ makes pointer from integer without a cast [-Wint-conversion]
+    send_message(QUEUE_SEND, number_value, 1);
+                             ^~~~~~~~~~~~
+../src/game.c:294:6: note: expected ‘char *’ but argument is of type ‘int’
+ void send_message(QUEUE_ID queue, char *message, int message_lenght) {
+      ^~~~~~~~~~~~
+../src/game.c:392:29: warning: passing argument 2 of ‘send_message’ makes pointer from integer without a cast [-Wint-conversion]
+    send_message(QUEUE_SEND, number_value, 1);
+                             ^~~~~~~~~~~~
+../src/game.c:294:6: note: expected ‘char *’ but argument is of type ‘int’
+ void send_message(QUEUE_ID queue, char *message, int message_lenght) {
+      ^~~~~~~~~~~~
+../src/game.c:372:6: warning: variable ‘instruction’ set but not used [-Wunused-but-set-variable]
+  int instruction = 0;
+      ^~~~~~~~~~~
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+16:10:56 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+../src/game.c: In function ‘application’:
+../src/game.c:383:29: warning: passing argument 2 of ‘send_message’ makes pointer from integer without a cast [-Wint-conversion]
+    send_message(QUEUE_SEND, number_value, 1);
+                             ^~~~~~~~~~~~
+../src/game.c:294:6: note: expected ‘char *’ but argument is of type ‘int’
+ void send_message(QUEUE_ID queue, char *message, int message_lenght) {
+      ^~~~~~~~~~~~
+../src/game.c:392:29: warning: passing argument 2 of ‘send_message’ makes pointer from integer without a cast [-Wint-conversion]
+    send_message(QUEUE_SEND, number_value, 1);
+                             ^~~~~~~~~~~~
+../src/game.c:294:6: note: expected ‘char *’ but argument is of type ‘int’
+ void send_message(QUEUE_ID queue, char *message, int message_lenght) {
+      ^~~~~~~~~~~~
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+16:14:55 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+16:16:51 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:17:54 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+../src/game.c: In function ‘show_board’:
+../src/game.c:403:6: warning: unused variable ‘number_to_display’ [-Wunused-variable]
+  int number_to_display = 0;
+      ^~~~~~~~~~~~~~~~~
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+16:18:01 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+16:18:07 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:35:46 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+16:49:24 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+../src/game.c: In function ‘application’:
+../src/game.c:377:3: warning: implicit declaration of function ‘prinft’; did you mean ‘printf’? [-Wimplicit-function-declaration]
+   prinft("%d\n", message_receive[0]);
+   ^~~~~~
+   printf
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+./src/game.o: In function `application':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/simu_multithread/Debug/../src/game.c:377: undefined reference to `prinft'
+collect2: error: ld returned 1 exit status
+makefile:30: recipe for target 'simu_multithread' failed
+make: *** [simu_multithread] Error 1
+16:49:45 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+16:49:50 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:52:37 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+../src/game.c:32:24: warning: ‘mutex_number’ defined but not used [-Wunused-variable]
+ static pthread_mutex_t mutex_number;
+                        ^~~~~~~~~~~~
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+16:52:57 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+16:53:00 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:57:37 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+16:58:00 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:54:54 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+19:54:57 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:22:25 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+08:22:32 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:51:23 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+08:54:55 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:56:50 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+08:57:52 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+08:57:58 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:58:12 **** Incremental Build of configuration Debug for project simu_multithread ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+09:30:30 **** Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_multithread_p4"  ./src/main.o   
+09:30:48 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:31:01 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:33:32 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/fifo.d" -MT"src/fifo.o" -o "src/fifo.o" "../src/fifo.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/leds_control.d" -MT"src/leds_control.o" -o "src/leds_control.o" "../src/leds_control.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_multithread_p4"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+09:34:32 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:35:53 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
+09:38:35 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/debug.d" -MT"src/debug.o" -o "src/debug.o" "../src/debug.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game_p4.d" -MT"src/game_p4.o" -o "src/game_p4.o" "../src/game_p4.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread

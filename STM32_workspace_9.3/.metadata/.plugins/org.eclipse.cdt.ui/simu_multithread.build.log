@@ -1,6 +1,7 @@
-13:35:11 **** Incremental Build of configuration Debug for project simu_multithread ****
+08:58:12 **** Incremental Build of configuration Debug for project simu_multithread ****
 make -j4 all 
-make: Nothing to be done for 'all'.
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "simu_multithread"  ./src/fifo.o ./src/game.o ./src/leds_control.o ./src/main.o   -lpthread
 
-13:35:12 Build Finished (took 545ms)
+08:58:13 Build Finished (took 703ms)
 
