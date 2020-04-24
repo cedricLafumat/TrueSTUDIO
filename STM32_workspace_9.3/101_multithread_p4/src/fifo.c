@@ -11,7 +11,7 @@
 #include <pthread.h>
 #include <string.h>
 
-static pthread_mutex_t mutex_queue;
+static pthread_mutex_t mutex_element;
 
 
 void init_queue(struct Queue *queue){
@@ -23,7 +23,7 @@ void add_element(struct Queue *queue, char *command){
 
 	Element *new_element = malloc(sizeof(*new_element));
 
-	pthread_mutex_lock(&mutex_queue);
+	pthread_mutex_lock(&mutex_element);
 
 	memcpy(new_element->command, command, SIZE_COMMAND);
 	new_element->next = NULL;
@@ -47,7 +47,7 @@ void add_element(struct Queue *queue, char *command){
 		queue->tail = new_element;
 	}
 
-	pthread_mutex_unlock(&mutex_queue);
+	pthread_mutex_unlock(&mutex_element);
 
 }
 
@@ -60,11 +60,11 @@ int pop_element(struct Queue *queue, char *command){
 	//char command[SIZE_COMMAND];
 
 	if (queue->head != NULL){
-		pthread_mutex_lock(&mutex_queue);
+		pthread_mutex_lock(&mutex_element);
 		Element *element_to_remove = queue->head;
 		memcpy(command, element_to_remove->command, SIZE_COMMAND);
 		queue->head = element_to_remove->next;
-		pthread_mutex_unlock(&mutex_queue);
+		pthread_mutex_unlock(&mutex_element);
 		free(element_to_remove);
 	}
 	return 0;

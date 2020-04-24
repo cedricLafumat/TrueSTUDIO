@@ -13,10 +13,10 @@ int main(void){
 	pthread_t thread_read;
 	pthread_t thread_app;
 	pthread_t thread_send;
+	pthread_t thread_timer;
 	init_queue(&p_queue_read);
 	init_queue(&p_queue_display);
 	sem_init(&semaphore_input, 0, 0);
-	sem_init(&semaphore_display, 0, 0);
 
 	printf("Creation thread de lecture\n");
 	pthread_create(&thread_read, NULL, read_input, NULL);
@@ -24,11 +24,15 @@ int main(void){
 	pthread_create(&thread_app, NULL, application, NULL);
 	printf("Creation thread d'envoi\n");
 	pthread_create(&thread_send, NULL, show_board, NULL);
+	printf("Creation thread de timer\n");
+	pthread_create(&thread_timer, NULL, timer, NULL);
 
 
 	(void)pthread_join(thread_read, NULL);
 	(void)pthread_join(thread_app, NULL);
 	(void)pthread_join(thread_send, NULL);
+	(void)pthread_join(thread_timer, NULL);
+
 
 	sem_destroy(&semaphore_input);
 	sem_destroy(&semaphore_display);

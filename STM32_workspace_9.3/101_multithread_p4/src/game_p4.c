@@ -11,6 +11,7 @@
 #include"game_p4.h"
 #include"debug.h"
 #include<stdbool.h>
+#include"leds_control.h"
 
 // ---------------------------------------- VARIABLE GLOBALE -----------------
 
@@ -33,13 +34,13 @@ void gp4_init(void) {
 	debug_printf(10, "Joueur actif : %d\n\n", g_active_player);
 	g_token_top_selector = 4;
 	// ------------- SET TEST EGALITE
-	g_matrice[0][0] = PLAYER_1;
+	/*g_matrice[0][0] = PLAYER_1;
 	g_matrice[1][0] = PLAYER_1;
 	g_matrice[2][0] = PLAYER_1;
 	g_matrice[3][0] = PLAYER_2;
 	g_matrice[4][0] = PLAYER_1;
 	g_matrice[5][0] = PLAYER_1;
-	g_matrice[6][0] = PLAYER_1;
+	g_matrice[6][0] = PLAYER_1;*/
 	// ------------- SET RANDOM
 	/*g_matrice[0][0] = PLAYER_1;
 	g_matrice[1][0] = PLAYER_1;
@@ -91,14 +92,19 @@ pos_token_t gp4_next_player(void){
 		g_active_player = PLAYER_1;
 	}
 	debug_printf(3, "Changement de joueur / Joueur actif : %d\n", g_active_player);
-	pos_token_t result_move;
 	g_token_top_selector = 4;
+	pos_token_t result_move;
+	result_move.is_ok = true;
+	result_move.beg_position.col = 0;
+	result_move.beg_position.line = 0;
+	result_move.end_position.col = g_token_top_selector -1;
+	result_move.end_position.line = 0;
 	/*
 	 * If column is full, the token go to the next column
 	 */
 	if (g_matrice[g_token_top_selector -1][0] != EMPTY_CASE){
 		result_move = gp4_top_move_token_right();
-		g_token_top_selector = result_move.end_position.col;
+		g_token_top_selector = result_move.end_position.col +1;
 		if (result_move.is_ok == false){
 			error_printf("ERROR : Grille pleine");
 			return result_move;
@@ -184,7 +190,7 @@ pos_token_t gp4_top_play_token(void){
 	token_played.beg_position.col = g_token_top_selector-1;
 	token_played.beg_position.line = 0;
 	token_played.end_position.col = g_token_top_selector -1;
-	token_played.end_position.line = play_line;
+	token_played.end_position.line = play_line+1;
 	debug_printf(3, "Joueur %d joue // Coordonnées du jeton joué "
 			"[col : %d line : %d]\n", g_active_player, token_played.end_position.col, token_played.end_position.line);
 	return token_played;
@@ -288,10 +294,8 @@ winner_t check_right_diag_win(winner_t winner, int8_t col, int8_t line){
 }
 
 
-winner_t gp4_check_winner(void){
-	int8_t line = 0;
-	int8_t col = 0;
-	winner_t winner;
+winner_t init_winner(void){
+	winner_t winner = { 0 };
 	winner.status = live;
 	winner.win_type = 0;
 	winner.win_player = 0;
@@ -303,6 +307,13 @@ winner_t gp4_check_winner(void){
 	winner.win_position[2].line = 0;
 	winner.win_position[3].col = 0;
 	winner.win_position[3].line = 0;
+	return winner;
+}
+
+winner_t gp4_check_winner(void){
+	int8_t line = 0;
+	int8_t col = 0;
+	winner_t winner = init_winner();
 	if((g_matrice[0][0] != EMPTY_CASE) && (g_matrice[1][0] != EMPTY_CASE) && (g_matrice[2][0] != EMPTY_CASE) && (g_matrice[3][0] != EMPTY_CASE)
 			&& (g_matrice[4][0] != EMPTY_CASE) && (g_matrice[5][0] != EMPTY_CASE) && (g_matrice[6][0] != EMPTY_CASE)){
 		debug_printf(3,"Egalite\n");

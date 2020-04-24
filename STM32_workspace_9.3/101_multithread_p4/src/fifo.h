@@ -35,8 +35,6 @@ Queue p_queue_display;
 
 typedef enum {left, right, up, down} movement_t;
 
-typedef enum {player_1, player_2} player_t;
-
 
 
 void init_queue(struct Queue *queue);
