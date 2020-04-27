@@ -1,0 +1,13 @@
+/*
+ * thread.h
+ *
+ *  Created on: 24 Apr 2020
+ *      Author: cedric
+ */
+
+#ifndef INC_THREAD_H_
+#define INC_THREAD_H_
+
+void thread_send(void const *argument);
+
+#endif /* INC_THREAD_H_ */

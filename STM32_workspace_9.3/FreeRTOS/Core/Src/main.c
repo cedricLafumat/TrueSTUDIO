@@ -6,6 +6,7 @@
 #include "local_leds.h"
 #include "leds_control.h"
 #include "send_to_serial.h"
+#include "thread.h"
 
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////// DECLARAION DES THREADS
@@ -26,6 +27,33 @@ const osThreadAttr_t sendToSerialTask_attributes = {
 		.stack_size = 256 * 4
 };
 
+osThreadId_t taskred;
+const osThreadAttr_t taskred_attributes = {
+		.name = "taskred",
+		.priority = (osPriority_t) osPriorityRealtime7,
+		.stack_size = 256 * 4
+};
+
+osThreadId_t taskblue;
+const osThreadAttr_t taskblue_attributes = {
+		.name = "taskblue",
+		.priority = (osPriority_t) osPriorityRealtime7,
+		.stack_size = 256 * 4
+};
+
+osThreadId_t taskgreen;
+const osThreadAttr_t taskgreen_attributes = {
+		.name = "taskgreen",
+		.priority = (osPriority_t) osPriorityRealtime7,
+		.stack_size = 256 * 4
+};
+
+osThreadId_t tasktimer;
+const osThreadAttr_t tasktimer_attributes = {
+		.name = "tasktimer",
+		.priority = (osPriority_t) osPriorityRealtime7,
+		.stack_size = 256 * 4
+};
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////// DECLARATION DES QUEUES
 osMessageQueueId_t receiveFromSerialHandle;
@@ -49,6 +77,11 @@ osSemaphoreId_t localButtonReleasedQueueHandle;
 const osSemaphoreAttr_t localButtonReleasedQueue_attributes = {
 		.name = "localButtonReleasedQueue"
 };
+
+/*osSemaphoreId_t localButtonReleasedQueueHandle;
+const osSemaphoreAttr_t localButtonReleasedQueue_attributes = {
+		.name = "localButtonReleasedQueue"
+};*/
 
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////// DECLARATION DES FONCTIONS DE GESTION DU MATERIEL
@@ -99,6 +132,11 @@ int main(void)
 	sendToSerialTaskHandle = osThreadNew(SendToSerialTask, NULL, &sendToSerialTask_attributes);
 
 	/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+	taskred = osThreadNew(thread_red, NULL, &taskred_attributes);
+	taskblue = osThreadNew(thread_blue, NULL, &taskblue_attributes);
+	taskgreen = osThreadNew(thread_green, NULL, &taskgreen_attributes);
+	tasktimer = osThreadNew(thread_timer, NULL, &tasktimer_attributes);
+
 	/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 	/* C'est entre c'est 2 double lignes de % que vous pouvez démarrer vos   */
 	/* tâches et mettre votre code perso                                     */

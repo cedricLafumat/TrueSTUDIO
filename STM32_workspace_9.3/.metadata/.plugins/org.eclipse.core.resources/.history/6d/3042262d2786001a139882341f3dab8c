@@ -1,0 +1,16 @@
+/*
+ * thread.h
+ *
+ *  Created on: 24 Apr 2020
+ *      Author: cedric
+ */
+
+#ifndef INC_THREAD_H_
+#define INC_THREAD_H_
+
+void thread_send(void *argument);
+/*void thread_read(void *argument);
+void thread_app(void  *argument);
+void thread_timer(void *argument);*/
+
+#endif /* INC_THREAD_H_ */

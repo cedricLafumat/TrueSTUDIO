@@ -1,0 +1,31 @@
+/*
+ * thread.c
+ *
+ *  Created on: 24 Apr 2020
+ *      Author: cedric
+ */
+
+
+void thread_send(void *argument){
+	while (1){
+
+	}
+}
+
+void thread_read(void *argument){
+	while (1){
+
+	}
+}
+
+void thread_app(void *argument){
+	while (1){
+
+	}
+}
+
+void thread_timer(void *argument){
+	while (1){
+
+	}
+}

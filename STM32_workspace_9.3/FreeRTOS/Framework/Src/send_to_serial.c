@@ -36,13 +36,13 @@ void sendToSerial(const char * const msg, const size_t size) {
 void SendToSerialTask(void *argument)
 {
 	openLink();
+	osDelay(1000);
 	for(;;)
 	{
 		MsgToSerial msg;
 		osMessageQueueGet(sendToSerialHandle, &(msg), NULL, osWaitForever);
-
-		CDC_Transmit_FS((uint8_t *)msg.params.sendMessage.msg, msg.params.sendMessage.size);
-
-		osSemaphoreAcquire(sendToSerialDoneHandle, osWaitForever);
+		if (CDC_Transmit_FS((uint8_t *)msg.params.sendMessage.msg, msg.params.sendMessage.size) != USBD_BUSY) {
+			osSemaphoreAcquire(sendToSerialDoneHandle, osWaitForever);
+		}
 	}
 }

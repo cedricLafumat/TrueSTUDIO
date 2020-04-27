@@ -1,0 +1,42 @@
+/*
+ * thread.c
+ *
+ *  Created on: 24 Apr 2020
+ *      Author: cedric
+ */
+
+#include <local_leds.h>
+#include "cmsis_os.h"
+
+void thread_send(void *argument){
+	while (1){
+		/*LedRedOn();
+		osDelay(400);
+		LedRedOff();
+		osDelay(400);*/
+		if (WaitForLocalButtonReleased()){
+			LedBlueOn();
+			osDelay(400);
+			LedBlueOff();
+			osDelay(400);
+		}
+	}
+}
+
+/*void thread_read(void *argument){
+	while (1){
+
+	}
+}
+
+void thread_app(void *argument){
+	while (1){
+
+	}
+}
+
+void thread_timer(void *argument){
+	while (1){
+
+	}
+}*/
