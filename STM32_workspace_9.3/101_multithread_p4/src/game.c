@@ -9,9 +9,11 @@
 #include"game_p4.h"
 #include"leds_control.h"
 #include"fifo.h"
+#include"debug.h"
 #include<pthread.h>
 #include<unistd.h>
 #include<semaphore.h>
+#include <stdbool.h>
 
 /*
  * -----------------------------------------------------------------------------------------------------------------------------------
@@ -138,19 +140,42 @@ void blink_led(winner_t winner, char *message){
 
 void StartTimer(int num_timer, int delay){
 	int countdown = (delay / DELAY_SLEEP_TIMER);
-	pthread_mutex_lock(&mutex_timer);
-	tab_timer[num_timer].status = START;
-	tab_timer[num_timer].countdown = countdown;
-	pthread_mutex_unlock(&mutex_timer);
+	if (num_timer > NB_TIMERS){
+		debug_printf(4, "Bad number timer: %d\n", num_timer);
+	}
+	else{
+		pthread_mutex_lock(&mutex_timer);
+		tab_timer[num_timer].status = START;
+		tab_timer[num_timer].countdown = countdown;
+		pthread_mutex_unlock(&mutex_timer);
+	}
 }
 
 void StopTimer(int num_timer){
-	pthread_mutex_lock(&mutex_timer);
-	tab_timer[num_timer].status = STOP;
-	pthread_mutex_unlock(&mutex_timer);
+	if (num_timer > NB_TIMERS){
+		debug_printf(4, "Bad number timer: %d\n", num_timer);
+	}
+	else {
+		pthread_mutex_lock(&mutex_timer);
+		tab_timer[num_timer].status = STOP;
+		pthread_mutex_unlock(&mutex_timer);
+	}
 }
 
-
+void init_timer(void){
+	// timer blink
+	timer_blink.number = 0;
+	StopTimer(timer_blink.number);
+	timer_blink.owner = APP;
+	//timer to play
+	timer_to_play.number = 1;
+	StartTimer(timer_to_play.number, DELAY_TO_PLAY);
+	timer_to_play.owner = APP;
+	//timer inactivity
+	timer_idle.number = 2;
+	StartTimer(timer_idle.number, DELAY_IDLE);
+	timer_idle.owner = APP;
+}
 
 
 
@@ -168,8 +193,8 @@ void compute_message(char message_send[10], pos_token_t move_token) {
 
 void function_play_token(pos_token_t move_token, char message_send[10],
 		pos_token_t move_token_next_player, char message_receive[10],
-	 const Timer* timer_blink, winner_t* winner) {
-//	message_send[0] = message_receive[0];
+		const Timer* timer_blink, winner_t* winner) {
+	//	message_send[0] = message_receive[0];
 	move_token = gp4_top_play_token();
 	compute_message(message_send, move_token);
 	send_message(QUEUE_SEND, message_send, 1);
@@ -241,6 +266,7 @@ int receive_message(QUEUE_ID queue, char *message, int message_lenght) {
 
 void *read_input(void *arg){
 	char command[10];
+
 	while(1){
 		if ((readbutton(message, 5)) == LCRC_OK){
 			for (int i = 0; i<4; i++){
@@ -290,55 +316,89 @@ void *read_input(void *arg){
 
 
 void *application(void *arg){
+	/*bool is_equal_to_equal = false;
+	char valeur[10];
+
+	FILE* config = NULL;
+	config = fopen("/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/101_multithread_p4/src/config.txt", "r");
+	char newline[SIZELINE];
+	while (fgets(newline, SIZELINE, config) != NULL){
+		printf("%s", newline);
+		//int index = 0;
+		int index_valeur = 0;
+		for (int index_line = 0; newline[index_line] != '\0'; index_line++){
+			while (newline[index_line] != '=' ){
+				is_equal_to_equal = false;
+				index_line++;
+			}
+			is_equal_to_equal = true;
+			if (is_equal_to_equal == true){
+				valeur[index_valeur] = newline[index_line];
+				index_valeur ++;
+			}
+		}
+		printf("%s\n", valeur);
+	}
+
+	fclose(config);*/
+
+
 	char message_receive_app[10];
 	char message_send_app[10];
-	start_game();
+	int cpt_timer_win = 0;
 	pos_token_t move_token, move_token_next_player;
 	winner_t winner;
 	actual_player = PLAYER_1;
-	// timer blink
-	timer_blink.number = 0;
-	timer_blink.status = STOP;
-	timer_blink.owner = APP;
-	//timer to play
-	timer_to_play.number = 1;
-	StartTimer(timer_to_play.number, DELAY_TO_PLAY);
-	timer_to_play.owner = APP;
-	int cpt_timer_win = 0;
-	//timer inactivity
-	timer_idle.number = 2;
-	StartTimer(timer_idle.number, DELAY_IDLE);
-	timer_idle.owner = APP;
+	int state_game = 0;
+
 
 	while(1){
 		while (cpt_timer_win < 10){
 			receive_message(QUEUE_READ, message_receive_app, 1);
 			if (message_receive_app[0] == CLAVIER){
-				if(actual_player == message_receive_app[1]){
-					message_send_app[0] = message_receive_app[0];
+				if (state_game == 0){
 					if (message_receive_app[1] == PLAYER_1){
-						message_send_app[1] = PLAYER_1;
+						actual_player = PLAYER_1;
+						//token_player_1 = {255, 0, 0};
 					}
 					else if (message_receive_app[1] == PLAYER_2){
-						message_send_app[1] = PLAYER_2;
+						actual_player = PLAYER_2;
+						//token_player_2 = {0, 0, 255};
 					}
-					if (message_receive_app[2] == left){
-						move_token = gp4_top_move_token_left();
-						compute_message(message_send_app, move_token);
-						send_message(QUEUE_SEND, message_send_app, 1);
-					}
-					else if (message_receive_app[2] == right){
-						move_token = gp4_top_move_token_right();
-						compute_message(message_send_app, move_token);
-						send_message(QUEUE_SEND, message_send_app, 1);
-					}
-					else if (message_receive_app[2] == down){
-						function_play_token(move_token, message_send_app,
-								move_token_next_player, message_receive_app, &timer_blink, &winner);
+					start_game();
+					state_game = 1;
+					init_timer();
+					winner.status = live;
+				}
+				else{
+					if(actual_player == message_receive_app[1]){
+						message_send_app[0] = message_receive_app[0];
+						if (message_receive_app[1] == PLAYER_1){
+							message_send_app[1] = PLAYER_1;
+						}
+						else if (message_receive_app[1] == PLAYER_2){
+							message_send_app[1] = PLAYER_2;
+						}
+						if (message_receive_app[2] == left){
+							move_token = gp4_top_move_token_left();
+							StartTimer(timer_idle.number, DELAY_IDLE);
+							compute_message(message_send_app, move_token);
+							send_message(QUEUE_SEND, message_send_app, 1);
+						}
+						else if (message_receive_app[2] == right){
+							move_token = gp4_top_move_token_right();
+							StartTimer(timer_idle.number, DELAY_IDLE);
+							compute_message(message_send_app, move_token);
+							send_message(QUEUE_SEND, message_send_app, 1);
+						}
+						else if (message_receive_app[2] == down){
+							function_play_token(move_token, message_send_app,
+									move_token_next_player, message_receive_app, &timer_blink, &winner);
+						}
 					}
 				}
 			}
-			else if(message_receive_app[0] == t){
+			else if((message_receive_app[0] == t) && (state_game == 1)){
 				if (winner.status == stop_winner){
 					message_send_app[0] = message_receive_app[0];
 					message_send_app[1] = actual_player;
@@ -351,9 +411,13 @@ void *application(void *arg){
 					message_send_app[1] = actual_player;
 					function_play_token(move_token, message_send_app,
 							move_token_next_player, message_receive_app, &timer_blink, &winner);
+					StartTimer(timer_idle.number, DELAY_IDLE);
 				}
 			}
 		}
+		cpt_timer_win = 0;
+		state_game = 0;
+
 	}
 	(void) arg;
 	pthread_exit(NULL);
@@ -366,6 +430,7 @@ void *application(void *arg){
 void *show_board(void *arg){
 	char message[10];
 	RGB token;
+	SetLedMatrice();
 
 	while (1){
 		gp4_display();

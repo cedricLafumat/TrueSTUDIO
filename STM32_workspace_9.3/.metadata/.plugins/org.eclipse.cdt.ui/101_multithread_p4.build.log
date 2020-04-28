@@ -1,8 +1,6 @@
-09:10:46 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+18:25:28 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
 make -j4 all 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+make: Nothing to be done for 'all'.
 
-09:10:46 Build Finished (took 747ms)
+18:25:29 Build Finished (took 535ms)
 

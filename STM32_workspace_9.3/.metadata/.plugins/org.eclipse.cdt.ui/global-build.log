@@ -118,3 +118,950 @@ Output sent to: FreeRTOS.list
 Generate listing file done
 Generate build reports done
 arm-atollic-eabi-objcopy -O ihex FreeRTOS.elf FreeRTOS.hex 
+08:54:24 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:54:57 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:55:00 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:15:29 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+09:15:40 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:17:44 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+09:22:24 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+09:22:31 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:23:24 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+09:23:27 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:31:58 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+09:58:07 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:58:09 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:59:22 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:59:26 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:02:06 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:02:07 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:04:04 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+10:05:26 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+10:05:28 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:06:59 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+10:07:03 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:13:56 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:13:58 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:16:26 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+10:16:33 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:19:27 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+10:19:34 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:19:36 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:20:58 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+10:20:59 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:22:14 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+10:22:15 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:26:46 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+10:26:47 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:30:21 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+10:30:23 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:31:06 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:35:18 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:35:19 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:40:47 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+10:40:48 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:42:37 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:42:39 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:45:48 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+10:46:17 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:46:22 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:52:22 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+10:52:24 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:57:35 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+../src/game.c: In function ‘application’:
+../src/game.c:313:6: warning: unused variable ‘timer_state’ [-Wunused-variable]
+  int timer_state = 0;
+      ^~~~~~~~~~~
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+10:57:44 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+10:57:46 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+10:59:47 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+10:59:48 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:00:59 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:01:00 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:06:49 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+../src/game.c: In function ‘read_input’:
+../src/game.c:274:8: error: ‘active_player’ undeclared (first use in this function); did you mean ‘actual_player’?
+        active_player = PLAYER_1;
+        ^~~~~~~~~~~~~
+        actual_player
+../src/game.c:274:8: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/game.o] Error 1
+src/subdir.mk:33: recipe for target 'src/game.o' failed
+11:07:12 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+11:07:18 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:14:10 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+../src/game.c: In function ‘StartTimer’:
+../src/game.c:142:3: warning: implicit declaration of function ‘debug_printf’; did you mean ‘dprintf’? [-Wimplicit-function-declaration]
+   debug_printf(4, "Bad number timer: %d\n", num_timer);
+   ^~~~~~~~~~~~
+   dprintf
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+./src/game.o: In function `StartTimer':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/101_multithread_p4/Debug/../src/game.c:142: undefined reference to `debug_printf'
+./src/game.o: In function `StopTimer':
+/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/101_multithread_p4/Debug/../src/game.c:154: undefined reference to `debug_printf'
+collect2: error: ld returned 1 exit status
+makefile:30: recipe for target '101_multithread_p4' failed
+make: *** [101_multithread_p4] Error 1
+11:14:11 **** Incremental Build of configuration Debug for project c_structure_traitement ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:35:2: error: ‘button’ undeclared (first use in this function)
+  button = 0;
+  ^~~~~~
+../src/main.c:35:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:36:2: error: ‘button_input’ undeclared (first use in this function); did you mean ‘button’?
+  button_input = scanf("%d", &button);
+  ^~~~~~~~~~~~
+  button
+../src/main.c:37:25: warning: implicit declaration of function ‘and’ [-Wimplicit-function-declaration]
+  if (button_input == 1) and ((button == 1) or (button == 2))
+                         ^~~
+../src/main.c:37:44: error: expected ‘)’ before ‘or’
+  if (button_input == 1) and ((button == 1) or (button == 2))
+                                            ^~
+../src/main.c:38:2: error: expected ‘;’ before ‘{’ token
+  {
+  ^
+../src/main.c:34:7: warning: unused variable ‘bool_light’ [-Wunused-variable]
+  bool bool_light = false;
+       ^~~~~~~~~~
+src/subdir.mk:18: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+11:14:41 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+11:15:09 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:25:28 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+11:37:21 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+11:37:23 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:38:45 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+11:38:47 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+11:43:57 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+../src/game.c: In function ‘application’:
+../src/game.c:334:24: error: expected expression before ‘{’ token
+       token_player_1 = {255, 0, 0};
+                        ^
+../src/game.c:338:24: error: expected expression before ‘{’ token
+       token_player_2 = {0, 0, 255};
+                        ^
+make: *** [src/game.o] Error 1
+src/subdir.mk:33: recipe for target 'src/game.o' failed
+12:01:18 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+12:01:19 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/60_count_char.d" -MT"src/60_count_char.o" -o "src/60_count_char.o" "../src/60_count_char.c"
+gcc  -o "exo_manip_char"  ./src/60_count_char.o   
+13:14:38 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+13:14:39 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:29:29 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:16:3: error: ‘DELAY_BLINK’ undeclared (first use in this function)
+   DELAY_BLINK = newline[1];
+   ^~~~~~~~~~~
+../src/main.c:16:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:17:3: error: ‘DELAY_TO_PLAY’ undeclared (first use in this function)
+   DELAY_TO_PLAY = newline[3];
+   ^~~~~~~~~~~~~
+../src/main.c:18:3: error: ‘DELAY_IDLE’ undeclared (first use in this function); did you mean ‘DELAY_BLINK’?
+   DELAY_IDLE = newline[5];
+   ^~~~~~~~~~
+   DELAY_BLINK
+../src/game.c: In function ‘init_timer’:
+../src/game.c:171:35: error: ‘DELAY_TO_PLAY’ undeclared (first use in this function)
+  StartTimer(timer_to_play.number, DELAY_TO_PLAY);
+                                   ^~~~~~~~~~~~~
+../src/game.c:171:35: note: each undeclared identifier is reported only once for each function it appears in
+../src/game.c:175:32: error: ‘DELAY_IDLE’ undeclared (first use in this function); did you mean ‘DELAY_TO_PLAY’?
+  StartTimer(timer_idle.number, DELAY_IDLE);
+                                ^~~~~~~~~~
+                                DELAY_TO_PLAY
+../src/game.c: In function ‘function_play_token’:
+../src/game.c:215:36: error: ‘DELAY_TO_PLAY’ undeclared (first use in this function)
+   StartTimer(timer_to_play.number, DELAY_TO_PLAY);
+                                    ^~~~~~~~~~~~~
+../src/game.c:218:35: error: ‘DELAY_BLINK’ undeclared (first use in this function)
+   StartTimer(timer_blink->number, DELAY_BLINK);
+                                   ^~~~~~~~~~~
+../src/game.c: In function ‘application’:
+../src/game.c:356:38: error: ‘DELAY_IDLE’ undeclared (first use in this function)
+        StartTimer(timer_idle.number, DELAY_IDLE);
+                                      ^~~~~~~~~~
+../src/game.c:379:37: error: ‘DELAY_BLINK’ undeclared (first use in this function); did you mean ‘DELAY_IDLE’?
+      StartTimer(timer_blink.number, DELAY_BLINK);
+                                     ^~~~~~~~~~~
+                                     DELAY_IDLE
+src/subdir.mk:33: recipe for target 'src/main.o' failed
+src/subdir.mk:33: recipe for target 'src/game.o' failed
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [src/game.o] Error 1
+13:29:30 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:30:20 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:16:3: error: ‘DELAY_BLINK’ undeclared (first use in this function)
+   DELAY_BLINK = newline[1];
+   ^~~~~~~~~~~
+../src/main.c:16:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:17:3: error: ‘DELAY_TO_PLAY’ undeclared (first use in this function)
+   DELAY_TO_PLAY = newline[3];
+   ^~~~~~~~~~~~~
+../src/main.c:18:3: error: ‘DELAY_IDLE’ undeclared (first use in this function); did you mean ‘DELAY_BLINK’?
+   DELAY_IDLE = newline[5];
+   ^~~~~~~~~~
+   DELAY_BLINK
+src/subdir.mk:33: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+../src/game.c: In function ‘init_timer’:
+../src/game.c:171:35: error: ‘DELAY_TO_PLAY’ undeclared (first use in this function)
+  StartTimer(timer_to_play.number, DELAY_TO_PLAY);
+                                   ^~~~~~~~~~~~~
+../src/game.c:171:35: note: each undeclared identifier is reported only once for each function it appears in
+../src/game.c:175:32: error: ‘DELAY_IDLE’ undeclared (first use in this function); did you mean ‘DELAY_TO_PLAY’?
+  StartTimer(timer_idle.number, DELAY_IDLE);
+                                ^~~~~~~~~~
+                                DELAY_TO_PLAY
+../src/game.c: In function ‘function_play_token’:
+../src/game.c:215:36: error: ‘DELAY_TO_PLAY’ undeclared (first use in this function)
+   StartTimer(timer_to_play.number, DELAY_TO_PLAY);
+                                    ^~~~~~~~~~~~~
+../src/game.c:218:35: error: ‘DELAY_BLINK’ undeclared (first use in this function)
+   StartTimer(timer_blink->number, DELAY_BLINK);
+                                   ^~~~~~~~~~~
+../src/game.c: In function ‘application’:
+../src/game.c:356:38: error: ‘DELAY_IDLE’ undeclared (first use in this function)
+        StartTimer(timer_idle.number, DELAY_IDLE);
+                                      ^~~~~~~~~~
+../src/game.c:379:37: error: ‘DELAY_BLINK’ undeclared (first use in this function); did you mean ‘DELAY_IDLE’?
+      StartTimer(timer_blink.number, DELAY_BLINK);
+                                     ^~~~~~~~~~~
+                                     DELAY_IDLE
+src/subdir.mk:33: recipe for target 'src/game.o' failed
+make: *** [src/game.o] Error 1
+13:48:40 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/game.c: In function ‘init_timer’:
+../src/game.c:171:35: error: ‘DELAY_TO_PLAY’ undeclared (first use in this function)
+  StartTimer(timer_to_play.number, DELAY_TO_PLAY);
+                                   ^~~~~~~~~~~~~
+../src/game.c:171:35: note: each undeclared identifier is reported only once for each function it appears in
+../src/game.c:175:32: error: ‘DELAY_IDLE’ undeclared (first use in this function); did you mean ‘DELAY_TO_PLAY’?
+  StartTimer(timer_idle.number, DELAY_IDLE);
+                                ^~~~~~~~~~
+                                DELAY_TO_PLAY
+../src/game.c: In function ‘function_play_token’:
+../src/game.c:215:36: error: ‘DELAY_TO_PLAY’ undeclared (first use in this function)
+   StartTimer(timer_to_play.number, DELAY_TO_PLAY);
+                                    ^~~~~~~~~~~~~
+../src/game.c:218:35: error: ‘DELAY_BLINK’ undeclared (first use in this function)
+   StartTimer(timer_blink->number, DELAY_BLINK);
+                                   ^~~~~~~~~~~
+../src/game.c: In function ‘application’:
+../src/game.c:356:38: error: ‘DELAY_IDLE’ undeclared (first use in this function)
+        StartTimer(timer_idle.number, DELAY_IDLE);
+                                      ^~~~~~~~~~
+../src/game.c:379:37: error: ‘DELAY_BLINK’ undeclared (first use in this function); did you mean ‘DELAY_IDLE’?
+      StartTimer(timer_blink.number, DELAY_BLINK);
+                                     ^~~~~~~~~~~
+                                     DELAY_IDLE
+make: *** [src/game.o] Error 1
+src/subdir.mk:33: recipe for target 'src/game.o' failed
+make: *** Waiting for unfinished jobs....
+13:48:41 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:50:10 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/game.c: In function ‘init_timer’:
+../src/game.c:171:35: error: ‘DELAY_TO_PLAY’ undeclared (first use in this function)
+  StartTimer(timer_to_play.number, DELAY_TO_PLAY);
+                                   ^~~~~~~~~~~~~
+../src/game.c:171:35: note: each undeclared identifier is reported only once for each function it appears in
+../src/game.c:175:32: error: ‘DELAY_IDLE’ undeclared (first use in this function); did you mean ‘DELAY_TO_PLAY’?
+  StartTimer(timer_idle.number, DELAY_IDLE);
+                                ^~~~~~~~~~
+                                DELAY_TO_PLAY
+../src/game.c: In function ‘function_play_token’:
+../src/game.c:215:36: error: ‘DELAY_TO_PLAY’ undeclared (first use in this function)
+   StartTimer(timer_to_play.number, DELAY_TO_PLAY);
+                                    ^~~~~~~~~~~~~
+../src/game.c:218:35: error: ‘DELAY_BLINK’ undeclared (first use in this function)
+   StartTimer(timer_blink->number, DELAY_BLINK);
+                                   ^~~~~~~~~~~
+../src/game.c: In function ‘application’:
+../src/game.c:356:38: error: ‘DELAY_IDLE’ undeclared (first use in this function)
+        StartTimer(timer_idle.number, DELAY_IDLE);
+                                      ^~~~~~~~~~
+../src/game.c:379:37: error: ‘DELAY_BLINK’ undeclared (first use in this function); did you mean ‘DELAY_IDLE’?
+      StartTimer(timer_blink.number, DELAY_BLINK);
+                                     ^~~~~~~~~~~
+                                     DELAY_IDLE
+src/subdir.mk:33: recipe for target 'src/game.o' failed
+make: *** [src/game.o] Error 1
+make: *** Waiting for unfinished jobs....
+13:50:11 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:50:20 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+13:50:21 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:50:23 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:54:55 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+13:54:56 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+13:55:00 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:06:00 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:17:12: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘int’ [-Wformat=]
+   printf("%s", newline[0]);
+           ~^   ~~~~~~~~~~
+           %d
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+14:06:01 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:10:58 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+14:10:59 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:11:02 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:13:44 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+14:13:45 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:13:47 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:14:35 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+14:14:36 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:14:37 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:17:03 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+14:17:03 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:32:37 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+14:32:38 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:33:00 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+14:33:01 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:33:02 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:33:24 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:20:15: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘int’ [-Wformat=]
+      printf("%s", newline[indexletter]);
+              ~^   ~~~~~~~~~~~~~~~~~~~~
+              %d
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+14:33:25 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:33:27 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:37:33 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function ‘main’:
+../src/main.c:17:15: error: lvalue required as left operand of assignment
+   DELAY_BLINK = newline[0];
+               ^
+../src/main.c:18:17: error: lvalue required as left operand of assignment
+   DELAY_TO_PLAY = newline[1];
+                 ^
+../src/main.c:19:14: error: lvalue required as left operand of assignment
+   DELAY_IDLE = newline[2];
+              ^
+src/subdir.mk:33: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+14:37:33 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+14:47:30 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+14:47:31 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:50:30 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+16:50:31 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:50:35 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:51:42 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+../src/game.c: In function ‘application’:
+../src/game.c:323:15: error: ‘SIZELINE’ undeclared (first use in this function); did you mean ‘SIZE_MAX’?
+  char newline[SIZELINE];
+               ^~~~~~~~
+               SIZE_MAX
+../src/game.c:323:15: note: each undeclared identifier is reported only once for each function it appears in
+../src/game.c:323:7: warning: unused variable ‘newline’ [-Wunused-variable]
+  char newline[SIZELINE];
+       ^~~~~~~
+../src/game.c:320:7: warning: variable ‘toto’ set but not used [-Wunused-but-set-variable]
+  char toto[10];
+       ^~~~
+src/subdir.mk:33: recipe for target 'src/game.o' failed
+make: *** [src/game.o] Error 1
+16:51:43 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+16:52:10 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/game.c: In function ‘application’:
+../src/game.c:320:7: warning: variable ‘toto’ set but not used [-Wunused-but-set-variable]
+  char toto[10];
+       ^~~~
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+16:52:11 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:42:34 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+../src/game.c: In function ‘application’:
+../src/game.c:320:7: warning: variable ‘toto’ set but not used [-Wunused-but-set-variable]
+  char toto[10];
+       ^~~~
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+17:42:34 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:44:11 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+../src/game.c: In function ‘application’:
+../src/game.c:320:7: warning: variable ‘valeur’ set but not used [-Wunused-but-set-variable]
+  char valeur[10];
+       ^~~~~~
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+17:44:11 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:45:13 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+../src/game.c: In function ‘application’:
+../src/game.c:320:7: warning: variable ‘valeur’ set but not used [-Wunused-but-set-variable]
+  char valeur[10];
+       ^~~~~~
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+17:45:13 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:46:05 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+17:46:05 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:47:22 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:47:23 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:47:26 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:48:34 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+17:48:34 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:48:38 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:52:08 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+17:52:08 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:52:09 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:52:48 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+17:52:49 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:52:55 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:52:55 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:52:56 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:53:16 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+17:53:17 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:53:19 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:55:29 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+17:55:29 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:55:30 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:56:08 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+../src/game.c: In function ‘application’:
+../src/game.c:339:12: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘int *’ [-Wformat=]
+   printf("%s\n", valeur);
+           ~^     ~~~~~~
+           %ls
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+17:56:09 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:56:19 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+../src/game.c: In function ‘application’:
+../src/game.c:339:12: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘int *’ [-Wformat=]
+   printf("%d\n", valeur);
+           ~^     ~~~~~~
+           %ls
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+17:56:19 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:56:50 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+17:56:51 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:56:53 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:58:28 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+17:58:28 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:58:30 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:59:17 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+17:59:18 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:59:19 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:00:35 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+18:00:36 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:00:37 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:01:08 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+18:01:08 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:01:09 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:01:49 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+../src/game.c: In function ‘application’:
+../src/game.c:338:14: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘int *’ [-Wformat=]
+     printf("%s", valeur);
+             ~^   ~~~~~~
+             %ls
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+18:01:50 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:02:01 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+../src/game.c: In function ‘application’:
+../src/game.c:338:14: warning: format ‘%c’ expects argument of type ‘int’, but argument 2 has type ‘int *’ [-Wformat=]
+     printf("%c", valeur);
+             ~^   ~~~~~~
+             %ls
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+18:02:02 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:02:10 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+../src/game.c: In function ‘application’:
+../src/game.c:338:14: warning: format ‘%c’ expects argument of type ‘int’, but argument 2 has type ‘char *’ [-Wformat=]
+     printf("%c", valeur);
+             ~^   ~~~~~~
+             %s
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+18:02:11 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:02:15 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+18:02:15 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:02:18 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:02:40 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+18:02:41 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:02:42 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:04:12 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+18:04:12 **** Incremental Build of configuration Debug for project exo_manip_char ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:04:27 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:04:29 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:04:53 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+18:04:55 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:06:01 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+18:06:04 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:08:13 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+18:08:15 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:09:59 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+18:10:00 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:12:41 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:12:56 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:13:36 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+18:13:38 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:14:56 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+18:15:00 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:20:16 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/game.d" -MT"src/game.o" -o "src/game.o" "../src/game.c"
+gcc  -o "101_multithread_p4"  ./src/debug.o ./src/fifo.o ./src/game.o ./src/game_p4.o ./src/leds_control.o ./src/main.o   -lpthread
+18:20:18 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:25:27 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:25:28 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+make -j4 all 
+make: Nothing to be done for 'all'.

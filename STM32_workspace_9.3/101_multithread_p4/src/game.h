@@ -13,6 +13,7 @@
 #define DELAY_TO_PLAY 30000000
 #define DELAY_IDLE 5000000
 #define DELAY_SLEEP_TIMER 10000
+#define SIZELINE 50
 
 typedef struct{
 	int RValue;

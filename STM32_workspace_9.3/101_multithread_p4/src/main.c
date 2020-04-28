@@ -9,6 +9,7 @@
 
 
 int main(void){
+
 	openLink();
 	pthread_t thread_read;
 	pthread_t thread_app;
@@ -37,5 +38,6 @@ int main(void){
 	sem_destroy(&semaphore_input);
 	sem_destroy(&semaphore_display);
 	closeLink();
+
 	return 0;
 }

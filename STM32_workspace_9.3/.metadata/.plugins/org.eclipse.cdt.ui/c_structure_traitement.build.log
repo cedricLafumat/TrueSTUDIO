@@ -1,4 +1,4 @@
-20:32:19 **** Incremental Build of configuration Debug for project c_structure_traitement ****
+11:14:11 **** Incremental Build of configuration Debug for project c_structure_traitement ****
 make -j4 all 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
 ../src/main.c: In function ‘main’:
@@ -22,8 +22,8 @@ gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o"
 ../src/main.c:34:7: warning: unused variable ‘bool_light’ [-Wunused-variable]
   bool bool_light = false;
        ^~~~~~~~~~
-make: *** [src/main.o] Error 1
 src/subdir.mk:18: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
 
-20:32:20 Build Finished (took 534ms)
+11:14:12 Build Finished (took 547ms)
 
