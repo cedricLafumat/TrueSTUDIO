@@ -1,6 +1,6 @@
-18:25:28 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
+16:26:01 **** Incremental Build of configuration Debug for project 101_multithread_p4 ****
 make -j4 all 
 make: Nothing to be done for 'all'.
 
-18:25:29 Build Finished (took 535ms)
+16:26:02 Build Finished (took 524ms)
 

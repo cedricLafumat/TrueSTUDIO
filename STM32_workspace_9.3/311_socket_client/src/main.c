@@ -8,7 +8,7 @@
 #include"client.h"
 
 int main(int argc, char *argv[]) {
-	debug_setlevel(3);
+	debug_setlevel(0);
 	int socket_desc;
 	char *message;
 	int message_send = -1;

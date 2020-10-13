@@ -1,6 +1,11 @@
-00:24:17 **** Incremental Build of configuration Debug for project 320_socket_server ****
+16:16:33 **** Incremental Build of configuration Debug for project 320_socket_server ****
 make -j4 all 
-make: Nothing to be done for 'all'.
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/server.d" -MT"src/server.o" -o "src/server.o" "../src/server.c"
+../src/server.c: In function ‘create_server’:
+../src/server.c:47:6: warning: variable ‘error_receive’ set but not used [-Wunused-but-set-variable]
+  int error_receive;
+      ^~~~~~~~~~~~~
+gcc  -o "320_socket_server"  ./src/debug.o ./src/main.o ./src/server.o   
 
-00:24:18 Build Finished (took 464ms)
+16:16:33 Build Finished (took 583ms)
 

@@ -13,7 +13,6 @@
 #include<errno.h> //errno
 #include<unistd.h>
 #include "server.h"
-#include <stdlib.h>
 
 int create_socket(void) {
 	int socket_desc;
@@ -44,7 +43,6 @@ int create_server(void) {
 	int error_create;
 	int error_accept;
 	int error_listen;
-	int error_receive;
 	int bind_state = -1;
 	int socket_desc = -1;
 	int new_socket_desc;
@@ -89,7 +87,7 @@ int create_server(void) {
 
 	debug_printf(3, "Waiting for incoming connections\n", socket_desc);
 	size_struct_sockaddr = sizeof(struct sockaddr_in);
-	new_socket_desc = accept(socket_desc, (struct sockaddr *)&client, (socklen_t*)&size_struct_sockaddr);
+	new_socket_desc = accept(socket_desc, (struct sockaddr *)&client, (socklen_t*)&size_struct_sockaddr)
 				debug_printf(3, "Connection accepted\n", socket_desc);
 	//reply to the client
 	//Receive a message from client
@@ -110,16 +108,22 @@ int create_server(void) {
 				error_listen, strerror(error_listen));
 		perror("recv failed");
 	}
-	void *sock = &socket_desc;
+	void *sock = &socket_desc
 	//Free the socket pointer
 	free(sock);
 
+
+
+
+	//message = "Auto-reply to the client\n";
+	//write(new_socket_desc, message, strlen(message));
+	//debug_printf(3, "Auto-reply send\n", socket_desc);
 	if (new_socket_desc<0){
 		error_accept = errno;
 		error_printf("accept failed // Num error : [%i] // Message_error : [%s]\n\n", error_accept, strerror(error_accept));
 	}
 
-	return 0;
+	return socket_desc;
 }
 
 

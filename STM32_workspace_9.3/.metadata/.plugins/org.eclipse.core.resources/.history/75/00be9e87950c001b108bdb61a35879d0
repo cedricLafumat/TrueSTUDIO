@@ -114,12 +114,18 @@ int create_server(void) {
 	//Free the socket pointer
 	free(sock);
 
+
+
+
+	//message = "Auto-reply to the client\n";
+	//write(new_socket_desc, message, strlen(message));
+	//debug_printf(3, "Auto-reply send\n", socket_desc);
 	if (new_socket_desc<0){
 		error_accept = errno;
 		error_printf("accept failed // Num error : [%i] // Message_error : [%s]\n\n", error_accept, strerror(error_accept));
 	}
 
-	return 0;
+	return socket_desc;
 }
 
 
