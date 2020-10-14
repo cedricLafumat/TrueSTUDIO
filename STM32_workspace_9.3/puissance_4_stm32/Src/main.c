@@ -284,9 +284,9 @@ void compteur(int TabSize) {
 			RGB *matrice[7] = { tabline_1, tabline_2, tabline_3, tabline_4,tabline_5, tabline_6, tabline_7 };
 			SetLedLine(matrice, TabSize);
 		}
-		HAL_Delay(1000);
+		//HAL_Delay(1000);
 		ResetAllBlack();
-		HAL_Delay(500);
+		//HAL_Delay(500);
 	}
 }
 

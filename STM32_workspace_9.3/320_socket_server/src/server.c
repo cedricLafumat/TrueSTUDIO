@@ -47,9 +47,9 @@ int create_server(void) {
 	int error_receive;
 	int bind_state = -1;
 	int socket_desc = -1;
-	int new_socket_desc;
-	int read_size;
-	char message[2000];
+	int new_socket_desc = -1;
+	int read_size = -1;
+	char message[SIZE_MESSAGE +1];
 	int size_struct_sockaddr;
 	while (socket_desc == -1) {
 		socket_desc = create_socket();
@@ -63,8 +63,7 @@ int create_server(void) {
 				bind_state = bind(socket_desc, (struct sockaddr *)&server, sizeof(server));
 				if (bind_state == -1) {
 					error_create = errno;
-					error_printf(
-							"bind failed // Num error : [%i] // Message_error : [%s]\n\n",
+					error_printf("bind failed // Num error : [%i] // Message_error : [%s]\n\n",
 							error_create, strerror(error_create));
 					sleep(2);
 				} else {
@@ -73,6 +72,7 @@ int create_server(void) {
 			}
 		}
 	}
+
 	//listen
 	int listen_state = -1;
 	while (listen_state == -1){
@@ -85,30 +85,35 @@ int create_server(void) {
 		}
 	}
 
-	//accept and incoming connection
+	while (1){
+		//accept and incoming connection
+		debug_printf(3, "Waiting for incoming connections\n", socket_desc);
+		size_struct_sockaddr = sizeof(struct sockaddr_in);
+		new_socket_desc = accept(socket_desc, (struct sockaddr *)&client, (socklen_t*)&size_struct_sockaddr);
+		if (new_socket_desc == -1){
+			error_accept = errno;
+			error_printf("accept failed // Num error : [%i] // Message_error : [%s]\n\n",
+					error_accept, strerror(error_accept));
+		}
+		debug_printf(3, "Connection accepted\n", socket_desc);
+		//Receive a message from client
+		while( (read_size = recv(new_socket_desc , message , SIZE_MESSAGE , 0)) > 0 )
+		{
+			message[read_size] = '\0';
+			printf("%s", message);
+		}
 
-	debug_printf(3, "Waiting for incoming connections\n", socket_desc);
-	size_struct_sockaddr = sizeof(struct sockaddr_in);
-	new_socket_desc = accept(socket_desc, (struct sockaddr *)&client, (socklen_t*)&size_struct_sockaddr);
-				debug_printf(3, "Connection accepted\n", socket_desc);
-	//reply to the client
-	//Receive a message from client
-	while( (read_size = recv(new_socket_desc , message , 2000 , 0)) > 0 )
-	{
-		//Send the message back to client
-		printf("%s", message);
-	}
-
-	if(read_size == 0)
-	{
-		debug_printf(3, "Client disconnected\n", new_socket_desc);
-	}
-	else if(read_size == -1)
-	{
-		error_receive = errno;
-		error_printf("listen failed // Num error : [%i] // Message_error : [%s]\n\n",
-				error_listen, strerror(error_listen));
-		perror("recv failed");
+		if(read_size == 0)
+		{
+			debug_printf(3, "Client disconnected\n", new_socket_desc);
+		}
+		else if(read_size == -1)
+		{
+			error_receive = errno;
+			error_printf("listen failed // Num error : [%i] // Message_error : [%s]\n\n",
+					error_listen, strerror(error_listen));
+			perror("receive failed");
+		}
 	}
 	void *sock = &socket_desc;
 	//Free the socket pointer
