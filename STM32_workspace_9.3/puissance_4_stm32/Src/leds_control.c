@@ -2,8 +2,8 @@
 
 #include <fcntl.h>
 #include <unistd.h>
-#include<string.h>
-#include<stdio.h>
+#include <string.h>
+#include <stdio.h>
 #include "stm32f4xx_hal.h"
 
 #ifdef TEST_HEADER
