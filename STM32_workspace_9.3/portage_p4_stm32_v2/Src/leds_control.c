@@ -48,6 +48,7 @@
 
 extern UART_HandleTypeDef huart3;
 extern osMessageQueueId_t queue_send_uartHandle;
+extern osMessageQueueId_t queue_read_uartHandle;
 //extern osMessageQueueId_t queue_read_uartHandle;
 
 /**
@@ -117,7 +118,7 @@ LedControlReturnCode setLedColor(const unsigned int row,
 	const unsigned int finalCol = col - 1;
 	char buffer[SIZE_OF_LED_COMMAND_BUFFER] = { 0 };
 	computeMessage(buffer, finalRow, finalCol, red, green, blue);
-	osMessageQueuePut(&queue_send_uartHandle, buffer, 10, osWaitForever);
+	osMessageQueuePut(queue_send_uartHandle, buffer, 0, 10);
 
 
 
@@ -129,8 +130,10 @@ char readbutton(char *pReadData, char DataSize)
 {
 	unsigned char buffer[SIZE_OF_PLAYER_COMMAND_BUFFER] = { 0 };
 
-	if(osMessageQueueGet(&queue_send_uartHandle, buffer, 0, 10) == osOK)
+	//if(osMessageQueueGet(queue_read_uartHandle, buffer, 0, 10) == osOK)
+	if (osMessageQueueGetCount(queue_read_uartHandle) > 0)
 	{
+		osMessageQueueGet(queue_read_uartHandle, buffer, 0, 10);
 		memcpy(pReadData,buffer,SIZE_OF_PLAYER_COMMAND_BUFFER);
 		return LCRC_OK;
 	}

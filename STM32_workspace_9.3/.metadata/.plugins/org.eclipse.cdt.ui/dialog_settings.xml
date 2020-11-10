@@ -23,10 +23,18 @@
 		<item value="223" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration.internal">
-		<item value="168" key="size.height"/>
-		<item value="378" key="size.width"/>
+		<item value="144" key="size.height"/>
+		<item value="491" key="size.width"/>
 	</section>
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
+	</section>
+	<section name="PDOMSearchPage">
+		<item value="false" key="caseSensitive"/>
+		<item value="227191" key="searchFlags"/>
+		<list key="previousPatterns">
+			<item value="queue_send_uartHandle"/>
+			<item value="queue_read_uartHandle"/>
+		</list>
 	</section>
 	<section name="RenameInformationPopup">
 		<item value="2" key="snap_position"/>

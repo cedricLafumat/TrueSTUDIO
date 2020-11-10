@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/famine_thread"/>
 		<item value="/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/portage_p4_stm32_v2"/>
 		<item value="/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/portage_p4_stm32"/>
 		<item value="/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/led_blink"/>

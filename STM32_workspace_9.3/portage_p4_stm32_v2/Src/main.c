@@ -27,7 +27,6 @@
 #include "game.h"
 #include "game_p4.h"
 #include "leds_control.h"
-#include <string.h>
 
 #include <stdio.h>
 
@@ -50,6 +49,7 @@
 /* Private variables ---------------------------------------------------------*/
 ETH_HandleTypeDef heth;
 
+UART_HandleTypeDef huart7;
 UART_HandleTypeDef huart3;
 
 PCD_HandleTypeDef hpcd_USB_OTG_FS;
@@ -65,35 +65,35 @@ const osThreadAttr_t defaultTask_attributes = {
 osThreadId_t read_input_taskHandle;
 const osThreadAttr_t read_input_task_attributes = {
   .name = "read_input_task",
-  .priority = (osPriority_t) osPriorityNormal,
+  .priority = (osPriority_t) osPriorityLow,
   .stack_size = 128 * 4
 };
 /* Definitions for application_tas */
 osThreadId_t application_tasHandle;
 const osThreadAttr_t application_tas_attributes = {
   .name = "application_tas",
-  .priority = (osPriority_t) osPriorityNormal,
+  .priority = (osPriority_t) osPriorityLow,
   .stack_size = 128 * 4
 };
 /* Definitions for show_board_task */
 osThreadId_t show_board_taskHandle;
 const osThreadAttr_t show_board_task_attributes = {
   .name = "show_board_task",
-  .priority = (osPriority_t) osPriorityNormal,
+  .priority = (osPriority_t) osPriorityLow,
   .stack_size = 128 * 4
 };
 /* Definitions for timer_task */
 osThreadId_t timer_taskHandle;
 const osThreadAttr_t timer_task_attributes = {
   .name = "timer_task",
-  .priority = (osPriority_t) osPriorityNormal,
+  .priority = (osPriority_t) osPriorityLow,
   .stack_size = 128 * 4
 };
 /* Definitions for uart_tastk */
 osThreadId_t uart_tastkHandle;
 const osThreadAttr_t uart_tastk_attributes = {
   .name = "uart_tastk",
-  .priority = (osPriority_t) osPriorityNormal,
+  .priority = (osPriority_t) osPriorityLow,
   .stack_size = 128 * 4
 };
 /* Definitions for queue_read */
@@ -160,6 +160,7 @@ Timer timer_blink;
 Timer timer_to_play;
 Timer timer_idle;
 Timer tab_timer[NB_TIMERS];
+int init_game = 0;
 
 
 extern RGB bckgrd;
@@ -174,6 +175,7 @@ static void MX_GPIO_Init(void);
 static void MX_ETH_Init(void);
 static void MX_USART3_UART_Init(void);
 static void MX_USB_OTG_FS_PCD_Init(void);
+static void MX_UART7_Init(void);
 void StartDefaultTask(void *argument);
 void read_input_function(void *argument);
 void application_function(void *argument);
@@ -225,6 +227,7 @@ int main(void)
   MX_ETH_Init();
   MX_USART3_UART_Init();
   MX_USB_OTG_FS_PCD_Init();
+  MX_UART7_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
@@ -269,16 +272,16 @@ int main(void)
 
   /* Create the queue(s) */
   /* creation of queue_read */
-  queue_readHandle = osMessageQueueNew (16, sizeof(SIZEOFMESSAGE), &queue_read_attributes);
+  queue_readHandle = osMessageQueueNew (16, 10, &queue_read_attributes);
 
   /* creation of queue_send */
-  queue_sendHandle = osMessageQueueNew (16, sizeof(SIZEOFMESSAGE), &queue_send_attributes);
+  queue_sendHandle = osMessageQueueNew (16, 10, &queue_send_attributes);
 
   /* creation of queue_read_uart */
-  queue_read_uartHandle = osMessageQueueNew (16, sizeof(SIZEOFMESSAGE), &queue_read_uart_attributes);
+  queue_read_uartHandle = osMessageQueueNew (10, 5, &queue_read_uart_attributes);
 
   /* creation of queue_send_uart */
-  queue_send_uartHandle = osMessageQueueNew (16, sizeof(SIZEOFMESSAGE), &queue_send_uart_attributes);
+  queue_send_uartHandle = osMessageQueueNew (49, 10, &queue_send_uart_attributes);
 
   /* USER CODE BEGIN RTOS_QUEUES */
 	/* add queues, ... */
@@ -407,6 +410,39 @@ static void MX_ETH_Init(void)
 }
 
 /**
+  * @brief UART7 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_UART7_Init(void)
+{
+
+  /* USER CODE BEGIN UART7_Init 0 */
+
+  /* USER CODE END UART7_Init 0 */
+
+  /* USER CODE BEGIN UART7_Init 1 */
+
+  /* USER CODE END UART7_Init 1 */
+  huart7.Instance = UART7;
+  huart7.Init.BaudRate = 115200;
+  huart7.Init.WordLength = UART_WORDLENGTH_8B;
+  huart7.Init.StopBits = UART_STOPBITS_1;
+  huart7.Init.Parity = UART_PARITY_NONE;
+  huart7.Init.Mode = UART_MODE_TX_RX;
+  huart7.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart7.Init.OverSampling = UART_OVERSAMPLING_16;
+  if (HAL_UART_Init(&huart7) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN UART7_Init 2 */
+
+  /* USER CODE END UART7_Init 2 */
+
+}
+
+/**
   * @brief USART3 Initialization Function
   * @param None
   * @retval None
@@ -488,6 +524,7 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
+  __HAL_RCC_GPIOE_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
   __HAL_RCC_GPIOG_CLK_ENABLE();
 
@@ -546,8 +583,8 @@ void StartDefaultTask(void *argument)
 		//if ((readbutton(message, 5)) == LCRC_OK){
 			osDelay(1000);
 			start_game();
-		}*/
 		//}
+		}*/
 		osDelay(1);
 	}
   /* USER CODE END 5 */ 
@@ -571,10 +608,13 @@ void read_input_function(void *argument)
 			start_game();
 		}*/
 		if ((readbutton(message, 5)) == LCRC_OK){
-			start_game();
+			if (init_game == 0) {
+				start_game();
+				init_game = 1;
+			}
 			if (message[0] == 112){
 				command[0] = CLAVIER;
-				if (message[3] == 117){
+				if (message[3] == 100){
 					if (message[1] == 49){
 						command[1] = PLAYER_1;
 					}
@@ -782,12 +822,12 @@ void uart_task_function(void *argument)
   /* Infinite loop */
   for(;;)
   {
-	  if(osMessageQueueGetCount > 0){
-		  osMessageQueueGet(&queue_send_uartHandle, message, 0, 10);
-		  HAL_UART_Transmit(&huart3,(uint8_t *) message, strlen(message), 0xFFFF);
+	  if(osMessageQueueGetCount(queue_send_uartHandle) > 0){
+		  osMessageQueueGet(queue_send_uartHandle, message, 0, 10);
+		  HAL_UART_Transmit(&huart7,(uint8_t *) message, SIZEOFMESSAGE, 10);
 	  }
-	  if(HAL_UART_Receive(&huart3,(uint8_t *) message, 5, 0xFFFF) == HAL_OK){
-		  osMessageQueuePut(QUEUE_READ, message, 0, 10);
+	  if(HAL_UART_Receive(&huart7,(uint8_t *) message, 5, 10) == HAL_OK){
+		  osMessageQueuePut(queue_read_uartHandle, message, 0, 10);
 	  }
     osDelay(1);
   }

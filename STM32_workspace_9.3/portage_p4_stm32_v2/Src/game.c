@@ -46,7 +46,7 @@ const RGB Black={0,0,0};
 
 const RGB bckgrd = {255, 0, 0};
 const RGB token_player_1 = {0, 0, 255};
-const RGB token_player_2 = {255, 0, 0};
+const RGB token_player_2 = {0, 255, 0};
 
 extern osMessageQueueId_t queue_readHandle;
 extern osMessageQueueId_t queue_sendHandle;
