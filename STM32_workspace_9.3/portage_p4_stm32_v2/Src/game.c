@@ -44,7 +44,7 @@ const RGB Purple={255,0,255};
 const RGB Yellow={255,255,0};
 const RGB Black={0,0,0};
 
-const RGB bckgrd = {255, 0, 0};
+const RGB bckgrd = {255, 255, 255};
 const RGB token_player_1 = {0, 0, 255};
 const RGB token_player_2 = {0, 255, 0};
 

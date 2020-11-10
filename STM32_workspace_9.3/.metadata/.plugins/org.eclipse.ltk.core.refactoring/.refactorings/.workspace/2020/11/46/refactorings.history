@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;portage_p4_stm32_v2/Src/write_debug.c&apos;" deleteContents="false" description="Delete resource &apos;portage_p4_stm32_v2/Src/write_debug.c&apos;" element1="/portage_p4_stm32_v2/Src/write_debug.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1605000490356"/>
+</session>

@@ -29,6 +29,9 @@
 #include "leds_control.h"
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
 
 /* USER CODE END Includes */
 
@@ -57,99 +60,99 @@ PCD_HandleTypeDef hpcd_USB_OTG_FS;
 /* Definitions for defaultTask */
 osThreadId_t defaultTaskHandle;
 const osThreadAttr_t defaultTask_attributes = {
-  .name = "defaultTask",
-  .priority = (osPriority_t) osPriorityNormal,
-  .stack_size = 128 * 4
+		.name = "defaultTask",
+		.priority = (osPriority_t) osPriorityNormal,
+		.stack_size = 128 * 4
 };
 /* Definitions for read_input_task */
 osThreadId_t read_input_taskHandle;
 const osThreadAttr_t read_input_task_attributes = {
-  .name = "read_input_task",
-  .priority = (osPriority_t) osPriorityLow,
-  .stack_size = 128 * 4
+		.name = "read_input_task",
+		.priority = (osPriority_t) osPriorityLow,
+		.stack_size = 128 * 4
 };
 /* Definitions for application_tas */
 osThreadId_t application_tasHandle;
 const osThreadAttr_t application_tas_attributes = {
-  .name = "application_tas",
-  .priority = (osPriority_t) osPriorityLow,
-  .stack_size = 128 * 4
+		.name = "application_tas",
+		.priority = (osPriority_t) osPriorityLow,
+		.stack_size = 128 * 4
 };
 /* Definitions for show_board_task */
 osThreadId_t show_board_taskHandle;
 const osThreadAttr_t show_board_task_attributes = {
-  .name = "show_board_task",
-  .priority = (osPriority_t) osPriorityLow,
-  .stack_size = 128 * 4
+		.name = "show_board_task",
+		.priority = (osPriority_t) osPriorityLow,
+		.stack_size = 128 * 4
 };
 /* Definitions for timer_task */
 osThreadId_t timer_taskHandle;
 const osThreadAttr_t timer_task_attributes = {
-  .name = "timer_task",
-  .priority = (osPriority_t) osPriorityLow,
-  .stack_size = 128 * 4
+		.name = "timer_task",
+		.priority = (osPriority_t) osPriorityLow,
+		.stack_size = 128 * 4
 };
 /* Definitions for uart_tastk */
 osThreadId_t uart_tastkHandle;
 const osThreadAttr_t uart_tastk_attributes = {
-  .name = "uart_tastk",
-  .priority = (osPriority_t) osPriorityLow,
-  .stack_size = 128 * 4
+		.name = "uart_tastk",
+		.priority = (osPriority_t) osPriorityLow,
+		.stack_size = 128 * 4
 };
 /* Definitions for queue_read */
 osMessageQueueId_t queue_readHandle;
 const osMessageQueueAttr_t queue_read_attributes = {
-  .name = "queue_read"
+		.name = "queue_read"
 };
 /* Definitions for queue_send */
 osMessageQueueId_t queue_sendHandle;
 const osMessageQueueAttr_t queue_send_attributes = {
-  .name = "queue_send"
+		.name = "queue_send"
 };
 /* Definitions for queue_read_uart */
 osMessageQueueId_t queue_read_uartHandle;
 const osMessageQueueAttr_t queue_read_uart_attributes = {
-  .name = "queue_read_uart"
+		.name = "queue_read_uart"
 };
 /* Definitions for queue_send_uart */
 osMessageQueueId_t queue_send_uartHandle;
 const osMessageQueueAttr_t queue_send_uart_attributes = {
-  .name = "queue_send_uart"
+		.name = "queue_send_uart"
 };
 /* Definitions for timer_blink */
 osTimerId_t timer_blinkHandle;
 const osTimerAttr_t timer_blink_attributes = {
-  .name = "timer_blink"
+		.name = "timer_blink"
 };
 /* Definitions for timer_to_play */
 osTimerId_t timer_to_playHandle;
 const osTimerAttr_t timer_to_play_attributes = {
-  .name = "timer_to_play"
+		.name = "timer_to_play"
 };
 /* Definitions for timer_inactivity */
 osTimerId_t timer_inactivityHandle;
 const osTimerAttr_t timer_inactivity_attributes = {
-  .name = "timer_inactivity"
+		.name = "timer_inactivity"
 };
 /* Definitions for mutex_timer */
 osMutexId_t mutex_timerHandle;
 const osMutexAttr_t mutex_timer_attributes = {
-  .name = "mutex_timer"
+		.name = "mutex_timer"
 };
 /* Definitions for mutex_element */
 osMutexId_t mutex_elementHandle;
 const osMutexAttr_t mutex_element_attributes = {
-  .name = "mutex_element"
+		.name = "mutex_element"
 };
 /* Definitions for semaphore_input */
 osSemaphoreId_t semaphore_inputHandle;
 const osSemaphoreAttr_t semaphore_input_attributes = {
-  .name = "semaphore_input"
+		.name = "semaphore_input"
 };
 /* Definitions for semaphore_display */
 osSemaphoreId_t semaphore_displayHandle;
 const osSemaphoreAttr_t semaphore_display_attributes = {
-  .name = "semaphore_display"
+		.name = "semaphore_display"
 };
 /* USER CODE BEGIN PV */
 
@@ -197,368 +200,368 @@ void Callback03(void *argument);
 /* USER CODE END 0 */
 
 /**
-  * @brief  The application entry point.
-  * @retval int
-  */
+ * @brief  The application entry point.
+ * @retval int
+ */
 int main(void)
 {
-  /* USER CODE BEGIN 1 */
+	/* USER CODE BEGIN 1 */
 
-  /* USER CODE END 1 */
+	/* USER CODE END 1 */
 
-  /* MCU Configuration--------------------------------------------------------*/
+	/* MCU Configuration--------------------------------------------------------*/
 
-  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  HAL_Init();
+	/* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+	HAL_Init();
 
-  /* USER CODE BEGIN Init */
+	/* USER CODE BEGIN Init */
 
-  /* USER CODE END Init */
+	/* USER CODE END Init */
 
-  /* Configure the system clock */
-  SystemClock_Config();
+	/* Configure the system clock */
+	SystemClock_Config();
 
-  /* USER CODE BEGIN SysInit */
+	/* USER CODE BEGIN SysInit */
 
-  /* USER CODE END SysInit */
+	/* USER CODE END SysInit */
 
-  /* Initialize all configured peripherals */
-  MX_GPIO_Init();
-  MX_ETH_Init();
-  MX_USART3_UART_Init();
-  MX_USB_OTG_FS_PCD_Init();
-  MX_UART7_Init();
-  /* USER CODE BEGIN 2 */
+	/* Initialize all configured peripherals */
+	MX_GPIO_Init();
+	MX_ETH_Init();
+	MX_USART3_UART_Init();
+	MX_USB_OTG_FS_PCD_Init();
+	MX_UART7_Init();
+	/* USER CODE BEGIN 2 */
 
-  /* USER CODE END 2 */
+	/* USER CODE END 2 */
 
-  /* Init scheduler */
-  osKernelInitialize();
-  /* Create the mutex(es) */
-  /* creation of mutex_timer */
-  mutex_timerHandle = osMutexNew(&mutex_timer_attributes);
+	/* Init scheduler */
+	osKernelInitialize();
+	/* Create the mutex(es) */
+	/* creation of mutex_timer */
+	mutex_timerHandle = osMutexNew(&mutex_timer_attributes);
 
-  /* creation of mutex_element */
-  mutex_elementHandle = osMutexNew(&mutex_element_attributes);
+	/* creation of mutex_element */
+	mutex_elementHandle = osMutexNew(&mutex_element_attributes);
 
-  /* USER CODE BEGIN RTOS_MUTEX */
+	/* USER CODE BEGIN RTOS_MUTEX */
 	/* add mutexes, ... */
-  /* USER CODE END RTOS_MUTEX */
+	/* USER CODE END RTOS_MUTEX */
 
-  /* Create the semaphores(s) */
-  /* creation of semaphore_input */
-  semaphore_inputHandle = osSemaphoreNew(1, 1, &semaphore_input_attributes);
+	/* Create the semaphores(s) */
+	/* creation of semaphore_input */
+	semaphore_inputHandle = osSemaphoreNew(1, 1, &semaphore_input_attributes);
 
-  /* creation of semaphore_display */
-  semaphore_displayHandle = osSemaphoreNew(1, 1, &semaphore_display_attributes);
+	/* creation of semaphore_display */
+	semaphore_displayHandle = osSemaphoreNew(1, 1, &semaphore_display_attributes);
 
-  /* USER CODE BEGIN RTOS_SEMAPHORES */
+	/* USER CODE BEGIN RTOS_SEMAPHORES */
 	/* add semaphores, ... */
-  /* USER CODE END RTOS_SEMAPHORES */
+	/* USER CODE END RTOS_SEMAPHORES */
 
-  /* Create the timer(s) */
-  /* creation of timer_blink */
-  timer_blinkHandle = osTimerNew(Callback01, osTimerOnce, NULL, &timer_blink_attributes);
+	/* Create the timer(s) */
+	/* creation of timer_blink */
+	timer_blinkHandle = osTimerNew(Callback01, osTimerOnce, NULL, &timer_blink_attributes);
 
-  /* creation of timer_to_play */
-  timer_to_playHandle = osTimerNew(Callback02, osTimerOnce, NULL, &timer_to_play_attributes);
+	/* creation of timer_to_play */
+	timer_to_playHandle = osTimerNew(Callback02, osTimerOnce, NULL, &timer_to_play_attributes);
 
-  /* creation of timer_inactivity */
-  timer_inactivityHandle = osTimerNew(Callback03, osTimerOnce, NULL, &timer_inactivity_attributes);
+	/* creation of timer_inactivity */
+	timer_inactivityHandle = osTimerNew(Callback03, osTimerOnce, NULL, &timer_inactivity_attributes);
 
-  /* USER CODE BEGIN RTOS_TIMERS */
+	/* USER CODE BEGIN RTOS_TIMERS */
 	/* start timers, add new ones, ... */
-  /* USER CODE END RTOS_TIMERS */
+	/* USER CODE END RTOS_TIMERS */
 
-  /* Create the queue(s) */
-  /* creation of queue_read */
-  queue_readHandle = osMessageQueueNew (16, 10, &queue_read_attributes);
+	/* Create the queue(s) */
+	/* creation of queue_read */
+	queue_readHandle = osMessageQueueNew (16, 10, &queue_read_attributes);
 
-  /* creation of queue_send */
-  queue_sendHandle = osMessageQueueNew (16, 10, &queue_send_attributes);
+	/* creation of queue_send */
+	queue_sendHandle = osMessageQueueNew (16, 10, &queue_send_attributes);
 
-  /* creation of queue_read_uart */
-  queue_read_uartHandle = osMessageQueueNew (10, 5, &queue_read_uart_attributes);
+	/* creation of queue_read_uart */
+	queue_read_uartHandle = osMessageQueueNew (10, 5, &queue_read_uart_attributes);
 
-  /* creation of queue_send_uart */
-  queue_send_uartHandle = osMessageQueueNew (49, 10, &queue_send_uart_attributes);
+	/* creation of queue_send_uart */
+	queue_send_uartHandle = osMessageQueueNew (49, 10, &queue_send_uart_attributes);
 
-  /* USER CODE BEGIN RTOS_QUEUES */
+	/* USER CODE BEGIN RTOS_QUEUES */
 	/* add queues, ... */
-  /* USER CODE END RTOS_QUEUES */
+	/* USER CODE END RTOS_QUEUES */
 
-  /* Create the thread(s) */
-  /* creation of defaultTask */
-  defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
+	/* Create the thread(s) */
+	/* creation of defaultTask */
+	defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
 
-  /* creation of read_input_task */
-  read_input_taskHandle = osThreadNew(read_input_function, NULL, &read_input_task_attributes);
+	/* creation of read_input_task */
+	read_input_taskHandle = osThreadNew(read_input_function, NULL, &read_input_task_attributes);
 
-  /* creation of application_tas */
-  application_tasHandle = osThreadNew(application_function, NULL, &application_tas_attributes);
+	/* creation of application_tas */
+	application_tasHandle = osThreadNew(application_function, NULL, &application_tas_attributes);
 
-  /* creation of show_board_task */
-  show_board_taskHandle = osThreadNew(show_board_function, NULL, &show_board_task_attributes);
+	/* creation of show_board_task */
+	show_board_taskHandle = osThreadNew(show_board_function, NULL, &show_board_task_attributes);
 
-  /* creation of timer_task */
-  timer_taskHandle = osThreadNew(timer_function, NULL, &timer_task_attributes);
+	/* creation of timer_task */
+	timer_taskHandle = osThreadNew(timer_function, NULL, &timer_task_attributes);
 
-  /* creation of uart_tastk */
-  uart_tastkHandle = osThreadNew(uart_task_function, NULL, &uart_tastk_attributes);
+	/* creation of uart_tastk */
+	uart_tastkHandle = osThreadNew(uart_task_function, NULL, &uart_tastk_attributes);
 
-  /* USER CODE BEGIN RTOS_THREADS */
+	/* USER CODE BEGIN RTOS_THREADS */
 	/* add threads, ... */
-  /* USER CODE END RTOS_THREADS */
+	/* USER CODE END RTOS_THREADS */
 
-  /* Start scheduler */
-  osKernelStart();
- 
-  /* We should never get here as control is now taken by the scheduler */
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
+	/* Start scheduler */
+	osKernelStart();
+
+	/* We should never get here as control is now taken by the scheduler */
+	/* Infinite loop */
+	/* USER CODE BEGIN WHILE */
 	while (1)
 	{
-    /* USER CODE END WHILE */
+		/* USER CODE END WHILE */
 
-    /* USER CODE BEGIN 3 */
+		/* USER CODE BEGIN 3 */
 	}
-  /* USER CODE END 3 */
+	/* USER CODE END 3 */
 }
 
 /**
-  * @brief System Clock Configuration
-  * @retval None
-  */
+ * @brief System Clock Configuration
+ * @retval None
+ */
 void SystemClock_Config(void)
 {
-  RCC_OscInitTypeDef RCC_OscInitStruct = {0};
-  RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+	RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+	RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
-  /** Configure the main internal regulator output voltage 
-  */
-  __HAL_RCC_PWR_CLK_ENABLE();
-  __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
-  /** Initializes the CPU, AHB and APB busses clocks 
-  */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
-  RCC_OscInitStruct.HSEState = RCC_HSE_BYPASS;
-  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
-  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
-  RCC_OscInitStruct.PLL.PLLM = 4;
-  RCC_OscInitStruct.PLL.PLLN = 168;
-  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
-  RCC_OscInitStruct.PLL.PLLQ = 7;
-  if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /** Initializes the CPU, AHB and APB busses clocks 
-  */
-  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
-                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
-  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;
-  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
+	/** Configure the main internal regulator output voltage
+	 */
+	__HAL_RCC_PWR_CLK_ENABLE();
+	__HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
+	/** Initializes the CPU, AHB and APB busses clocks
+	 */
+	RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+	RCC_OscInitStruct.HSEState = RCC_HSE_BYPASS;
+	RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+	RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+	RCC_OscInitStruct.PLL.PLLM = 4;
+	RCC_OscInitStruct.PLL.PLLN = 168;
+	RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
+	RCC_OscInitStruct.PLL.PLLQ = 7;
+	if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+	{
+		Error_Handler();
+	}
+	/** Initializes the CPU, AHB and APB busses clocks
+	 */
+	RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+			|RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+	RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+	RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+	RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;
+	RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_5) != HAL_OK)
-  {
-    Error_Handler();
-  }
+	if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_5) != HAL_OK)
+	{
+		Error_Handler();
+	}
 }
 
 /**
-  * @brief ETH Initialization Function
-  * @param None
-  * @retval None
-  */
+ * @brief ETH Initialization Function
+ * @param None
+ * @retval None
+ */
 static void MX_ETH_Init(void)
 {
 
-  /* USER CODE BEGIN ETH_Init 0 */
+	/* USER CODE BEGIN ETH_Init 0 */
 
-  /* USER CODE END ETH_Init 0 */
+	/* USER CODE END ETH_Init 0 */
 
-  /* USER CODE BEGIN ETH_Init 1 */
+	/* USER CODE BEGIN ETH_Init 1 */
 
-  /* USER CODE END ETH_Init 1 */
-  heth.Instance = ETH;
-  heth.Init.AutoNegotiation = ETH_AUTONEGOTIATION_ENABLE;
-  heth.Init.PhyAddress = LAN8742A_PHY_ADDRESS;
-  heth.Init.MACAddr[0] =   0x00;
-  heth.Init.MACAddr[1] =   0x80;
-  heth.Init.MACAddr[2] =   0xE1;
-  heth.Init.MACAddr[3] =   0x00;
-  heth.Init.MACAddr[4] =   0x00;
-  heth.Init.MACAddr[5] =   0x00;
-  heth.Init.RxMode = ETH_RXPOLLING_MODE;
-  heth.Init.ChecksumMode = ETH_CHECKSUM_BY_HARDWARE;
-  heth.Init.MediaInterface = ETH_MEDIA_INTERFACE_RMII;
+	/* USER CODE END ETH_Init 1 */
+	heth.Instance = ETH;
+	heth.Init.AutoNegotiation = ETH_AUTONEGOTIATION_ENABLE;
+	heth.Init.PhyAddress = LAN8742A_PHY_ADDRESS;
+	heth.Init.MACAddr[0] =   0x00;
+	heth.Init.MACAddr[1] =   0x80;
+	heth.Init.MACAddr[2] =   0xE1;
+	heth.Init.MACAddr[3] =   0x00;
+	heth.Init.MACAddr[4] =   0x00;
+	heth.Init.MACAddr[5] =   0x00;
+	heth.Init.RxMode = ETH_RXPOLLING_MODE;
+	heth.Init.ChecksumMode = ETH_CHECKSUM_BY_HARDWARE;
+	heth.Init.MediaInterface = ETH_MEDIA_INTERFACE_RMII;
 
-  /* USER CODE BEGIN MACADDRESS */
+	/* USER CODE BEGIN MACADDRESS */
 
-  /* USER CODE END MACADDRESS */
+	/* USER CODE END MACADDRESS */
 
-  if (HAL_ETH_Init(&heth) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN ETH_Init 2 */
+	if (HAL_ETH_Init(&heth) != HAL_OK)
+	{
+		Error_Handler();
+	}
+	/* USER CODE BEGIN ETH_Init 2 */
 
-  /* USER CODE END ETH_Init 2 */
+	/* USER CODE END ETH_Init 2 */
 
 }
 
 /**
-  * @brief UART7 Initialization Function
-  * @param None
-  * @retval None
-  */
+ * @brief UART7 Initialization Function
+ * @param None
+ * @retval None
+ */
 static void MX_UART7_Init(void)
 {
 
-  /* USER CODE BEGIN UART7_Init 0 */
+	/* USER CODE BEGIN UART7_Init 0 */
 
-  /* USER CODE END UART7_Init 0 */
+	/* USER CODE END UART7_Init 0 */
 
-  /* USER CODE BEGIN UART7_Init 1 */
+	/* USER CODE BEGIN UART7_Init 1 */
 
-  /* USER CODE END UART7_Init 1 */
-  huart7.Instance = UART7;
-  huart7.Init.BaudRate = 115200;
-  huart7.Init.WordLength = UART_WORDLENGTH_8B;
-  huart7.Init.StopBits = UART_STOPBITS_1;
-  huart7.Init.Parity = UART_PARITY_NONE;
-  huart7.Init.Mode = UART_MODE_TX_RX;
-  huart7.Init.HwFlowCtl = UART_HWCONTROL_NONE;
-  huart7.Init.OverSampling = UART_OVERSAMPLING_16;
-  if (HAL_UART_Init(&huart7) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN UART7_Init 2 */
+	/* USER CODE END UART7_Init 1 */
+	huart7.Instance = UART7;
+	huart7.Init.BaudRate = 115200;
+	huart7.Init.WordLength = UART_WORDLENGTH_8B;
+	huart7.Init.StopBits = UART_STOPBITS_1;
+	huart7.Init.Parity = UART_PARITY_NONE;
+	huart7.Init.Mode = UART_MODE_TX_RX;
+	huart7.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+	huart7.Init.OverSampling = UART_OVERSAMPLING_16;
+	if (HAL_UART_Init(&huart7) != HAL_OK)
+	{
+		Error_Handler();
+	}
+	/* USER CODE BEGIN UART7_Init 2 */
 
-  /* USER CODE END UART7_Init 2 */
+	/* USER CODE END UART7_Init 2 */
 
 }
 
 /**
-  * @brief USART3 Initialization Function
-  * @param None
-  * @retval None
-  */
+ * @brief USART3 Initialization Function
+ * @param None
+ * @retval None
+ */
 static void MX_USART3_UART_Init(void)
 {
 
-  /* USER CODE BEGIN USART3_Init 0 */
+	/* USER CODE BEGIN USART3_Init 0 */
 
-  /* USER CODE END USART3_Init 0 */
+	/* USER CODE END USART3_Init 0 */
 
-  /* USER CODE BEGIN USART3_Init 1 */
+	/* USER CODE BEGIN USART3_Init 1 */
 
-  /* USER CODE END USART3_Init 1 */
-  huart3.Instance = USART3;
-  huart3.Init.BaudRate = 115200;
-  huart3.Init.WordLength = UART_WORDLENGTH_8B;
-  huart3.Init.StopBits = UART_STOPBITS_1;
-  huart3.Init.Parity = UART_PARITY_NONE;
-  huart3.Init.Mode = UART_MODE_TX_RX;
-  huart3.Init.HwFlowCtl = UART_HWCONTROL_NONE;
-  huart3.Init.OverSampling = UART_OVERSAMPLING_16;
-  if (HAL_UART_Init(&huart3) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN USART3_Init 2 */
+	/* USER CODE END USART3_Init 1 */
+	huart3.Instance = USART3;
+	huart3.Init.BaudRate = 115200;
+	huart3.Init.WordLength = UART_WORDLENGTH_8B;
+	huart3.Init.StopBits = UART_STOPBITS_1;
+	huart3.Init.Parity = UART_PARITY_NONE;
+	huart3.Init.Mode = UART_MODE_TX_RX;
+	huart3.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+	huart3.Init.OverSampling = UART_OVERSAMPLING_16;
+	if (HAL_UART_Init(&huart3) != HAL_OK)
+	{
+		Error_Handler();
+	}
+	/* USER CODE BEGIN USART3_Init 2 */
 
-  /* USER CODE END USART3_Init 2 */
+	/* USER CODE END USART3_Init 2 */
 
 }
 
 /**
-  * @brief USB_OTG_FS Initialization Function
-  * @param None
-  * @retval None
-  */
+ * @brief USB_OTG_FS Initialization Function
+ * @param None
+ * @retval None
+ */
 static void MX_USB_OTG_FS_PCD_Init(void)
 {
 
-  /* USER CODE BEGIN USB_OTG_FS_Init 0 */
+	/* USER CODE BEGIN USB_OTG_FS_Init 0 */
 
-  /* USER CODE END USB_OTG_FS_Init 0 */
+	/* USER CODE END USB_OTG_FS_Init 0 */
 
-  /* USER CODE BEGIN USB_OTG_FS_Init 1 */
+	/* USER CODE BEGIN USB_OTG_FS_Init 1 */
 
-  /* USER CODE END USB_OTG_FS_Init 1 */
-  hpcd_USB_OTG_FS.Instance = USB_OTG_FS;
-  hpcd_USB_OTG_FS.Init.dev_endpoints = 4;
-  hpcd_USB_OTG_FS.Init.speed = PCD_SPEED_FULL;
-  hpcd_USB_OTG_FS.Init.dma_enable = DISABLE;
-  hpcd_USB_OTG_FS.Init.phy_itface = PCD_PHY_EMBEDDED;
-  hpcd_USB_OTG_FS.Init.Sof_enable = ENABLE;
-  hpcd_USB_OTG_FS.Init.low_power_enable = DISABLE;
-  hpcd_USB_OTG_FS.Init.lpm_enable = DISABLE;
-  hpcd_USB_OTG_FS.Init.vbus_sensing_enable = ENABLE;
-  hpcd_USB_OTG_FS.Init.use_dedicated_ep1 = DISABLE;
-  if (HAL_PCD_Init(&hpcd_USB_OTG_FS) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN USB_OTG_FS_Init 2 */
+	/* USER CODE END USB_OTG_FS_Init 1 */
+	hpcd_USB_OTG_FS.Instance = USB_OTG_FS;
+	hpcd_USB_OTG_FS.Init.dev_endpoints = 4;
+	hpcd_USB_OTG_FS.Init.speed = PCD_SPEED_FULL;
+	hpcd_USB_OTG_FS.Init.dma_enable = DISABLE;
+	hpcd_USB_OTG_FS.Init.phy_itface = PCD_PHY_EMBEDDED;
+	hpcd_USB_OTG_FS.Init.Sof_enable = ENABLE;
+	hpcd_USB_OTG_FS.Init.low_power_enable = DISABLE;
+	hpcd_USB_OTG_FS.Init.lpm_enable = DISABLE;
+	hpcd_USB_OTG_FS.Init.vbus_sensing_enable = ENABLE;
+	hpcd_USB_OTG_FS.Init.use_dedicated_ep1 = DISABLE;
+	if (HAL_PCD_Init(&hpcd_USB_OTG_FS) != HAL_OK)
+	{
+		Error_Handler();
+	}
+	/* USER CODE BEGIN USB_OTG_FS_Init 2 */
 
-  /* USER CODE END USB_OTG_FS_Init 2 */
+	/* USER CODE END USB_OTG_FS_Init 2 */
 
 }
 
 /**
-  * @brief GPIO Initialization Function
-  * @param None
-  * @retval None
-  */
+ * @brief GPIO Initialization Function
+ * @param None
+ * @retval None
+ */
 static void MX_GPIO_Init(void)
 {
-  GPIO_InitTypeDef GPIO_InitStruct = {0};
+	GPIO_InitTypeDef GPIO_InitStruct = {0};
 
-  /* GPIO Ports Clock Enable */
-  __HAL_RCC_GPIOC_CLK_ENABLE();
-  __HAL_RCC_GPIOH_CLK_ENABLE();
-  __HAL_RCC_GPIOA_CLK_ENABLE();
-  __HAL_RCC_GPIOB_CLK_ENABLE();
-  __HAL_RCC_GPIOE_CLK_ENABLE();
-  __HAL_RCC_GPIOD_CLK_ENABLE();
-  __HAL_RCC_GPIOG_CLK_ENABLE();
+	/* GPIO Ports Clock Enable */
+	__HAL_RCC_GPIOC_CLK_ENABLE();
+	__HAL_RCC_GPIOH_CLK_ENABLE();
+	__HAL_RCC_GPIOA_CLK_ENABLE();
+	__HAL_RCC_GPIOB_CLK_ENABLE();
+	__HAL_RCC_GPIOE_CLK_ENABLE();
+	__HAL_RCC_GPIOD_CLK_ENABLE();
+	__HAL_RCC_GPIOG_CLK_ENABLE();
 
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, LD1_Pin|LD3_Pin|LD2_Pin, GPIO_PIN_RESET);
+	/*Configure GPIO pin Output Level */
+	HAL_GPIO_WritePin(GPIOB, LD1_Pin|LD3_Pin|LD2_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(USB_PowerSwitchOn_GPIO_Port, USB_PowerSwitchOn_Pin, GPIO_PIN_RESET);
+	/*Configure GPIO pin Output Level */
+	HAL_GPIO_WritePin(USB_PowerSwitchOn_GPIO_Port, USB_PowerSwitchOn_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pin : USER_Btn_Pin */
-  GPIO_InitStruct.Pin = USER_Btn_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(USER_Btn_GPIO_Port, &GPIO_InitStruct);
+	/*Configure GPIO pin : USER_Btn_Pin */
+	GPIO_InitStruct.Pin = USER_Btn_Pin;
+	GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+	GPIO_InitStruct.Pull = GPIO_NOPULL;
+	HAL_GPIO_Init(USER_Btn_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : LD1_Pin LD3_Pin LD2_Pin */
-  GPIO_InitStruct.Pin = LD1_Pin|LD3_Pin|LD2_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+	/*Configure GPIO pins : LD1_Pin LD3_Pin LD2_Pin */
+	GPIO_InitStruct.Pin = LD1_Pin|LD3_Pin|LD2_Pin;
+	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+	GPIO_InitStruct.Pull = GPIO_NOPULL;
+	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+	HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : USB_PowerSwitchOn_Pin */
-  GPIO_InitStruct.Pin = USB_PowerSwitchOn_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(USB_PowerSwitchOn_GPIO_Port, &GPIO_InitStruct);
+	/*Configure GPIO pin : USB_PowerSwitchOn_Pin */
+	GPIO_InitStruct.Pin = USB_PowerSwitchOn_Pin;
+	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+	GPIO_InitStruct.Pull = GPIO_NOPULL;
+	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+	HAL_GPIO_Init(USB_PowerSwitchOn_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : USB_OverCurrent_Pin */
-  GPIO_InitStruct.Pin = USB_OverCurrent_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(USB_OverCurrent_GPIO_Port, &GPIO_InitStruct);
+	/*Configure GPIO pin : USB_OverCurrent_Pin */
+	GPIO_InitStruct.Pin = USB_OverCurrent_Pin;
+	GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+	GPIO_InitStruct.Pull = GPIO_NOPULL;
+	HAL_GPIO_Init(USB_OverCurrent_GPIO_Port, &GPIO_InitStruct);
 
 }
 
@@ -575,19 +578,46 @@ static void MX_GPIO_Init(void)
 /* USER CODE END Header_StartDefaultTask */
 void StartDefaultTask(void *argument)
 {
-  /* USER CODE BEGIN 5 */
+	/* USER CODE BEGIN 5 */
+	char *trame_debug;
+	char *trame_debug_send;
+	int count = 0;
+	trame_debug = "dHello_World\n";
+	int length_trame = strlen(trame_debug);
+	trame_debug_send = pvPortMalloc(length_trame);
+	trame_debug_send[0] = 'd';
+	osDelay(100);
 	/* Infinite loop */
 	for(;;)
 	{
-		/*if(HAL_GPIO_ReadPin(USER_Btn_GPIO_Port, USER_Btn_Pin)){
-		//if ((readbutton(message, 5)) == LCRC_OK){
-			osDelay(1000);
-			start_game();
-		//}
-		}*/
-		osDelay(1);
+		if(HAL_GPIO_ReadPin(USER_Btn_GPIO_Port, USER_Btn_Pin)){
+			count ++;
+			if (count == 4){
+				count = 1;
+			}
+			if (count == 1){
+				for (int i = 1; i < length_trame; i++){
+					trame_debug_send[i] = tolower(trame_debug[i]);
+				}
+			}
+			else if (count == 2){
+				for (int i = 1; i < length_trame; i++){
+					trame_debug_send[i] = toupper(trame_debug[i]);
+				}
+			}
+			else if (count == 3){
+				int end = length_trame - 2;
+				for (int i = 1; i < length_trame -1; i++){
+					trame_debug_send[i] = trame_debug[end];
+					end --;
+				}
+			}
+
+			HAL_UART_Transmit(&huart7,(uint8_t *) trame_debug_send, length_trame, 10);
+		}
+		osDelay(100);
 	}
-  /* USER CODE END 5 */ 
+	/* USER CODE END 5 */
 }
 
 /* USER CODE BEGIN Header_read_input_function */
@@ -599,7 +629,7 @@ void StartDefaultTask(void *argument)
 /* USER CODE END Header_read_input_function */
 void read_input_function(void *argument)
 {
-  /* USER CODE BEGIN read_input_function */
+	/* USER CODE BEGIN read_input_function */
 	char command[10];
 	/* Infinite loop */
 	for(;;)
@@ -623,26 +653,26 @@ void read_input_function(void *argument)
 					}
 					if (message[2] == 108){
 						command[2] = left;
-						send_message(QUEUE_READ, command, 1);
+						send_message(QUEUE_READ, command, 10);
 					}
 					else if(message[2] == 114){
 						command[2] = right;
-						send_message(QUEUE_READ, command, 1);
+						send_message(QUEUE_READ, command, 10);
 					}
 					else if(message[2] == 100){
 						command[2] = down;
-						send_message(QUEUE_READ, command, 1);
+						send_message(QUEUE_READ, command, 10);
 					}
 					else if(message[2] == 117){
 						command[2] = up;
-						send_message(QUEUE_READ, command, 1);
+						send_message(QUEUE_READ, command, 10);
 					}
 				}
 			}
 		}
 		osDelay(1);
 	}
-  /* USER CODE END read_input_function */
+	/* USER CODE END read_input_function */
 }
 
 /* USER CODE BEGIN Header_application_function */
@@ -654,7 +684,7 @@ void read_input_function(void *argument)
 /* USER CODE END Header_application_function */
 void application_function(void *argument)
 {
-  /* USER CODE BEGIN application_function */
+	/* USER CODE BEGIN application_function */
 	char message_receive_app[10];
 	char message_send_app[10];
 	int cpt_timer_win = 0;
@@ -733,7 +763,7 @@ void application_function(void *argument)
 
 		osDelay(1);
 	}
-  /* USER CODE END application_function */
+	/* USER CODE END application_function */
 }
 
 /* USER CODE BEGIN Header_show_board_function */
@@ -745,7 +775,7 @@ void application_function(void *argument)
 /* USER CODE END Header_show_board_function */
 void show_board_function(void *argument)
 {
-  /* USER CODE BEGIN show_board_function */
+	/* USER CODE BEGIN show_board_function */
 	char message[10];
 	RGB token;
 	SetLedMatrice();
@@ -771,7 +801,7 @@ void show_board_function(void *argument)
 		}
 		osDelay(1);
 	}
-  /* USER CODE END show_board_function */
+	/* USER CODE END show_board_function */
 }
 
 /* USER CODE BEGIN Header_timer_function */
@@ -783,7 +813,7 @@ void show_board_function(void *argument)
 /* USER CODE END Header_timer_function */
 void timer_function(void *argument)
 {
-  /* USER CODE BEGIN timer_function */
+	/* USER CODE BEGIN timer_function */
 	char message_timer[10];
 	/* Infinite loop */
 	for(;;)
@@ -805,106 +835,106 @@ void timer_function(void *argument)
 		}
 		osDelay(1);
 	}
-  /* USER CODE END timer_function */
+	/* USER CODE END timer_function */
 }
 
 /* USER CODE BEGIN Header_uart_task_function */
 /**
-* @brief Function implementing the uart_tastk thread.
-* @param argument: Not used
-* @retval None
-*/
+ * @brief Function implementing the uart_tastk thread.
+ * @param argument: Not used
+ * @retval None
+ */
 /* USER CODE END Header_uart_task_function */
 void uart_task_function(void *argument)
 {
-  /* USER CODE BEGIN uart_task_function */
+	/* USER CODE BEGIN uart_task_function */
 	char message[10];
-  /* Infinite loop */
-  for(;;)
-  {
-	  if(osMessageQueueGetCount(queue_send_uartHandle) > 0){
-		  osMessageQueueGet(queue_send_uartHandle, message, 0, 10);
-		  HAL_UART_Transmit(&huart7,(uint8_t *) message, SIZEOFMESSAGE, 10);
-	  }
-	  if(HAL_UART_Receive(&huart7,(uint8_t *) message, 5, 10) == HAL_OK){
-		  osMessageQueuePut(queue_read_uartHandle, message, 0, 10);
-	  }
-    osDelay(1);
-  }
-  /* USER CODE END uart_task_function */
+	/* Infinite loop */
+	for(;;)
+	{
+		if(osMessageQueueGetCount(queue_send_uartHandle) > 0){
+			osMessageQueueGet(queue_send_uartHandle, message, 0, 10);
+			HAL_UART_Transmit(&huart7,(uint8_t *) message, SIZEOFMESSAGE, 10);
+		}
+		if(HAL_UART_Receive(&huart7,(uint8_t *) message, 5, 10) == HAL_OK){
+			osMessageQueuePut(queue_read_uartHandle, message, 0, 10);
+		}
+		osDelay(1);
+	}
+	/* USER CODE END uart_task_function */
 }
 
 /* Callback01 function */
 void Callback01(void *argument)
 {
-  /* USER CODE BEGIN Callback01 */
+	/* USER CODE BEGIN Callback01 */
 
-  /* USER CODE END Callback01 */
+	/* USER CODE END Callback01 */
 }
 
 /* Callback02 function */
 void Callback02(void *argument)
 {
-  /* USER CODE BEGIN Callback02 */
+	/* USER CODE BEGIN Callback02 */
 
-  /* USER CODE END Callback02 */
+	/* USER CODE END Callback02 */
 }
 
 /* Callback03 function */
 void Callback03(void *argument)
 {
-  /* USER CODE BEGIN Callback03 */
+	/* USER CODE BEGIN Callback03 */
 
-  /* USER CODE END Callback03 */
-}
-
- /**
-  * @brief  Period elapsed callback in non blocking mode
-  * @note   This function is called  when TIM1 interrupt took place, inside
-  * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
-  * a global variable "uwTick" used as application time base.
-  * @param  htim : TIM handle
-  * @retval None
-  */
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
-{
-  /* USER CODE BEGIN Callback 0 */
-
-  /* USER CODE END Callback 0 */
-  if (htim->Instance == TIM1) {
-    HAL_IncTick();
-  }
-  /* USER CODE BEGIN Callback 1 */
-
-  /* USER CODE END Callback 1 */
+	/* USER CODE END Callback03 */
 }
 
 /**
-  * @brief  This function is executed in case of error occurrence.
-  * @retval None
-  */
+ * @brief  Period elapsed callback in non blocking mode
+ * @note   This function is called  when TIM1 interrupt took place, inside
+ * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
+ * a global variable "uwTick" used as application time base.
+ * @param  htim : TIM handle
+ * @retval None
+ */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+	/* USER CODE BEGIN Callback 0 */
+
+	/* USER CODE END Callback 0 */
+	if (htim->Instance == TIM1) {
+		HAL_IncTick();
+	}
+	/* USER CODE BEGIN Callback 1 */
+
+	/* USER CODE END Callback 1 */
+}
+
+/**
+ * @brief  This function is executed in case of error occurrence.
+ * @retval None
+ */
 void Error_Handler(void)
 {
-  /* USER CODE BEGIN Error_Handler_Debug */
+	/* USER CODE BEGIN Error_Handler_Debug */
 	/* User can add his own implementation to report the HAL error return state */
 
-  /* USER CODE END Error_Handler_Debug */
+	/* USER CODE END Error_Handler_Debug */
 }
 
 #ifdef  USE_FULL_ASSERT
 /**
-  * @brief  Reports the name of the source file and the source line number
-  *         where the assert_param error has occurred.
-  * @param  file: pointer to the source file name
-  * @param  line: assert_param error line source number
-  * @retval None
-  */
+ * @brief  Reports the name of the source file and the source line number
+ *         where the assert_param error has occurred.
+ * @param  file: pointer to the source file name
+ * @param  line: assert_param error line source number
+ * @retval None
+ */
 void assert_failed(uint8_t *file, uint32_t line)
 { 
-  /* USER CODE BEGIN 6 */
+	/* USER CODE BEGIN 6 */
 	/* User can add his own implementation to report the file name and line number,
      tex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
-  /* USER CODE END 6 */
+	/* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
 
