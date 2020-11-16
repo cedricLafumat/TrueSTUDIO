@@ -1,0 +1,30 @@
+/*
+ * horodate.c
+ *
+ *  Created on: 13 Nov 2020
+ *      Author: cedric
+ */
+
+#include "horodate.h"
+#include "cmsis_os.h"
+
+
+extern I2C_HandleTypeDef hi2c1;
+
+char *buffer_RTC_data = "0";
+
+
+
+
+
+void get_RTC_data(){
+	if (HAL_I2C_Master_Receive(&hi2c1, 1101000, *buffer_RTC_data, 7, 10) == HAL_OK){
+
+		osDelay(1);
+	}
+}
+
+
+
+
+
