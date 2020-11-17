@@ -26,7 +26,7 @@
 //static pthread_mutex_t mutex_timer;
 
 static RGB actual_matrice[7][7];
-static RGB matrice[7][7];
+RGB matrice[7][7];
 char init_matrice_is_ok = 0;
 static int TabSize = 7;
 int actual_player;
@@ -44,7 +44,7 @@ const RGB Purple={255,0,255};
 const RGB Yellow={255,255,0};
 const RGB Black={0,0,0};
 
-const RGB bckgrd = {255, 255, 255};
+const RGB bckgrd = {0, 0, 0};
 const RGB token_player_1 = {0, 0, 255};
 const RGB token_player_2 = {0, 255, 0};
 
@@ -220,20 +220,20 @@ void function_play_token(pos_token_t move_token, char message_send[10],
 
 void send_message(QUEUE_ID queue, char *message, int message_lenght) {
 	if (queue == QUEUE_READ) {
-		osMessageQueuePut(&queue_readHandle, message, 10, osWaitForever);
+		osStatus_t status1 = osMessageQueuePut(queue_readHandle, message, 0, 10);
 	}
 	if (queue == QUEUE_SEND) {
-		osMessageQueuePut(&queue_sendHandle, message, 10, osWaitForever);
+		osStatus_t status2 = osMessageQueuePut(queue_sendHandle, message, 0, 10);
 	}
 }
 
 int receive_message(QUEUE_ID queue, char *message, int message_lenght) {
 	int return_value = 0;
 	if (queue == QUEUE_READ) {
-		return_value = osMessageQueueGet(&queue_readHandle, message, NULL, osWaitForever);
+		return_value = osMessageQueueGet(queue_readHandle, message, NULL, 10);
 	}
 	if (queue == QUEUE_SEND) {
-		return_value = osMessageQueueGet(&queue_sendHandle, message, NULL, osWaitForever);
+		return_value = osMessageQueueGet(queue_sendHandle, message, NULL, 10);
 	}
 	return return_value;
 }

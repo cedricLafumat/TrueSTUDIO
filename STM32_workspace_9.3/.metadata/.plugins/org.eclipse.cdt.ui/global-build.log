@@ -1,108 +1,55 @@
-12:43:14 **** Incremental Build of configuration Debug for project rtc_project ****
+10:27:34 **** Incremental Build of configuration Debug for project portage_p4_stm32_v2 ****
 Info: Internal Builder is used for build
+arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src/game.o ../Src/game.c 
+../Src/game.c: In function 'send_message':
+../Src/game.c:223:14: warning: unused variable 'status1' [-Wunused-variable]
+   osStatus_t status1 = osMessageQueuePut(queue_readHandle, message, 0, 10);
+              ^~~~~~~
+../Src/game.c:226:14: warning: unused variable 'status2' [-Wunused-variable]
+   osStatus_t status2 = osMessageQueuePut(queue_sendHandle, message, 0, 10);
+              ^~~~~~~
 arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src/main.o ../Src/main.c 
-arm-atollic-eabi-gcc -o rtc_project.elf Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_eth.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.o Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.o Middlewares/Third_Party/FreeRTOS/Source/croutine.o Middlewares/Third_Party/FreeRTOS/Source/event_groups.o Middlewares/Third_Party/FreeRTOS/Source/list.o Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o Middlewares/Third_Party/FreeRTOS/Source/queue.o Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.o Middlewares/Third_Party/FreeRTOS/Source/tasks.o Middlewares/Third_Party/FreeRTOS/Source/timers.o Src/freertos.o Src/main.o Src/stm32f4xx_hal_msp.o Src/stm32f4xx_it.o Src/syscalls.o Src/system_stm32f4xx.o startup/startup_stm32f429xx.o -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T../STM32F429ZI_FLASH.ld -specs=nosys.specs -static -Wl,-Map=rtc_project.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
-/opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.3.0/ide/jre/bin/java -jar /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.3.0/Tools/arm-atollic-reports.jar sizeinfo list rtc_project.elf 
+../Src/main.c: In function 'read_input_function':
+../Src/main.c:659:32: warning: passing argument 2 of 'send_message' from incompatible pointer type [-Wincompatible-pointer-types]
+       send_message(QUEUE_READ, &command, 10);
+                                ^
+In file included from ../Src/main.c:27:0:
+../Src/game.h:51:6: note: expected 'char *' but argument is of type 'char (*)[10]'
+ void send_message(QUEUE_ID queue, char *message, int message_lenght);
+      ^~~~~~~~~~~~
+../Src/main.c:663:32: warning: passing argument 2 of 'send_message' from incompatible pointer type [-Wincompatible-pointer-types]
+       send_message(QUEUE_READ, &command, 10);
+                                ^
+In file included from ../Src/main.c:27:0:
+../Src/game.h:51:6: note: expected 'char *' but argument is of type 'char (*)[10]'
+ void send_message(QUEUE_ID queue, char *message, int message_lenght);
+      ^~~~~~~~~~~~
+../Src/main.c:667:32: warning: passing argument 2 of 'send_message' from incompatible pointer type [-Wincompatible-pointer-types]
+       send_message(QUEUE_READ, &command, 10);
+                                ^
+In file included from ../Src/main.c:27:0:
+../Src/game.h:51:6: note: expected 'char *' but argument is of type 'char (*)[10]'
+ void send_message(QUEUE_ID queue, char *message, int message_lenght);
+      ^~~~~~~~~~~~
+../Src/main.c:671:32: warning: passing argument 2 of 'send_message' from incompatible pointer type [-Wincompatible-pointer-types]
+       send_message(QUEUE_READ, &command, 10);
+                                ^
+In file included from ../Src/main.c:27:0:
+../Src/game.h:51:6: note: expected 'char *' but argument is of type 'char (*)[10]'
+ void send_message(QUEUE_ID queue, char *message, int message_lenght);
+      ^~~~~~~~~~~~
+arm-atollic-eabi-gcc -o portage_p4_stm32_v2.elf Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_eth.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.o Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.o Middlewares/Third_Party/FreeRTOS/Source/croutine.o Middlewares/Third_Party/FreeRTOS/Source/event_groups.o Middlewares/Third_Party/FreeRTOS/Source/list.o Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o Middlewares/Third_Party/FreeRTOS/Source/queue.o Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.o Middlewares/Third_Party/FreeRTOS/Source/tasks.o Middlewares/Third_Party/FreeRTOS/Source/timers.o Src/freertos.o Src/game.o Src/game_p4.o Src/leds_control.o Src/main.o Src/stm32f4xx_hal_msp.o Src/stm32f4xx_hal_timebase_tim.o Src/stm32f4xx_it.o Src/syscalls.o Src/system_stm32f4xx.o startup/startup_stm32f429xx.o -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T../STM32F429ZI_FLASH.ld -specs=nosys.specs -static -Wl,-Map=portage_p4_stm32_v2.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
+/opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.3.0/ide/jre/bin/java -jar /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.3.0/Tools/arm-atollic-reports.jar sizeinfo list portage_p4_stm32_v2.elf 
 Generate build reports...
 Print size information
    text	   data	    bss	    dec	    hex	filename
-  30004	     24	  21648	  51676	   c9dc	rtc_project.elf
+  37944	     28	  23032	  61004	   ee4c	portage_p4_stm32_v2.elf
 Print size information done
 Generate listing file
-Output sent to: rtc_project.list
+Output sent to: portage_p4_stm32_v2.list
 Generate listing file done
 Generate build reports done
-arm-atollic-eabi-objcopy -O ihex rtc_project.elf rtc_project.hex 
-Info: Nothing to build for rtc_project
-13:12:59 **** Incremental Build of configuration Debug for project rtc_project ****
-Info: Internal Builder is used for build
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src/main.o ../Src/main.c 
-../Src/main.c: In function 'main':
-../Src/main.c:169:42: warning: pointer targets in passing argument 5 of 'HAL_I2C_Mem_Write' differ in signedness [-Wpointer-sign]
-  HAL_I2C_Mem_Write(&hi2c1, 0xD0, 0x02,1, &hours, 1, 1000);
-                                          ^
-In file included from ../Inc/stm32f4xx_hal_conf.h:319:0,
-                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
-                 from ../Inc/main.h:31,
-                 from ../Src/main.c:22:
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h:571:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
- HAL_StatusTypeDef HAL_I2C_Mem_Write(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
-                   ^~~~~~~~~~~~~~~~~
-../Src/main.c:171:42: warning: pointer targets in passing argument 5 of 'HAL_I2C_Mem_Write' differ in signedness [-Wpointer-sign]
-  HAL_I2C_Mem_Write(&hi2c1, 0xD0, 0x01,1, &min, 1, 1000);
-                                          ^
-In file included from ../Inc/stm32f4xx_hal_conf.h:319:0,
-                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
-                 from ../Inc/main.h:31,
-                 from ../Src/main.c:22:
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h:571:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
- HAL_StatusTypeDef HAL_I2C_Mem_Write(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
-                   ^~~~~~~~~~~~~~~~~
-../Src/main.c:173:42: warning: pointer targets in passing argument 5 of 'HAL_I2C_Mem_Write' differ in signedness [-Wpointer-sign]
-  HAL_I2C_Mem_Write(&hi2c1, 0xD0, 0x00,1, &sec, 1, 1000);
-                                          ^
-In file included from ../Inc/stm32f4xx_hal_conf.h:319:0,
-                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
-                 from ../Inc/main.h:31,
-                 from ../Src/main.c:22:
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h:571:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
- HAL_StatusTypeDef HAL_I2C_Mem_Write(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
-                   ^~~~~~~~~~~~~~~~~
-arm-atollic-eabi-gcc -o rtc_project.elf Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_eth.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.o Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.o Middlewares/Third_Party/FreeRTOS/Source/croutine.o Middlewares/Third_Party/FreeRTOS/Source/event_groups.o Middlewares/Third_Party/FreeRTOS/Source/list.o Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o Middlewares/Third_Party/FreeRTOS/Source/queue.o Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.o Middlewares/Third_Party/FreeRTOS/Source/tasks.o Middlewares/Third_Party/FreeRTOS/Source/timers.o Src/freertos.o Src/main.o Src/stm32f4xx_hal_msp.o Src/stm32f4xx_it.o Src/syscalls.o Src/system_stm32f4xx.o startup/startup_stm32f429xx.o -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T../STM32F429ZI_FLASH.ld -specs=nosys.specs -static -Wl,-Map=rtc_project.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
-/opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.3.0/ide/jre/bin/java -jar /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.3.0/Tools/arm-atollic-reports.jar sizeinfo list rtc_project.elf 
-Generate build reports...
-Print size information
-   text	   data	    bss	    dec	    hex	filename
-  30884	     24	  21648	  52556	   cd4c	rtc_project.elf
-Print size information done
-Generate listing file
-Output sent to: rtc_project.list
-Generate listing file done
-Generate build reports done
-arm-atollic-eabi-objcopy -O ihex rtc_project.elf rtc_project.hex 
-13:13:23 **** Incremental Build of configuration Debug for project rtc_project ****
-Info: Internal Builder is used for build
-arm-atollic-eabi-gcc -c -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F429xx -I../Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -g -fstack-usage -Wall -specs=nano.specs -o Src/main.o ../Src/main.c 
-../Src/main.c: In function 'main':
-../Src/main.c:169:42: warning: pointer targets in passing argument 5 of 'HAL_I2C_Mem_Write' differ in signedness [-Wpointer-sign]
-  HAL_I2C_Mem_Write(&hi2c1, 0xD0, 0x02,1, &hours, 1, 1000);
-                                          ^
-In file included from ../Inc/stm32f4xx_hal_conf.h:319:0,
-                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
-                 from ../Inc/main.h:31,
-                 from ../Src/main.c:22:
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h:571:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
- HAL_StatusTypeDef HAL_I2C_Mem_Write(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
-                   ^~~~~~~~~~~~~~~~~
-../Src/main.c:171:42: warning: pointer targets in passing argument 5 of 'HAL_I2C_Mem_Write' differ in signedness [-Wpointer-sign]
-  HAL_I2C_Mem_Write(&hi2c1, 0xD0, 0x01,1, &min, 1, 1000);
-                                          ^
-In file included from ../Inc/stm32f4xx_hal_conf.h:319:0,
-                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
-                 from ../Inc/main.h:31,
-                 from ../Src/main.c:22:
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h:571:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
- HAL_StatusTypeDef HAL_I2C_Mem_Write(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
-                   ^~~~~~~~~~~~~~~~~
-../Src/main.c:173:42: warning: pointer targets in passing argument 5 of 'HAL_I2C_Mem_Write' differ in signedness [-Wpointer-sign]
-  HAL_I2C_Mem_Write(&hi2c1, 0xD0, 0x00,1, &sec, 1, 1000);
-                                          ^
-In file included from ../Inc/stm32f4xx_hal_conf.h:319:0,
-                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:30,
-                 from ../Inc/main.h:31,
-                 from ../Src/main.c:22:
-../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h:571:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
- HAL_StatusTypeDef HAL_I2C_Mem_Write(I2C_HandleTypeDef *hi2c, uint16_t DevAddress, uint16_t MemAddress, uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
-                   ^~~~~~~~~~~~~~~~~
-arm-atollic-eabi-gcc -o rtc_project.elf Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_eth.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.o Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.o Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.o Middlewares/Third_Party/FreeRTOS/Source/croutine.o Middlewares/Third_Party/FreeRTOS/Source/event_groups.o Middlewares/Third_Party/FreeRTOS/Source/list.o Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.o Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o Middlewares/Third_Party/FreeRTOS/Source/queue.o Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.o Middlewares/Third_Party/FreeRTOS/Source/tasks.o Middlewares/Third_Party/FreeRTOS/Source/timers.o Src/freertos.o Src/main.o Src/stm32f4xx_hal_msp.o Src/stm32f4xx_it.o Src/syscalls.o Src/system_stm32f4xx.o startup/startup_stm32f429xx.o -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -T../STM32F429ZI_FLASH.ld -specs=nosys.specs -static -Wl,-Map=rtc_project.map -Wl,--gc-sections -Wl,--defsym=malloc_getpagesize_P=0x80 -Wl,--start-group -lc -lm -Wl,--end-group -specs=nano.specs 
-/opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.3.0/ide/jre/bin/java -jar /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.3.0/Tools/arm-atollic-reports.jar sizeinfo list rtc_project.elf 
-Generate build reports...
-Print size information
-   text	   data	    bss	    dec	    hex	filename
-  30884	     24	  21648	  52556	   cd4c	rtc_project.elf
-Print size information done
-Generate listing file
-Output sent to: rtc_project.list
-Generate listing file done
-Generate build reports done
-arm-atollic-eabi-objcopy -O ihex rtc_project.elf rtc_project.hex 
+arm-atollic-eabi-objcopy -O ihex portage_p4_stm32_v2.elf portage_p4_stm32_v2.hex 
+Info: Nothing to build for portage_p4_stm32_v2
+Info: Nothing to build for portage_p4_stm32_v2
+Info: Nothing to build for portage_p4_stm32_v2

@@ -5131,3 +5131,249 @@ Binding(ALT+CTRL+T,
 
 !ENTRY edu.hawaii.ics.csdl.jupiter 1 0 2020-11-16 08:43:03.150
 !MESSAGE Code Review is up.
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2020-11-16 13:39:39.950
+!MESSAGE Unloading product manager
+!SESSION 2020-11-16 13:46:03.341 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_GB
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2020-11-16 13:46:06.736
+!MESSAGE Loading product manager
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2020-11-16 13:46:06.752
+!MESSAGE OS info: Linux, 4.15.0-122-generic, amd64
+
+!ENTRY TrueSTUDIO 1 0 2020-11-16 13:46:07.599
+!MESSAGE Target: STM32, Version: 9.3.0, Build date: 20190212-0734, Installation dir: /opt/Atollic_TrueSTUDIO_for_STM32_x86_64_9.3.0/ide/
+
+!ENTRY TrueSTUDIO 1 0 2020-11-16 13:46:07.599
+!MESSAGE Workspace: /home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3
+
+!ENTRY org.eclipse.jface 2 0 2020-11-16 13:46:08.753
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-11-16 13:46:08.753
+!MESSAGE A conflict occurred for ALT+CTRL+T:
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.EditPropertiesCommand,Show Properties,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@41bd6a0f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.connector.local.command.launch,Open Local Terminal on Selection,
+		,
+		Category(org.eclipse.tm.terminal.view.ui.commands.category,Terminal Commands,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1ae9d0e4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.atollic.truestudio.integration.processorexpert 0 0 2020-11-16 13:46:11.988
+!MESSAGE Atollic TrueSTUDIO Processor Expert integration is up.
+
+!ENTRY edu.hawaii.ics.csdl.jupiter 1 0 2020-11-16 13:46:12.064
+!MESSAGE Code Review is up.
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 09:06:18.523
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 09:06:24.924
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 09:06:24.960
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 09:06:25.000
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 09:06:25.041
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 09:06:25.084
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 09:06:25.127
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 09:06:25.167
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 09:06:25.219
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 09:06:25.267
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 09:06:25.309
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 09:06:25.358
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 09:06:25.404
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 09:06:25.445
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 09:06:25.492
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 09:06:25.575
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 09:06:25.670
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 09:06:25.760
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 09:06:32.713
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 09:14:05.908
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:06:21.134
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:06:23.303
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:06:23.355
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:06:23.487
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:06:23.670
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:06:26.383
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:06:26.534
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:06:26.764
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:06:27.173
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:06:27.333
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:06:27.450
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:06:27.659
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:06:28.144
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:06:28.181
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:06:28.382
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:06:28.482
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:06:39.668
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:10:37.567
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:10:39.295
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:14:04.127
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:14:06.972
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:14:12.470
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:14:20.497
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:14:22.136
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:14:24.039
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:14:24.835
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:14:26.298
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:14:27.822
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:14:30.089
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:14:33.245
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:14:34.282
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:14:35.358
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:14:35.932
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:14:37.305
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:14:39.154
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:14:40.115
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:14:41.682
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:14:43.711
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:14:49.328
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:14:51.854
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:14:57.064
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:14:58.800
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:15:00.427
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:15:06.445
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:15:15.950
+!MESSAGE Endianness was never initialized!
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 0 2020-11-17 10:15:17.624
+!MESSAGE Endianness was never initialized!
