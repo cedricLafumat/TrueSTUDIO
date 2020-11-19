@@ -220,10 +220,10 @@ void function_play_token(pos_token_t move_token, char message_send[10],
 
 void send_message(QUEUE_ID queue, char *message, int message_lenght) {
 	if (queue == QUEUE_READ) {
-		osStatus_t status1 = osMessageQueuePut(queue_readHandle, message, 0, 10);
+		osMessageQueuePut(queue_readHandle, message, 0, 10);
 	}
 	if (queue == QUEUE_SEND) {
-		osStatus_t status2 = osMessageQueuePut(queue_sendHandle, message, 0, 10);
+		osMessageQueuePut(queue_sendHandle, message, 0, 10);
 	}
 }
 

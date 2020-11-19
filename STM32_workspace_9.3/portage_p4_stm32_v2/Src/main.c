@@ -656,19 +656,19 @@ void read_input_function(void *argument)
 					}
 					if (message[2] == 108){
 						command[2] = left;
-						send_message(QUEUE_READ, &command, 10);
+						send_message(QUEUE_READ, command, 10);
 					}
 					else if(message[2] == 114){
 						command[2] = right;
-						send_message(QUEUE_READ, &command, 10);
+						send_message(QUEUE_READ, command, 10);
 					}
 					else if(message[2] == 100){
 						command[2] = down;
-						send_message(QUEUE_READ, &command, 10);
+						send_message(QUEUE_READ, command, 10);
 					}
 					else if(message[2] == 117){
 						command[2] = up;
-						send_message(QUEUE_READ, &command, 10);
+						send_message(QUEUE_READ, command, 10);
 					}
 				}
 			}
@@ -855,16 +855,18 @@ void timer_function(void *argument)
 void uart_task_function(void *argument)
 {
 	/* USER CODE BEGIN uart_task_function */
-	char message[10];
+	char message_receive[5] = {0};
+	char message_send[10] = {0};
 	/* Infinite loop */
 	for(;;)
 	{
 		if(osMessageQueueGetCount(queue_send_uartHandle) > 0){
-			osMessageQueueGet(queue_send_uartHandle, message, 0, 10);
-			HAL_UART_Transmit(&huart7,(uint8_t *) message, SIZEOFMESSAGE, 10);
+			osMessageQueueGet(queue_send_uartHandle, message_send, 0, 10);
+			HAL_UART_Transmit(&huart7,(uint8_t *) message_send, SIZEOFMESSAGE, 10);
+			osDelay(10);
 		}
-		if(HAL_UART_Receive(&huart7,(uint8_t *) message, 5, 10) == HAL_OK){
-			osMessageQueuePut(queue_read_uartHandle, message, 0, 10);
+		if(HAL_UART_Receive(&huart7,(uint8_t *) message_receive, 5, 10) == HAL_OK){
+			osMessageQueuePut(queue_read_uartHandle, message_receive, 0, 10);
 		}
 		osDelay(1);
 	}

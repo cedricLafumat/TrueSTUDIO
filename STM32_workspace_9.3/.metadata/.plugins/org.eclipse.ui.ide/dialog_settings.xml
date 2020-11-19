@@ -13,6 +13,7 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/driver_stm32_p4"/>
 			<item value="/home/cedric/Atollic/TrueSTUDIO/STM32_workspace_9.3/FreeRTOS"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">

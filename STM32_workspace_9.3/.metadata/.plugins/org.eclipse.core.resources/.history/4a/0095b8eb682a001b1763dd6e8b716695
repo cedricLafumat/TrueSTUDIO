@@ -1,0 +1,950 @@
+/* USER CODE BEGIN Header */
+/**
+ ******************************************************************************
+ * @file           : main.c
+ * @brief          : Main program body
+ ******************************************************************************
+ * @attention
+ *
+ * <h2><center>&copy; Copyright (c) 2020 STMicroelectronics.
+ * All rights reserved.</center></h2>
+ *
+ * This software component is licensed by ST under Ultimate Liberty license
+ * SLA0044, the "License"; You may not use this file except in compliance with
+ * the License. You may obtain a copy of the License at:
+ *                             www.st.com/SLA0044
+ *
+ ******************************************************************************
+ */
+/* USER CODE END Header */
+
+/* Includes ------------------------------------------------------------------*/
+#include "main.h"
+#include "cmsis_os.h"
+
+/* Private includes ----------------------------------------------------------*/
+/* USER CODE BEGIN Includes */
+#include <stdbool.h>
+
+/* USER CODE END Includes */
+
+/* Private typedef -----------------------------------------------------------*/
+/* USER CODE BEGIN PTD */
+
+/* USER CODE END PTD */
+
+/* Private define ------------------------------------------------------------*/
+/* USER CODE BEGIN PD */
+#define TIME_0_HIGH 8
+#define TIME_0_LOW 20
+#define TIME_1_HIGH 19
+#define TIME_1_LOW 13
+#define TIME_RESET 2000
+#define SIZE_MESSAGE_SEND 5
+#define SIZE_MESSAGE_RECEIVE 10
+
+/* USER CODE END PD */
+
+/* Private macro -------------------------------------------------------------*/
+/* USER CODE BEGIN PM */
+
+/* USER CODE END PM */
+
+/* Private variables ---------------------------------------------------------*/
+DAC_HandleTypeDef hdac;
+
+ETH_HandleTypeDef heth;
+
+UART_HandleTypeDef huart7;
+UART_HandleTypeDef huart3;
+
+PCD_HandleTypeDef hpcd_USB_OTG_FS;
+
+/* Definitions for defaultTask */
+osThreadId_t defaultTaskHandle;
+const osThreadAttr_t defaultTask_attributes = {
+		.name = "defaultTask",
+		.priority = (osPriority_t) osPriorityNormal,
+		.stack_size = 128 * 4
+};
+/* Definitions for read_input_task */
+osThreadId_t read_input_taskHandle;
+const osThreadAttr_t read_input_task_attributes = {
+		.name = "read_input_task",
+		.priority = (osPriority_t) osPriorityNormal,
+		.stack_size = 128 * 4
+};
+/* Definitions for show_led_task */
+osThreadId_t show_led_taskHandle;
+const osThreadAttr_t show_led_task_attributes = {
+		.name = "show_led_task",
+		.priority = (osPriority_t) osPriorityNormal,
+		.stack_size = 128 * 4
+};
+/* Definitions for uart_task */
+osThreadId_t uart_taskHandle;
+const osThreadAttr_t uart_task_attributes = {
+		.name = "uart_task",
+		.priority = (osPriority_t) osPriorityNormal,
+		.stack_size = 128 * 4
+};
+/* Definitions for other_task */
+osThreadId_t other_taskHandle;
+const osThreadAttr_t other_task_attributes = {
+		.name = "other_task",
+		.priority = (osPriority_t) osPriorityHigh,
+		.stack_size = 128 * 4
+};
+/* Definitions for queue_read_uart */
+osMessageQueueId_t queue_read_uartHandle;
+const osMessageQueueAttr_t queue_read_uart_attributes = {
+		.name = "queue_read_uart"
+};
+/* Definitions for queue_send_uart */
+osMessageQueueId_t queue_send_uartHandle;
+const osMessageQueueAttr_t queue_send_uart_attributes = {
+		.name = "queue_send_uart"
+};
+/* USER CODE BEGIN PV */
+
+bool flag_interrupt_left = false;
+bool flag_interrupt_down = false;
+bool flag_interrupt_right = false;
+int matrix[8][8];
+
+
+/* USER CODE END PV */
+
+/* Private function prototypes -----------------------------------------------*/
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+static void MX_ETH_Init(void);
+static void MX_USART3_UART_Init(void);
+static void MX_USB_OTG_FS_PCD_Init(void);
+static void MX_UART7_Init(void);
+static void MX_DAC_Init(void);
+void StartDefaultTask(void *argument);
+void read_input_function(void *argument);
+void show_led_function(void *argument);
+void uart_task_function(void *argument);
+void other_task_function(void *argument);
+
+static void MX_NVIC_Init(void);
+/* USER CODE BEGIN PFP */
+
+/* USER CODE END PFP */
+
+/* Private user code ---------------------------------------------------------*/
+/* USER CODE BEGIN 0 */
+
+/* USER CODE END 0 */
+
+/**
+ * @brief  The application entry point.
+ * @retval int
+ */
+int main(void)
+{
+	/* USER CODE BEGIN 1 */
+
+	/* USER CODE END 1 */
+
+	/* MCU Configuration--------------------------------------------------------*/
+
+	/* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+	HAL_Init();
+
+	/* USER CODE BEGIN Init */
+
+	/* USER CODE END Init */
+
+	/* Configure the system clock */
+	SystemClock_Config();
+
+	/* USER CODE BEGIN SysInit */
+
+	/* USER CODE END SysInit */
+
+	/* Initialize all configured peripherals */
+	MX_GPIO_Init();
+	MX_ETH_Init();
+	MX_USART3_UART_Init();
+	MX_USB_OTG_FS_PCD_Init();
+	MX_UART7_Init();
+	MX_DAC_Init();
+
+	/* Initialize interrupts */
+	MX_NVIC_Init();
+	/* USER CODE BEGIN 2 */
+
+	/* USER CODE END 2 */
+
+	/* Init scheduler */
+	osKernelInitialize();
+
+	/* USER CODE BEGIN RTOS_MUTEX */
+	/* add mutexes, ... */
+	/* USER CODE END RTOS_MUTEX */
+
+	/* USER CODE BEGIN RTOS_SEMAPHORES */
+	/* add semaphores, ... */
+	/* USER CODE END RTOS_SEMAPHORES */
+
+	/* USER CODE BEGIN RTOS_TIMERS */
+	/* start timers, add new ones, ... */
+	/* USER CODE END RTOS_TIMERS */
+
+	/* Create the queue(s) */
+	/* creation of queue_read_uart */
+	queue_read_uartHandle = osMessageQueueNew (49, 10, &queue_read_uart_attributes);
+
+	/* creation of queue_send_uart */
+	queue_send_uartHandle = osMessageQueueNew (10, 5, &queue_send_uart_attributes);
+
+	/* USER CODE BEGIN RTOS_QUEUES */
+	/* add queues, ... */
+	/* USER CODE END RTOS_QUEUES */
+
+	/* Create the thread(s) */
+	/* creation of defaultTask */
+	defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
+
+	/* creation of read_input_task */
+	read_input_taskHandle = osThreadNew(read_input_function, NULL, &read_input_task_attributes);
+
+	/* creation of show_led_task */
+	show_led_taskHandle = osThreadNew(show_led_function, NULL, &show_led_task_attributes);
+
+	/* creation of uart_task */
+	uart_taskHandle = osThreadNew(uart_task_function, NULL, &uart_task_attributes);
+
+	/* creation of other_task */
+	other_taskHandle = osThreadNew(other_task_function, NULL, &other_task_attributes);
+
+	/* USER CODE BEGIN RTOS_THREADS */
+	/* add threads, ... */
+	/* USER CODE END RTOS_THREADS */
+
+	/* Start scheduler */
+	osKernelStart();
+
+	/* We should never get here as control is now taken by the scheduler */
+	/* Infinite loop */
+	/* USER CODE BEGIN WHILE */
+	while (1)
+	{
+		/* USER CODE END WHILE */
+
+		/* USER CODE BEGIN 3 */
+	}
+	/* USER CODE END 3 */
+}
+
+/**
+ * @brief System Clock Configuration
+ * @retval None
+ */
+void SystemClock_Config(void)
+{
+	RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+	RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+
+	/** Configure the main internal regulator output voltage
+	 */
+	__HAL_RCC_PWR_CLK_ENABLE();
+	__HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
+	/** Initializes the CPU, AHB and APB busses clocks
+	 */
+	RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
+	RCC_OscInitStruct.HSEState = RCC_HSE_BYPASS;
+	RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+	RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
+	RCC_OscInitStruct.PLL.PLLM = 4;
+	RCC_OscInitStruct.PLL.PLLN = 168;
+	RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
+	RCC_OscInitStruct.PLL.PLLQ = 7;
+	if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+	{
+		Error_Handler();
+	}
+	/** Initializes the CPU, AHB and APB busses clocks
+	 */
+	RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+			|RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+	RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+	RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+	RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;
+	RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
+
+	if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_5) != HAL_OK)
+	{
+		Error_Handler();
+	}
+}
+
+/**
+ * @brief NVIC Configuration.
+ * @retval None
+ */
+static void MX_NVIC_Init(void)
+{
+	/* EXTI9_5_IRQn interrupt configuration */
+	HAL_NVIC_SetPriority(EXTI9_5_IRQn, 5, 0);
+	HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
+}
+
+/**
+ * @brief DAC Initialization Function
+ * @param None
+ * @retval None
+ */
+static void MX_DAC_Init(void)
+{
+
+	/* USER CODE BEGIN DAC_Init 0 */
+
+	/* USER CODE END DAC_Init 0 */
+
+	DAC_ChannelConfTypeDef sConfig = {0};
+
+	/* USER CODE BEGIN DAC_Init 1 */
+
+	/* USER CODE END DAC_Init 1 */
+	/** DAC Initialization
+	 */
+	hdac.Instance = DAC;
+	if (HAL_DAC_Init(&hdac) != HAL_OK)
+	{
+		Error_Handler();
+	}
+	/** DAC channel OUT1 config
+	 */
+	sConfig.DAC_Trigger = DAC_TRIGGER_NONE;
+	sConfig.DAC_OutputBuffer = DAC_OUTPUTBUFFER_ENABLE;
+	if (HAL_DAC_ConfigChannel(&hdac, &sConfig, DAC_CHANNEL_1) != HAL_OK)
+	{
+		Error_Handler();
+	}
+	/* USER CODE BEGIN DAC_Init 2 */
+
+	/* USER CODE END DAC_Init 2 */
+
+}
+
+/**
+ * @brief ETH Initialization Function
+ * @param None
+ * @retval None
+ */
+static void MX_ETH_Init(void)
+{
+
+	/* USER CODE BEGIN ETH_Init 0 */
+
+	/* USER CODE END ETH_Init 0 */
+
+	/* USER CODE BEGIN ETH_Init 1 */
+
+	/* USER CODE END ETH_Init 1 */
+	heth.Instance = ETH;
+	heth.Init.AutoNegotiation = ETH_AUTONEGOTIATION_ENABLE;
+	heth.Init.PhyAddress = LAN8742A_PHY_ADDRESS;
+	heth.Init.MACAddr[0] =   0x00;
+	heth.Init.MACAddr[1] =   0x80;
+	heth.Init.MACAddr[2] =   0xE1;
+	heth.Init.MACAddr[3] =   0x00;
+	heth.Init.MACAddr[4] =   0x00;
+	heth.Init.MACAddr[5] =   0x00;
+	heth.Init.RxMode = ETH_RXPOLLING_MODE;
+	heth.Init.ChecksumMode = ETH_CHECKSUM_BY_HARDWARE;
+	heth.Init.MediaInterface = ETH_MEDIA_INTERFACE_RMII;
+
+	/* USER CODE BEGIN MACADDRESS */
+
+	/* USER CODE END MACADDRESS */
+
+	if (HAL_ETH_Init(&heth) != HAL_OK)
+	{
+		Error_Handler();
+	}
+	/* USER CODE BEGIN ETH_Init 2 */
+
+	/* USER CODE END ETH_Init 2 */
+
+}
+
+/**
+ * @brief UART7 Initialization Function
+ * @param None
+ * @retval None
+ */
+static void MX_UART7_Init(void)
+{
+
+	/* USER CODE BEGIN UART7_Init 0 */
+
+	/* USER CODE END UART7_Init 0 */
+
+	/* USER CODE BEGIN UART7_Init 1 */
+
+	/* USER CODE END UART7_Init 1 */
+	huart7.Instance = UART7;
+	huart7.Init.BaudRate = 115200;
+	huart7.Init.WordLength = UART_WORDLENGTH_8B;
+	huart7.Init.StopBits = UART_STOPBITS_1;
+	huart7.Init.Parity = UART_PARITY_NONE;
+	huart7.Init.Mode = UART_MODE_TX_RX;
+	huart7.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+	huart7.Init.OverSampling = UART_OVERSAMPLING_16;
+	if (HAL_UART_Init(&huart7) != HAL_OK)
+	{
+		Error_Handler();
+	}
+	/* USER CODE BEGIN UART7_Init 2 */
+
+	/* USER CODE END UART7_Init 2 */
+
+}
+
+/**
+ * @brief USART3 Initialization Function
+ * @param None
+ * @retval None
+ */
+static void MX_USART3_UART_Init(void)
+{
+
+	/* USER CODE BEGIN USART3_Init 0 */
+
+	/* USER CODE END USART3_Init 0 */
+
+	/* USER CODE BEGIN USART3_Init 1 */
+
+	/* USER CODE END USART3_Init 1 */
+	huart3.Instance = USART3;
+	huart3.Init.BaudRate = 115200;
+	huart3.Init.WordLength = UART_WORDLENGTH_8B;
+	huart3.Init.StopBits = UART_STOPBITS_1;
+	huart3.Init.Parity = UART_PARITY_NONE;
+	huart3.Init.Mode = UART_MODE_TX_RX;
+	huart3.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+	huart3.Init.OverSampling = UART_OVERSAMPLING_16;
+	if (HAL_UART_Init(&huart3) != HAL_OK)
+	{
+		Error_Handler();
+	}
+	/* USER CODE BEGIN USART3_Init 2 */
+
+	/* USER CODE END USART3_Init 2 */
+
+}
+
+/**
+ * @brief USB_OTG_FS Initialization Function
+ * @param None
+ * @retval None
+ */
+static void MX_USB_OTG_FS_PCD_Init(void)
+{
+
+	/* USER CODE BEGIN USB_OTG_FS_Init 0 */
+
+	/* USER CODE END USB_OTG_FS_Init 0 */
+
+	/* USER CODE BEGIN USB_OTG_FS_Init 1 */
+
+	/* USER CODE END USB_OTG_FS_Init 1 */
+	hpcd_USB_OTG_FS.Instance = USB_OTG_FS;
+	hpcd_USB_OTG_FS.Init.dev_endpoints = 4;
+	hpcd_USB_OTG_FS.Init.speed = PCD_SPEED_FULL;
+	hpcd_USB_OTG_FS.Init.dma_enable = DISABLE;
+	hpcd_USB_OTG_FS.Init.phy_itface = PCD_PHY_EMBEDDED;
+	hpcd_USB_OTG_FS.Init.Sof_enable = ENABLE;
+	hpcd_USB_OTG_FS.Init.low_power_enable = DISABLE;
+	hpcd_USB_OTG_FS.Init.lpm_enable = DISABLE;
+	hpcd_USB_OTG_FS.Init.vbus_sensing_enable = ENABLE;
+	hpcd_USB_OTG_FS.Init.use_dedicated_ep1 = DISABLE;
+	if (HAL_PCD_Init(&hpcd_USB_OTG_FS) != HAL_OK)
+	{
+		Error_Handler();
+	}
+	/* USER CODE BEGIN USB_OTG_FS_Init 2 */
+
+	/* USER CODE END USB_OTG_FS_Init 2 */
+
+}
+
+/**
+ * @brief GPIO Initialization Function
+ * @param None
+ * @retval None
+ */
+static void MX_GPIO_Init(void)
+{
+	GPIO_InitTypeDef GPIO_InitStruct = {0};
+
+	/* GPIO Ports Clock Enable */
+	__HAL_RCC_GPIOC_CLK_ENABLE();
+	__HAL_RCC_GPIOH_CLK_ENABLE();
+	__HAL_RCC_GPIOA_CLK_ENABLE();
+	__HAL_RCC_GPIOB_CLK_ENABLE();
+	__HAL_RCC_GPIOE_CLK_ENABLE();
+	__HAL_RCC_GPIOD_CLK_ENABLE();
+	__HAL_RCC_GPIOG_CLK_ENABLE();
+
+	/*Configure GPIO pin Output Level */
+	HAL_GPIO_WritePin(OUT_CMD_GPIO_Port, OUT_CMD_Pin, GPIO_PIN_RESET);
+
+	/*Configure GPIO pin Output Level */
+	HAL_GPIO_WritePin(GPIOB, LD1_Pin|LD3_Pin|LD2_Pin, GPIO_PIN_RESET);
+
+	/*Configure GPIO pin Output Level */
+	HAL_GPIO_WritePin(USB_PowerSwitchOn_GPIO_Port, USB_PowerSwitchOn_Pin, GPIO_PIN_RESET);
+
+	/*Configure GPIO pin : USER_Btn_Pin */
+	GPIO_InitStruct.Pin = USER_Btn_Pin;
+	GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+	GPIO_InitStruct.Pull = GPIO_NOPULL;
+	HAL_GPIO_Init(USER_Btn_GPIO_Port, &GPIO_InitStruct);
+
+	/*Configure GPIO pin : OUT_CMD_Pin */
+	GPIO_InitStruct.Pin = OUT_CMD_Pin;
+	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+	GPIO_InitStruct.Pull = GPIO_NOPULL;
+	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+	HAL_GPIO_Init(OUT_CMD_GPIO_Port, &GPIO_InitStruct);
+
+	/*Configure GPIO pins : LD1_Pin LD3_Pin LD2_Pin */
+	GPIO_InitStruct.Pin = LD1_Pin|LD3_Pin|LD2_Pin;
+	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+	GPIO_InitStruct.Pull = GPIO_NOPULL;
+	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+	HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+	/*Configure GPIO pin : USB_PowerSwitchOn_Pin */
+	GPIO_InitStruct.Pin = USB_PowerSwitchOn_Pin;
+	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+	GPIO_InitStruct.Pull = GPIO_NOPULL;
+	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+	HAL_GPIO_Init(USB_PowerSwitchOn_GPIO_Port, &GPIO_InitStruct);
+
+	/*Configure GPIO pin : USB_OverCurrent_Pin */
+	GPIO_InitStruct.Pin = USB_OverCurrent_Pin;
+	GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+	GPIO_InitStruct.Pull = GPIO_NOPULL;
+	HAL_GPIO_Init(USB_OverCurrent_GPIO_Port, &GPIO_InitStruct);
+
+	/*Configure GPIO pins : PD4 PD5 PD6 PD7 */
+	GPIO_InitStruct.Pin = GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_6|GPIO_PIN_7;
+	GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+	GPIO_InitStruct.Pull = GPIO_NOPULL;
+	HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
+
+	/* EXTI interrupt init*/
+	HAL_NVIC_SetPriority(EXTI4_IRQn, 5, 0);
+	HAL_NVIC_EnableIRQ(EXTI4_IRQn);
+
+}
+
+/* USER CODE BEGIN 4 */
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
+	if(GPIO_Pin == GPIO_PIN_4){
+		flag_interrupt_left = true;
+	}
+	else if(GPIO_Pin == GPIO_PIN_5){
+		flag_interrupt_down = true;
+	}
+	else if(GPIO_Pin == GPIO_PIN_6){
+		flag_interrupt_down = true;
+	}
+	else if(GPIO_Pin == GPIO_PIN_7){
+		flag_interrupt_right = true;
+	}
+}
+
+
+uint8_t two_ascii_to_uint8(char color_value[2]){
+	uint8_t num_color_value1 = 0;
+	uint8_t num_color_value2 = 0;
+	uint8_t total_color_value = 0;
+
+	// calcul la valeur décimal du premier caractère hexa
+	if (color_value[0] == '0'){
+		num_color_value1 = 0*16;
+	}
+	else if (color_value[0] == '1'){
+		num_color_value1 = 1*16;
+	}
+	else if (color_value[0] == '2'){
+		num_color_value1 = 2*16;
+	}
+	else if (color_value[0] == '3'){
+		num_color_value1 = 3*16;
+	}
+	else if (color_value[0] == '4'){
+		num_color_value1 = 4*16;
+	}
+	else if (color_value[0] == '5'){
+		num_color_value1 = 5*16;
+	}
+	else if (color_value[0] == '6'){
+		num_color_value1 = 6*16;
+	}
+	else if (color_value[0] == '7'){
+		num_color_value1 = 7*16;
+	}
+	else if (color_value[0] == '8'){
+		num_color_value1 = 8*16;
+	}
+	else if (color_value[0] == '0'){
+		num_color_value1 = 0*16;
+	}
+	else if (color_value[0] == '9'){
+		num_color_value1 = 9*16;
+	}
+	else if (color_value[0] == 'A'){
+		num_color_value1 = 10*16;
+	}
+	else if (color_value[0] == 'B'){
+		num_color_value1 = 11*16;
+	}
+	else if (color_value[0] == 'C'){
+		num_color_value1 = 12*16;
+	}
+	else if (color_value[0] == 'D'){
+		num_color_value1 = 13*16;
+	}
+	else if (color_value[0] == 'E'){
+		num_color_value1 = 14*16;
+	}
+	else if (color_value[0] == 'F'){
+		num_color_value1 = 15*16;
+	}
+
+	// calcul la valeur décimal du deuxieme caractère hexa
+	if (color_value[1] == '0'){
+		num_color_value2 = 0;
+	}
+	else if (color_value[1] == '1'){
+		num_color_value2 = 1;
+	}
+	else if (color_value[1] == '2'){
+		num_color_value2 = 2;
+	}
+	else if (color_value[1] == '3'){
+		num_color_value2 = 3;
+	}
+	else if (color_value[1] == '4'){
+		num_color_value2 = 4;
+	}
+	else if (color_value[1] == '5'){
+		num_color_value2 = 5;
+	}
+	else if (color_value[1] == '6'){
+		num_color_value2 = 6;
+	}
+	else if (color_value[1] == '7'){
+		num_color_value2 = 7;
+	}
+	else if (color_value[1] == '8'){
+		num_color_value2 = 8;
+	}
+	else if (color_value[1] == '0'){
+		num_color_value2 = 0;
+	}
+	else if (color_value[1] == '9'){
+		num_color_value2 = 9;
+	}
+	else if (color_value[1] == 'A'){
+		num_color_value2 = 10;
+	}
+	else if (color_value[1] == 'B'){
+		num_color_value2 = 11;
+	}
+	else if (color_value[1] == 'C'){
+		num_color_value2 = 12;
+	}
+	else if (color_value[1] == 'D'){
+		num_color_value2 = 13;
+	}
+	else if (color_value[1] == 'E'){
+		num_color_value2 = 14;
+	}
+	else if (color_value[1] == 'F'){
+		num_color_value2 = 15;
+	}
+	total_color_value = num_color_value1 + num_color_value2;
+	return total_color_value;
+}
+
+void init_matrix( ){
+	for(int i=0 ; i<8; i++){
+		for(int j=0 ; j<8; j++){
+			matrix[i][j]= 0;
+		}
+	}
+}
+
+void update_matrix(int row, int col, int GRBValue){
+	for (int i = 0 ; i < row ;i++){
+		for(int j=0; j < col;j++){
+			matrix[i][j]= GRBValue;
+		}
+	}
+}
+
+void test_trame_to_led(){
+	init_matrix();
+	char message_receive[10] = {0};
+	char var_Rvalue[2] = {0};
+	char var_Gvalue[2] = {0};
+	char var_Bvalue[2] = {0};
+	int row = 0;
+	int col = 0;
+	message_receive = "R23000008\n";
+
+	//recup coordonnées led
+	row = message_receive[1];
+	col = message_receive[2];
+	row = row - 48;
+	col = col - 48;
+	//RValue
+	message_receive[3] = '0';
+	message_receive[4] = '0';
+	//GValue
+	message_receive[5] = '0';
+	message_receive[6] = '0';
+	//BValue
+	message_receive[7] = '0';
+	message_receive[8] = '8';
+
+	var_Rvalue[0] = message_receive[3];
+	var_Rvalue[1] = message_receive[4];
+	var_Gvalue[0] = message_receive[5];
+	var_Gvalue[1] = message_receive[6];
+	var_Bvalue[0] = message_receive[7];
+	var_Bvalue[1] = message_receive[8];
+	uint8_t num_Rvalue = two_ascii_to_uint8(var_Rvalue);
+	uint8_t num_Gvalue = two_ascii_to_uint8(var_Gvalue);
+	uint8_t num_Bvalue = two_ascii_to_uint8(var_Bvalue);
+	int GRBValue = 0;
+	GRBValue = (num_Gvalue<<16) + (num_Rvalue<<8) + num_Bvalue;
+	update_matrix(row, col, GRBValue);
+	send_trame_to_led();
+}
+
+void send_trame_to_led(){
+	uint8_t trame_length = 24;
+	int mask = 0x800000;
+	for (int row = 0; row < 2; row ++){
+		for (int col = 0; col < 8; col ++){
+			int data = matrix[row][col];
+			mask = 0x800000;
+			for (int i = trame_length -1; i >= 0; i--){
+				uint8_t bit_data = (data & mask) >>i;
+				if (bit_data == 0){
+					HAL_GPIO_WritePin(OUT_CMD_GPIO_Port, OUT_CMD_Pin, 1);
+					int j = TIME_0_HIGH;
+					while (j --);
+					HAL_GPIO_WritePin(OUT_CMD_GPIO_Port, OUT_CMD_Pin, 0);
+					int k = TIME_0_LOW;
+					while (k --);
+				}
+				else if(bit_data == 1){
+					HAL_GPIO_WritePin(OUT_CMD_GPIO_Port, OUT_CMD_Pin, 1);
+					int j = TIME_1_HIGH;
+					while (j --);
+					HAL_GPIO_WritePin(OUT_CMD_GPIO_Port, OUT_CMD_Pin, 0);
+					int k = TIME_1_LOW;
+					while (k --);
+				}
+				mask >>= 1;
+			}
+		}
+	}
+	HAL_GPIO_WritePin(OUT_CMD_GPIO_Port, OUT_CMD_Pin, 1);
+	HAL_GPIO_WritePin(OUT_CMD_GPIO_Port, OUT_CMD_Pin, 0);
+}
+
+/* USER CODE END 4 */
+
+/* USER CODE BEGIN Header_StartDefaultTask */
+/**
+ * @brief  Function implementing the defaultTask thread.
+ * @param  argument: Not used
+ * @retval None
+ */
+/* USER CODE END Header_StartDefaultTask */
+void StartDefaultTask(void *argument)
+{
+	/* USER CODE BEGIN 5 */
+	/* Infinite loop */
+	for(;;)
+	{
+		osDelay(1000);
+	}
+	/* USER CODE END 5 */
+}
+
+/* USER CODE BEGIN Header_read_input_function */
+/**
+ * @brief Function implementing the read_input_task thread.
+ * @param argument: Not used
+ * @retval None
+ */
+/* USER CODE END Header_read_input_function */
+void read_input_function(void *argument)
+{
+	/* USER CODE BEGIN read_input_function */
+	char message[5];
+	message[0] = 'p';
+	message[1] = '1';
+	message[2] = '0';
+	message[3] = 'd';
+	message[4] = '\n';
+
+	/* Infinite loop */
+	for(;;)
+	{
+		if (flag_interrupt_left){
+			message[2] = 'l';
+			flag_interrupt_left = false;
+		}
+		else if (flag_interrupt_down){
+			message[2] = 'd';
+			flag_interrupt_down = false;
+		}
+		else if (flag_interrupt_right){
+			message[2] = 'r';
+			flag_interrupt_right = false;
+		}
+		if (message[2] != '0'){
+			osMessageQueuePut(queue_send_uartHandle, message, 0, 10);
+			message[2] = '0';
+			test_trame_to_led();
+			osDelay(1000);
+		}
+		osDelay(1000);
+	}
+	/* USER CODE END read_input_function */
+}
+
+/* USER CODE BEGIN Header_show_led_function */
+/**
+ * @brief Function implementing the show_led_task thread.
+ * @param argument: Not used
+ * @retval None
+ */
+/* USER CODE END Header_show_led_function */
+void show_led_function(void *argument)
+{
+	/* USER CODE BEGIN show_led_function */
+	char message_receive[10] = {0};
+	char var_Rvalue[2] = {0};
+	char var_Gvalue[2] = {0};
+	char var_Bvalue[2] = {0};
+	int row = 0;
+	int col = 0;
+	/* Infinite loop */
+	for(;;)
+	{
+		if(osMessageQueueGetCount(queue_read_uartHandle) > 0){
+			osMessageQueueGet(queue_read_uartHandle, message_receive, 0, 10);
+			row = message_receive[1];
+			col = message_receive[2];
+			row = row - 48;
+			col = col - 48;
+			var_Rvalue[0] = message_receive[3];
+			var_Rvalue[1] = message_receive[4];
+			var_Gvalue[0] = message_receive[5];
+			var_Gvalue[1] = message_receive[6];
+			var_Bvalue[0] = message_receive[7];
+			var_Bvalue[1] = message_receive[8];
+			uint8_t num_Rvalue = two_ascii_to_uint8(var_Rvalue);
+			uint8_t num_Gvalue = two_ascii_to_uint8(var_Gvalue);
+			uint8_t num_Bvalue = two_ascii_to_uint8(var_Bvalue);
+			int GRBValue = 0;
+			GRBValue = (num_Gvalue<<16) + (num_Rvalue<<8) + num_Bvalue;
+			update_matrix(row, col, GRBValue);
+			osDelay(1000);
+		}
+		osDelay(1000);
+	}
+	/* USER CODE END show_led_function */
+}
+
+/* USER CODE BEGIN Header_uart_task_function */
+/**
+ * @brief Function implementing the uart_task thread.
+ * @param argument: Not used
+ * @retval None
+ */
+/* USER CODE END Header_uart_task_function */
+void uart_task_function(void *argument)
+{
+	/* USER CODE BEGIN uart_task_function */
+	char message_send[5] = {0};
+	char message_receive[10] = {0};
+	/* Infinite loop */
+	for(;;)
+	{
+		if(osMessageQueueGetCount(queue_send_uartHandle) > 0){
+			osMessageQueueGet(queue_send_uartHandle, message_send, 0, 10);
+			HAL_UART_Transmit(&huart7,(uint8_t *) message_send, SIZE_MESSAGE_SEND, 10);
+		}
+		if(HAL_UART_Receive(&huart7,(uint8_t *) message_receive, SIZE_MESSAGE_RECEIVE, 10) == HAL_OK){
+			osMessageQueuePut(queue_read_uartHandle, message_receive, 0, 10);
+		}
+		osDelay(1000);
+	}
+	/* USER CODE END uart_task_function */
+}
+
+/* USER CODE BEGIN Header_other_task_function */
+/**
+ * @brief Function implementing the other_task thread.
+ * @param argument: Not used
+ * @retval None
+ */
+/* USER CODE END Header_other_task_function */
+void other_task_function(void *argument)
+{
+	/* USER CODE BEGIN other_task_function */
+	/* Infinite loop */
+	for(;;)
+	{
+		osDelay(1000);
+	}
+	/* USER CODE END other_task_function */
+}
+
+/**
+ * @brief  This function is executed in case of error occurrence.
+ * @retval None
+ */
+void Error_Handler(void)
+{
+	/* USER CODE BEGIN Error_Handler_Debug */
+	/* User can add his own implementation to report the HAL error return state */
+
+	/* USER CODE END Error_Handler_Debug */
+}
+
+#ifdef  USE_FULL_ASSERT
+/**
+ * @brief  Reports the name of the source file and the source line number
+ *         where the assert_param error has occurred.
+ * @param  file: pointer to the source file name
+ * @param  line: assert_param error line source number
+ * @retval None
+ */
+void assert_failed(uint8_t *file, uint32_t line)
+{ 
+	/* USER CODE BEGIN 6 */
+	/* User can add his own implementation to report the file name and line number,
+     tex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+	/* USER CODE END 6 */
+}
+#endif /* USE_FULL_ASSERT */
+
+/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
