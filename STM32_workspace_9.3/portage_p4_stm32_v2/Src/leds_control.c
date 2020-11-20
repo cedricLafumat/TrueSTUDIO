@@ -44,7 +44,7 @@
 #endif
 
 #define SIZE_OF_LED_COMMAND_BUFFER (10)
-#define SIZE_OF_PLAYER_COMMAND_BUFFER (5)
+#define SIZE_OF_PLAYER_COMMAND_BUFFER (9)
 
 extern UART_HandleTypeDef huart3;
 extern osMessageQueueId_t queue_send_uartHandle;

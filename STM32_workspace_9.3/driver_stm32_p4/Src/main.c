@@ -40,7 +40,7 @@
 #define TIME_1_HIGH 19
 #define TIME_1_LOW 13
 #define TIME_RESET 2000
-#define SIZE_MESSAGE_SEND 5
+#define SIZE_MESSAGE_SEND 9
 #define SIZE_MESSAGE_RECEIVE 10
 
 /* USER CODE END PD */
@@ -108,12 +108,8 @@ const osMessageQueueAttr_t queue_send_uart_attributes = {
 /* USER CODE BEGIN PV */
 
 bool flag_interrupt_left = false;
-bool flag_interrupt_left_p1 = false;
 bool flag_interrupt_down = false;
-bool flag_interrupt_down_p1 = false;
-bool flag_interrupt_down_p2 = false;
 bool flag_interrupt_right = false;
-bool flag_interrupt_right_p2 = false;
 int matrix[8][8];
 
 
@@ -203,7 +199,7 @@ int main(void)
 	queue_read_uartHandle = osMessageQueueNew (49, 10, &queue_read_uart_attributes);
 
 	/* creation of queue_send_uart */
-	queue_send_uartHandle = osMessageQueueNew (10, 5, &queue_send_uart_attributes);
+	queue_send_uartHandle = osMessageQueueNew (10, 9, &queue_send_uart_attributes);
 
 	/* USER CODE BEGIN RTOS_QUEUES */
 	/* add queues, ... */
@@ -554,19 +550,15 @@ static void MX_GPIO_Init(void)
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
 	if(GPIO_Pin == GPIO_PIN_4){
 		flag_interrupt_left = true;
-		flag_interrupt_left_p1 = true;
 	}
 	else if(GPIO_Pin == GPIO_PIN_5){
 		flag_interrupt_down = true;
-		flag_interrupt_down_p1 = true;
 	}
 	else if(GPIO_Pin == GPIO_PIN_6){
 		flag_interrupt_down = true;
-		flag_interrupt_down_p2 = true;
 	}
 	else if(GPIO_Pin == GPIO_PIN_7){
 		flag_interrupt_right = true;
-		flag_interrupt_right_p2 = true;
 	}
 }
 
@@ -801,47 +793,39 @@ void StartDefaultTask(void *argument)
 void read_input_function(void *argument)
 {
 	/* USER CODE BEGIN read_input_function */
-	char message[5];
+	char message[9];
 	message[0] = 'p';
-	message[1] = '0';
+	message[1] = '1';
 	message[2] = '0';
 	message[3] = 'd';
-	message[4] = '\n';
+	message[4] = 'p';
+	message[5] = '2';
+	message[6] = '0';
+	message[7] = 'd';
+	message[8] = '\n';
 
 	/* Infinite loop */
 	for(;;)
 	{
 		if (flag_interrupt_left){
-			message[1] = '1';
 			message[2] = 'l';
+			message[6] = 'l';
 			flag_interrupt_left = false;
-			flag_interrupt_left_p1 = false;
 		}
-		else if (flag_interrupt_down_p1){
-			message[1] = '1';
+		else if (flag_interrupt_down){
 			message[2] = 'd';
+			message[6] = 'd';
 			flag_interrupt_down = false;
-			flag_interrupt_down_p1 = false;
-		}
-		else if (flag_interrupt_down_p2){
-			message[1] = '2';
-			message[2] = 'd';
-			flag_interrupt_down = false;
-			flag_interrupt_down_p2 = false;
 		}
 		else if (flag_interrupt_right){
-			message[1] = '2';
 			message[2] = 'r';
+			message[6] = 'r';
 			flag_interrupt_right = false;
-			flag_interrupt_right_p2 = false;
 		}
-		if (message[2] != '0'){
+		if (message[2] != '0' || message[6] != '0'){
 			osMessageQueuePut(queue_send_uartHandle, message, 0, 10);
-			//osDelay(10);
-			//message[1] = '2';
-			//osMessageQueuePut(queue_send_uartHandle, message, 0, 10);
-			message[1] = '0';
 			message[2] = '0';
+			message[6] = '0';
 			//test_trame_to_led();
 			osDelay(10);
 		}
@@ -907,7 +891,7 @@ void show_led_function(void *argument)
 void uart_task_function(void *argument)
 {
 	/* USER CODE BEGIN uart_task_function */
-	char message_send[5] = {0};
+	char message_send[9] = {0};
 	char message_receive[10] = {0};
 	/* Infinite loop */
 	for(;;)

@@ -157,7 +157,7 @@ const osSemaphoreAttr_t semaphore_display_attributes = {
 /* USER CODE BEGIN PV */
 
 extern RGB matrice[7][7];
-static char message[5];
+static char message[9];
 extern int actual_player;
 extern Timer timer_blink;
 extern Timer timer_to_play;
@@ -281,7 +281,7 @@ int main(void)
 	queue_sendHandle = osMessageQueueNew (16, 10, &queue_send_attributes);
 
 	/* creation of queue_read_uart */
-	queue_read_uartHandle = osMessageQueueNew (10, 5, &queue_read_uart_attributes);
+	queue_read_uartHandle = osMessageQueueNew (10, 9, &queue_read_uart_attributes);
 
 	/* creation of queue_send_uart */
 	queue_send_uartHandle = osMessageQueueNew (49, 10, &queue_send_uart_attributes);
@@ -634,40 +634,46 @@ void read_input_function(void *argument)
 {
 	/* USER CODE BEGIN read_input_function */
 	char command[10];
+	int	indexcorrector = 0;
 	/* Infinite loop */
 	for(;;)
 	{
 		/*if(HAL_GPIO_ReadPin(USER_Btn_GPIO_Port, USER_Btn_Pin)){
 			start_game();
 		}*/
-		if ((readbutton(message, 5)) == LCRC_OK){
+		if ((readbutton(message, 9)) == LCRC_OK){
 			if (init_game == 0) {
 				start_game();
 				init_game = 1;
 			}
 			if (message[0] == 112){
 				command[0] = CLAVIER;
-
+				if (actual_player == PLAYER_2){
+					indexcorrector = 4;
+				}
+				else{
+					indexcorrector = 0;
+				}
 				if (message[3] == 100){
-					if (message[1] == 49){
+					if (message[1 + indexcorrector] == 49){
 						command[1] = PLAYER_1;
 					}
-					else if (message[1] == 50){
+					else if (message[1 + indexcorrector] == 50){
 						command[1] = PLAYER_2;
 					}
-					if (message[2] == 108){
+					if (message[2 + indexcorrector] == 108){
 						command[2] = left;
 						send_message(QUEUE_READ, command, 10);
 					}
-					else if(message[2] == 114){
+					else if(message[2 + indexcorrector] == 114){
 						command[2] = right;
 						send_message(QUEUE_READ, command, 10);
 					}
-					else if(message[2] == 100){
+					else if(message[2 + indexcorrector] == 100){
 						command[2] = down;
 						send_message(QUEUE_READ, command, 10);
 					}
-					else if(message[2] == 117){
+					else if(message[2 + indexcorrector] == 117){
 						command[2] = up;
 						send_message(QUEUE_READ, command, 10);
 					}
@@ -706,11 +712,9 @@ void application_function(void *argument)
 					if (state_game == 0){
 						if (message_receive_app[1] == PLAYER_1){
 							actual_player = PLAYER_1;
-							//token_player_1 = {255, 0, 0};
 						}
 						else if (message_receive_app[1] == PLAYER_2){
 							actual_player = PLAYER_2;
-							//token_player_2 = {0, 0, 255};
 						}
 						start_game();
 						state_game = 1;
@@ -857,7 +861,7 @@ void timer_function(void *argument)
 void uart_task_function(void *argument)
 {
 	/* USER CODE BEGIN uart_task_function */
-	char message_receive[5] = {0};
+	char message_receive[9] = {0};
 	char message_send[10] = {0};
 	/* Infinite loop */
 	for(;;)
@@ -867,7 +871,7 @@ void uart_task_function(void *argument)
 			HAL_UART_Transmit(&huart7,(uint8_t *) message_send, SIZEOFMESSAGE, 10);
 			osDelay(10);
 		}
-		if(HAL_UART_Receive(&huart7,(uint8_t *) message_receive, 5, 10) == HAL_OK){
+		if(HAL_UART_Receive(&huart7,(uint8_t *) message_receive, 9, 10) == HAL_OK){
 			osMessageQueuePut(queue_read_uartHandle, message_receive, 0, 10);
 		}
 		osDelay(1);
