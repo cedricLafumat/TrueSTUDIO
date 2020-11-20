@@ -647,6 +647,7 @@ void read_input_function(void *argument)
 			}
 			if (message[0] == 112){
 				command[0] = CLAVIER;
+
 				if (message[3] == 100){
 					if (message[1] == 49){
 						command[1] = PLAYER_1;
@@ -700,8 +701,7 @@ void application_function(void *argument)
 	for(;;)
 	{
 		while (cpt_timer_win < 10){
-			if (osMessageQueueGetCount(queue_readHandle) > 0){
-				receive_message(QUEUE_READ, message_receive_app, 1);
+			if (receive_message(QUEUE_READ, message_receive_app, 1) == osOK) {
 				if (message_receive_app[0] == CLAVIER){
 					if (state_game == 0){
 						if (message_receive_app[1] == PLAYER_1){
@@ -765,6 +765,8 @@ void application_function(void *argument)
 		}
 		cpt_timer_win = 0;
 		state_game = 0;
+		setAllBlack();
+
 
 		osDelay(1);
 	}

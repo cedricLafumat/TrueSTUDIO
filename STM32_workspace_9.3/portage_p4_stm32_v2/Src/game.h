@@ -43,6 +43,7 @@ typedef enum {APP, DISPLAY} OWNER_TIMER;
 typedef enum {left, right, up, down} movement_t;
 
 
+void setAllBlack(void);
 void init_matrice(void);
 void SetLedMatrice();
 void start_game(void);

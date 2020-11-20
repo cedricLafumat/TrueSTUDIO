@@ -6431,3 +6431,22 @@ Please specify the serial number in the debug configuration.
 !MESSAGE Error in initializing ST-Link device.
 Reason: (16) Multiple ST-Links detected.
 Please specify the serial number in the debug configuration.
+
+!ENTRY TrueSTUDIO 4 0 2020-11-19 16:44:58.576
+!MESSAGE ST-LINK GDB server failed to start (exit code = 16)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2020-11-19 16:44:58.605
+!MESSAGE Error in initializing ST-Link device.
+Reason: (16) Multiple ST-Links detected.
+Please specify the serial number in the debug configuration.
+
+!ENTRY TrueSTUDIO 4 0 2020-11-20 08:52:05.240
+!MESSAGE ST-LINK GDB server failed to start (exit code = 16)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 5012 2020-11-20 08:52:05.297
+!MESSAGE Error in initializing ST-Link device.
+Reason: (16) Multiple ST-Links detected.
+Please specify the serial number in the debug configuration.
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2020-11-20 14:11:30.807
+!MESSAGE Unloading product manager

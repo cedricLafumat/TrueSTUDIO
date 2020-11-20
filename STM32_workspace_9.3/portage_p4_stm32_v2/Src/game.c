@@ -45,8 +45,8 @@ const RGB Yellow={255,255,0};
 const RGB Black={0,0,0};
 
 const RGB bckgrd = {0, 0, 0};
-const RGB token_player_1 = {0, 0, 255};
-const RGB token_player_2 = {0, 255, 0};
+const RGB token_player_1 = {0, 0, 20};
+const RGB token_player_2 = {20, 0, 0};
 
 extern osMessageQueueId_t queue_readHandle;
 extern osMessageQueueId_t queue_sendHandle;
@@ -60,6 +60,15 @@ extern osMessageQueueId_t queue_sendHandle;
  *
  * -----------------------------------------------------------------------------------------------------------------------------------
  */
+
+void setAllBlack(void){
+	for (int line = 0; line < 7; line ++){
+		for(int col = 0; col < 7; col ++){
+			matrice[col][line] = bckgrd;
+		}
+	}
+	SetLedMatrice();
+}
 
 void init_matrice(void){
 	for (int line = 0; line < 7; line ++){

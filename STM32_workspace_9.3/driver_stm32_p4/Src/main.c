@@ -108,8 +108,12 @@ const osMessageQueueAttr_t queue_send_uart_attributes = {
 /* USER CODE BEGIN PV */
 
 bool flag_interrupt_left = false;
+bool flag_interrupt_left_p1 = false;
 bool flag_interrupt_down = false;
+bool flag_interrupt_down_p1 = false;
+bool flag_interrupt_down_p2 = false;
 bool flag_interrupt_right = false;
+bool flag_interrupt_right_p2 = false;
 int matrix[8][8];
 
 
@@ -550,15 +554,19 @@ static void MX_GPIO_Init(void)
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
 	if(GPIO_Pin == GPIO_PIN_4){
 		flag_interrupt_left = true;
+		flag_interrupt_left_p1 = true;
 	}
 	else if(GPIO_Pin == GPIO_PIN_5){
 		flag_interrupt_down = true;
+		flag_interrupt_down_p1 = true;
 	}
 	else if(GPIO_Pin == GPIO_PIN_6){
 		flag_interrupt_down = true;
+		flag_interrupt_down_p2 = true;
 	}
 	else if(GPIO_Pin == GPIO_PIN_7){
 		flag_interrupt_right = true;
+		flag_interrupt_right_p2 = true;
 	}
 }
 
@@ -759,7 +767,7 @@ void send_trame_to_led(){
 	HAL_GPIO_WritePin(OUT_CMD_GPIO_Port, OUT_CMD_Pin, 0);
 	xTaskResumeAll();
 	SysTick->CTRL |= 1;
-	TIM1->CR1 &= (uint16_t)TIM_CR1_CEN;
+	TIM1->CR1 |= TIM_CR1_CEN;
 	osDelay(1);
 }
 
@@ -795,7 +803,7 @@ void read_input_function(void *argument)
 	/* USER CODE BEGIN read_input_function */
 	char message[5];
 	message[0] = 'p';
-	message[1] = '1';
+	message[1] = '0';
 	message[2] = '0';
 	message[3] = 'd';
 	message[4] = '\n';
@@ -804,22 +812,38 @@ void read_input_function(void *argument)
 	for(;;)
 	{
 		if (flag_interrupt_left){
+			message[1] = '1';
 			message[2] = 'l';
 			flag_interrupt_left = false;
+			flag_interrupt_left_p1 = false;
 		}
-		else if (flag_interrupt_down){
+		else if (flag_interrupt_down_p1){
+			message[1] = '1';
 			message[2] = 'd';
 			flag_interrupt_down = false;
+			flag_interrupt_down_p1 = false;
+		}
+		else if (flag_interrupt_down_p2){
+			message[1] = '2';
+			message[2] = 'd';
+			flag_interrupt_down = false;
+			flag_interrupt_down_p2 = false;
 		}
 		else if (flag_interrupt_right){
+			message[1] = '2';
 			message[2] = 'r';
 			flag_interrupt_right = false;
+			flag_interrupt_right_p2 = false;
 		}
 		if (message[2] != '0'){
 			osMessageQueuePut(queue_send_uartHandle, message, 0, 10);
+			//osDelay(10);
+			//message[1] = '2';
+			//osMessageQueuePut(queue_send_uartHandle, message, 0, 10);
+			message[1] = '0';
 			message[2] = '0';
 			//test_trame_to_led();
-			osDelay(1);
+			osDelay(10);
 		}
 		osDelay(1);
 	}
@@ -891,6 +915,7 @@ void uart_task_function(void *argument)
 		if(osMessageQueueGetCount(queue_send_uartHandle) > 0){
 			osMessageQueueGet(queue_send_uartHandle, message_send, 0, 10);
 			HAL_UART_Transmit(&huart7,(uint8_t *) message_send, SIZE_MESSAGE_SEND, 10);
+			osDelay(10);
 		}
 		if(HAL_UART_Receive(&huart7,(uint8_t *) message_receive, SIZE_MESSAGE_RECEIVE, 10) == HAL_OK){
 			osMessageQueuePut(queue_read_uartHandle, message_receive, 0, 10);
